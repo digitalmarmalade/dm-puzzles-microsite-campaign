@@ -1,12 +1,11 @@
 {
-    "name": "dm-microsite",
+    "name": "dm-campaigns",
     "type": "module",
     "private": true,
     "scripts": {
         "build": "nuxt build",
         "dev": "nuxt dev",
         "local": "nuxt dev --dotenv .env.local",
-        "rasp": "nuxt dev --dotenv .env.rasp",
         "generate": "nuxt generate",
         "tutorials": "node tutorials/crossword/build.js && node tutorials/sudoku/build.js && node tutorials/huedoku/build.js && node tutorials/takuzu/build.js && node tutorials/traintracks/build.js && node tutorials/gridfill/build.js && node tutorials/headcoach/build.js && node tutorials/guessword/build.js && node tutorials/wordwheel/build.js && node tutorials/wordsearch/build.js && node tutorials/codeword/build.js",
         "preview": "nuxt preview",

@@ -1,7 +1,7 @@
 name: Static site deploy (shared)
 
 #  Builds the Nuxt site and syncs it to an S3 bucket. Called by the per-site
-#  workflows (games.deploy.yml, rasp.deploy.yml). The named GitHub environment
+#  workflows (campaigns.deploy.yml). The named GitHub environment
 #  supplies the build settings as variables and the bucket and AWS keys as secrets.
 
 on:

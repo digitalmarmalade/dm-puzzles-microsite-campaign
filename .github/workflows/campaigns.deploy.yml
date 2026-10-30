@@ -1,0 +1,15 @@
+name: Campaigns website deploy
+
+on:
+  push:
+    branches:
+      - deploy-campaigns
+  workflow_dispatch:
+
+jobs:
+  deploy_campaigns:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      environment: Campaigns
+      branch: deploy-campaigns
+    secrets: inherit

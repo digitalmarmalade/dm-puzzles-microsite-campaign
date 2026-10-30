@@ -279,34 +279,30 @@ code fails the build. Needs a restart to take effect.
 
 ## Deployments
 
-Each site is a static `nuxt generate` build synced to its own S3 bucket, behind
-CloudFront. Pushing to a deploy branch deploys that site; the workflow can also
-be run manually from the Actions tab, but only on its own deploy branch.
+One deployment serves every campaign: a static `nuxt generate` build synced to an
+S3 bucket, behind CloudFront. Work happens on `main` and feature branches; pushing
+to `deploy-campaigns` deploys the site. The workflow can also be run manually from
+the Actions tab, but only on its deploy branch.
 
 | Site | Branch | GitHub environment | Workflow |
 | --- | --- | --- | --- |
-| games.stickypuzzles.com | `deploy-games` | `Games` | `games.deploy.yml` |
-| RASP (Polish, no accounts) | `deploy-rasp` | `RASP` | `rasp.deploy.yml` |
+| Campaigns | `deploy-campaigns` | `Campaigns` | `campaigns.deploy.yml` |
 
-Both call the shared `.github/workflows/deploy.yml`. Each GitHub environment holds:
+It calls the shared `.github/workflows/deploy.yml`, so another deploy target only
+needs another small workflow and environment. The GitHub environment holds:
 
 - **Secrets:** `S3_ACCESS_KEY_ID`, `S3_SECRET_ACCESS_KEY`, `S3_DEFAULT_REGION`, `S3_BUCKET`.
 - **Variables:** the build settings. The workflow writes every non-empty variable
   into `.env` before building and prints it in the run log. Adding a setting only
   needs a new variable, no workflow change. See `.env.example` for the full list.
 
-| Variable | Games | RASP |
-| --- | --- | --- |
-| `NUXT_APP_BASE_URL` | `/` | `/` |
-| `DM_ARCHIVE_FILE` | `/archive.json` | `/archive.json` |
-| `FIREBASE_CONFIG_FILE` | `/firebaseConfig.json` | — |
-| `NUXT_PUBLIC_SITE_URL` | — | `https://droizk47iuqob.cloudfront.net` |
-| `SITE_LOCALES` | — | `pl` |
-| `NUXT_PUBLIC_FEATURES_REQUIRE_ACCOUNT` | — | `false` |
-| `NUXT_PUBLIC_FEATURES_ACCOUNT` | — | `false` |
-| `NUXT_PUBLIC_FEATURES_FRIENDS` | — | `false` |
+| Variable | Campaigns |
+| --- | --- |
+| `NUXT_APP_BASE_URL` | `/` |
+| `FIREBASE_CONFIG_FILE` | `/firebaseConfig.json` (the campaigns Firebase project, not Sticky Puzzles') |
+| `NUXT_PUBLIC_SITE_URL` | the CloudFront URL until a domain is set up |
 
-Settings changed in GitHub take effect on the next deploy of that site.
+Settings changed in GitHub take effect on the next deploy.
 
 The deployed commit is in `/version.json`. `archive.json`, `firebaseConfig.json`,
 `data/`, `gameplay/`, `puzzle-icons/` and `tools/` live only in the buckets and are
@@ -314,6 +310,5 @@ never overwritten by a deploy.
 
 ### Local env files
 
-Copy `.env.example` to `.env` and fill in what you need for `npm run dev`. To
-preview the RASP variant, create a `.env.rasp` with the RASP values from the table
-above and run `npm run rasp`. Both files are gitignored.
+Copy `.env.example` to `.env` and fill in what you need for `npm run dev`. It is
+gitignored.
