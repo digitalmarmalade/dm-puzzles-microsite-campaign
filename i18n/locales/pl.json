@@ -136,7 +136,6 @@
         "title": "Zbuduj swój profil gracza",
         "achievements": "Czekające na ciebie osiągnięcia",
         "signIn": "Zaloguj się, aby śledzić statystyki i zachować serię oraz ustawienia na każdym urządzeniu.",
-        "play": "Zagraj w dzisiejsze łamigłówki",
         "body": "Rozwiąż kilka łamigłówek, a tutaj pojawią się twoje statystyki, serie i profil gracza."
     },
     "guide": {
@@ -219,7 +218,6 @@
     "announcement": {
         "label": "Nowa łamigłówka: {name}",
         "kicker": "Nowa łamigłówka",
-        "play": "Zagraj teraz",
         "learn": "Naucz się grać",
         "dismiss": "Zamknij",
         "body": {
@@ -735,7 +733,6 @@
         "progress": "{current} z {target}",
         "join": "Dołącz",
         "notNow": "Nie teraz",
-        "play": "Graj",
         "leave": "Opuść wyzwanie",
         "retry": "Spróbuj ponownie",
         "pickNew": "Wybierz nowe",
@@ -1271,7 +1268,6 @@
         "open": "O {name}",
         "videoComingSoon": "Podgląd wideo już wkrótce",
         "playTime": "Około {mins} min",
-        "play": "Graj",
         "playLatest": "Zagraj w najnowszą"
     },
     "puzzleDescription": {
@@ -1319,12 +1315,10 @@
         "consonants": "Spółgłoski",
         "vowels": "Samogłoski",
         "count": "{n} z {max}",
-        "play": "Graj",
         "skip": "Graj bez liter pomocy"
     },
     "cover": {
         "number": "Nr {number}",
-        "play": "Graj",
         "includedIn": "Liczy się do wyzwania | Liczy się do wyzwań",
         "lastTimeOf": "Ostatnio · {name}",
         "tutorials": "Samouczki",
@@ -1588,5 +1582,75 @@
         "empty": "Na razie nic — rozwiąż kilka łamigłówek, a zaczniemy dopasowywać stronę.",
         "allRemoved": "Nic do pokazania — usunięto wszystkie nasze założenia.",
         "restore": "Przywróć {count} usunięty element | Przywróć {count} usunięte elementy"
+    },
+    "campaign": {
+        "loading": "Ładowanie…",
+        "notFound": "Nic tu nie ma.",
+        "devIndex": "Kampanie w tej wersji",
+        "upcoming": "Startuje {date}.",
+        "ended": "Ta kampania się zakończyła.",
+        "pickTrack": "Wybierz swoje wyzwanie",
+        "start": "Zacznij",
+        "startTrack": "Zacznij {name}",
+        "dayN": "Dzień {day}",
+        "back": "Wstecz",
+        "backTo": "Wróć do {name}",
+        "beforeStart": "Twoja pierwsza łamigłówka odblokuje się {date}.",
+        "states": {
+            "locked": "Zablokowane",
+            "today": "Dziś",
+            "catchup": "Pominięte, wciąż do rozegrania",
+            "missed": "Pominięte",
+            "done": "Gotowe",
+            "late": "Gotowe z opóźnieniem"
+        },
+        "wellDone": "Brawo!",
+        "completedDay": "Ukończono dzień {day} w ",
+        "keepTrying": "Próbuj dalej!",
+        "notQuite": "To jeszcze nie to.",
+        "previewing": "Podgląd na dzień {date}. Postęp jest zapisywany tylko w tej karcie.",
+        "stopPreview": "Zakończ podgląd",
+        "lateBadge": "Późno",
+        "namedChallenge": "Wyzwanie: {name}",
+        "yourChallenge": "Twoje wyzwanie",
+        "daysCompleted": "Ukończone dni",
+        "raisedOf": "{raised} z {target}",
+        "raised": "Zebrano",
+        "sponsors": "Sponsorzy",
+        "sponsor": "Wesprzyj",
+        "home": "Start",
+        "profile": {
+            "title": "Twój profil",
+            "name": "Twoje imię",
+            "nameHint": "Widoczne na stronie Twojego wyzwania.",
+            "avatar": "Wybierz awatar",
+            "avatarInitial": "Użyj mojego inicjału",
+            "avatarN": "Awatar {n}",
+            "reason": "Dlaczego podejmujesz wyzwanie?",
+            "reasonHint": "Opcjonalnie. Napisz sponsorom, co ono dla Ciebie znaczy.",
+            "save": "Zapisz",
+            "cancel": "Anuluj",
+            "edit": "Edytuj profil",
+            "add": "Dodaj imię i awatar"
+        },
+        "account": {
+            "needed": "Zaloguj się lub załóż konto, aby wziąć udział.",
+            "signIn": "Zaloguj się",
+            "register": "Załóż konto",
+            "haveAccount": "Masz już konto?",
+            "noAccount": "Jesteś tu nowy?",
+            "email": "E-mail",
+            "password": "Hasło",
+            "signedInAs": "Zalogowano jako {email}",
+            "signOut": "Wyloguj się",
+            "errors": {
+                "auth/invalid-credential": "Ten e-mail i hasło nie pasują do żadnego konta.",
+                "auth/email-already-in-use": "Konto z tym adresem już istnieje. Zaloguj się.",
+                "auth/weak-password": "Hasło musi mieć co najmniej 6 znaków.",
+                "auth/invalid-email": "To nie wygląda na adres e-mail.",
+                "auth/too-many-requests": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
+                "default": "Coś poszło nie tak. Spróbuj ponownie."
+            }
+        }
     }
 }

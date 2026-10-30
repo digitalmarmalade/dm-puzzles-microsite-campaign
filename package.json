@@ -10,7 +10,8 @@
         "tutorials": "node tutorials/crossword/build.js && node tutorials/sudoku/build.js && node tutorials/huedoku/build.js && node tutorials/takuzu/build.js && node tutorials/traintracks/build.js && node tutorials/gridfill/build.js && node tutorials/headcoach/build.js && node tutorials/guessword/build.js && node tutorials/wordwheel/build.js && node tutorials/wordsearch/build.js && node tutorials/codeword/build.js",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "test:rules": "firebase emulators:exec --only firestore --project demo-campaigns \"vitest run tests/rules\""
+        "test:rules": "firebase emulators:exec --only firestore --project demo-campaigns \"vitest run tests/rules\"",
+        "test": "vitest run tests/unit"
     },
     "dependencies": {
         "@nuxtjs/i18n": "^10.4.0",

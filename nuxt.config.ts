@@ -1,12 +1,37 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {writeFileSync} from 'node:fs'
+import {readdirSync, readFileSync, watch, writeFileSync} from 'node:fs'
 import {join} from 'node:path'
 
 const BUILD_VERSION = process.env.GIT_COMMIT || Date.now().toString()
-const SITE_URL = process.env.NUXT_PUBLIC_SITE_URL || 'https://games.stickypuzzles.com'
-const SITE_NAME = 'Sticky Puzzles'
-const SITE_DESCRIPTION = 'A daily puzzle fix from Digital Marmalade.'
-const OG_IMAGE = `${SITE_URL}/og-default.png`
+
+const CAMPAIGN_ERRORS = []
+const CAMPAIGNS = readdirSync('campaigns', {withFileTypes: true})
+    .filter((d) => d.isDirectory())
+    .flatMap((d) => {
+        const file = join('campaigns', d.name, 'campaign.json')
+        try {
+            const {id, hosts = []} = JSON.parse(readFileSync(file, 'utf8'))
+            return [{id, hosts}]
+        } catch (e) {
+            CAMPAIGN_ERRORS.push(`${file}: ${e.message}`)
+            return []
+        }
+    })
+
+function campaignFiles(_options, nuxt) {
+    for (const error of CAMPAIGN_ERRORS) {
+        if (!nuxt.options.dev) throw new Error(error)
+        console.warn(`Skipping a campaign: ${error}`)
+    }
+    if (!nuxt.options.dev) return
+    let timer = null
+    const watcher = watch('campaigns', {recursive: true}, (_event, file) => {
+        if (!file?.endsWith('campaign.json')) return
+        clearTimeout(timer)
+        timer = setTimeout(() => nuxt.callHook('restart'), 300)
+    })
+    nuxt.hook('close', () => watcher.close())
+}
 
 //  Every language the site can be built with.
 const ALL_LOCALES = [
@@ -76,7 +101,7 @@ export default defineNuxtConfig({
             pathPrefix: false,
         },
     ],
-    modules: ['@pinia/nuxt', '@nuxtjs/i18n'],
+    modules: ['@pinia/nuxt', '@nuxtjs/i18n', campaignFiles],
     i18n: {
         defaultLocale: LOCALES[0].code,
         strategy: 'prefix_except_default',
@@ -90,7 +115,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             buildVersion: BUILD_VERSION,
-            archiveFile: process.env.DM_ARCHIVE_FILE || '/archive.json',
+            campaigns: CAMPAIGNS,
             firebaseConfigFile: process.env.FIREBASE_CONFIG_FILE,
             firebaseConfig: {
                 apiKey: process.env.FIREBASE_API_KEY,
@@ -102,65 +127,12 @@ export default defineNuxtConfig({
                 appId: process.env.FIREBASE_APP_ID,
                 measurementId: process.env.FIREBASE_MEASUREMENT_ID,
             },
-
-            //  Per-deploy feature toggles. Override with NUXT_PUBLIC_FEATURES_* env vars.
-
-            features: {
-                requireAccount: true,
-                account: true,
-                friends: true,
-                achievements: true,
-                stats: true,
-                challenges: true,
-                streakFreeze: true,
-                changelog: false,
-                levelNudge: false,
-                installPrompt: true,
-            },
         },
     },
     app: {
         baseURL: '/',
         cdnURL : '/',
         buildAssetsDir: 'assets/',
-        head: {
-            title: SITE_NAME,
-            titleTemplate: `%s · ${SITE_NAME}`,
-            link: [
-                {
-                    rel: 'manifest',
-                    href: '/webmanifest.json',
-                },
-                {
-                    rel: 'apple-touch-icon',
-                    href: '/img/web-app-manifest-192x192.png',
-                },
-            ],
-            meta: [
-                {name: 'description', content: SITE_DESCRIPTION},
-                {property: 'og:type', content: 'website'},
-                {property: 'og:site_name', content: SITE_NAME},
-                {property: 'og:title', content: SITE_NAME},
-                {property: 'og:description', content: SITE_DESCRIPTION},
-                {property: 'og:url', content: SITE_URL},
-                {property: 'og:image', content: OG_IMAGE},
-                {property: 'og:image:width', content: '1200'},
-                {property: 'og:image:height', content: '630'},
-                {property: 'og:image:alt', content: SITE_NAME},
-                {name: 'twitter:card', content: 'summary_large_image'},
-                {name: 'twitter:title', content: SITE_NAME},
-                {name: 'twitter:description', content: SITE_DESCRIPTION},
-                {name: 'twitter:image', content: OG_IMAGE},
-            ],
-            script: [
-                //  Apply the saved light/dark override before first paint so the
-                //  loading splash matches the theme instead of flashing the OS default.
-                {
-                    innerHTML: `try{var t=localStorage.getItem('sp-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme-status',t)}catch(e){}`,
-                    tagPosition: 'head',
-                },
-            ],
-        },
     },
     vite: {
         base: '/',

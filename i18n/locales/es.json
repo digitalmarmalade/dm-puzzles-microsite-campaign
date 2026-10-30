@@ -136,7 +136,6 @@
         "title": "Crea tu perfil de jugador",
         "achievements": "Logros que te esperan",
         "signIn": "Inicia sesión para seguir tus estadísticas y conservar tu racha y tu configuración en todos tus dispositivos.",
-        "play": "Jugar a los juegos de hoy",
         "body": "Juega unos cuantos juegos y aquí irán apareciendo tus estadísticas, rachas y perfil de jugador."
     },
     "guide": {
@@ -219,7 +218,6 @@
     "announcement": {
         "label": "Nuevo puzle: {name}",
         "kicker": "Nuevo puzle",
-        "play": "Jugar ahora",
         "learn": "Aprende a jugar",
         "dismiss": "Cerrar",
         "body": {
@@ -735,7 +733,6 @@
         "progress": "{current} de {target}",
         "join": "Aceptar",
         "notNow": "Ahora no",
-        "play": "Jugar",
         "leave": "Abandonar reto",
         "retry": "Reintentar",
         "pickNew": "Elegir otro",
@@ -1271,7 +1268,6 @@
         "open": "Acerca de {name}",
         "videoComingSoon": "Vista previa del vídeo próximamente",
         "playTime": "Unos {mins} min",
-        "play": "Jugar",
         "playLatest": "Jugar el último"
     },
     "puzzleDescription": {
@@ -1319,12 +1315,10 @@
         "consonants": "Consonantes",
         "vowels": "Vocales",
         "count": "{n} de {max}",
-        "play": "Jugar",
         "skip": "Jugar sin letras de ayuda"
     },
     "cover": {
         "number": "N.º {number}",
-        "play": "Jugar",
         "includedIn": "Cuenta para el reto | Cuenta para los retos",
         "lastTimeOf": "La última vez · {name}",
         "tutorials": "Tutoriales",
@@ -1588,5 +1582,75 @@
         "empty": "Nada todavía: juega unos cuantos puzles y empezaremos a adaptar la web a ti.",
         "allRemoved": "Nada que mostrar: has eliminado todo lo que habíamos supuesto.",
         "restore": "Recuperar {count} elemento eliminado | Recuperar {count} elementos eliminados"
+    },
+    "campaign": {
+        "loading": "Cargando…",
+        "notFound": "Aquí no hay nada.",
+        "devIndex": "Campañas en esta compilación",
+        "upcoming": "Empieza el {date}.",
+        "ended": "Esta campaña ha terminado.",
+        "pickTrack": "Elige tu reto",
+        "start": "Empezar",
+        "startTrack": "Empezar {name}",
+        "dayN": "Día {day}",
+        "back": "Atrás",
+        "backTo": "Volver a {name}",
+        "beforeStart": "Tu primer puzle se desbloquea el {date}.",
+        "states": {
+            "locked": "Bloqueado",
+            "today": "Hoy",
+            "catchup": "Perdido, aún se puede jugar",
+            "missed": "Perdido",
+            "done": "Hecho",
+            "late": "Hecho tarde"
+        },
+        "wellDone": "¡Bien hecho!",
+        "completedDay": "Has completado el día {day} en ",
+        "keepTrying": "¡Sigue intentándolo!",
+        "notQuite": "Todavía no está del todo bien.",
+        "previewing": "Vista previa como {date}. El progreso solo se guarda en esta pestaña.",
+        "stopPreview": "Salir de la vista previa",
+        "lateBadge": "Tarde",
+        "namedChallenge": "El reto de {name}",
+        "yourChallenge": "Tu reto",
+        "daysCompleted": "Días completados",
+        "raisedOf": "{raised} de {target}",
+        "raised": "Recaudado",
+        "sponsors": "Patrocinadores",
+        "sponsor": "Patrocinar",
+        "home": "Inicio",
+        "profile": {
+            "title": "Tu perfil",
+            "name": "Tu nombre",
+            "nameHint": "Se muestra en la página de tu reto.",
+            "avatar": "Elige un avatar",
+            "avatarInitial": "Usar mi inicial",
+            "avatarN": "Avatar {n}",
+            "reason": "¿Por qué aceptas el reto?",
+            "reasonHint": "Opcional. Cuéntales a tus patrocinadores lo que significa para ti.",
+            "save": "Guardar",
+            "cancel": "Cancelar",
+            "edit": "Editar perfil",
+            "add": "Añade tu nombre y avatar"
+        },
+        "account": {
+            "needed": "Inicia sesión o crea una cuenta para participar.",
+            "signIn": "Iniciar sesión",
+            "register": "Crear cuenta",
+            "haveAccount": "¿Ya tienes una cuenta?",
+            "noAccount": "¿Eres nuevo?",
+            "email": "Correo electrónico",
+            "password": "Contraseña",
+            "signedInAs": "Sesión iniciada como {email}",
+            "signOut": "Cerrar sesión",
+            "errors": {
+                "auth/invalid-credential": "Ese correo y esa contraseña no coinciden con ninguna cuenta.",
+                "auth/email-already-in-use": "Ya hay una cuenta con ese correo. Inicia sesión.",
+                "auth/weak-password": "Usa al menos 6 caracteres para tu contraseña.",
+                "auth/invalid-email": "Eso no parece un correo electrónico.",
+                "auth/too-many-requests": "Demasiados intentos. Espera un momento y vuelve a intentarlo.",
+                "default": "Algo ha fallado. Inténtalo de nuevo."
+            }
+        }
     }
 }

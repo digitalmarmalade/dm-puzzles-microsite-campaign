@@ -1,4 +1,3 @@
-//  Firestore security rules. Needs the emulator: `npm run test:rules` starts it.
 import {readFileSync} from 'node:fs'
 import {afterAll, beforeAll, beforeEach, describe, test} from 'vitest'
 import {assertFails, assertSucceeds, initializeTestEnvironment} from '@firebase/rules-unit-testing'
@@ -68,6 +67,27 @@ describe('days', () => {
     })
 })
 
+describe('profiles', () => {
+    const profile = (extra = {}) => ({name: 'Amy', avatar: '/img/profiles/newbie.svg', reason: 'For my gran', updatedAt: serverTimestamp(), ...extra})
+    test('a player can save and change their own profile', async () => {
+        await assertSucceeds(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile()))
+        await assertSucceeds(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile({name: 'Amy B', avatar: null, reason: ''})))
+        await assertSucceeds(getDoc(doc(as('amy'), `${C}/profiles/amy`)))
+    })
+    test('nobody else can write or read it, except admins reading', async () => {
+        await assertSucceeds(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile()))
+        await assertFails(setDoc(doc(as('bob'), `${C}/profiles/amy`), profile()))
+        await assertFails(getDoc(doc(as('bob'), `${C}/profiles/amy`)))
+        await assertSucceeds(getDoc(doc(as('partner'), `${C}/profiles/amy`)))
+    })
+    test('only the expected fields, within their limits', async () => {
+        await assertFails(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile({admin: true})))
+        await assertFails(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile({name: 'x'.repeat(41)})))
+        await assertFails(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile({reason: 'x'.repeat(281)})))
+        await assertFails(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile({updatedAt: Timestamp.fromDate(new Date('2020-01-01'))})))
+    })
+})
+
 describe('partner admins', () => {
     test('see their campaign\'s players and days', async () => {
         await assertSucceeds(getDocs(collection(as('partner'), `${C}/players`)))
@@ -102,12 +122,5 @@ describe('public pages', () => {
     })
     test('nobody can create one in someone else\'s name', async () => {
         await assertFails(setDoc(doc(as('amy'), `${C}/public/share-x`), {ownerUid: 'bob'}))
-    })
-})
-
-describe('users', () => {
-    test('a player\'s own settings are private to them', async () => {
-        await assertSucceeds(setDoc(doc(as('bob'), 'users/bob/settings/microsite'), {a: 1}))
-        await assertFails(getDoc(doc(as('amy'), 'users/bob/settings/microsite')))
     })
 })

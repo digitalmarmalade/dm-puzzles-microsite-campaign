@@ -136,7 +136,6 @@
         "title": "Créez votre profil de joueur",
         "achievements": "Des succès vous attendent",
         "signIn": "Connectez-vous pour suivre vos statistiques et garder votre série et vos réglages sur tous vos appareils.",
-        "play": "Jouer aux jeux du jour",
         "body": "Jouez à quelques jeux et vos statistiques, vos séries et votre profil de joueur apparaîtront ici."
     },
     "guide": {
@@ -219,7 +218,6 @@
     "announcement": {
         "label": "Nouveau puzzle : {name}",
         "kicker": "Nouveau puzzle",
-        "play": "Jouer",
         "learn": "Apprendre à jouer",
         "dismiss": "Fermer",
         "body": {
@@ -735,7 +733,6 @@
         "progress": "{current} sur {target}",
         "join": "Relever",
         "notNow": "Pas maintenant",
-        "play": "Jouer",
         "leave": "Quitter le défi",
         "retry": "Réessayer",
         "pickNew": "En choisir un",
@@ -1271,7 +1268,6 @@
         "open": "À propos de {name}",
         "videoComingSoon": "Aperçu vidéo bientôt disponible",
         "playTime": "Environ {mins} min",
-        "play": "Jouer",
         "playLatest": "Jouer le dernier"
     },
     "puzzleDescription": {
@@ -1319,12 +1315,10 @@
         "consonants": "Consonnes",
         "vowels": "Voyelles",
         "count": "{n} sur {max}",
-        "play": "Jouer",
         "skip": "Jouer sans lettres d'aide"
     },
     "cover": {
         "number": "N° {number}",
-        "play": "Jouer",
         "includedIn": "Compte pour un défi | Compte pour des défis",
         "lastTimeOf": "La dernière fois · {name}",
         "tutorials": "Tutoriels",
@@ -1588,5 +1582,75 @@
         "empty": "Rien pour l'instant — jouez à quelques puzzles et nous commencerons à adapter le site pour vous.",
         "allRemoved": "Rien à afficher — vous avez supprimé tout ce que nous avions supposé.",
         "restore": "Rétablir {count} élément supprimé | Rétablir {count} éléments supprimés"
+    },
+    "campaign": {
+        "loading": "Chargement…",
+        "notFound": "Il n'y a rien ici.",
+        "devIndex": "Campagnes de cette version",
+        "upcoming": "Commence le {date}.",
+        "ended": "Cette campagne est terminée.",
+        "pickTrack": "Choisissez votre défi",
+        "start": "Commencer",
+        "startTrack": "Commencer {name}",
+        "dayN": "Jour {day}",
+        "back": "Retour",
+        "backTo": "Retour à {name}",
+        "beforeStart": "Votre premier puzzle se débloque le {date}.",
+        "states": {
+            "locked": "Verrouillé",
+            "today": "Aujourd'hui",
+            "catchup": "Manqué, encore jouable",
+            "missed": "Manqué",
+            "done": "Terminé",
+            "late": "Terminé en retard"
+        },
+        "wellDone": "Bravo !",
+        "completedDay": "Vous avez terminé le jour {day} en ",
+        "keepTrying": "Continuez !",
+        "notQuite": "Ce n'est pas encore tout à fait ça.",
+        "previewing": "Aperçu au {date}. La progression n'est conservée que dans cet onglet.",
+        "stopPreview": "Arrêter l'aperçu",
+        "lateBadge": "Retard",
+        "namedChallenge": "Le défi de {name}",
+        "yourChallenge": "Votre défi",
+        "daysCompleted": "Jours terminés",
+        "raisedOf": "{raised} sur {target}",
+        "raised": "Collectés",
+        "sponsors": "Parrains",
+        "sponsor": "Parrainer",
+        "home": "Accueil",
+        "profile": {
+            "title": "Votre profil",
+            "name": "Votre nom",
+            "nameHint": "Affiché sur la page de votre défi.",
+            "avatar": "Choisissez un avatar",
+            "avatarInitial": "Utiliser mon initiale",
+            "avatarN": "Avatar {n}",
+            "reason": "Pourquoi relevez-vous ce défi ?",
+            "reasonHint": "Facultatif. Dites à vos parrains ce qu'il représente pour vous.",
+            "save": "Enregistrer",
+            "cancel": "Annuler",
+            "edit": "Modifier le profil",
+            "add": "Ajoutez votre nom et votre avatar"
+        },
+        "account": {
+            "needed": "Connectez-vous ou créez un compte pour participer.",
+            "signIn": "Se connecter",
+            "register": "Créer un compte",
+            "haveAccount": "Vous avez déjà un compte ?",
+            "noAccount": "Nouveau ici ?",
+            "email": "E-mail",
+            "password": "Mot de passe",
+            "signedInAs": "Connecté en tant que {email}",
+            "signOut": "Se déconnecter",
+            "errors": {
+                "auth/invalid-credential": "Cet e-mail et ce mot de passe ne correspondent à aucun compte.",
+                "auth/email-already-in-use": "Un compte existe déjà avec cet e-mail. Connectez-vous plutôt.",
+                "auth/weak-password": "Utilisez au moins 6 caractères pour votre mot de passe.",
+                "auth/invalid-email": "Cela ne ressemble pas à une adresse e-mail.",
+                "auth/too-many-requests": "Trop de tentatives. Patientez un instant et réessayez.",
+                "default": "Un problème est survenu. Veuillez réessayer."
+            }
+        }
     }
 }

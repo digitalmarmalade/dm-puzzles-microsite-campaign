@@ -1,1 +1,1 @@
-{"version":"0.0.1","configurations":[{"name":"dev-no-firebase","runtimeExecutable":"npx","runtimeArgs":["nuxt","dev","--dotenv",".env.local","--port","3125"],"port":3125,"env":{"NUXT_PUBLIC_FEATURES_REQUIRE_ACCOUNT":"false","NUXT_PUBLIC_FEATURES_FRIENDS":"false"}}]}
+{"version":"0.0.1","configurations":[{"name":"dev","runtimeExecutable":"npx","runtimeArgs":["nuxt","dev","--dotenv",".env.local","--port","3125"],"port":3125}]}

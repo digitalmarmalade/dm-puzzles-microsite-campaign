@@ -136,7 +136,6 @@
         "title": "Erstelle dein Rätselprofil",
         "achievements": "Diese Erfolge warten auf dich",
         "signIn": "Melde dich an, um deine Statistiken zu verfolgen und deine Serie und Einstellungen auf jedem Gerät zu behalten.",
-        "play": "Die Rätsel von heute spielen",
         "body": "Spiel ein paar Rätsel, dann füllen sich hier deine Statistiken, Serien und dein Spielerprofil."
     },
     "guide": {
@@ -219,7 +218,6 @@
     "announcement": {
         "label": "Neues Rätsel: {name}",
         "kicker": "Neues Rätsel",
-        "play": "Jetzt spielen",
         "learn": "So wird gespielt",
         "dismiss": "Schließen",
         "body": {
@@ -735,7 +733,6 @@
         "progress": "{current} von {target}",
         "join": "Annehmen",
         "notNow": "Nicht jetzt",
-        "play": "Spielen",
         "leave": "Herausforderung verlassen",
         "retry": "Nochmal versuchen",
         "pickNew": "Neue wählen",
@@ -1270,7 +1267,6 @@
         "open": "Über {name}",
         "videoComingSoon": "Videovorschau folgt in Kürze",
         "playTime": "Etwa {mins} Min",
-        "play": "Spielen",
         "playLatest": "Neuestes spielen"
     },
     "puzzleDescription": {
@@ -1318,12 +1314,10 @@
         "consonants": "Konsonanten",
         "vowels": "Vokale",
         "count": "{n} von {max}",
-        "play": "Spielen",
         "skip": "Ohne Hilfsbuchstaben spielen"
     },
     "cover": {
         "number": "Nr. {number}",
-        "play": "Spielen",
         "includedIn": "Zählt für Herausforderung | Zählt für Herausforderungen",
         "lastTimeOf": "Letztes Mal · {name}",
         "tutorials": "Tutorials",
@@ -1587,5 +1581,75 @@
         "empty": "Noch nichts – spiel ein paar Rätsel, dann passen wir die Seite an dich an.",
         "allRemoved": "Nichts anzuzeigen – du hast alles entfernt, was wir angenommen hatten.",
         "restore": "{count} entfernten Eintrag wiederherstellen | {count} entfernte Einträge wiederherstellen"
+    },
+    "campaign": {
+        "loading": "Wird geladen…",
+        "notFound": "Hier gibt es nichts.",
+        "devIndex": "Kampagnen in diesem Build",
+        "upcoming": "Beginnt am {date}.",
+        "ended": "Diese Kampagne ist beendet.",
+        "pickTrack": "Wähle deine Challenge",
+        "start": "Starten",
+        "startTrack": "{name} starten",
+        "dayN": "Tag {day}",
+        "back": "Zurück",
+        "backTo": "Zurück zu {name}",
+        "beforeStart": "Dein erstes Rätsel wird am {date} freigeschaltet.",
+        "states": {
+            "locked": "Gesperrt",
+            "today": "Heute",
+            "catchup": "Verpasst, noch spielbar",
+            "missed": "Verpasst",
+            "done": "Erledigt",
+            "late": "Verspätet erledigt"
+        },
+        "wellDone": "Gut gemacht!",
+        "completedDay": "Du hast Tag {day} geschafft in ",
+        "keepTrying": "Weiter so!",
+        "notQuite": "Das stimmt noch nicht ganz.",
+        "previewing": "Vorschau für den {date}. Der Fortschritt bleibt nur in diesem Tab.",
+        "stopPreview": "Vorschau beenden",
+        "lateBadge": "Spät",
+        "namedChallenge": "{name}s Challenge",
+        "yourChallenge": "Deine Challenge",
+        "daysCompleted": "Tage geschafft",
+        "raisedOf": "{raised} von {target}",
+        "raised": "Gesammelt",
+        "sponsors": "Sponsoren",
+        "sponsor": "Sponsern",
+        "home": "Start",
+        "profile": {
+            "title": "Dein Profil",
+            "name": "Dein Name",
+            "nameHint": "Wird auf deiner Challenge-Seite angezeigt.",
+            "avatar": "Wähle einen Avatar",
+            "avatarInitial": "Meinen Anfangsbuchstaben verwenden",
+            "avatarN": "Avatar {n}",
+            "reason": "Warum nimmst du die Challenge an?",
+            "reasonHint": "Optional. Erzähl deinen Unterstützern, was sie dir bedeutet.",
+            "save": "Speichern",
+            "cancel": "Abbrechen",
+            "edit": "Profil bearbeiten",
+            "add": "Name und Avatar hinzufügen"
+        },
+        "account": {
+            "needed": "Melde dich an oder erstelle ein Konto, um mitzumachen.",
+            "signIn": "Anmelden",
+            "register": "Konto erstellen",
+            "haveAccount": "Schon ein Konto?",
+            "noAccount": "Neu hier?",
+            "email": "E-Mail",
+            "password": "Passwort",
+            "signedInAs": "Angemeldet als {email}",
+            "signOut": "Abmelden",
+            "errors": {
+                "auth/invalid-credential": "E-Mail und Passwort passen zu keinem Konto.",
+                "auth/email-already-in-use": "Für diese E-Mail gibt es schon ein Konto. Melde dich stattdessen an.",
+                "auth/weak-password": "Verwende mindestens 6 Zeichen für dein Passwort.",
+                "auth/invalid-email": "Das sieht nicht wie eine E-Mail-Adresse aus.",
+                "auth/too-many-requests": "Zu viele Versuche. Bitte warte kurz und versuche es erneut.",
+                "default": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+            }
+        }
     }
 }

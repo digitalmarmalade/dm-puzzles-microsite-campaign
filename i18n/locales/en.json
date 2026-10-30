@@ -136,7 +136,6 @@
         "title": "Build Your Puzzle Profile",
         "achievements": "Achievements waiting for you",
         "signIn": "Sign in to track your stats and keep your streak and setup on every device.",
-        "play": "Play today's puzzles",
         "body": "Play a few puzzles and your stats, streaks and player profile will start to fill in here."
     },
     "guide": {
@@ -219,7 +218,6 @@
     "announcement": {
         "label": "New puzzle: {name}",
         "kicker": "New puzzle",
-        "play": "Play now",
         "learn": "Learn how to play",
         "dismiss": "Dismiss",
         "body": {
@@ -741,7 +739,6 @@
         "progress": "{current} of {target}",
         "join": "Join",
         "notNow": "Not now",
-        "play": "Play",
         "leave": "Leave challenge",
         "retry": "Try again",
         "pickNew": "Pick new",
@@ -1277,7 +1274,6 @@
         "open": "About {name}",
         "videoComingSoon": "Video preview coming soon",
         "playTime": "About {mins} min",
-        "play": "Play",
         "playLatest": "Play latest"
     },
     "puzzleDescription": {
@@ -1325,12 +1321,10 @@
         "consonants": "Consonants",
         "vowels": "Vowels",
         "count": "{n} of {max}",
-        "play": "Play",
         "skip": "Play without help letters"
     },
     "cover": {
         "number": "No {number}",
-        "play": "Play",
         "includedIn": "Included in challenge | Included in challenges",
         "lastTimeOf": "Last time · {name}",
         "tutorials": "Tutorials",
@@ -1594,5 +1588,75 @@
         "empty": "Nothing yet — play a few puzzles and we'll start tailoring the site to you.",
         "allRemoved": "Nothing to show — you've removed everything we'd assumed.",
         "restore": "Bring back {count} removed item | Bring back {count} removed items"
+    },
+    "campaign": {
+        "loading": "Loading…",
+        "notFound": "There's nothing here.",
+        "devIndex": "Campaigns in this build",
+        "upcoming": "Starts on {date}.",
+        "ended": "This campaign has ended.",
+        "pickTrack": "Choose your challenge",
+        "start": "Start",
+        "startTrack": "Start {name}",
+        "dayN": "Day {day}",
+        "back": "Back",
+        "backTo": "Back to {name}",
+        "beforeStart": "Your first puzzle unlocks on {date}.",
+        "states": {
+            "locked": "Locked",
+            "today": "Today",
+            "catchup": "Missed, can still be played",
+            "missed": "Missed",
+            "done": "Done",
+            "late": "Done late"
+        },
+        "wellDone": "Well done!",
+        "completedDay": "You completed day {day} in ",
+        "keepTrying": "Keep trying!",
+        "notQuite": "It's not quite right yet.",
+        "previewing": "Previewing as {date}. Progress is only kept in this tab.",
+        "stopPreview": "Stop previewing",
+        "lateBadge": "Late",
+        "namedChallenge": "{name}'s Challenge",
+        "yourChallenge": "Your Challenge",
+        "daysCompleted": "Days completed",
+        "raisedOf": "{raised} of {target}",
+        "raised": "Raised",
+        "sponsors": "Sponsors",
+        "sponsor": "Sponsor",
+        "home": "Home",
+        "profile": {
+            "title": "Your profile",
+            "name": "Your name",
+            "nameHint": "Shown on your challenge page.",
+            "avatar": "Pick an avatar",
+            "avatarInitial": "Use my initial",
+            "avatarN": "Avatar {n}",
+            "reason": "Why are you taking on the challenge?",
+            "reasonHint": "Optional. Tell your sponsors what it means to you.",
+            "save": "Save",
+            "cancel": "Cancel",
+            "edit": "Edit profile",
+            "add": "Add your name and avatar"
+        },
+        "account": {
+            "needed": "Sign in or create an account to take part.",
+            "signIn": "Sign in",
+            "register": "Create account",
+            "haveAccount": "Already have an account?",
+            "noAccount": "New here?",
+            "email": "Email",
+            "password": "Password",
+            "signedInAs": "Signed in as {email}",
+            "signOut": "Sign out",
+            "errors": {
+                "auth/invalid-credential": "That email and password don't match an account.",
+                "auth/email-already-in-use": "There's already an account with that email. Sign in instead.",
+                "auth/weak-password": "Use at least 6 characters for your password.",
+                "auth/invalid-email": "That doesn't look like an email address.",
+                "auth/too-many-requests": "Too many attempts. Please wait a moment and try again.",
+                "default": "Something went wrong. Please try again."
+            }
+        }
     }
 }

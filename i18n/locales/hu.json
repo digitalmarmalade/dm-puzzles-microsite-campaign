@@ -136,7 +136,6 @@
         "title": "Építsd fel a rejtvényprofilodat",
         "achievements": "Ezek a teljesítmények várnak rád",
         "signIn": "Jelentkezz be, hogy kövesd a statisztikádat, és a sorozatod meg a beállításaid minden eszközön megmaradjanak.",
-        "play": "A mai rejtvények",
         "body": "Játssz néhány rejtvényt, és itt megjelennek a statisztikáid, a sorozataid és a játékosprofilod."
     },
     "guide": {
@@ -219,7 +218,6 @@
     "announcement": {
         "label": "Új rejtvény: {name}",
         "kicker": "Új rejtvény",
-        "play": "Játék most",
         "learn": "Tanuld meg",
         "dismiss": "Bezárás",
         "body": {
@@ -735,7 +733,6 @@
         "progress": "{current} / {target}",
         "join": "Elfogadom",
         "notNow": "Most nem",
-        "play": "Játék",
         "leave": "Kilépés a kihívásból",
         "retry": "Újra",
         "pickNew": "Új választása",
@@ -1271,7 +1268,6 @@
         "open": "{name} – bemutatás",
         "videoComingSoon": "Videó előnézet hamarosan",
         "playTime": "Kb. {mins} perc",
-        "play": "Játék",
         "playLatest": "Legutóbbi játék"
     },
     "puzzleDescription": {
@@ -1319,12 +1315,10 @@
         "consonants": "Mássalhangzók",
         "vowels": "Magánhangzók",
         "count": "{n} / {max}",
-        "play": "Játék",
         "skip": "Játék segítő betűk nélkül"
     },
     "cover": {
         "number": "{number}. szám",
-        "play": "Játék",
         "includedIn": "Kihívás része | Kihívások része",
         "lastTimeOf": "Legutóbb · {name}",
         "tutorials": "Oktatóanyagok",
@@ -1588,5 +1582,75 @@
         "empty": "Még semmi – játssz néhány rejtvényt, és elkezdjük hozzád igazítani az oldalt.",
         "allRemoved": "Nincs mit mutatni – mindent töröltél, amit feltételeztünk.",
         "restore": "{count} törölt elem visszaállítása | {count} törölt elem visszaállítása"
+    },
+    "campaign": {
+        "loading": "Betöltés…",
+        "notFound": "Itt nincs semmi.",
+        "devIndex": "Kampányok ebben a buildben",
+        "upcoming": "Kezdés: {date}.",
+        "ended": "Ez a kampány véget ért.",
+        "pickTrack": "Válaszd ki a kihívásodat",
+        "start": "Kezdés",
+        "startTrack": "{name} indítása",
+        "dayN": "{day}. nap",
+        "back": "Vissza",
+        "backTo": "Vissza ide: {name}",
+        "beforeStart": "Az első rejtvényed {date} napon nyílik meg.",
+        "states": {
+            "locked": "Zárolva",
+            "today": "Ma",
+            "catchup": "Kimaradt, még játszható",
+            "missed": "Kimaradt",
+            "done": "Kész",
+            "late": "Késve kész"
+        },
+        "wellDone": "Szép munka!",
+        "completedDay": "A(z) {day}. napot teljesítetted ennyi idő alatt: ",
+        "keepTrying": "Próbáld tovább!",
+        "notQuite": "Még nem egészen jó.",
+        "previewing": "Előnézet: {date}. A haladás csak ezen a lapon marad meg.",
+        "stopPreview": "Előnézet leállítása",
+        "lateBadge": "Késve",
+        "namedChallenge": "{name} kihívása",
+        "yourChallenge": "A te kihívásod",
+        "daysCompleted": "Teljesített nap",
+        "raisedOf": "{raised} / {target}",
+        "raised": "Összegyűjtve",
+        "sponsors": "Támogató",
+        "sponsor": "Támogatom",
+        "home": "Kezdőlap",
+        "profile": {
+            "title": "Profilod",
+            "name": "Neved",
+            "nameHint": "A kihívásod oldalán jelenik meg.",
+            "avatar": "Válassz avatárt",
+            "avatarInitial": "A kezdőbetűm használata",
+            "avatarN": "{n}. avatár",
+            "reason": "Miért vállalod a kihívást?",
+            "reasonHint": "Nem kötelező. Mondd el a támogatóidnak, mit jelent számodra.",
+            "save": "Mentés",
+            "cancel": "Mégse",
+            "edit": "Profil szerkesztése",
+            "add": "Add meg a neved és az avatárod"
+        },
+        "account": {
+            "needed": "A részvételhez jelentkezz be vagy hozz létre fiókot.",
+            "signIn": "Bejelentkezés",
+            "register": "Fiók létrehozása",
+            "haveAccount": "Már van fiókod?",
+            "noAccount": "Új vagy itt?",
+            "email": "E-mail",
+            "password": "Jelszó",
+            "signedInAs": "Bejelentkezve: {email}",
+            "signOut": "Kijelentkezés",
+            "errors": {
+                "auth/invalid-credential": "Ez az e-mail és jelszó egyik fiókhoz sem tartozik.",
+                "auth/email-already-in-use": "Ezzel az e-maillel már van fiók. Jelentkezz be inkább.",
+                "auth/weak-password": "A jelszó legalább 6 karakter legyen.",
+                "auth/invalid-email": "Ez nem tűnik e-mail-címnek.",
+                "auth/too-many-requests": "Túl sok próbálkozás. Várj egy kicsit, és próbáld újra.",
+                "default": "Valami hiba történt. Próbáld újra."
+            }
+        }
     }
 }

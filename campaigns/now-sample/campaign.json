@@ -1,0 +1,233 @@
+{
+  "id": "now-sample",
+  "name": "Puzzle Now (sample)",
+  "hosts": [],
+  "timezone": "Europe/London",
+  "account": "optional",
+  "features": {
+    "friends": false
+  },
+  "schedule": {
+    "mode": "fixed",
+    "days": 24,
+    "start": "2026-10-30",
+    "late": {
+      "until": "2026-11-22"
+    }
+  },
+  "theme": {
+    "primary": "#b3262f",
+    "onPrimary": "#ffffff",
+    "background": "#fbf6ef",
+    "text": "#2a1414"
+  },
+  "text": {
+    "en": {
+      "title": "Puzzle Advent",
+      "tagline": "A puzzle behind every door, 1 to 24 December.",
+      "intro": "A new puzzle every day until Christmas Eve. Missed one? Catch up any time before 31 December.",
+      "finished": "All 24 doors opened. Merry Christmas!",
+      "perfect": "Every door on its day. Perfect!"
+    }
+  },
+  "tracks": [
+    {
+      "id": "main",
+      "name": "Advent",
+      "puzzles": [
+        {
+          "slug": "crossword-no-94",
+          "name": "Crossword No 94",
+          "variant": "Crossword",
+          "tag": "crossword",
+          "type": "crossword",
+          "url": "https://games.stickypuzzles.com/data/crossword/crossword-15/crossword-121073.json"
+        },
+        {
+          "slug": "sudoku-no-107-11",
+          "name": "Sudoku No 107",
+          "variant": "Sudoku",
+          "tag": "sudoku",
+          "type": "sudoku",
+          "url": "https://games.stickypuzzles.com/data/sudoku/sudoku-19/sudoku-121590.json"
+        },
+        {
+          "slug": "guessword-no-74",
+          "name": "GuessWord No 74",
+          "variant": "GuessWord",
+          "tag": "guessword",
+          "type": "guessword",
+          "url": "https://games.stickypuzzles.com/data/guessword/guessword/guessword-120361.json"
+        },
+        {
+          "slug": "takuzu-no-12",
+          "name": "Takuzu No 12",
+          "variant": "Takuzu",
+          "tag": "takuzu",
+          "type": "takuzu",
+          "url": "https://games.stickypuzzles.com/data/takuzu/takuzu/takuzu-121594.json"
+        },
+        {
+          "slug": "wordwheel-no-61",
+          "name": "WordWheel No 61",
+          "variant": "WordWheel",
+          "tag": "wordwheel",
+          "type": "polygon",
+          "url": "https://games.stickypuzzles.com/data/polygon/wordwheel-3/wordwheel-118389.json"
+        },
+        {
+          "slug": "train-tracks-no-23",
+          "name": "Train Tracks No 23",
+          "variant": "Train Tracks",
+          "tag": "train-tracks",
+          "type": "traintracks",
+          "url": "https://games.stickypuzzles.com/data/traintracks/train-tracks-2/train-tracks-121530.json"
+        },
+        {
+          "slug": "head-coach-no-107-9",
+          "name": "Head Coach No 107",
+          "variant": "Head Coach",
+          "tag": "head-coach",
+          "type": "headcoach",
+          "url": "https://games.stickypuzzles.com/data/headcoach/head-coach-10/head-coach-121593.json"
+        },
+        {
+          "slug": "gridfill-no-107-5",
+          "name": "GridFill No 107",
+          "variant": "GridFill",
+          "tag": "gridfill",
+          "type": "cellblocks",
+          "url": "https://games.stickypuzzles.com/data/cellblocks/gridfill-8/gridfill-121589.json"
+        },
+        {
+          "slug": "crossword-no-66",
+          "name": "Crossword No 66",
+          "variant": "Crossword",
+          "tag": "crossword",
+          "type": "crossword",
+          "url": "https://games.stickypuzzles.com/data/crossword/crossword-15/crossword-119040.json"
+        },
+        {
+          "slug": "sudoku-no-79-11",
+          "name": "Sudoku No 79",
+          "variant": "Sudoku",
+          "tag": "sudoku",
+          "type": "sudoku",
+          "url": "https://games.stickypuzzles.com/data/sudoku/sudoku-19/sudoku-120045.json"
+        },
+        {
+          "slug": "guessword-no-46",
+          "name": "GuessWord No 46",
+          "variant": "GuessWord",
+          "tag": "guessword",
+          "type": "guessword",
+          "url": "https://games.stickypuzzles.com/data/guessword/guessword/guessword-117956.json"
+        },
+        {
+          "slug": "takuzu-no-19",
+          "name": "Takuzu No 19",
+          "variant": "Takuzu",
+          "tag": "takuzu",
+          "type": "takuzu",
+          "url": "https://games.stickypuzzles.com/data/takuzu/takuzu/takuzu-121896.json"
+        },
+        {
+          "slug": "wordwheel-no-33",
+          "name": "WordWheel No 33",
+          "variant": "WordWheel",
+          "tag": "wordwheel",
+          "type": "polygon",
+          "url": "https://games.stickypuzzles.com/data/polygon/wordwheel-3/wordwheel-118361.json"
+        },
+        {
+          "slug": "train-tracks-no-30",
+          "name": "Train Tracks No 30",
+          "variant": "Train Tracks",
+          "tag": "train-tracks",
+          "type": "traintracks",
+          "url": "https://games.stickypuzzles.com/data/traintracks/train-tracks-2/train-tracks-121537.json"
+        },
+        {
+          "slug": "head-coach-no-79-9",
+          "name": "Head Coach No 79",
+          "variant": "Head Coach",
+          "tag": "head-coach",
+          "type": "headcoach",
+          "url": "https://games.stickypuzzles.com/data/headcoach/head-coach-10/head-coach-120048.json"
+        },
+        {
+          "slug": "gridfill-no-79-5",
+          "name": "GridFill No 79",
+          "variant": "GridFill",
+          "tag": "gridfill",
+          "type": "cellblocks",
+          "url": "https://games.stickypuzzles.com/data/cellblocks/gridfill-8/gridfill-120044.json"
+        },
+        {
+          "slug": "crossword-no-38",
+          "name": "Crossword No 38",
+          "variant": "Crossword",
+          "tag": "crossword",
+          "type": "crossword",
+          "url": "https://games.stickypuzzles.com/data/crossword/crossword-15/crossword-117616.json"
+        },
+        {
+          "slug": "sudoku-no-51-12",
+          "name": "Sudoku No 51",
+          "variant": "Sudoku",
+          "tag": "sudoku",
+          "type": "sudoku",
+          "url": "https://games.stickypuzzles.com/data/sudoku/sudoku-19/sudoku-118715.json"
+        },
+        {
+          "slug": "guessword-no-18",
+          "name": "GuessWord No 18",
+          "variant": "GuessWord",
+          "tag": "guessword",
+          "type": "guessword",
+          "url": "https://games.stickypuzzles.com/data/guessword/guessword/guessword-117928.json"
+        },
+        {
+          "slug": "takuzu-no-26",
+          "name": "Takuzu No 26",
+          "variant": "Takuzu",
+          "tag": "takuzu",
+          "type": "takuzu",
+          "url": "https://games.stickypuzzles.com/data/takuzu/takuzu/takuzu-122268.json"
+        },
+        {
+          "slug": "wordwheel-no-5",
+          "name": "WordWheel No 5",
+          "variant": "WordWheel",
+          "tag": "wordwheel",
+          "type": "polygon",
+          "url": "https://games.stickypuzzles.com/data/polygon/wordwheel-3/wordwheel-118333.json"
+        },
+        {
+          "slug": "train-tracks-no-2",
+          "name": "Train Tracks No 2",
+          "variant": "Train Tracks",
+          "tag": "train-tracks",
+          "type": "traintracks",
+          "url": "https://games.stickypuzzles.com/data/traintracks/train-tracks-2/train-tracks-120472.json"
+        },
+        {
+          "slug": "head-coach-no-51-8",
+          "name": "Head Coach No 51",
+          "variant": "Head Coach",
+          "tag": "head-coach",
+          "type": "headcoach",
+          "url": "https://games.stickypuzzles.com/data/headcoach/head-coach-10/head-coach-118718.json"
+        },
+        {
+          "slug": "gridfill-no-51-6",
+          "name": "GridFill No 51",
+          "variant": "GridFill",
+          "tag": "gridfill",
+          "type": "cellblocks",
+          "url": "https://games.stickypuzzles.com/data/cellblocks/gridfill-8/gridfill-118714.json"
+        }
+      ]
+    }
+  ]
+}
