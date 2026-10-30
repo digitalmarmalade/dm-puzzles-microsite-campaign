@@ -1623,6 +1623,7 @@
             "title": "Tu perfil",
             "name": "Tu nombre",
             "nameHint": "Se muestra en la página de tu reto.",
+            "pageAddress": "La página de tu reto",
             "avatar": "Elige un avatar",
             "avatarInitial": "Usar mi inicial",
             "avatarN": "Avatar {n}",
@@ -1631,16 +1632,7 @@
             "save": "Guardar",
             "cancel": "Cancelar",
             "edit": "Editar perfil",
-            "add": "Añade tu nombre y avatar",
-            "handle": "Dirección de tu página",
-            "handleHint": "Tu página pública del reto, para que te sigan patrocinadores y amigos. Letras, números y guiones.",
-            "handleTry": "Prueba {handle}",
-            "handleStatus": {
-                "checking": "Comprobando…",
-                "free": "Esta dirección está libre",
-                "taken": "Esta dirección ya está en uso",
-                "invalid": "Esta dirección no se puede usar. Prueba con letras, números y guiones."
-            }
+            "add": "Añade tu nombre y avatar"
         },
         "public": {
             "createOwn": "Crea tu propio reto",
@@ -1674,8 +1666,68 @@
             "endedTitle": "Tu reto ha terminado",
             "endedText": "Has completado {completed} de {total} puzles."
         },
+        "readyTitle": "Cuando quieras",
+        "signup": {
+            "title": "Empieza tu reto de puzles gratis",
+            "step": "Paso {step} de {total}",
+            "next": "Siguiente",
+            "personaliseTitle": "¡Bienvenido, {name}! Personaliza tu página",
+            "personaliseIntro": "Elige un avatar y cuenta a tus patrocinadores por qué participas. Puedes cambiarlos cuando quieras.",
+            "personaliseShort": "Personaliza tu página",
+            "finish": "Guardar y continuar"
+        },
+        "explainer": {
+            "labels": {
+                "when": "Cuándo",
+                "catchUp": "Recuperar días",
+                "joining": "Inscripción"
+            },
+            "howItWorks": "Cómo funciona",
+            "details": "Los detalles",
+            "tracks": "Elige entre {n} retos",
+            "rolling": "Empieza cualquier día del {from} al {until} y juega durante {days} días",
+            "fixed": "Del {from} al {to}",
+            "lateAnytime": "¿Te saltaste un día? Recupéralo cuando quieras",
+            "lateDays": "¿Te saltaste un día? Tienes {n} días para recuperarlo",
+            "lateUntil": "¿Te saltaste un día? Recupéralo hasta el {date}",
+            "lateNever": "Cada puzle solo se puede jugar en su día",
+            "accountRequired": "Gratis: solo tu nombre, tu correo y una contraseña",
+            "accountOptional": "No necesitas cuenta para jugar",
+            "steps": {
+                "signUp": {
+                    "title": "Regístrate",
+                    "body": "Dinos tu nombre y crea la página de tu reto."
+                },
+                "start": {
+                    "title": "Empieza ya",
+                    "body": "Empieza enseguida, sin registrarte."
+                },
+                "play": {
+                    "title": "Un puzle al día",
+                    "body": "{days} puzles, uno cada día durante {days} días."
+                },
+                "share": {
+                    "title": "Comparte tu página",
+                    "body": "Amigos y patrocinadores pueden seguir tu progreso."
+                },
+                "finish": {
+                    "title": "Termina a lo grande",
+                    "body": "Completa los {days} para desbloquear tu final y una imagen para compartir."
+                }
+            }
+        },
+        "footer": {
+            "copyright": "© {year} {name}",
+            "poweredBy": "Con la tecnología de {brand}"
+        },
+        "welcome": {
+            "yourDetails": "Tus datos",
+            "challengeHint": "Todos los participantes de un reto reciben los mismos {days} puzles, uno al día.",
+            "avatarHint": "Se muestra junto a tu nombre en tu página.",
+            "previewHint": "Así verán tu página tus amigos y patrocinadores.",
+            "previewPlaceholder": "Elige tu reto arriba"
+        },
         "account": {
-            "needed": "Inicia sesión o crea una cuenta para participar.",
             "signIn": "Iniciar sesión",
             "register": "Crear cuenta",
             "haveAccount": "¿Ya tienes una cuenta?",
@@ -1690,7 +1742,6 @@
                 "auth/weak-password": "Usa al menos 6 caracteres para tu contraseña.",
                 "auth/invalid-email": "Eso no parece un correo electrónico.",
                 "auth/too-many-requests": "Demasiados intentos. Espera un momento y vuelve a intentarlo.",
-                "permission-denied": "Alguien acaba de coger esa dirección. Elige otra.",
                 "default": "Algo ha fallado. Inténtalo de nuevo."
             }
         }

@@ -1623,6 +1623,7 @@
             "title": "Twój profil",
             "name": "Twoje imię",
             "nameHint": "Widoczne na stronie Twojego wyzwania.",
+            "pageAddress": "Strona Twojego wyzwania",
             "avatar": "Wybierz awatar",
             "avatarInitial": "Użyj mojego inicjału",
             "avatarN": "Awatar {n}",
@@ -1631,16 +1632,7 @@
             "save": "Zapisz",
             "cancel": "Anuluj",
             "edit": "Edytuj profil",
-            "add": "Dodaj imię i awatar",
-            "handle": "Adres Twojej strony",
-            "handleHint": "Twoja publiczna strona wyzwania, którą mogą śledzić sponsorzy i znajomi. Litery, cyfry i myślniki.",
-            "handleTry": "Spróbuj {handle}",
-            "handleStatus": {
-                "checking": "Sprawdzanie…",
-                "free": "Ten adres jest wolny",
-                "taken": "Ten adres jest już zajęty",
-                "invalid": "Tego adresu nie można użyć. Spróbuj liter, cyfr i myślników."
-            }
+            "add": "Dodaj imię i awatar"
         },
         "public": {
             "createOwn": "Stwórz własne wyzwanie",
@@ -1674,8 +1666,68 @@
             "endedTitle": "Twoje wyzwanie dobiegło końca",
             "endedText": "Ukończono {completed} z {total} łamigłówek."
         },
+        "readyTitle": "Gotowe, kiedy Ty",
+        "signup": {
+            "title": "Rozpocznij darmowe wyzwanie z łamigłówkami",
+            "step": "Krok {step} z {total}",
+            "next": "Dalej",
+            "personaliseTitle": "Witaj, {name}! Dopasuj swoją stronę",
+            "personaliseIntro": "Wybierz awatar i napisz sponsorom, dlaczego bierzesz udział. Możesz je zmienić w każdej chwili.",
+            "personaliseShort": "Dopasuj swoją stronę",
+            "finish": "Zapisz i kontynuuj"
+        },
+        "explainer": {
+            "labels": {
+                "when": "Kiedy",
+                "catchUp": "Nadrabianie",
+                "joining": "Dołączenie"
+            },
+            "howItWorks": "Jak to działa",
+            "details": "Szczegóły",
+            "tracks": "Wybierz jedno z {n} wyzwań",
+            "rolling": "Zacznij dowolnego dnia od {from} do {until}, a potem graj przez {days} dni",
+            "fixed": "Od {from} do {to}",
+            "lateAnytime": "Opuszczony dzień? Nadrób go, kiedy chcesz",
+            "lateDays": "Opuszczony dzień? Masz {n} dni na nadrobienie",
+            "lateUntil": "Opuszczony dzień? Nadrób do {date}",
+            "lateNever": "Każdą łamigłówkę można rozwiązać tylko w jej dniu",
+            "accountRequired": "Za darmo: tylko imię, e-mail i hasło",
+            "accountOptional": "Do gry nie potrzebujesz konta",
+            "steps": {
+                "signUp": {
+                    "title": "Zarejestruj się",
+                    "body": "Podaj swoje imię i załóż stronę wyzwania."
+                },
+                "start": {
+                    "title": "Zaczynaj",
+                    "body": "Zacznij od razu, bez rejestracji."
+                },
+                "play": {
+                    "title": "Łamigłówka dziennie",
+                    "body": "{days} łamigłówek, jedna dziennie przez {days} dni."
+                },
+                "share": {
+                    "title": "Udostępnij stronę",
+                    "body": "Znajomi i sponsorzy mogą śledzić Twoje postępy."
+                },
+                "finish": {
+                    "title": "Wielki finał",
+                    "body": "Ukończ wszystkie {days}, by odblokować finał i obraz do udostępnienia."
+                }
+            }
+        },
+        "footer": {
+            "copyright": "© {year} {name}",
+            "poweredBy": "Działa dzięki {brand}"
+        },
+        "welcome": {
+            "yourDetails": "Twoje dane",
+            "challengeHint": "Każdy uczestnik wyzwania dostaje te same {days} łamigłówek, jedną dziennie.",
+            "avatarHint": "Widoczny obok Twojego imienia na Twojej stronie.",
+            "previewHint": "Tak Twoją stronę zobaczą znajomi i sponsorzy.",
+            "previewPlaceholder": "Wybierz wyzwanie powyżej"
+        },
         "account": {
-            "needed": "Zaloguj się lub załóż konto, aby wziąć udział.",
             "signIn": "Zaloguj się",
             "register": "Załóż konto",
             "haveAccount": "Masz już konto?",
@@ -1690,7 +1742,6 @@
                 "auth/weak-password": "Hasło musi mieć co najmniej 6 znaków.",
                 "auth/invalid-email": "To nie wygląda na adres e-mail.",
                 "auth/too-many-requests": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
-                "permission-denied": "Ten adres właśnie został zajęty. Wybierz inny.",
                 "default": "Coś poszło nie tak. Spróbuj ponownie."
             }
         }

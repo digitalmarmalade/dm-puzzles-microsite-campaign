@@ -66,7 +66,10 @@ What's stored, under `campaigns/{campaign}/`:
 - `players/{uid}/days/{day}`: one per completed day, `{slug, completedAt}`. Create-only
   and stamped by the server, so a late day always stays late.
 - `profiles/{uid}`: the player's `{name, avatar, reason, handle, updatedAt}`, given when they
-  register and editable at `/c/{id}/profile`. Only they (and the campaign's admins) can read it.
+  register, which finishes on `/c/{id}/welcome` (nothing is saved until then), and editable at
+  `/c/{id}/profile`.
+  `handle` is chosen for them from their name (`harold`, or `harold-2` if that's taken) and
+  never changes, so links they've shared keep working. Only they (and the campaign's admins) can read it.
 - `public/{handle}`: a player's public challenge page at `/c/{id}/{handle}` (e.g.
   `/c/charity-sample/harold`), holding `{ownerUid, name, avatar, reason, updatedAt}`. The
   document id is the address, so two players can't have the same one. Anyone can read one;

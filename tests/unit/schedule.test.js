@@ -151,6 +151,11 @@ describe('validating a campaign', () => {
     })
 })
 
+test('a campaign\'s own "how it works" steps are checked', () => {
+    expect(validateCampaign({...advent, text: {en: {steps: [{title: 'Open a door', body: 'Every day.'}]}}})).toEqual([])
+    expect(validateCampaign({...advent, text: {en: {steps: [{title: 'No body'}]}}})).toHaveLength(1)
+})
+
 describe('sample runs for previewing the finale', () => {
     const run = (campaign, kind) => {
         const r = sampleRun(campaign, kind)

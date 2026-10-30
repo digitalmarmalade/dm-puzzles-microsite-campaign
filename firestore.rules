@@ -21,7 +21,7 @@ service cloud.firestore {
     function validHandle(handle) {
       return handle.size() <= 40
         && handle.matches('^[a-z0-9]+(-[a-z0-9]+)*$')
-        && !(handle in ['profile', 'day', 'days', 'p', 'admin', 'dashboard', 'share', 'public', 'sign-in', 'signin', 'login', 'register', 'settings', 'help', 'about', 'new', 'edit']);
+        && !(handle in ['profile', 'day', 'days', 'p', 'admin', 'dashboard', 'share', 'public', 'sign-in', 'signin', 'login', 'register', 'settings', 'help', 'about', 'new', 'edit', 'welcome']);
     }
 
     match /campaigns/{campaign} {

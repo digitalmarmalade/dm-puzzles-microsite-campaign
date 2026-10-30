@@ -1,5 +1,5 @@
 import {expect, test} from 'vitest'
-import {DEFAULT_AVATARS, cleanProfile, handleFrom, handleSuggestions, isValidHandle, validateProfileSettings} from '../../app/lib/campaign/profile.js'
+import {DEFAULT_AVATARS, cleanProfile, handleCandidates, handleFrom, isValidHandle, validateProfileSettings} from '../../app/lib/campaign/profile.js'
 
 const campaign = {id: 'x'}
 
@@ -28,8 +28,14 @@ test('addresses must be tidy and not clash with the site\'s own pages', () => {
     expect(isValidHandle('profile')).toBe(false)
     expect(isValidHandle('day')).toBe(false)
 })
-test('a taken address suggests numbered ones', () => {
-    expect(handleSuggestions('harold', 2)).toEqual(['harold-2', 'harold-3'])
+test('addresses are tried in order: the name, then numbered, then random', () => {
+    const tries = handleCandidates('Harold', () => .5)
+    expect(tries.slice(0, 3)).toEqual(['harold', 'harold-2', 'harold-3'])
+    expect(tries.at(-1)).toBe('harold-i')
+    expect(handleCandidates('')[0]).toBe('player')
+})
+test('a name that clashes with a site page skips straight to numbered addresses', () => {
+    expect(handleCandidates('Welcome')[0]).toBe('welcome-2')
 })
 test('a campaign can turn public pages off', () => {
     expect(cleanProfile(campaign, {name: 'Amy', handle: 'amy'}).handle).toBe('amy')

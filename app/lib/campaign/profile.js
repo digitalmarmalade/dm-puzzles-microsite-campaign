@@ -2,12 +2,12 @@ export const NAME_MAX = 40
 export const REASON_MAX = 280
 export const HANDLE_MAX = 40
 
-const RESERVED = new Set(['profile', 'day', 'days', 'p', 'admin', 'dashboard', 'share', 'public', 'sign-in', 'signin', 'login', 'register', 'settings', 'help', 'about', 'new', 'edit'])
+const RESERVED = new Set(['profile', 'day', 'days', 'p', 'admin', 'dashboard', 'share', 'public', 'sign-in', 'signin', 'login', 'register', 'settings', 'help', 'about', 'new', 'edit', 'welcome'])
 
 export const DEFAULT_AVATARS = [
-    'allRounder', 'dailyDevotee', 'earlyBird', 'fanatic', 'logicBuff', 'newbie',
-    'nightOwl', 'numberCruncher', 'quizzer', 'weekendWarrior', 'wordsmith',
-].map(name => `/img/profiles/${name}.svg`)
+    'sudoku', 'crossword', 'jigsaw', 'magnifier', 'lightbulb', 'pencil',
+    'dice', 'pawn', 'cube', 'maze', 'tangram', 'letters',
+].map(name => `/img/avatars/${name}.svg`)
 
 export function profileSettings(campaign) {
     const p = campaign.profile ?? {}
@@ -35,9 +35,11 @@ export function isValidHandle(handle) {
         && !RESERVED.has(handle)
 }
 
-export function handleSuggestions(handle, count = 5) {
-    const base = handleFrom(handle).slice(0, HANDLE_MAX - 3).replace(/-+$/, '') || 'player'
-    return Array.from({length: count}, (_, i) => `${base}-${i + 2}`)
+export function handleCandidates(name, random = Math.random) {
+    const base = handleFrom(name).slice(0, HANDLE_MAX - 6).replace(/-+$/, '') || 'player'
+    const numbered = Array.from({length: 19}, (_, i) => `${base}-${i + 2}`)
+    const extra = Array.from({length: 3}, () => `${base}-${random().toString(36).slice(2, 6)}`)
+    return [base, ...numbered, ...extra].filter(isValidHandle)
 }
 
 export function cleanProfile(campaign, {name, avatar, reason, handle} = {}) {

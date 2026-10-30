@@ -101,6 +101,17 @@ export function validateCampaign(campaign) {
     }
     if (!['required', 'optional'].includes(campaign.account)) errors.push('account must be "required" or "optional"')
     errors.push(...validateProfileSettings(campaign.profile))
+    if (campaign.organisation !== undefined && (typeof campaign.organisation !== 'string' || !campaign.organisation)) errors.push('organisation must be text')
+    for (const key of ['logo', 'banner', 'bannerFocus']) {
+        const value = campaign.theme?.[key]
+        if (value !== undefined && (typeof value !== 'string' || !value)) errors.push(`theme.${key} must be text`)
+    }
+    for (const [lang, words] of Object.entries(campaign.text ?? {})) {
+        const steps = words?.steps
+        if (steps !== undefined && (!Array.isArray(steps) || steps.some(st => typeof st?.title !== 'string' || typeof st?.body !== 'string'))) {
+            errors.push(`text.${lang}.steps must be a list of {"title", "body"}`)
+        }
+    }
     if (!Array.isArray(campaign.tracks) || !campaign.tracks.length) return [...errors, 'tracks must list at least one track']
     const ids = new Set()
     for (const track of campaign.tracks) {

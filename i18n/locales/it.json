@@ -1623,6 +1623,7 @@
             "title": "Il tuo profilo",
             "name": "Il tuo nome",
             "nameHint": "Mostrato nella pagina della tua sfida.",
+            "pageAddress": "La pagina della tua sfida",
             "avatar": "Scegli un avatar",
             "avatarInitial": "Usa la mia iniziale",
             "avatarN": "Avatar {n}",
@@ -1631,16 +1632,7 @@
             "save": "Salva",
             "cancel": "Annulla",
             "edit": "Modifica profilo",
-            "add": "Aggiungi nome e avatar",
-            "handle": "Indirizzo della tua pagina",
-            "handleHint": "La tua pagina pubblica della sfida, da seguire per sostenitori e amici. Lettere, numeri e trattini.",
-            "handleTry": "Prova {handle}",
-            "handleStatus": {
-                "checking": "Verifica in corso…",
-                "free": "Questo indirizzo è libero",
-                "taken": "Questo indirizzo è già in uso",
-                "invalid": "Questo indirizzo non può essere usato. Prova con lettere, numeri e trattini."
-            }
+            "add": "Aggiungi nome e avatar"
         },
         "public": {
             "createOwn": "Crea la tua sfida",
@@ -1674,8 +1666,68 @@
             "endedTitle": "La tua sfida è finita",
             "endedText": "Hai completato {completed} puzzle su {total}."
         },
+        "readyTitle": "Quando vuoi tu",
+        "signup": {
+            "title": "Inizia la tua sfida di puzzle gratuita",
+            "step": "Passo {step} di {total}",
+            "next": "Avanti",
+            "personaliseTitle": "Benvenuto, {name}! Personalizza la tua pagina",
+            "personaliseIntro": "Scegli un avatar e racconta ai tuoi sostenitori perché partecipi. Puoi cambiarli quando vuoi.",
+            "personaliseShort": "Personalizza la tua pagina",
+            "finish": "Salva e continua"
+        },
+        "explainer": {
+            "labels": {
+                "when": "Quando",
+                "catchUp": "Recuperi",
+                "joining": "Iscrizione"
+            },
+            "howItWorks": "Come funziona",
+            "details": "I dettagli",
+            "tracks": "Scegli tra {n} sfide",
+            "rolling": "Inizia un giorno qualsiasi dal {from} al {until}, poi gioca per {days} giorni",
+            "fixed": "Dal {from} al {to}",
+            "lateAnytime": "Hai saltato un giorno? Recupera quando vuoi",
+            "lateDays": "Hai saltato un giorno? Hai {n} giorni per recuperare",
+            "lateUntil": "Hai saltato un giorno? Recupera entro il {date}",
+            "lateNever": "Ogni puzzle si gioca solo nel suo giorno",
+            "accountRequired": "Iscrizione gratuita: basta nome, email e una password",
+            "accountOptional": "Per giocare non serve un account",
+            "steps": {
+                "signUp": {
+                    "title": "Iscriviti",
+                    "body": "Dicci il tuo nome e crea la pagina della tua sfida."
+                },
+                "start": {
+                    "title": "Inizia subito",
+                    "body": "Parti subito, senza iscrizione."
+                },
+                "play": {
+                    "title": "Un puzzle al giorno",
+                    "body": "{days} puzzle, uno al giorno per {days} giorni."
+                },
+                "share": {
+                    "title": "Condividi la tua pagina",
+                    "body": "Amici e sostenitori possono seguirti passo dopo passo."
+                },
+                "finish": {
+                    "title": "Chiudi in bellezza",
+                    "body": "Completa tutti i {days} per sbloccare il gran finale e un'immagine da condividere."
+                }
+            }
+        },
+        "footer": {
+            "copyright": "© {year} {name}",
+            "poweredBy": "Realizzato con {brand}"
+        },
+        "welcome": {
+            "yourDetails": "I tuoi dati",
+            "challengeHint": "Chi partecipa a una sfida riceve gli stessi {days} puzzle, uno al giorno.",
+            "avatarHint": "Mostrato accanto al tuo nome sulla tua pagina.",
+            "previewHint": "Ecco come vedranno la tua pagina amici e sostenitori.",
+            "previewPlaceholder": "Scegli la tua sfida qui sopra"
+        },
         "account": {
-            "needed": "Accedi o crea un account per partecipare.",
             "signIn": "Accedi",
             "register": "Crea account",
             "haveAccount": "Hai già un account?",
@@ -1690,7 +1742,6 @@
                 "auth/weak-password": "Usa almeno 6 caratteri per la password.",
                 "auth/invalid-email": "Non sembra un indirizzo email.",
                 "auth/too-many-requests": "Troppi tentativi. Attendi un momento e riprova.",
-                "permission-denied": "Questo indirizzo è appena stato preso. Scegline un altro.",
                 "default": "Qualcosa è andato storto. Riprova."
             }
         }

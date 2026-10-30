@@ -1622,6 +1622,7 @@
             "title": "Dein Profil",
             "name": "Dein Name",
             "nameHint": "Wird auf deiner Challenge-Seite angezeigt.",
+            "pageAddress": "Deine Challenge-Seite",
             "avatar": "Wähle einen Avatar",
             "avatarInitial": "Meinen Anfangsbuchstaben verwenden",
             "avatarN": "Avatar {n}",
@@ -1630,16 +1631,7 @@
             "save": "Speichern",
             "cancel": "Abbrechen",
             "edit": "Profil bearbeiten",
-            "add": "Name und Avatar hinzufügen",
-            "handle": "Adresse deiner Seite",
-            "handleHint": "Deine öffentliche Challenge-Seite, der Unterstützer und Freunde folgen können. Buchstaben, Zahlen und Bindestriche.",
-            "handleTry": "Versuch {handle}",
-            "handleStatus": {
-                "checking": "Wird geprüft…",
-                "free": "Diese Adresse ist frei",
-                "taken": "Diese Adresse ist schon vergeben",
-                "invalid": "Diese Adresse ist nicht möglich. Versuch es mit Buchstaben, Zahlen und Bindestrichen."
-            }
+            "add": "Name und Avatar hinzufügen"
         },
         "public": {
             "createOwn": "Starte deine eigene Challenge",
@@ -1673,8 +1665,68 @@
             "endedTitle": "Deine Challenge ist vorbei",
             "endedText": "Du hast {completed} von {total} Rätseln gelöst."
         },
+        "readyTitle": "Bereit, wenn du es bist",
+        "signup": {
+            "title": "Starte deine kostenlose Rätsel-Challenge",
+            "step": "Schritt {step} von {total}",
+            "next": "Weiter",
+            "personaliseTitle": "Willkommen, {name}! Gestalte deine Seite",
+            "personaliseIntro": "Wähle einen Avatar und erzähl deinen Unterstützern, warum du mitmachst. Du kannst beides jederzeit ändern.",
+            "personaliseShort": "Gestalte deine Seite",
+            "finish": "Speichern und weiter"
+        },
+        "explainer": {
+            "labels": {
+                "when": "Wann",
+                "catchUp": "Nachholen",
+                "joining": "Teilnahme"
+            },
+            "howItWorks": "So funktioniert's",
+            "details": "Die Details",
+            "tracks": "Wähle aus {n} Challenges",
+            "rolling": "Starte an einem beliebigen Tag vom {from} bis {until} und spiele dann {days} Tage lang",
+            "fixed": "Vom {from} bis {to}",
+            "lateAnytime": "Einen Tag verpasst? Hol ihn nach, wann du willst",
+            "lateDays": "Einen Tag verpasst? Du hast {n} Tage zum Nachholen",
+            "lateUntil": "Einen Tag verpasst? Nachholen bis {date}",
+            "lateNever": "Jedes Rätsel kann nur an seinem Tag gespielt werden",
+            "accountRequired": "Kostenlos: nur Name, E-Mail und ein Passwort",
+            "accountOptional": "Zum Spielen ist kein Konto nötig",
+            "steps": {
+                "signUp": {
+                    "title": "Anmelden",
+                    "body": "Sag uns deinen Namen und richte deine Challenge-Seite ein."
+                },
+                "start": {
+                    "title": "Leg los",
+                    "body": "Starte sofort, ohne Anmeldung."
+                },
+                "play": {
+                    "title": "Ein Rätsel pro Tag",
+                    "body": "{days} Rätsel, eins pro Tag, {days} Tage lang."
+                },
+                "share": {
+                    "title": "Teile deine Seite",
+                    "body": "Freunde und Unterstützer können deinen Fortschritt verfolgen."
+                },
+                "finish": {
+                    "title": "Großes Finale",
+                    "body": "Schaff alle {days} und schalte dein Finale und ein Bild zum Teilen frei."
+                }
+            }
+        },
+        "footer": {
+            "copyright": "© {year} {name}",
+            "poweredBy": "Bereitgestellt von {brand}"
+        },
+        "welcome": {
+            "yourDetails": "Deine Angaben",
+            "challengeHint": "Alle in einer Challenge bekommen dieselben {days} Rätsel, eins pro Tag.",
+            "avatarHint": "Wird neben deinem Namen auf deiner Seite angezeigt.",
+            "previewHint": "So sehen Freunde und Unterstützer deine Seite.",
+            "previewPlaceholder": "Wähle oben deine Challenge"
+        },
         "account": {
-            "needed": "Melde dich an oder erstelle ein Konto, um mitzumachen.",
             "signIn": "Anmelden",
             "register": "Konto erstellen",
             "haveAccount": "Schon ein Konto?",
@@ -1689,7 +1741,6 @@
                 "auth/weak-password": "Verwende mindestens 6 Zeichen für dein Passwort.",
                 "auth/invalid-email": "Das sieht nicht wie eine E-Mail-Adresse aus.",
                 "auth/too-many-requests": "Zu viele Versuche. Bitte warte kurz und versuche es erneut.",
-                "permission-denied": "Diese Adresse wurde gerade vergeben. Bitte wähle eine andere.",
                 "default": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
             }
         }

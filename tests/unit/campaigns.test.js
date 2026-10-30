@@ -1,4 +1,4 @@
-import {readdirSync, readFileSync} from 'node:fs'
+import {existsSync, readdirSync, readFileSync} from 'node:fs'
 import {describe, expect, test} from 'vitest'
 import {validateCampaign} from '../../app/lib/campaign/schedule.js'
 
@@ -15,6 +15,10 @@ describe.each(ids)('campaigns/%s', (id) => {
     })
     test('has English text', () => {
         expect(campaign.text?.en?.title).toBeTruthy()
+    })
+    test('its images are in public/', () => {
+        const local = [campaign.theme?.logo, campaign.theme?.banner, ...(campaign.profile?.avatars ?? [])].filter(src => src?.startsWith('/'))
+        expect(local.filter(src => !existsSync(`public${src}`))).toEqual([])
     })
 })
 

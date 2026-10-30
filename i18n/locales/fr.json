@@ -1623,6 +1623,7 @@
             "title": "Votre profil",
             "name": "Votre nom",
             "nameHint": "Affiché sur la page de votre défi.",
+            "pageAddress": "La page de votre défi",
             "avatar": "Choisissez un avatar",
             "avatarInitial": "Utiliser mon initiale",
             "avatarN": "Avatar {n}",
@@ -1631,16 +1632,7 @@
             "save": "Enregistrer",
             "cancel": "Annuler",
             "edit": "Modifier le profil",
-            "add": "Ajoutez votre nom et votre avatar",
-            "handle": "Adresse de votre page",
-            "handleHint": "Votre page de défi publique, que vos parrains et amis peuvent suivre. Lettres, chiffres et tirets.",
-            "handleTry": "Essayez {handle}",
-            "handleStatus": {
-                "checking": "Vérification…",
-                "free": "Cette adresse est libre",
-                "taken": "Cette adresse est déjà prise",
-                "invalid": "Cette adresse ne peut pas être utilisée. Essayez des lettres, des chiffres et des tirets."
-            }
+            "add": "Ajoutez votre nom et votre avatar"
         },
         "public": {
             "createOwn": "Créez votre propre défi",
@@ -1674,8 +1666,68 @@
             "endedTitle": "Votre défi est terminé",
             "endedText": "Vous avez terminé {completed} puzzles sur {total}."
         },
+        "readyTitle": "Prêt quand vous l'êtes",
+        "signup": {
+            "title": "Lancez votre défi de puzzles gratuit",
+            "step": "Étape {step} sur {total}",
+            "next": "Suivant",
+            "personaliseTitle": "Bienvenue, {name} ! Personnalisez votre page",
+            "personaliseIntro": "Choisissez un avatar et dites à vos parrains pourquoi vous participez. Vous pourrez les modifier à tout moment.",
+            "personaliseShort": "Personnalisez votre page",
+            "finish": "Enregistrer et continuer"
+        },
+        "explainer": {
+            "labels": {
+                "when": "Quand",
+                "catchUp": "Rattrapage",
+                "joining": "Inscription"
+            },
+            "howItWorks": "Comment ça marche",
+            "details": "Les détails",
+            "tracks": "Choisissez parmi {n} défis",
+            "rolling": "Commencez n'importe quel jour du {from} au {until}, puis jouez pendant {days} jours",
+            "fixed": "Du {from} au {to}",
+            "lateAnytime": "Un jour manqué ? Rattrapez-le quand vous voulez",
+            "lateDays": "Un jour manqué ? Vous avez {n} jours pour le rattraper",
+            "lateUntil": "Un jour manqué ? Rattrapez-le jusqu'au {date}",
+            "lateNever": "Chaque puzzle ne se joue que le jour prévu",
+            "accountRequired": "Inscription gratuite : votre nom, votre e-mail et un mot de passe",
+            "accountOptional": "Aucun compte nécessaire pour jouer",
+            "steps": {
+                "signUp": {
+                    "title": "Inscrivez-vous",
+                    "body": "Indiquez votre nom et créez votre page de défi."
+                },
+                "start": {
+                    "title": "Lancez-vous",
+                    "body": "Commencez tout de suite, sans inscription."
+                },
+                "play": {
+                    "title": "Un puzzle par jour",
+                    "body": "{days} puzzles, un par jour pendant {days} jours."
+                },
+                "share": {
+                    "title": "Partagez votre page",
+                    "body": "Vos amis et parrains peuvent suivre votre progression."
+                },
+                "finish": {
+                    "title": "Finissez en beauté",
+                    "body": "Terminez les {days} pour débloquer votre final et une image à partager."
+                }
+            }
+        },
+        "footer": {
+            "copyright": "© {year} {name}",
+            "poweredBy": "Propulsé par {brand}"
+        },
+        "welcome": {
+            "yourDetails": "Vos coordonnées",
+            "challengeHint": "Chaque participant d'un défi reçoit les mêmes {days} puzzles, un par jour.",
+            "avatarHint": "Affiché à côté de votre nom sur votre page.",
+            "previewHint": "Voici à quoi ressemblera votre page pour vos amis et parrains.",
+            "previewPlaceholder": "Choisissez votre défi ci-dessus"
+        },
         "account": {
-            "needed": "Connectez-vous ou créez un compte pour participer.",
             "signIn": "Se connecter",
             "register": "Créer un compte",
             "haveAccount": "Vous avez déjà un compte ?",
@@ -1690,7 +1742,6 @@
                 "auth/weak-password": "Utilisez au moins 6 caractères pour votre mot de passe.",
                 "auth/invalid-email": "Cela ne ressemble pas à une adresse e-mail.",
                 "auth/too-many-requests": "Trop de tentatives. Patientez un instant et réessayez.",
-                "permission-denied": "Cette adresse vient d'être prise. Veuillez en choisir une autre.",
                 "default": "Un problème est survenu. Veuillez réessayer."
             }
         }

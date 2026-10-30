@@ -24,7 +24,7 @@ beforeEach(async () => {
     })
 })
 
-const details = (extra = {}) => ({name: 'Amy', avatar: '/img/profiles/newbie.svg', reason: 'For my gran', updatedAt: serverTimestamp(), ...extra})
+const details = (extra = {}) => ({name: 'Amy', avatar: '/img/avatars/dice.svg', reason: 'For my gran', updatedAt: serverTimestamp(), ...extra})
 
 function saveProfile(uid, handle, extra = {}) {
     const db = as(uid)
@@ -141,6 +141,7 @@ describe('public pages', () => {
         await assertSucceeds(setDoc(doc(as('amy'), `${C}/public/amy-2`), {ownerUid: 'amy', ...details()}))
         await assertFails(setDoc(doc(as('amy'), `${C}/public/Amy`), {ownerUid: 'amy', ...details()}))
         await assertFails(setDoc(doc(as('amy'), `${C}/public/profile`), {ownerUid: 'amy', ...details()}))
+        await assertFails(setDoc(doc(as('amy'), `${C}/public/welcome`), {ownerUid: 'amy', ...details()}))
     })
     test('nobody can create one in someone else\'s name', async () => {
         await assertFails(setDoc(doc(as('amy'), `${C}/public/x`), {ownerUid: 'bob', ...details()}))

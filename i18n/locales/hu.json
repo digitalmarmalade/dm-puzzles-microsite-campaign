@@ -1623,6 +1623,7 @@
             "title": "Profilod",
             "name": "Neved",
             "nameHint": "A kihívásod oldalán jelenik meg.",
+            "pageAddress": "A kihívásod oldala",
             "avatar": "Válassz avatárt",
             "avatarInitial": "A kezdőbetűm használata",
             "avatarN": "{n}. avatár",
@@ -1631,16 +1632,7 @@
             "save": "Mentés",
             "cancel": "Mégse",
             "edit": "Profil szerkesztése",
-            "add": "Add meg a neved és az avatárod",
-            "handle": "Oldalad címe",
-            "handleHint": "A kihívásod nyilvános oldala, amelyet a támogatóid és barátaid követhetnek. Betűk, számok és kötőjelek.",
-            "handleTry": "Próbáld: {handle}",
-            "handleStatus": {
-                "checking": "Ellenőrzés…",
-                "free": "Ez a cím szabad",
-                "taken": "Ez a cím már foglalt",
-                "invalid": "Ez a cím nem használható. Próbálkozz betűkkel, számokkal és kötőjelekkel."
-            }
+            "add": "Add meg a neved és az avatárod"
         },
         "public": {
             "createOwn": "Indítsd el a saját kihívásod",
@@ -1674,8 +1666,68 @@
             "endedTitle": "A kihívásod véget ért",
             "endedText": "{total} rejtvényből {completed}-t oldottál meg."
         },
+        "readyTitle": "Amikor csak készen állsz",
+        "signup": {
+            "title": "Kezdd el ingyenes rejtvénykihívásodat",
+            "step": "{step}. lépés / {total}",
+            "next": "Tovább",
+            "personaliseTitle": "Üdv, {name}! Tedd a sajátoddá",
+            "personaliseIntro": "Válassz avatárt, és mondd el a támogatóidnak, miért veszel részt. Ezeket bármikor módosíthatod.",
+            "personaliseShort": "Tedd a sajátoddá",
+            "finish": "Mentés és tovább"
+        },
+        "explainer": {
+            "labels": {
+                "when": "Mikor",
+                "catchUp": "Pótlás",
+                "joining": "Csatlakozás"
+            },
+            "howItWorks": "Így működik",
+            "details": "A részletek",
+            "tracks": "Válassz {n} kihívás közül",
+            "rolling": "Kezdd bármelyik napon {from} és {until} között, majd játssz {days} napig",
+            "fixed": "{from} – {to}",
+            "lateAnytime": "Kimaradt egy nap? Pótold, amikor szeretnéd",
+            "lateDays": "Kimaradt egy nap? {n} napod van pótolni",
+            "lateUntil": "Kimaradt egy nap? Pótold {date}-ig",
+            "lateNever": "Minden rejtvény csak a saját napján játszható",
+            "accountRequired": "Ingyenes: csak a neved, az e-mail-címed és egy jelszó",
+            "accountOptional": "A játékhoz nem kell fiók",
+            "steps": {
+                "signUp": {
+                    "title": "Regisztrálj",
+                    "body": "Add meg a neved, és hozd létre a kihívásod oldalát."
+                },
+                "start": {
+                    "title": "Vágj bele",
+                    "body": "Kezdd azonnal, regisztráció nélkül."
+                },
+                "play": {
+                    "title": "Napi egy rejtvény",
+                    "body": "{days} rejtvény, minden nap egy, {days} napon át."
+                },
+                "share": {
+                    "title": "Oszd meg az oldalad",
+                    "body": "Barátaid és támogatóid követhetik a haladásod."
+                },
+                "finish": {
+                    "title": "Látványos befejezés",
+                    "body": "Teljesítsd mind a(z) {days} rejtvényt, és megnyílik a fináléd egy megosztható képpel."
+                }
+            }
+        },
+        "footer": {
+            "copyright": "© {year} {name}",
+            "poweredBy": "Működteti: {brand}"
+        },
+        "welcome": {
+            "yourDetails": "Az adataid",
+            "challengeHint": "Egy kihívás minden résztvevője ugyanazt a(z) {days} rejtvényt kapja, napi egyet.",
+            "avatarHint": "A neved mellett jelenik meg az oldaladon.",
+            "previewHint": "Így látják majd az oldaladat a barátaid és támogatóid.",
+            "previewPlaceholder": "Válaszd ki fent a kihívásod"
+        },
         "account": {
-            "needed": "A részvételhez jelentkezz be vagy hozz létre fiókot.",
             "signIn": "Bejelentkezés",
             "register": "Fiók létrehozása",
             "haveAccount": "Már van fiókod?",
@@ -1690,7 +1742,6 @@
                 "auth/weak-password": "A jelszó legalább 6 karakter legyen.",
                 "auth/invalid-email": "Ez nem tűnik e-mail-címnek.",
                 "auth/too-many-requests": "Túl sok próbálkozás. Várj egy kicsit, és próbáld újra.",
-                "permission-denied": "Ezt a címet épp most foglalták le. Kérlek, válassz másikat.",
                 "default": "Valami hiba történt. Próbáld újra."
             }
         }

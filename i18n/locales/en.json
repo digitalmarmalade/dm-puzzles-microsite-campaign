@@ -1629,6 +1629,7 @@
             "title": "Your profile",
             "name": "Your name",
             "nameHint": "Shown on your challenge page.",
+            "pageAddress": "Your challenge page",
             "avatar": "Pick an avatar",
             "avatarInitial": "Use my initial",
             "avatarN": "Avatar {n}",
@@ -1637,16 +1638,7 @@
             "save": "Save",
             "cancel": "Cancel",
             "edit": "Edit profile",
-            "add": "Add your name and avatar",
-            "handle": "Your page address",
-            "handleHint": "Your public challenge page, for sponsors and friends to follow. Letters, numbers and hyphens.",
-            "handleTry": "Try {handle}",
-            "handleStatus": {
-                "checking": "Checking…",
-                "free": "That address is free",
-                "taken": "That address is already taken",
-                "invalid": "That address can't be used. Try letters, numbers and hyphens."
-            }
+            "add": "Add your name and avatar"
         },
         "public": {
             "createOwn": "Create your own challenge",
@@ -1680,8 +1672,68 @@
             "endedTitle": "Your challenge is over",
             "endedText": "You completed {completed} of {total} puzzles."
         },
+        "readyTitle": "Ready when you are",
+        "signup": {
+            "title": "Start your free puzzle challenge",
+            "step": "Step {step} of {total}",
+            "next": "Next",
+            "personaliseTitle": "Welcome, {name}! Make it yours",
+            "personaliseIntro": "Pick an avatar and tell your sponsors why you're taking part. You can change these any time.",
+            "personaliseShort": "Make it yours",
+            "finish": "Save and continue"
+        },
+        "explainer": {
+            "labels": {
+                "when": "When",
+                "catchUp": "Catching up",
+                "joining": "Joining"
+            },
+            "howItWorks": "How it works",
+            "details": "The details",
+            "tracks": "Choose from {n} challenges",
+            "rolling": "Start any day from {from} to {until}, then play for {days} days",
+            "fixed": "Runs from {from} to {to}",
+            "lateAnytime": "Missed a day? Catch up whenever you like",
+            "lateDays": "Missed a day? You have {n} days to catch up",
+            "lateUntil": "Missed a day? Catch up until {date}",
+            "lateNever": "Each puzzle can only be played on its day",
+            "accountRequired": "Free to join: just your name, email and a password",
+            "accountOptional": "No account needed to play",
+            "steps": {
+                "signUp": {
+                    "title": "Sign up",
+                    "body": "Tell us your name and set up your challenge page."
+                },
+                "start": {
+                    "title": "Jump in",
+                    "body": "Start straight away, no sign-up needed."
+                },
+                "play": {
+                    "title": "A puzzle a day",
+                    "body": "{days} puzzles, one each day for {days} days."
+                },
+                "share": {
+                    "title": "Share your page",
+                    "body": "Friends and sponsors can follow along as you go."
+                },
+                "finish": {
+                    "title": "Finish in style",
+                    "body": "Complete all {days} to unlock your finale and a picture to share."
+                }
+            }
+        },
+        "footer": {
+            "copyright": "© {year} {name}",
+            "poweredBy": "Powered by {brand}"
+        },
+        "welcome": {
+            "yourDetails": "Your details",
+            "challengeHint": "Everyone on a challenge gets the same {days} puzzles, one a day.",
+            "avatarHint": "Shown next to your name on your page.",
+            "previewHint": "This is how your page will look to friends and sponsors.",
+            "previewPlaceholder": "Choose your challenge above"
+        },
         "account": {
-            "needed": "Sign in or create an account to take part.",
             "signIn": "Sign in",
             "register": "Create account",
             "haveAccount": "Already have an account?",
@@ -1696,7 +1748,6 @@
                 "auth/weak-password": "Use at least 6 characters for your password.",
                 "auth/invalid-email": "That doesn't look like an email address.",
                 "auth/too-many-requests": "Too many attempts. Please wait a moment and try again.",
-                "permission-denied": "That page address has just been taken. Please pick another.",
                 "default": "Something went wrong. Please try again."
             }
         }

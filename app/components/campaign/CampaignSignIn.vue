@@ -1,49 +1,48 @@
 <script setup>
-import {EmailAuthProvider, createUserWithEmailAndPassword, linkWithCredential, signInWithEmailAndPassword} from 'firebase/auth'
-import {profileSettings} from '@/lib/campaign/profile'
+import {signInWithEmailAndPassword} from 'firebase/auth'
+import {NAME_MAX} from '@/lib/campaign/profile'
 
 const props = defineProps({
     campaign: {type: Object, required: true},
+    profile: {type: Object, default: null},
+    intro: {type: String, default: ''},
 })
+const emit = defineEmits(['registered'])
 
 const {t, te} = useI18n()
 const {$auth} = useNuxtApp()
+const route = useRoute()
+const signup = useCampaignSignup(props.campaign)
 
 const mode = ref('register')
-const form = reactive({email: '', password: '', confirm: ''})
-const profile = ref({name: '', avatar: null, reason: '', handle: null})
-const handleStatus = ref('empty')
-const needsHandle = profileSettings(props.campaign).publicPage
+const form = reactive({name: signup.value?.name ?? props.profile?.name ?? '', email: signup.value?.email ?? '', password: '', confirm: ''})
 const busy = ref(false)
 const error = ref('')
 
 const registering = computed(() => mode.value === 'register')
-const confirmError = computed(() => registering.value && form.confirm && form.password !== form.confirm ? t('account.passwordMismatch') : '')
 
-async function register() {
-    const current = $auth.currentUser
-    if (current?.isAnonymous) {
-        await linkWithCredential(current, EmailAuthProvider.credential(form.email, form.password))
-        await current.reload()
-        await saveCampaignProfile(props.campaign, current.uid, profile.value)
-        useState('campaignUser').value = {uid: current.uid, isAnonymous: false, email: current.email}
-        return
-    }
-    const {user} = await createUserWithEmailAndPassword($auth, form.email, form.password)
-    await saveCampaignProfile(props.campaign, user.uid, profile.value)
-}
+watch(() => route.query.signin, (asked) => {
+    if (!asked) return
+    mode.value = 'signIn'
+    nextTick(() => {
+        const card = document.getElementById('campaign-signin')
+        card?.scrollIntoView({behavior: 'smooth', block: 'nearest'})
+        card?.querySelector('input[type=email]')?.focus({preventScroll: true})
+    })
+}, {immediate: true})
+const confirmError = computed(() => registering.value && form.confirm && form.password !== form.confirm ? t('account.passwordMismatch') : '')
 
 async function submit() {
     if (confirmError.value) return
-    if (registering.value && needsHandle && handleStatus.value !== 'free') {
-        error.value = t(`campaign.profile.handleStatus.${handleStatus.value === 'empty' ? 'invalid' : handleStatus.value}`)
-        return
-    }
     busy.value = true
     error.value = ''
     try {
-        if (registering.value) await register()
-        else await signInWithEmailAndPassword($auth, form.email, form.password)
+        if (registering.value) {
+            signup.value = {name: form.name.trim(), email: form.email.trim(), password: form.password}
+            emit('registered')
+        } else {
+            await signInWithEmailAndPassword($auth, form.email, form.password)
+        }
     } catch (e) {
         const key = `campaign.account.errors.${e.code}`
         error.value = te(key) ? t(key) : t('campaign.account.errors.default')
@@ -54,16 +53,30 @@ async function submit() {
 </script>
 
 <template>
-    <div class="card card--main campaign-signin">
-        <h2 class="campaign-signin__title">{{ t(registering ? 'campaign.account.register' : 'campaign.account.signIn') }}</h2>
-        <p class="campaign-signin__intro">{{ t('campaign.account.needed') }}</p>
+    <div id="campaign-signin" class="card card--main campaign-panel">
+        <div class="campaign-panel__header">
+            <h2 class="campaign-panel__title">{{ t(registering ? 'campaign.signup.title' : 'campaign.account.signIn') }}</h2>
+            <p v-if="registering && intro">{{ intro }}</p>
+        </div>
 
         <form @submit.prevent="submit">
             <Attention v-if="error" type="negative">
                 <p role="alert">{{ error }}</p>
             </Attention>
 
-            <CampaignProfileFields v-if="registering" v-model="profile" v-model:handle-status="handleStatus" :campaign="campaign" />
+            <div v-if="registering" class="form-input">
+                <label for="campaign-name">{{ t('campaign.profile.name') }}</label>
+                <p id="campaign-name-hint">{{ t('campaign.profile.nameHint') }}</p>
+                <input
+                    id="campaign-name"
+                    type="text"
+                    autocomplete="given-name"
+                    required
+                    :maxlength="NAME_MAX"
+                    aria-describedby="campaign-name-hint"
+                    v-model="form.name"
+                />
+            </div>
 
             <EmailInput id="campaign-email" :label="t('account.yourEmail')" required v-model="form.email" />
 
@@ -89,7 +102,7 @@ async function submit() {
             <div class="form-actions">
                 <Button type="submit" icon="right-arrow" :class="{'is-busy': busy}">
                     <template #text>
-                        <span>{{ t(registering ? 'campaign.account.register' : 'campaign.account.signIn') }}</span>
+                        <span>{{ t(registering ? 'campaign.signup.next' : 'campaign.account.signIn') }}</span>
                     </template>
                 </Button>
             </div>
@@ -105,29 +118,13 @@ async function submit() {
 </template>
 
 <style scoped>
-.campaign-signin {
-    inline-size: 100%;
-    max-inline-size: 56rem;
-    margin-inline: auto;
-}
-
-.campaign-signin__title {
-    font-family: var(--font-display);
-    font-size: 2.8rem;
-    margin: 0 0 .6rem;
-}
-
-.campaign-signin__intro {
-    margin: 0 0 2.4rem;
-}
-
 .is-busy {
     opacity: .6;
     pointer-events: none;
 }
 
 .campaign-signin__switch {
-    margin: 2.4rem 0 0;
+    margin: 0;
     text-align: center;
 }
 

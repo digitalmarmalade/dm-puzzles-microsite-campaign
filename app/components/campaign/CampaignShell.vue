@@ -1,4 +1,6 @@
 <script setup>
+import {signOut} from 'firebase/auth'
+
 const props = defineProps({
     campaign: {type: Object, required: true},
     previewing: {type: String, default: null},
@@ -10,6 +12,13 @@ const text = useCampaignText(props.campaign)
 const route = useRoute()
 const localePath = useLocalePath()
 const home = localePath(`/c/${props.campaign.id}`)
+const {$auth} = useNuxtApp()
+const user = useState('campaignUser')
+const accounts = props.campaign.account === 'required'
+const signedIn = computed(() => !!user.value && !user.value.isAnonymous)
+const slots = useSlots()
+const year = new Date().getFullYear()
+const owner = props.campaign.organisation || text('title')
 
 useHead({
     title: () => props.title ?? text('title'),
@@ -23,19 +32,39 @@ useHead({
             {{ t('campaign.previewing', {date: previewing}) }}
             <a :href="`${route.path}?today=off`">{{ t('campaign.stopPreview') }}</a>
         </p>
-        <header class="campaign__header">
-            <NuxtLink :to="home" class="campaign__brand">
-                <img v-if="campaign.theme?.logo" :src="campaign.theme.logo" :alt="text('title')" class="campaign__logo">
-                <span v-else class="campaign__title">{{ text('title') }}</span>
-            </NuxtLink>
-            <nav class="campaign__nav">
-                <NuxtLink :to="home">{{ t('campaign.home') }}</NuxtLink>
-                <slot name="nav" />
-            </nav>
-        </header>
+        <div class="campaign__top" :class="{'has-banner': !!slots.banner}">
+            <header class="campaign__header">
+                <NuxtLink :to="home" class="campaign__brand">
+                    <img v-if="campaign.theme?.logo" :src="campaign.theme.logo" :alt="text('title')" class="campaign__logo">
+                    <span v-else class="campaign__title">{{ text('title') }}</span>
+                </NuxtLink>
+                <nav class="campaign__nav">
+                    <NuxtLink :to="home">{{ t('campaign.home') }}</NuxtLink>
+                    <slot name="nav" />
+                    <template v-if="accounts && !previewing && user !== undefined">
+                        <button v-if="signedIn" type="button" class="campaign__nav-button" @click="signOut($auth)">{{ t('campaign.account.signOut') }}</button>
+                        <NuxtLink v-else :to="{path: home, query: {signin: 1}}">{{ t('campaign.account.signIn') }}</NuxtLink>
+                    </template>
+                </nav>
+            </header>
+            <slot name="banner" />
+        </div>
         <main class="campaign__main">
             <slot />
         </main>
+        <footer class="campaign__footer">
+            <div class="campaign__footer-inner">
+                <div class="campaign__footer-owner">
+                    <p>{{ t('campaign.footer.copyright', {year, name: owner}) }}</p>
+                    <p v-if="text('footer')">{{ text('footer') }}</p>
+                </div>
+                <i18n-t keypath="campaign.footer.poweredBy" tag="p" class="campaign__powered">
+                    <template #brand>
+                        <a href="https://stickypuzzles.com" target="_blank" rel="noopener">Sticky Puzzles</a>
+                    </template>
+                </i18n-t>
+            </div>
+        </footer>
     </div>
 </template>
 
@@ -45,13 +74,23 @@ body:has(.campaign, .campaign-play) {
 }
 
 .campaign {
+    --page-gutter: 1.6rem;
     color-scheme: light;
+    overflow-x: clip;
     --text-rgb: 33, 33, 33;
     background: var(--app-bg);
     color: var(--text-colour);
     min-block-size: 100dvh;
     display: flex;
     flex-direction: column;
+
+    @media (width >= 720px) {
+        --page-gutter: 2rem;
+    }
+
+    @media (width >= 1200px) {
+        --page-gutter: 4.8rem;
+    }
 }
 
 .campaign__preview {
@@ -81,10 +120,44 @@ body:has(.campaign, .campaign-play) {
     inline-size: 100%;
     max-inline-size: 128rem;
     margin-inline: auto;
-    padding: 2rem 1.6rem;
+    padding: 2rem var(--page-gutter);
 
     @media (width >= 720px) {
-        padding: 3rem 2rem;
+        padding-block: 3rem;
+    }
+}
+
+.campaign__top {
+    position: relative;
+
+    &.has-banner .campaign__header {
+        position: absolute;
+        z-index: 2;
+        inset-block-start: 0;
+        inset-inline: var(--page-gutter);
+        inline-size: auto;
+        max-inline-size: calc(128rem - 2 * var(--page-gutter));
+        padding: 1.2rem 1.6rem;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        background: color-mix(in srgb, var(--card-background) 85%, transparent);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
+
+        @media (width >= 720px) {
+            padding: 1.6rem 2.4rem;
+        }
+    }
+
+    &.has-banner .campaign__logo {
+        block-size: 4.8rem;
+    }
+
+    &.has-banner .campaign__title {
+        font-size: 2rem;
+
+        @media (width >= 720px) {
+            font-size: 2.4rem;
+        }
     }
 }
 
@@ -111,9 +184,12 @@ body:has(.campaign, .campaign-play) {
 
 .campaign__nav {
     display: flex;
-    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: .8rem 3rem;
 
-    a {
+    a,
+    .campaign__nav-button {
         color: inherit;
         font-size: 1.4rem;
         text-transform: uppercase;
@@ -128,15 +204,132 @@ body:has(.campaign, .campaign-play) {
     }
 }
 
+.campaign__nav-button {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    cursor: pointer;
+}
+
 .campaign__main {
     flex-grow: 1;
     inline-size: 100%;
     max-inline-size: 128rem;
     margin-inline: auto;
-    padding: 0 1.6rem 4rem;
+    padding: 0 var(--page-gutter) 4rem;
+}
+
+.campaign :is(input[type=text], input[type=email], input[type=password], textarea) {
+    background-color: var(--card-background);
+}
+
+.campaign .form-input :is(label, legend) {
+    font-weight: 700;
+}
+
+.campaign .campaign-panel {
+    inline-size: 100%;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2.4rem 2rem;
+    text-align: start;
 
     @media (width >= 720px) {
-        padding-inline: 2rem;
+        padding: 3.2rem;
+    }
+
+    form {
+        gap: 1.6rem;
+    }
+}
+
+.campaign-panel__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+.campaign-panel__header {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+
+    p {
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
+.campaign-heading {
+    margin: 0;
+    color: var(--primary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+}
+
+.campaign-step {
+    margin: 0;
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.campaign__footer {
+    border-block-start: 1px solid var(--card-border);
+    background: var(--card-background);
+    font-size: 1.4rem;
+
+    p {
+        margin: 0;
+    }
+}
+
+.campaign__footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    inline-size: 100%;
+    max-inline-size: 128rem;
+    margin-inline: auto;
+    padding: 2.4rem var(--page-gutter);
+    text-align: center;
+
+    @media (width >= 720px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: start;
+    }
+}
+
+.campaign__footer-owner {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    opacity: .8;
+}
+
+.campaign__powered {
+    flex-shrink: 0;
+
+    a {
+        color: var(--primary);
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            @media (hover: hover) {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -155,10 +348,17 @@ body:has(.campaign, .campaign-play) {
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
+    transition: background-color .15s ease;
 
     &:disabled {
         opacity: .5;
         cursor: default;
+    }
+
+    &:not(.is-secondary, :disabled):hover {
+        @media (hover: hover) {
+            background: var(--button-primary-hover, var(--primary));
+        }
     }
 
     &.is-secondary {

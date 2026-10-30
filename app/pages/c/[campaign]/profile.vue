@@ -1,6 +1,4 @@
 <script setup>
-import {profileSettings} from '@/lib/campaign/profile'
-
 const campaign = await useCampaign()
 const {t} = useI18n()
 const localePath = useLocalePath()
@@ -11,8 +9,7 @@ const homePath = localePath(`/c/${campaign.id}`)
 const form = ref(null)
 const busy = ref(false)
 const error = ref('')
-const handleStatus = ref('empty')
-const needsHandle = profileSettings(campaign).publicPage
+const pageUrl = useCampaignPageUrl(campaign)
 
 watchEffect(() => {
     if (!p.loaded.value || form.value) return
@@ -20,22 +17,18 @@ watchEffect(() => {
         navigateTo(homePath, {replace: true})
         return
     }
-    form.value = {name: '', avatar: null, reason: '', handle: null, ...p.profile.value}
+    form.value = {name: '', avatar: null, reason: '', ...p.profile.value}
 })
 
 async function save() {
     error.value = ''
-    if (needsHandle && handleStatus.value !== 'free') {
-        error.value = t(`campaign.profile.handleStatus.${handleStatus.value === 'empty' ? 'invalid' : handleStatus.value}`)
-        return
-    }
     busy.value = true
     try {
         await p.saveProfile(form.value)
         await navigateTo(homePath)
     } catch (e) {
         console.error(e)
-        error.value = t(e.code === 'permission-denied' ? 'campaign.profile.handleStatus.taken' : 'campaign.account.errors.default')
+        error.value = t('campaign.account.errors.default')
     } finally {
         busy.value = false
     }
@@ -46,8 +39,8 @@ async function save() {
     <CampaignShell :campaign="campaign" :previewing="p.previewing ? p.today.value : null">
         <Title>{{ t('campaign.profile.title') }} · {{ text('title') }}</Title>
 
-        <div class="card card--main campaign-profile">
-            <h1 class="campaign-profile__title">{{ t('campaign.profile.title') }}</h1>
+        <div class="card card--main campaign-panel campaign-profile">
+            <h1 class="campaign-panel__title">{{ t('campaign.profile.title') }}</h1>
 
             <p v-if="!form">{{ t('campaign.loading') }}</p>
 
@@ -58,10 +51,8 @@ async function save() {
 
                 <CampaignProfileFields
                     v-model="form"
-                    v-model:handle-status="handleStatus"
                     :campaign="campaign"
-                    :own-handle="p.profile.value?.handle ?? null"
-                    :offline="p.previewing"
+                    :page-url="p.profile.value?.handle ? pageUrl(p.profile.value.handle) : null"
                 />
 
                 <div class="form-actions">
@@ -79,15 +70,8 @@ async function save() {
 
 <style scoped>
 .campaign-profile {
-    inline-size: 100%;
     max-inline-size: 56rem;
     margin-inline: auto;
-}
-
-.campaign-profile__title {
-    font-family: var(--font-display);
-    font-size: 2.8rem;
-    margin: 0 0 2.4rem;
 }
 
 .form-actions {

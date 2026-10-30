@@ -1,6 +1,7 @@
 {
   "id": "charity-sample",
   "name": "Puzzle for Good (sample)",
+  "organisation": "Puzzle for Good",
   "hosts": [],
   "timezone": "Europe/London",
   "account": "required",
@@ -19,20 +20,24 @@
     "onPrimary": "#ffffff",
     "secondary": "#00a8b5",
     "background": "#f2fbfc",
-    "text": "#333333"
+    "text": "#333333",
+    "banner": "/campaigns/charity-sample/banner.webp",
+    "bannerFocus": "20% 100%"
   },
   "text": {
     "en": {
       "title": "Puzzle for Good",
       "tagline": "30 days, 30 puzzles, one good cause.",
       "intro": "Get sponsored to solve a puzzle a day for 30 days. Pick your challenge and start whenever you like before 31 March.",
+      "summary": "Puzzle for Good funds care and support for people living with dementia, and for the families who look after them. Take on a puzzle a day for 30 days, ask friends and family to sponsor you, and every puzzle you solve helps.",
       "finished": "You did it! 30 puzzles for a good cause.",
-      "perfect": "A perfect run: every puzzle on its day."
+      "perfect": "A perfect run: every puzzle on its day.",
+      "footer": "Puzzle for Good is a sample charity used for testing."
     }
   },
   "preview": {
     "name": "Harold",
-    "avatar": "/img/profiles/wordsmith.svg",
+    "avatar": "/img/avatars/crossword.svg",
     "reason": "My mum lived with dementia for ten years. I'm doing this for her, and for everyone still caring for someone.",
     "fundraising": {
       "raised": 180,
