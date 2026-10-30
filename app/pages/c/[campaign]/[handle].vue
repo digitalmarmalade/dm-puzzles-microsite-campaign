@@ -54,6 +54,7 @@ const fundraising = computed(() => sampleFundraising(campaign, page.previewing))
                 :track="page.track.value"
                 :progress="page.progress.value"
                 :profile="page.profile.value"
+                :times="page.times.value"
                 :fundraising="fundraising"
                 :share-url="pageUrl(handle)"
                 :share-title="title"

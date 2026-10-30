@@ -2,7 +2,7 @@ import {collection, doc, getDoc, onSnapshot, serverTimestamp, setDoc, writeBatch
 import {EmailAuthProvider, createUserWithEmailAndPassword, linkWithCredential, signInAnonymously} from 'firebase/auth'
 import {loadCampaign} from '@/lib/campaign/registry'
 import {dateIn, isIsoDate} from '@/lib/campaign/dates'
-import {SAMPLE_RUNS, phase, progress as progressOf, sampleRun, startDateFor, timezoneOf, trackOf} from '@/lib/campaign/schedule'
+import {SAMPLE_RUNS, phase, progress as progressOf, sampleRun, sampleSeconds, startDateFor, timezoneOf, trackOf} from '@/lib/campaign/schedule'
 import {cleanProfile, handleCandidates, handleFrom, profileSettings} from '@/lib/campaign/profile'
 
 export async function useCampaign() {
@@ -57,7 +57,8 @@ export function useCampaignPreview(campaign) {
     try {
         if (asked === 'off') sessionStorage.removeItem(key)
         else if (isIsoDate(asked)) sessionStorage.setItem(key, asked)
-        if (SAMPLE_RUNS.includes(route.query.finale)) previewSampleRun(campaign, route.query.finale, key)
+        const sample = route.query.sample ?? route.query.finale
+        if (SAMPLE_RUNS.includes(sample)) previewSampleRun(campaign, sample, key)
     } catch {
         //
     }
@@ -71,8 +72,9 @@ function previewSampleRun(campaign, kind, todayKey) {
     const state = store.load()
     const track = trackOf(campaign, state.player?.track)?.id ?? campaign.tracks[0].id
     sessionStorage.setItem(todayKey, run.today)
-    store.save({...state, player: {track, startedOn: run.startedOn}, completions: run.completions})
+    store.save({...state, player: {track, startedOn: run.startedOn}, completions: run.completions, times: run.times})
     Object.keys(localStorage).filter(k => k.startsWith(`campaign-finale-seen:${campaign.id}:`)).forEach(k => localStorage.removeItem(k))
+    localStorage.removeItem(`campaign-milestones-seen:${campaign.id}:preview`)
 }
 
 function previewStore(campaign) {
@@ -80,9 +82,9 @@ function previewStore(campaign) {
     return {
         load() {
             try {
-                return JSON.parse(sessionStorage.getItem(key)) ?? {player: null, completions: {}, profile: null}
+                return JSON.parse(sessionStorage.getItem(key)) ?? {player: null, completions: {}, times: {}, profile: null}
             } catch {
-                return {player: null, completions: {}, profile: null}
+                return {player: null, completions: {}, times: {}, profile: null}
             }
         },
         save(state) {
@@ -189,6 +191,7 @@ export function useCampaignPlayer(campaign) {
     const today = ref(preview.today ?? dateIn(tz))
     const player = ref(null)
     const completions = ref({})
+    const times = ref({})
     const profile = ref(null)
     const loaded = ref(false)
     const percentsStore = percentStore(campaign, !!preview.today)
@@ -204,6 +207,7 @@ export function useCampaignPlayer(campaign) {
         const state = store.load()
         player.value = state.player
         completions.value = state.completions
+        times.value = {...Object.fromEntries(Object.keys(state.completions ?? {}).map(day => [day, sampleSeconds(+day)])), ...state.times}
         profile.value = state.profile ?? (campaign.preview?.name ? previewProfile(campaign) : null)
         loaded.value = true
     } else {
@@ -211,6 +215,7 @@ export function useCampaignPlayer(campaign) {
             unsubscribe()
             player.value = null
             completions.value = {}
+            times.value = {}
             profile.value = null
             if (!uid) {
                 loaded.value = user.value === null
@@ -229,7 +234,9 @@ export function useCampaignPlayer(campaign) {
                 ready('player')
             }, () => ready('player')))
             stop.push(onSnapshot(collection($firestore, `${base}/days`), (snap) => {
-                completions.value = Object.fromEntries(snap.docs.map(d => [d.id, dateIn(tz, d.data({serverTimestamps: 'estimate'}).completedAt.toDate())]))
+                const docs = snap.docs.map(d => [d.id, d.data({serverTimestamps: 'estimate'})])
+                completions.value = Object.fromEntries(docs.map(([id, data]) => [id, dateIn(tz, data.completedAt.toDate())]))
+                times.value = Object.fromEntries(docs.filter(([, data]) => typeof data.seconds === 'number').map(([id, data]) => [id, data.seconds]))
                 ready('days')
             }, () => ready('days')))
             stop.push(onSnapshot(doc($firestore, `campaigns/${campaign.id}/profiles/${uid}`), (snap) => {
@@ -273,14 +280,17 @@ export function useCampaignPlayer(campaign) {
         await setDoc(doc($firestore, `campaigns/${campaign.id}/players/${user.value.uid}`), {track: trackId, startedAt: serverTimestamp()})
     }
 
-    async function complete(day, slug) {
+    async function complete(day, slug, seconds = null) {
         if (!player.value || completions.value[day]) return
         if (store) {
             completions.value = {...completions.value, [day]: today.value}
-            store.save({...store.load(), completions: completions.value})
+            times.value = {...times.value, [day]: seconds ?? sampleSeconds(+day)}
+            store.save({...store.load(), completions: completions.value, times: times.value})
             return
         }
-        await setDoc(doc($firestore, `campaigns/${campaign.id}/players/${user.value.uid}/days/${day}`), {slug, completedAt: serverTimestamp()})
+        const record = {slug, completedAt: serverTimestamp()}
+        if (seconds) record.seconds = seconds
+        await setDoc(doc($firestore, `campaigns/${campaign.id}/players/${user.value.uid}/days/${day}`), record)
     }
 
     async function saveProfile(changes) {
@@ -299,7 +309,7 @@ export function useCampaignPlayer(campaign) {
         percentsStore.save(percents.value)
     }
 
-    return {user, today, player, track, progress, profile, percents, loaded, needsAccount, previewing: !!preview.today, ensureUser, start, complete, saveProfile, notePercent}
+    return {user, today, player, track, progress, profile, times, percents, loaded, needsAccount, previewing: !!preview.today, ensureUser, start, complete, saveProfile, notePercent}
 }
 
 function until(condition) {
@@ -322,6 +332,7 @@ export function useCampaignPublicPage(campaign, handle) {
     const details = ref(null)
     const player = ref(null)
     const completions = ref({})
+    const times = ref({})
     const loaded = ref(false)
 
     let stop = []
@@ -347,6 +358,7 @@ export function useCampaignPublicPage(campaign, handle) {
             ownerUid.value = data?.ownerUid ?? null
             player.value = null
             completions.value = {}
+            times.value = {}
             if (!data) {
                 loaded.value = true
                 return
@@ -363,7 +375,9 @@ export function useCampaignPublicPage(campaign, handle) {
                 ready('player')
             }, () => ready('player')))
             stop.push(onSnapshot(collection($firestore, `${base}/days`), (s) => {
-                completions.value = Object.fromEntries(s.docs.map(d => [d.id, dateIn(tz, d.data({serverTimestamps: 'estimate'}).completedAt.toDate())]))
+                const docs = s.docs.map(d => [d.id, d.data({serverTimestamps: 'estimate'})])
+                completions.value = Object.fromEntries(docs.map(([id, data]) => [id, dateIn(tz, data.completedAt.toDate())]))
+                times.value = Object.fromEntries(docs.filter(([, data]) => typeof data.seconds === 'number').map(([id, data]) => [id, data.seconds]))
                 ready('days')
             }, () => ready('days')))
         }, () => {
@@ -381,5 +395,7 @@ export function useCampaignPublicPage(campaign, handle) {
     })
     const isOwner = computed(() => own.previewing ? !!details.value : !!user.value && user.value.uid === ownerUid.value)
 
-    return {loaded, profile: details, track, progress, isOwner, previewing: own.previewing, today: own.today}
+    const solveTimes = computed(() => own.previewing ? own.times.value : times.value)
+
+    return {loaded, profile: details, track, progress, times: solveTimes, isOwner, previewing: own.previewing, today: own.today}
 }

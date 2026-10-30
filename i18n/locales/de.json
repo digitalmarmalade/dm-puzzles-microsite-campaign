@@ -1812,7 +1812,19 @@
         },
         "time": {
             "hm": "{h} Std. {m} Min.",
-            "m": "{m} Min."
+            "m": "{m} Min.",
+            "ms": "{m} Min. {s} Sek.",
+            "s": "{s} Sek."
+        },
+        "solveTimes": {
+            "title": "Lösungszeiten",
+            "fastest": "Am schnellsten",
+            "fastestNote": "Tag {day} · {type}",
+            "average": "Durchschnitt",
+            "timed": "Über {count} Rätsel",
+            "total": "Gesamtzeit",
+            "totalNote": "Rätseln für den guten Zweck",
+            "bests": "Persönliche Bestzeiten"
         },
         "account": {
             "signIn": "Anmelden",

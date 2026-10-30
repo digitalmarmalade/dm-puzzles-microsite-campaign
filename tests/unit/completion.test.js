@@ -1,5 +1,5 @@
 import {expect, test} from 'vitest'
-import {countsAsDone, percentDone} from '../../app/lib/campaign/completion.js'
+import {countsAsDone, percentDone, solveSeconds} from '../../app/lib/campaign/completion.js'
 
 const completed = {completed: {seconds: 60}}
 
@@ -24,4 +24,11 @@ test('part-played puzzles report a percentage', () => {
     expect(percentDone({status: {}, user: {wordsFound: 12, totalWords: 48}})).toBe(25)
     expect(percentDone({status: {progress: 0}})).toBe(null)
     expect(percentDone({status: {}})).toBe(null)
+})
+
+test('the solve time comes from the completed status, in whole seconds', () => {
+    expect(solveSeconds({status: {completed: {seconds: 312.4}}})).toBe(312)
+    expect(solveSeconds({status: {completed: true}})).toBe(null)
+    expect(solveSeconds({status: {completed: {seconds: 0}}})).toBe(null)
+    expect(solveSeconds({status: {completed: {seconds: 9e9}}})).toBe(null)
 })

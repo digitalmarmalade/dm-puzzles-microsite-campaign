@@ -17,6 +17,13 @@ export function countsAsDone({status, user}) {
     return !counts || (counts.found / counts.total) * 100 >= WORDS_COMPLETE_PERCENT
 }
 
+export const SOLVE_SECONDS_MAX = 7 * 24 * 3600
+
+export function solveSeconds({status}) {
+    const seconds = status?.completed?.seconds
+    return typeof seconds === 'number' && Number.isFinite(seconds) && seconds > 0 && seconds < SOLVE_SECONDS_MAX ? Math.round(seconds) : null
+}
+
 export function percentDone({status, user}) {
     const counts = resultCounts(user)
     const percent = counts ? (counts.found / counts.total) * 100 : status?.progress

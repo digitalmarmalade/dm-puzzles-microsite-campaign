@@ -134,7 +134,9 @@ export function validateCampaign(campaign) {
     return errors
 }
 
-export const SAMPLE_RUNS = ['perfect', 'finished', 'ended']
+export const SAMPLE_RUNS = ['midway', 'perfect', 'finished', 'ended']
+
+export const sampleSeconds = (day) => 95 + (day * 137) % 640
 
 export function sampleRun(campaign, kind) {
     const s = campaign.schedule
@@ -143,12 +145,28 @@ export function sampleRun(campaign, kind) {
     const dues = Array.from({length: total}, (_, i) => dueDate(startedOn, i + 1))
     const last = dues.at(-1)
     const completions = {}
+    const times = {}
+    const time = sampleSeconds
+    if (kind === 'midway') {
+        const today = Math.ceil(total / 2)
+        dues.slice(0, today - 1).forEach((due, i) => {
+            completions[i + 1] = i + 1 === Math.min(3, today - 1) ? addDays(due, 1) : due
+            times[i + 1] = time(i + 1)
+        })
+        return {startedOn, today: dues[today - 1], completions, times}
+    }
     if (kind === 'ended') {
-        dues.slice(0, Math.ceil(total * .6)).forEach((due, i) => completions[i + 1] = due)
+        dues.slice(0, Math.ceil(total * .6)).forEach((due, i) => {
+            completions[i + 1] = due
+            times[i + 1] = time(i + 1)
+        })
         const close = lastChance(campaign, last)
-        return {startedOn, today: addDays(close ?? last, 1), completions}
+        return {startedOn, today: addDays(close ?? last, 1), completions, times}
     }
     const late = kind === 'finished' && s.late !== false ? [Math.min(4, total - 1), Math.min(9, total - 1)] : []
-    dues.forEach((due, i) => completions[i + 1] = late.includes(i + 1) ? addDays(due, 1) : due)
-    return {startedOn, today: addDays(last, 1), completions}
+    dues.forEach((due, i) => {
+        completions[i + 1] = late.includes(i + 1) ? addDays(due, 1) : due
+        times[i + 1] = time(i + 1)
+    })
+    return {startedOn, today: addDays(last, 1), completions, times}
 }

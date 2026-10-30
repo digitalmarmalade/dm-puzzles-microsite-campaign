@@ -1813,7 +1813,19 @@
         },
         "time": {
             "hm": "{h} óra {m} perc",
-            "m": "{m} perc"
+            "m": "{m} perc",
+            "ms": "{m} perc {s} mp",
+            "s": "{s} mp"
+        },
+        "solveTimes": {
+            "title": "Megoldási idők",
+            "fastest": "Leggyorsabb",
+            "fastestNote": "{day}. nap · {type}",
+            "average": "Átlag",
+            "timed": "{count} rejtvény alapján",
+            "total": "Teljes idő",
+            "totalNote": "Egy jó ügyért",
+            "bests": "Egyéni csúcsok"
         },
         "account": {
             "signIn": "Bejelentkezés",

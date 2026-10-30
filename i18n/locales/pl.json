@@ -1813,7 +1813,19 @@
         },
         "time": {
             "hm": "{h} godz. {m} min",
-            "m": "{m} min"
+            "m": "{m} min",
+            "ms": "{m} min {s} s",
+            "s": "{s} s"
+        },
+        "solveTimes": {
+            "title": "Czasy rozwiązań",
+            "fastest": "Najszybciej",
+            "fastestNote": "Dzień {day} · {type}",
+            "average": "Średnio",
+            "timed": "Z {count} łamigłówek",
+            "total": "Łączny czas",
+            "totalNote": "W szczytnym celu",
+            "bests": "Rekordy osobiste"
         },
         "account": {
             "signIn": "Zaloguj się",

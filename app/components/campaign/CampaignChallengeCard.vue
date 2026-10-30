@@ -6,6 +6,7 @@ const props = defineProps({
     track: {type: Object, required: true},
     progress: {type: Object, required: true},
     percents: {type: Object, default: () => ({})},
+    times: {type: Object, default: () => ({})},
     profile: {type: Object, default: null},
     fundraising: {type: Object, default: null},
     playable: {type: Boolean, default: true},
@@ -88,6 +89,8 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
         />
 
         <CampaignMilestones :progress="progress" />
+
+        <CampaignSolveTimes :times="times" :puzzles="track.puzzles" />
 
         <CampaignSupporters
             v-if="fundraising"

@@ -136,6 +136,7 @@ async function begin() {
             :track="p.track.value"
             :progress="p.progress.value"
             :percents="p.percents.value"
+            :times="p.times.value"
             :profile="p.profile.value"
             :edit-to="localePath(`/c/${campaign.id}/profile`)"
             :share-url="p.profile.value?.handle ? pageUrl(p.profile.value.handle) : null"

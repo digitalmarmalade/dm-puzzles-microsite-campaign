@@ -15,7 +15,7 @@ defineProps({
             <circle cx="12" cy="12" r="9" />
             <path d="M12 3a9 9 0 0 1 0 18z" class="milestone-icon__fill" />
         </template>
-        <path v-else-if="id === 'streak'" d="M12 2c1 3.5-1.5 5.5-1.5 8.5A2.5 2.5 0 0 0 13 13c1.5 0 2.5-1.2 2.5-3 2 1.8 3.5 4.3 3.5 7a7 7 0 0 1-14 0c0-4.6 3.6-7.6 7-15z" />
+        <use v-else-if="id === 'streak'" :href="sprite('streak')" />
         <template v-else>
             <path d="M7 4h10v4a5 5 0 0 1-10 0z" />
             <path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M10 17h4" />

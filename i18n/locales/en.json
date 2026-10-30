@@ -1819,7 +1819,19 @@
         },
         "time": {
             "hm": "{h}h {m}m",
-            "m": "{m}m"
+            "m": "{m}m",
+            "ms": "{m}m {s}s",
+            "s": "{s}s"
+        },
+        "solveTimes": {
+            "title": "Solve times",
+            "fastest": "Fastest",
+            "fastestNote": "Day {day} · {type}",
+            "average": "Average",
+            "timed": "Across {count} puzzles",
+            "total": "Total time",
+            "totalNote": "Puzzling for a good cause",
+            "bests": "Personal bests"
         },
         "account": {
             "signIn": "Sign in",

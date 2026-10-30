@@ -168,6 +168,12 @@ describe('sample runs for previewing the finale', () => {
     test('a finished run with some days late', () => {
         expect(run(charity, 'finished')).toMatchObject({finished: true, perfect: false, late: 2})
     })
+    test('a run halfway through, with today still to play and every day timed', () => {
+        const r = sampleRun(charity, 'midway')
+        expect(run(charity, 'midway')).toMatchObject({completed: 14, late: 1, finished: false})
+        expect(run(charity, 'midway').days[14].state).toBe('today')
+        expect(Object.keys(r.times)).toHaveLength(14)
+    })
     test('a run that ended with days missed', () => {
         expect(run(advent, 'ended')).toMatchObject({finished: false, over: true, completed: 15, missed: 9})
     })

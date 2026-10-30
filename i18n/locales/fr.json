@@ -1813,7 +1813,19 @@
         },
         "time": {
             "hm": "{h} h {m} min",
-            "m": "{m} min"
+            "m": "{m} min",
+            "ms": "{m} min {s} s",
+            "s": "{s} s"
+        },
+        "solveTimes": {
+            "title": "Temps de résolution",
+            "fastest": "Le plus rapide",
+            "fastestNote": "Jour {day} · {type}",
+            "average": "Moyenne",
+            "timed": "Sur {count} puzzles",
+            "total": "Temps total",
+            "totalNote": "Pour une bonne cause",
+            "bests": "Records personnels"
         },
         "account": {
             "signIn": "Se connecter",

@@ -2,7 +2,7 @@
 import Archive from '@/api/Archive.js'
 import {PuzzleChannel} from '@/lib/puzzleChannel'
 import {canPlay} from '@/lib/campaign/schedule'
-import {countsAsDone, percentDone} from '@/lib/campaign/completion'
+import {countsAsDone, percentDone, solveSeconds} from '@/lib/campaign/completion'
 
 const campaign = await useCampaign()
 const route = useRoute()
@@ -86,7 +86,7 @@ function onProgress(result) {
 
 function onComplete(result) {
     if (!countsAsDone(result)) return
-    p.complete(day, puzzle.value.slug).catch(e => console.error('Saving the day failed', e))
+    p.complete(day, puzzle.value.slug, solveSeconds(result)).catch(e => console.error('Saving the day failed', e))
 }
 
 onMounted(() => {

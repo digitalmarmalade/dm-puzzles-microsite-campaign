@@ -61,6 +61,13 @@ describe('days', () => {
     test('a day is saved once, stamped with the server time', async () => {
         await assertSucceeds(setDoc(doc(as('bob'), `${C}/players/bob/days/2`), {slug: 'sudoku-2', completedAt: serverTimestamp()}))
     })
+    test('a day can carry its solve time, within sensible limits', async () => {
+        await assertSucceeds(setDoc(doc(as('bob'), `${C}/players/bob/days/2`), {slug: 'sudoku-2', completedAt: serverTimestamp(), seconds: 312}))
+        await assertFails(setDoc(doc(as('bob'), `${C}/players/bob/days/3`), {slug: 'sudoku-3', completedAt: serverTimestamp(), seconds: -5}))
+        await assertFails(setDoc(doc(as('bob'), `${C}/players/bob/days/3`), {slug: 'sudoku-3', completedAt: serverTimestamp(), seconds: 'fast'}))
+        await assertFails(setDoc(doc(as('bob'), `${C}/players/bob/days/3`), {slug: 'sudoku-3', completedAt: serverTimestamp(), seconds: 999999}))
+        await assertFails(setDoc(doc(as('bob'), `${C}/players/bob/days/3`), {slug: 'sudoku-3', completedAt: serverTimestamp(), score: 10}))
+    })
     test('a completion time cannot be backdated', async () => {
         await assertFails(setDoc(doc(as('bob'), `${C}/players/bob/days/2`), {slug: 'sudoku-2', completedAt: Timestamp.fromDate(new Date('2020-01-01'))}))
     })
