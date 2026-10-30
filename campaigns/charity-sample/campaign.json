@@ -2,6 +2,7 @@
   "id": "charity-sample",
   "name": "Puzzle for Good (sample)",
   "organisation": "Puzzle for Good",
+  "sampleFundraising": true,
   "hosts": [],
   "timezone": "Europe/London",
   "account": "required",
@@ -45,7 +46,16 @@
       "target": 300,
       "currency": "GBP",
       "sponsors": 12,
-      "url": "https://example.org/sponsor/harold"
+      "url": "https://example.org/sponsor/harold",
+      "giftAid": 36,
+      "supporters": [
+        {"name": "Auntie Jo", "amount": 20, "message": "So proud of you. Keep going!", "daysAgo": 0},
+        {"name": "The Patel family", "amount": 25, "message": "Keep those crosswords coming!", "daysAgo": 1},
+        {"name": "Anonymous", "amount": 10, "daysAgo": 2},
+        {"name": "Sam W", "amount": 15, "message": "Smash it. This means so much.", "daysAgo": 3},
+        {"name": "Work pals", "amount": 50, "message": "Puzzle hero of the office!", "daysAgo": 5},
+        {"name": "Grandad Pete", "amount": 30, "message": "I'll race you on day 30.", "daysAgo": 8}
+      ]
     }
   },
   "tracks": [

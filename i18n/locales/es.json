@@ -1591,7 +1591,6 @@
         "ended": "Esta campaña ha terminado.",
         "pickTrack": "Elige tu reto",
         "start": "Empezar",
-        "startTrack": "Empezar {name}",
         "dayN": "Día {day}",
         "back": "Atrás",
         "backTo": "Volver a {name}",
@@ -1617,7 +1616,6 @@
         "raisedOf": "{raised} de {target}",
         "raised": "Recaudado",
         "sponsors": "Patrocinadores",
-        "sponsor": "Patrocinar",
         "home": "Inicio",
         "profile": {
             "title": "Tu perfil",
@@ -1737,7 +1735,7 @@
             "catchUpNote": "Te lo perdiste. Aún estás a tiempo de jugarlo.",
             "doneLabel": "Puzle de hoy",
             "doneTitle": "¡Hecho! Buen trabajo.",
-            "doneNext": "El día {day} se desbloquea mañana."
+            "unlocksIn": "El día {day} se desbloquea en"
         },
         "card": {
             "started": "Estoy haciendo el reto de {days} días",
@@ -1768,6 +1766,54 @@
                     "hint": "Enlaces en X, LinkedIn, Facebook"
                 }
             }
+        },
+        "sponsorship": {
+            "yourTitle": "Tus patrocinadores",
+            "namedTitle": "Patrocinadores de {name}",
+            "sample": "Ejemplo",
+            "ofTarget": "recaudados de {target}",
+            "toGo": "Faltan {amount}",
+            "reached": "¡Objetivo alcanzado!",
+            "giftAid": "+ {amount} de Gift Aid",
+            "helpTitle": "Ayuda a {name} a llegar a {target}",
+            "helpLine": "{raised} recaudados hasta ahora de {count} patrocinadores."
+        },
+        "streak": {
+            "value": "{n}",
+            "label": "Racha puntual",
+            "labelBest": "Racha puntual · récord {best}"
+        },
+        "milestones": {
+            "title": "Hitos",
+            "unlocked": "Desbloqueado",
+            "progress": "{count} / {target}",
+            "unlockedLabel": "Hito desbloqueado",
+            "share": "Compartir",
+            "nice": "¡Genial!",
+            "first": {
+                "name": "Primer puzle",
+                "line": "¡En marcha! Día 1 hecho."
+            },
+            "week": {
+                "name": "Una semana",
+                "line": "Siete puzles hechos. Ya es un hábito."
+            },
+            "half": {
+                "name": "A mitad de camino",
+                "line": "{n} puzles hechos. Ahora todo es cuesta abajo."
+            },
+            "streak": {
+                "name": "Racha de {n} días",
+                "line": "{n} días seguidos, cada uno en su día."
+            },
+            "finish": {
+                "name": "Reto completado",
+                "line": "¡Todos los puzles hechos!"
+            }
+        },
+        "time": {
+            "hm": "{h} h {m} min",
+            "m": "{m} min"
         },
         "account": {
             "signIn": "Iniciar sesión",

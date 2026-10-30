@@ -1591,7 +1591,6 @@
         "ended": "Ez a kampány véget ért.",
         "pickTrack": "Válaszd ki a kihívásodat",
         "start": "Kezdés",
-        "startTrack": "{name} indítása",
         "dayN": "{day}. nap",
         "back": "Vissza",
         "backTo": "Vissza ide: {name}",
@@ -1617,7 +1616,6 @@
         "raisedOf": "{raised} / {target}",
         "raised": "Összegyűjtve",
         "sponsors": "Támogató",
-        "sponsor": "Támogatom",
         "home": "Kezdőlap",
         "profile": {
             "title": "Profilod",
@@ -1737,7 +1735,7 @@
             "catchUpNote": "Ez kimaradt. Még bepótolhatod.",
             "doneLabel": "A mai rejtvény",
             "doneTitle": "Kész! Szép munka.",
-            "doneNext": "A(z) {day}. nap holnap nyílik meg."
+            "unlocksIn": "A(z) {day}. nap ennyi idő múlva nyílik:"
         },
         "card": {
             "started": "Vállaltam a(z) {days} napos kihívást",
@@ -1768,6 +1766,54 @@
                     "hint": "X, LinkedIn, Facebook linkek"
                 }
             }
+        },
+        "sponsorship": {
+            "yourTitle": "A támogatóid",
+            "namedTitle": "{name} támogatói",
+            "sample": "Minta",
+            "ofTarget": "gyűlt össze a(z) {target} célból",
+            "toGo": "Még {amount}",
+            "reached": "Cél elérve!",
+            "giftAid": "+ {amount} Gift Aid",
+            "helpTitle": "Segíts {name} számára elérni a(z) {target} célt",
+            "helpLine": "Eddig {raised} gyűlt össze {count} támogatótól."
+        },
+        "streak": {
+            "value": "{n}",
+            "label": "Időben teljesített sorozat",
+            "labelBest": "Időben teljesített sorozat · rekord {best}"
+        },
+        "milestones": {
+            "title": "Mérföldkövek",
+            "unlocked": "Elérve",
+            "progress": "{count} / {target}",
+            "unlockedLabel": "Mérföldkő elérve",
+            "share": "Megosztás",
+            "nice": "Szuper!",
+            "first": {
+                "name": "Első rejtvény",
+                "line": "Elindultál! Az 1. nap kész."
+            },
+            "week": {
+                "name": "Egy hét",
+                "line": "Hét rejtvény kész. Már szokássá vált."
+            },
+            "half": {
+                "name": "Félúton",
+                "line": "{n} rejtvény kész. Innen már lejtő."
+            },
+            "streak": {
+                "name": "{n} napos sorozat",
+                "line": "{n} nap egymás után, mindegyik a maga napján."
+            },
+            "finish": {
+                "name": "Kihívás teljesítve",
+                "line": "Minden rejtvény kész!"
+            }
+        },
+        "time": {
+            "hm": "{h} óra {m} perc",
+            "m": "{m} perc"
         },
         "account": {
             "signIn": "Bejelentkezés",

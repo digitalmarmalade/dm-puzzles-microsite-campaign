@@ -101,6 +101,7 @@ export function validateCampaign(campaign) {
     }
     if (!['required', 'optional'].includes(campaign.account)) errors.push('account must be "required" or "optional"')
     errors.push(...validateProfileSettings(campaign.profile))
+    if (campaign.sampleFundraising !== undefined && typeof campaign.sampleFundraising !== 'boolean') errors.push('sampleFundraising must be true or false')
     if (campaign.organisation !== undefined && (typeof campaign.organisation !== 'string' || !campaign.organisation)) errors.push('organisation must be text')
     for (const key of ['logo', 'banner', 'bannerFocus']) {
         const value = campaign.theme?.[key]

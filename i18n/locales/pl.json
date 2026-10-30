@@ -1591,7 +1591,6 @@
         "ended": "Ta kampania się zakończyła.",
         "pickTrack": "Wybierz swoje wyzwanie",
         "start": "Zacznij",
-        "startTrack": "Zacznij {name}",
         "dayN": "Dzień {day}",
         "back": "Wstecz",
         "backTo": "Wróć do {name}",
@@ -1617,7 +1616,6 @@
         "raisedOf": "{raised} z {target}",
         "raised": "Zebrano",
         "sponsors": "Sponsorzy",
-        "sponsor": "Wesprzyj",
         "home": "Start",
         "profile": {
             "title": "Twój profil",
@@ -1737,7 +1735,7 @@
             "catchUpNote": "Ta Cię ominęła. Nadal możesz w nią zagrać.",
             "doneLabel": "Dzisiejsza łamigłówka",
             "doneTitle": "Gotowe! Świetna robota.",
-            "doneNext": "Dzień {day} odblokuje się jutro."
+            "unlocksIn": "Dzień {day} odblokuje się za"
         },
         "card": {
             "started": "Podejmuję {days}-dniowe wyzwanie",
@@ -1768,6 +1766,54 @@
                     "hint": "Linki w X, LinkedIn, Facebook"
                 }
             }
+        },
+        "sponsorship": {
+            "yourTitle": "Twoi sponsorzy",
+            "namedTitle": "Sponsorzy: {name}",
+            "sample": "Przykład",
+            "ofTarget": "zebrano z {target}",
+            "toGo": "Zostało {amount}",
+            "reached": "Cel osiągnięty!",
+            "giftAid": "+ {amount} Gift Aid",
+            "helpTitle": "Pomóż {name} osiągnąć {target}",
+            "helpLine": "Dotąd zebrano {raised} od {count} sponsorów."
+        },
+        "streak": {
+            "value": "{n}",
+            "label": "Seria na czas",
+            "labelBest": "Seria na czas · rekord {best}"
+        },
+        "milestones": {
+            "title": "Kamienie milowe",
+            "unlocked": "Odblokowane",
+            "progress": "{count} / {target}",
+            "unlockedLabel": "Kamień milowy odblokowany",
+            "share": "Udostępnij",
+            "nice": "Super!",
+            "first": {
+                "name": "Pierwsza łamigłówka",
+                "line": "Start! Dzień 1 za Tobą."
+            },
+            "week": {
+                "name": "Tydzień za Tobą",
+                "line": "Siedem łamigłówek. To już nawyk."
+            },
+            "half": {
+                "name": "Półmetek",
+                "line": "{n} łamigłówek za Tobą. Dalej już z górki."
+            },
+            "streak": {
+                "name": "Seria {n} dni",
+                "line": "{n} dni z rzędu, każda w swoim dniu."
+            },
+            "finish": {
+                "name": "Wyzwanie ukończone",
+                "line": "Wszystkie łamigłówki rozwiązane!"
+            }
+        },
+        "time": {
+            "hm": "{h} godz. {m} min",
+            "m": "{m} min"
         },
         "account": {
             "signIn": "Zaloguj się",

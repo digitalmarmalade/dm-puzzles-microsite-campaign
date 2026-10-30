@@ -1597,7 +1597,6 @@
         "ended": "This campaign has ended.",
         "pickTrack": "Choose your challenge",
         "start": "Start",
-        "startTrack": "Start {name}",
         "dayN": "Day {day}",
         "back": "Back",
         "backTo": "Back to {name}",
@@ -1623,7 +1622,6 @@
         "raisedOf": "{raised} of {target}",
         "raised": "Raised",
         "sponsors": "Sponsors",
-        "sponsor": "Sponsor",
         "home": "Home",
         "profile": {
             "title": "Your profile",
@@ -1743,7 +1741,7 @@
             "catchUpNote": "You missed this one. There's still time to play it.",
             "doneLabel": "Today's puzzle",
             "doneTitle": "Done! Nice work.",
-            "doneNext": "Day {day} unlocks tomorrow."
+            "unlocksIn": "Day {day} unlocks in"
         },
         "card": {
             "started": "I'm doing the {days} day challenge",
@@ -1774,6 +1772,54 @@
                     "hint": "X, LinkedIn, Facebook links"
                 }
             }
+        },
+        "sponsorship": {
+            "yourTitle": "Your sponsors",
+            "namedTitle": "{name}'s sponsors",
+            "sample": "Sample",
+            "ofTarget": "raised of {target}",
+            "toGo": "{amount} to go",
+            "reached": "Target reached!",
+            "giftAid": "+ {amount} Gift Aid",
+            "helpTitle": "Help {name} reach {target}",
+            "helpLine": "{raised} raised so far from {count} sponsors."
+        },
+        "streak": {
+            "value": "{n}",
+            "label": "On-time streak",
+            "labelBest": "On-time streak · best {best}"
+        },
+        "milestones": {
+            "title": "Milestones",
+            "unlocked": "Unlocked",
+            "progress": "{count} / {target}",
+            "unlockedLabel": "Milestone unlocked",
+            "share": "Share it",
+            "nice": "Nice!",
+            "first": {
+                "name": "First puzzle",
+                "line": "You're off! Day 1 done."
+            },
+            "week": {
+                "name": "One week in",
+                "line": "Seven puzzles down. You're in the habit now."
+            },
+            "half": {
+                "name": "Halfway there",
+                "line": "{n} puzzles done. The rest is downhill."
+            },
+            "streak": {
+                "name": "{n}-day streak",
+                "line": "{n} days in a row, every one on its day."
+            },
+            "finish": {
+                "name": "Challenge complete",
+                "line": "Every puzzle done!"
+            }
+        },
+        "time": {
+            "hm": "{h}h {m}m",
+            "m": "{m}m"
         },
         "account": {
             "signIn": "Sign in",

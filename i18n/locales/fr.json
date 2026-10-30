@@ -1591,7 +1591,6 @@
         "ended": "Cette campagne est terminée.",
         "pickTrack": "Choisissez votre défi",
         "start": "Commencer",
-        "startTrack": "Commencer {name}",
         "dayN": "Jour {day}",
         "back": "Retour",
         "backTo": "Retour à {name}",
@@ -1617,7 +1616,6 @@
         "raisedOf": "{raised} sur {target}",
         "raised": "Collectés",
         "sponsors": "Parrains",
-        "sponsor": "Parrainer",
         "home": "Accueil",
         "profile": {
             "title": "Votre profil",
@@ -1737,7 +1735,7 @@
             "catchUpNote": "Vous l'avez manqué. Il est encore temps d'y jouer.",
             "doneLabel": "Puzzle du jour",
             "doneTitle": "Terminé ! Bravo.",
-            "doneNext": "Le jour {day} se débloque demain."
+            "unlocksIn": "Le jour {day} se débloque dans"
         },
         "card": {
             "started": "Je relève le défi des {days} jours",
@@ -1768,6 +1766,54 @@
                     "hint": "Liens X, LinkedIn, Facebook"
                 }
             }
+        },
+        "sponsorship": {
+            "yourTitle": "Vos parrains",
+            "namedTitle": "Les parrains de {name}",
+            "sample": "Exemple",
+            "ofTarget": "collectés sur {target}",
+            "toGo": "Plus que {amount}",
+            "reached": "Objectif atteint !",
+            "giftAid": "+ {amount} de Gift Aid",
+            "helpTitle": "Aidez {name} à atteindre {target}",
+            "helpLine": "{raised} collectés jusqu'ici grâce à {count} parrains."
+        },
+        "streak": {
+            "value": "{n}",
+            "label": "Série à l'heure",
+            "labelBest": "Série à l'heure · record {best}"
+        },
+        "milestones": {
+            "title": "Étapes",
+            "unlocked": "Débloquée",
+            "progress": "{count} / {target}",
+            "unlockedLabel": "Étape débloquée",
+            "share": "Partager",
+            "nice": "Super !",
+            "first": {
+                "name": "Premier puzzle",
+                "line": "C'est parti ! Jour 1 terminé."
+            },
+            "week": {
+                "name": "Une semaine",
+                "line": "Sept puzzles faits. L'habitude est prise."
+            },
+            "half": {
+                "name": "À mi-chemin",
+                "line": "{n} puzzles faits. Le plus dur est derrière vous."
+            },
+            "streak": {
+                "name": "Série de {n} jours",
+                "line": "{n} jours d'affilée, chacun le bon jour."
+            },
+            "finish": {
+                "name": "Défi terminé",
+                "line": "Tous les puzzles sont faits !"
+            }
+        },
+        "time": {
+            "hm": "{h} h {m} min",
+            "m": "{m} min"
         },
         "account": {
             "signIn": "Se connecter",

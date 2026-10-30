@@ -15,7 +15,7 @@ const homePath = localePath(`/c/${campaign.id}`)
 const name = computed(() => page.profile.value?.name ?? '')
 const title = computed(() => name.value ? t('campaign.namedChallenge', {name: name.value}) : t('campaign.yourChallenge'))
 const pageUrl = useCampaignPageUrl(campaign)
-const fundraising = computed(() => page.previewing ? campaign.preview?.fundraising ?? null : null)
+const fundraising = computed(() => sampleFundraising(campaign, page.previewing))
 </script>
 
 <template>
@@ -57,8 +57,13 @@ const fundraising = computed(() => page.previewing ? campaign.preview?.fundraisi
                 :fundraising="fundraising"
                 :share-url="pageUrl(handle)"
                 :share-title="title"
+                :sample="!!fundraising"
                 :playable="false"
-            />
+            >
+                <template v-if="fundraising?.url && !page.progress.value.over" #lead>
+                    <CampaignSponsorCta :fundraising="fundraising" :name="name" />
+                </template>
+            </CampaignChallengeCard>
 
             <section v-else class="card card--main public-missing">
                 <h1>{{ title }}</h1>

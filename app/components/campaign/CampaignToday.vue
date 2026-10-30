@@ -1,4 +1,7 @@
 <script setup>
+import {msUntilTomorrow} from '@/lib/campaign/dates'
+import {timezoneOf} from '@/lib/campaign/schedule'
+
 const props = defineProps({
     campaign: {type: Object, required: true},
     track: {type: Object, required: true},
@@ -19,6 +22,19 @@ const puzzle = computed(() => lead.value ? props.track.puzzles[lead.value.day - 
 const percent = computed(() => lead.value ? props.percents[lead.value.day] ?? null : null)
 const doneToday = computed(() => !today.value && props.progress.currentDay >= 1 && props.progress.currentDay <= props.progress.days.length)
 const nextDay = computed(() => props.progress.currentDay < props.progress.days.length ? props.progress.currentDay + 1 : null)
+
+const remaining = ref(msUntilTomorrow(timezoneOf(props.campaign)))
+const countdown = computed(() => {
+    const minutes = Math.max(1, Math.ceil(remaining.value / 60000))
+    const h = Math.floor(minutes / 60)
+    const m = minutes % 60
+    return h ? t('campaign.time.hm', {h, m}) : t('campaign.time.m', {m})
+})
+let clock = null
+onMounted(() => {
+    clock = setInterval(() => remaining.value = msUntilTomorrow(timezoneOf(props.campaign)), 30000)
+})
+onBeforeUnmount(() => clearInterval(clock))
 </script>
 
 <template>
@@ -44,7 +60,10 @@ const nextDay = computed(() => props.progress.currentDay < props.progress.days.l
         <div class="today__text">
             <p class="today__label">{{ t('campaign.today.doneLabel') }}</p>
             <h2 class="today__name">{{ t('campaign.today.doneTitle') }}</h2>
-            <p v-if="nextDay" class="today__note">{{ t('campaign.today.doneNext', {day: nextDay}) }}</p>
+            <p v-if="nextDay" class="today__note">
+                {{ t('campaign.today.unlocksIn', {day: nextDay}) }}
+                <strong class="today__countdown">{{ countdown }}</strong>
+            </p>
         </div>
         <button v-if="shareCard?.available.value" type="button" class="today__share" @click="shareCard.open()">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" /></svg>
@@ -165,6 +184,16 @@ const nextDay = computed(() => props.progress.currentDay < props.progress.days.l
     @media (width >= 720px) {
         font-size: 3.6rem;
     }
+}
+
+.today__countdown {
+    display: inline-block;
+    margin-inline-start: .4rem;
+    padding: .1rem .8rem;
+    border-radius: 9999px;
+    background: var(--primary);
+    color: var(--text-on-primary);
+    font-variant-numeric: tabular-nums;
 }
 
 .today__note {

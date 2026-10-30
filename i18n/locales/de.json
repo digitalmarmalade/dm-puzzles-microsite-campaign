@@ -1590,7 +1590,6 @@
         "ended": "Diese Kampagne ist beendet.",
         "pickTrack": "Wähle deine Challenge",
         "start": "Starten",
-        "startTrack": "{name} starten",
         "dayN": "Tag {day}",
         "back": "Zurück",
         "backTo": "Zurück zu {name}",
@@ -1616,7 +1615,6 @@
         "raisedOf": "{raised} von {target}",
         "raised": "Gesammelt",
         "sponsors": "Sponsoren",
-        "sponsor": "Sponsern",
         "home": "Start",
         "profile": {
             "title": "Dein Profil",
@@ -1736,7 +1734,7 @@
             "catchUpNote": "Das hast du verpasst. Du kannst es noch spielen.",
             "doneLabel": "Rätsel des Tages",
             "doneTitle": "Geschafft! Gut gemacht.",
-            "doneNext": "Tag {day} wird morgen freigeschaltet."
+            "unlocksIn": "Tag {day} wird freigeschaltet in"
         },
         "card": {
             "started": "Ich mache die {days}-Tage-Challenge",
@@ -1767,6 +1765,54 @@
                     "hint": "Links auf X, LinkedIn, Facebook"
                 }
             }
+        },
+        "sponsorship": {
+            "yourTitle": "Deine Unterstützer",
+            "namedTitle": "Unterstützer von {name}",
+            "sample": "Beispiel",
+            "ofTarget": "von {target} gesammelt",
+            "toGo": "Noch {amount}",
+            "reached": "Ziel erreicht!",
+            "giftAid": "+ {amount} Gift Aid",
+            "helpTitle": "Hilf {name}, {target} zu erreichen",
+            "helpLine": "Bisher {raised} von {count} Unterstützern."
+        },
+        "streak": {
+            "value": "{n}",
+            "label": "Pünktlich-Serie",
+            "labelBest": "Pünktlich-Serie · Rekord {best}"
+        },
+        "milestones": {
+            "title": "Meilensteine",
+            "unlocked": "Freigeschaltet",
+            "progress": "{count} / {target}",
+            "unlockedLabel": "Meilenstein erreicht",
+            "share": "Teilen",
+            "nice": "Super!",
+            "first": {
+                "name": "Erstes Rätsel",
+                "line": "Los geht's! Tag 1 geschafft."
+            },
+            "week": {
+                "name": "Eine Woche",
+                "line": "Sieben Rätsel geschafft. Jetzt ist es Gewohnheit."
+            },
+            "half": {
+                "name": "Halbzeit",
+                "line": "{n} Rätsel geschafft. Ab jetzt geht's bergab."
+            },
+            "streak": {
+                "name": "{n} Tage in Folge",
+                "line": "{n} Tage am Stück, jedes Rätsel an seinem Tag."
+            },
+            "finish": {
+                "name": "Challenge geschafft",
+                "line": "Alle Rätsel gelöst!"
+            }
+        },
+        "time": {
+            "hm": "{h} Std. {m} Min.",
+            "m": "{m} Min."
         },
         "account": {
             "signIn": "Anmelden",

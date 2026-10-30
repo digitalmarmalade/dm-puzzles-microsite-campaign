@@ -15,7 +15,7 @@ const error = ref('')
 
 const when = computed(() => phase(campaign, p.today.value))
 const formatDate = (iso) => new Intl.DateTimeFormat(dateLocale.value, {day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'}).format(new Date(`${iso}T12:00:00Z`))
-const sample = p.previewing ? campaign.preview : null
+const fundraising = sampleFundraising(campaign, p.previewing)
 const pageUrl = useCampaignPageUrl(campaign)
 const welcomePath = localePath(`/c/${campaign.id}/welcome`)
 
@@ -51,11 +51,16 @@ onBeforeUnmount(() => {
     if (frame) cancelAnimationFrame(frame)
 })
 
-async function start(trackId) {
+async function begin() {
     busy.value = true
     error.value = ''
     try {
-        await p.start(trackId)
+        if (campaign.tracks.length > 1) {
+            await p.ensureUser()
+            await navigateTo(welcomePath)
+        } else {
+            await p.start(campaign.tracks[0].id)
+        }
     } catch (e) {
         console.error(e)
         error.value = t('campaign.account.errors.default')
@@ -88,33 +93,22 @@ async function start(trackId) {
         <div v-else-if="!p.player.value" class="campaign-landing" :class="{'has-banner': campaign.theme?.banner}">
             <aside class="campaign-landing__action">
                 <CampaignSignIn
-                    v-if="p.needsAccount.value && !p.previewing"
+                    v-if="campaign.account === 'required' && (p.previewing || p.needsAccount.value)"
                     :campaign="campaign"
                     :profile="p.profile.value"
                     :intro="text('intro')"
                     @registered="navigateTo(welcomePath)"
                 />
 
-
                 <div v-else class="card card--main campaign-panel">
                     <p v-if="when === 'upcoming'" class="campaign-note">{{ t('campaign.upcoming', {date: formatDate(joinWindow(campaign).from)}) }}</p>
                     <p v-else-if="when === 'ended'" class="campaign-note">{{ t('campaign.ended') }}</p>
                     <template v-else>
                         <div class="campaign-panel__header">
-                            <h2 class="campaign-panel__title">{{ t(campaign.tracks.length > 1 ? 'campaign.pickTrack' : 'campaign.readyTitle') }}</h2>
-                            <p v-if="!p.user.value || p.user.value.isAnonymous">{{ text('intro') }}</p>
+                            <h2 class="campaign-panel__title">{{ t('campaign.readyTitle') }}</h2>
+                            <p>{{ text('intro') }}</p>
                         </div>
-                        <ul class="campaign-tracks">
-                            <li v-for="track in campaign.tracks" :key="track.id" class="campaign-track">
-                                <template v-if="campaign.tracks.length > 1">
-                                    <h3>{{ track.name }}</h3>
-                                    <p>{{ track.description }}</p>
-                                </template>
-                                <button class="campaign-button" :disabled="busy" @click="start(track.id)">
-                                    {{ campaign.tracks.length > 1 ? t('campaign.startTrack', {name: track.name}) : t('campaign.start') }}
-                                </button>
-                            </li>
-                        </ul>
+                        <button class="campaign-button campaign-start" :disabled="busy" @click="begin">{{ t('campaign.start') }}</button>
                         <p v-if="error" class="campaign-note" role="alert">{{ error }}</p>
                     </template>
                 </div>
@@ -132,7 +126,7 @@ async function start(trackId) {
             :progress="p.progress.value"
             :profile="p.profile.value"
             :page-url="p.profile.value?.handle ? pageUrl(p.profile.value.handle) : null"
-            :fundraising="sample?.fundraising ?? null"
+            :fundraising="fundraising"
             own
         />
 
@@ -147,9 +141,11 @@ async function start(trackId) {
             :share-url="p.profile.value?.handle ? pageUrl(p.profile.value.handle) : null"
             :share-title="text('title')"
             :share-card="!!p.profile.value?.handle"
-            :fundraising="sample?.fundraising ?? null"
+            :fundraising="fundraising"
+            :sample="!!fundraising"
         >
             <template v-if="!p.progress.value.over" #lead>
+                <CampaignMilestoneUnlock :colours="[campaign.theme?.primary, campaign.theme?.secondary, '#ffd166'].filter(Boolean)" :progress="p.progress.value" :storage-key="`campaign-milestones-seen:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}`" />
                 <CampaignToday :campaign="campaign" :track="p.track.value" :progress="p.progress.value" :percents="p.percents.value" />
             </template>
             <p v-if="p.progress.value.currentDay === 0" class="campaign-note">{{ t('campaign.beforeStart', {date: formatDate(p.progress.value.days[0].due)}) }}</p>
@@ -288,37 +284,9 @@ async function start(trackId) {
     text-align: center;
 }
 
-.campaign-tracks {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 1.2rem;
-    inline-size: 100%;
-}
-
-.campaign-track {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .6rem;
-    padding: 1.6rem 2rem;
-    border: 1px solid var(--card-border);
-    border-radius: var(--border-radius-inner);
-
-    h3 {
-        margin: 0;
-        font-size: 1.8rem;
-    }
-
-    p {
-        margin: 0 0 .6rem;
-    }
-
-    .campaign-tracks:has(> :only-child) & {
-        border: 0;
-        padding: 0;
-    }
+.campaign-start {
+    align-self: flex-start;
+    padding-inline: 3.2rem;
 }
 
 .campaign-account {

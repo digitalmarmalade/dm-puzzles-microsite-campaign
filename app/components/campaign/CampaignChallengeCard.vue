@@ -1,4 +1,6 @@
 <script setup>
+import {streaks} from '@/lib/campaign/achievements'
+
 const props = defineProps({
     campaign: {type: Object, required: true},
     track: {type: Object, required: true},
@@ -11,15 +13,16 @@ const props = defineProps({
     shareUrl: {type: String, default: null},
     shareTitle: {type: String, default: ''},
     shareCard: {type: Boolean, default: false},
+    sample: {type: Boolean, default: false},
 })
 
 const {t} = useI18n()
-const dateLocale = useDateLocale()
 
 const total = props.campaign.schedule.days
+const streak = computed(() => streaks(props.progress))
 const title = computed(() => props.profile?.name ? t('campaign.namedChallenge', {name: props.profile.name}) : t('campaign.yourChallenge'))
 const initial = computed(() => (props.profile?.name ?? '').trim().charAt(0).toUpperCase())
-const money = (amount) => new Intl.NumberFormat(dateLocale.value, {style: 'currency', currency: props.fundraising?.currency ?? 'GBP', maximumFractionDigits: 0}).format(amount)
+const money = useMoney(props.fundraising?.currency)
 const shareCardDialog = ref(null)
 const openShareCard = () => shareCardDialog.value?.open()
 provide('shareCard', {available: toRef(props, 'shareCard'), open: openShareCard})
@@ -44,12 +47,6 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
                 <p v-if="track.headline" class="challenge-card__headline">{{ track.headline }}</p>
                 <blockquote v-if="profile?.reason" class="challenge-card__reason">{{ profile.reason }}</blockquote>
             </div>
-            <a v-if="fundraising?.url" :href="fundraising.url" class="campaign-button challenge-card__sponsor" target="_blank" rel="noopener">
-                {{ t('campaign.sponsor') }}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polyline points="9 18 15 12 9 6" />
-                </svg>
-            </a>
         </header>
 
         <slot name="lead" />
@@ -59,6 +56,11 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
                 :value="`${progress.completed} / ${total}`"
                 :label="t('campaign.daysCompleted')"
                 :percent="progress.completed / total * 100"
+            />
+            <CampaignStat
+                :value="t('campaign.streak.value', {n: streak.current})"
+                :label="streak.best > streak.current ? t('campaign.streak.labelBest', {best: streak.best}) : t('campaign.streak.label')"
+                :flame="streak.current > 0"
             />
             <template v-if="fundraising">
                 <CampaignStat
@@ -83,6 +85,16 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
             :puzzles="track.puzzles"
             :percents="percents"
             :playable="playable"
+        />
+
+        <CampaignMilestones :progress="progress" />
+
+        <CampaignSupporters
+            v-if="fundraising"
+            :fundraising="fundraising"
+            :name="profile?.name ?? ''"
+            :own="!!editTo"
+            :sample="sample"
         />
 
         <CampaignShareCard
@@ -205,17 +217,6 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
         inset-block-start: 2rem;
         inset-inline-end: 2rem;
         margin: 0;
-    }
-}
-
-.challenge-card__sponsor {
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    padding: .8rem 1.6rem;
-
-    svg {
-        inline-size: 1.4rem;
-        block-size: 1.4rem;
     }
 }
 

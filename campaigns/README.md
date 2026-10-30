@@ -31,7 +31,8 @@ and `advent-sample` (24 fixed December days, guests welcome) are examples to cop
 | `text` | The campaign's own words, per language: `{"en": {...}}` with `title`, `tagline`, `intro`, `finished` and `perfect`. `finished` and `perfect` are the headline of the player's finale once they've done every day (late or on time). Optional `summary` is a short paragraph shown in large type above "How it works", e.g. what the money raised pays for. Optional `pledge` is the sentence on players' share images, with `{org}`, `{headline}` (the track's headline) and `{days}` filled in; without it a standard sentence is used. Optional `footer` adds a line under the copyright, e.g. a registered charity number. Optional `steps`, e.g. `[{"title": "Open a door", "body": "A new puzzle every morning."}]`, replaces the landing page's standard "How it works" steps. |
 | `tracks` | The challenges a player can choose between. One track means no choice. |
 | `profile` | Optional. What players can add about themselves: `{"avatars": ["/img/...svg"], "reason": true}`. `avatars` replaces the default set of avatar images; `reason: false` hides the "why are you taking on the challenge" box; `publicPage: false` turns off players' public pages. Players always give a name. |
-| `preview` | Optional sample data shown only when previewing a date: `name`, `avatar`, `reason` and `fundraising`. |
+| `preview` | Optional sample data shown only when previewing a date: `name`, `avatar`, `reason` and `fundraising` (`raised`, `target`, `currency`, `sponsors`, `url`, `giftAid`, and `supporters`: `[{"name", "amount", "message", "daysAgo"}]`). |
+| `sampleFundraising` | `true` shows the `preview.fundraising` sample on every player's real page too, marked "Sample", until real fundraising data is connected. For demos only. |
 
 ### schedule
 

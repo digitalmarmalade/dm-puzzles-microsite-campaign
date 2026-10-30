@@ -1,8 +1,7 @@
 <script setup>
 import {signOut} from 'firebase/auth'
-import {NAME_MAX, REASON_MAX, handleCandidates, profileSettings} from '@/lib/campaign/profile'
-import {dateIn} from '@/lib/campaign/dates'
-import {phase, timezoneOf} from '@/lib/campaign/schedule'
+import {NAME_MAX, REASON_MAX, handleCandidates, handleFrom, profileSettings} from '@/lib/campaign/profile'
+import {phase} from '@/lib/campaign/schedule'
 
 const campaign = await useCampaign()
 const {t, te} = useI18n()
@@ -18,7 +17,7 @@ const mode = ref(pending ? 'new' : null)
 const form = ref({name: pending?.name ?? '', avatar: null, reason: ''})
 const askName = ref(false)
 const handle = ref(null)
-const open = phase(campaign, dateIn(timezoneOf(campaign))) === 'open'
+const open = phase(campaign, p.today.value) === 'open'
 const choosing = open && campaign.tracks.length > 1
 const track = ref(campaign.tracks.length === 1 ? campaign.tracks[0].id : null)
 const iconOf = (puzzle) => puzzle.icon ?? (puzzle.tag ?? '').replaceAll('-', '')
@@ -41,7 +40,8 @@ const section = (id) => sections.value.find(entry => entry.id === id)
 watchEffect(() => {
     if (mode.value || !p.loaded.value) return
     const user = p.user.value
-    if (!user || user.isAnonymous || p.player.value) {
+    const guest = campaign.account === 'optional' && user?.isAnonymous
+    if (p.player.value || (!p.previewing && (!user || (user.isAnonymous && !guest)))) {
         navigateTo(homePath, {replace: true})
         return
     }
@@ -77,8 +77,14 @@ async function save() {
     busy.value = true
     try {
         const trackId = open ? track.value : null
-        if (mode.value === 'new') await registerPlayer(campaign, pending, form.value, trackId)
-        else await joinCampaign(campaign, p.user.value.uid, form.value, trackId)
+        if (p.previewing) {
+            await p.saveProfile({...form.value, handle: mode.value === 'new' ? handle.value ?? handleFrom(form.value.name) : undefined})
+            if (trackId) await p.start(trackId)
+        } else if (mode.value === 'new') {
+            await registerPlayer(campaign, pending, form.value, trackId)
+        } else {
+            await joinCampaign(campaign, p.user.value.uid, form.value, trackId)
+        }
         signup.value = null
         await navigateTo(homePath)
     } catch (e) {
@@ -92,7 +98,7 @@ async function save() {
 
 async function cancel() {
     signup.value = null
-    if (mode.value === 'existing') await signOut($auth)
+    if (mode.value === 'existing' && !p.previewing && p.user.value && !p.user.value.isAnonymous) await signOut($auth)
     navigateTo(homePath)
 }
 </script>

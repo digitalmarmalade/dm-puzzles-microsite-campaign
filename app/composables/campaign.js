@@ -12,6 +12,13 @@ export async function useCampaign() {
     return campaign
 }
 
+export const sampleFundraising = (campaign, previewing) => previewing || campaign.sampleFundraising ? campaign.preview?.fundraising ?? null : null
+
+export function useMoney(currency = 'GBP') {
+    const dateLocale = useDateLocale()
+    return (amount) => new Intl.NumberFormat(dateLocale.value, {style: 'currency', currency, maximumFractionDigits: 0}).format(amount)
+}
+
 export function useCampaignText(campaign) {
     const {locale} = useI18n()
     return (key) => campaign.text?.[locale.value]?.[key] ?? campaign.text?.en?.[key] ?? ''
@@ -247,7 +254,7 @@ export function useCampaignPlayer(campaign) {
         : null)
 
     async function ensureUser() {
-        if (user.value) return
+        if (store || user.value) return
         if (campaign.account === 'required') throw new Error('An account is needed for this campaign')
         await signInAnonymously($auth)
         await until(() => user.value?.uid && loaded.value)
@@ -278,7 +285,7 @@ export function useCampaignPlayer(campaign) {
 
     async function saveProfile(changes) {
         if (store) {
-            profile.value = cleanProfile(campaign, {...changes, handle: profile.value?.handle ?? handleFrom(changes.name)})
+            profile.value = cleanProfile(campaign, {...changes, handle: changes.handle ?? profile.value?.handle ?? handleFrom(changes.name)})
             store.save({...store.load(), profile: profile.value})
             return
         }
@@ -292,7 +299,7 @@ export function useCampaignPlayer(campaign) {
         percentsStore.save(percents.value)
     }
 
-    return {user, today, player, track, progress, profile, percents, loaded, needsAccount, previewing: !!preview.today, start, complete, saveProfile, notePercent}
+    return {user, today, player, track, progress, profile, percents, loaded, needsAccount, previewing: !!preview.today, ensureUser, start, complete, saveProfile, notePercent}
 }
 
 function until(condition) {
