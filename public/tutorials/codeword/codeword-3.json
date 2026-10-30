@@ -1,0 +1,37 @@
+{
+  "headline": null,
+  "meta": {
+    "id": "tutorial-3",
+    "title": "Codeword",
+    "difficulty": "Easy",
+    "type": "codeword",
+    "number": "",
+    "variant": "Codeword",
+    "slug": "codeword-tutorial-3",
+    "description": "",
+    "section": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 3,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 5,
+    "rowCount": 5,
+    "allowedValues": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "solution": "TGCUOXRAENS"
+  },
+  "copy": {
+    "gridsize": {
+      "type": "Standard",
+      "rows": 5,
+      "cols": 5
+    }
+  },
+  "celldata": "2,7,8,11,11,7,,3,,1,9,6,1,7,8,9,,5,,1,10,4,7,11,9",
+  "cluedata": "T      AE S",
+  "feedback": null,
+  "sharing": null
+}

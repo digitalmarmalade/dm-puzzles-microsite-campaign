@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "id": "tutorial-3",
+    "title": "Cell Blocks",
+    "difficulty": "Easy",
+    "type": "cellblocks",
+    "variant": "Cell Blocks",
+    "slug": "cell-blocks-tutorial-3",
+    "number": "",
+    "description": "",
+    "section": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 3,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 6,
+    "rowCount": 6,
+    "allowedValues": "0123456789",
+    "solution": "1,2,3,4,5,6;7,8,13,14,19,20;9,10,11,12;15,16,17,21,22,23;18,24,30,36;25,31;26,27,32,33;28,29;34,35"
+  },
+  "copy": {
+    "gridsize": {
+      "type": "Standard",
+      "rows": 6,
+      "cols": 6
+    }
+  },
+  "celldata": "  6   6    4   6 4      2  2    42  ",
+  "cluedata": "",
+  "feedback": null
+}

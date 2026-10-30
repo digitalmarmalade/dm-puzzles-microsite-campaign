@@ -1,0 +1,60 @@
+.btn-darklight {
+  color: var(--text-colour);
+  cursor: pointer;
+  border: 0 solid transparent;
+  background: transparent;
+  border-radius: .25em;
+  outline: 0 transparent;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  @media (hover: hover) {
+      &:hover {
+          background: rgba(0,0,0,.05);
+      }
+  }
+}
+
+.btn-darklight__icon {
+  width: 2rem;
+  height: 100%;
+  position: relative;
+}
+
+.btn-darklight__icon-box {
+  height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  position: relative;
+}
+
+.btn-darklight__icon-box.is--absolute {
+  position: absolute;
+}
+
+/* Background */
+[data-theme-status] {
+  transition: background-color 0.4s cubic-bezier(0.35, 1, 0.6, 1);
+}
+[data-theme-status="dark"] {
+ @media (hover: hover) {
+     .btn-darklight:hover {
+         background: rgba(255,255,255,.05);
+     }
+ }
+}
+
+/* Button Icon */
+.btn-darklight .btn-darklight__icon-box{
+  transition: transform 0.8s cubic-bezier(0.35, 1.5, 0.6, 1);
+  transform: translateY(0%) rotate(-90deg);
+}
+
+[data-theme-status="dark"] .btn-darklight .btn-darklight__icon-box{
+  transform: translateY(-100%) rotate(0.001deg);
+}

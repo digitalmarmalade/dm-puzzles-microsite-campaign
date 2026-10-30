@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "id": "tutorial-3",
+    "title": "Head Coach",
+    "difficulty": "Easy",
+    "type": "headcoach",
+    "variant": "Head Coach",
+    "slug": "head-coach-tutorial-3",
+    "number": "",
+    "description": "",
+    "section": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 3,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 0,
+    "rowCount": 0,
+    "allowedValues": "1234567890",
+    "solution": "18"
+  },
+  "cluedata": [
+    {
+      "start": 12,
+      "answer": 18,
+      "difficulty": "Easy",
+      "data": [
+        {
+          "clue": "double it",
+          "result": 24
+        },
+        {
+          "clue": "+ 6",
+          "result": 30
+        },
+        {
+          "clue": "1/3 of it",
+          "result": 10
+        },
+        {
+          "clue": "square it",
+          "result": 100
+        },
+        {
+          "clue": "- 19",
+          "result": 81
+        },
+        {
+          "clue": "÷ 9",
+          "result": 9
+        },
+        {
+          "clue": "+ 27",
+          "result": 36
+        },
+        {
+          "clue": "50% of it",
+          "result": 18
+        }
+      ]
+    }
+  ],
+  "copy": {},
+  "feedback": null
+}

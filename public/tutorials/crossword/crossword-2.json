@@ -1,0 +1,336 @@
+{
+  "headline": "",
+  "type": "crossword",
+  "copy": {
+    "title": "",
+    "id": "tutorial-2",
+    "type": "block",
+    "crosswordtype": "Crossword",
+    "gridsize": {
+      "type": "Standard",
+      "cols": "5",
+      "rows": "5"
+    },
+    "settings": {
+      "solution": "HOUSEA   ATIGER  Y    M  ",
+      "solution_hashed": "82ba6e8717ab24798c93ddb81dafd9d7"
+    },
+    "hints": {},
+    "words": [
+      {
+        "id": 1,
+        "x": "1-5",
+        "y": "1",
+        "solution": "HOUSE"
+      },
+      {
+        "id": 2,
+        "x": "1-5",
+        "y": "3",
+        "solution": "TIGER"
+      },
+      {
+        "id": 3,
+        "x": "1",
+        "y": "1-3",
+        "solution": "HAT"
+      },
+      {
+        "id": 4,
+        "x": "5",
+        "y": "1-3",
+        "solution": "EAR"
+      },
+      {
+        "id": 5,
+        "x": "3",
+        "y": "3-5",
+        "solution": "GYM"
+      }
+    ],
+    "clues": [
+      {
+        "name": "Clues",
+        "title": "Across",
+        "clues": [
+          {
+            "word": 1,
+            "number": 1,
+            "clue": "Home with a roof and a front door",
+            "format": "5",
+            "length": 5,
+            "answer": "HOUSE"
+          },
+          {
+            "word": 2,
+            "number": 3,
+            "clue": "Big striped cat",
+            "format": "5",
+            "length": 5,
+            "answer": "TIGER"
+          }
+        ]
+      },
+      {
+        "name": "Clues",
+        "title": "Down",
+        "clues": [
+          {
+            "word": 3,
+            "number": 1,
+            "clue": "It's worn on your head",
+            "format": "3",
+            "length": 3,
+            "answer": "HAT"
+          },
+          {
+            "word": 4,
+            "number": 2,
+            "clue": "You hear with it",
+            "format": "3",
+            "length": 3,
+            "answer": "EAR"
+          },
+          {
+            "word": 5,
+            "number": 4,
+            "clue": "Place to work out",
+            "format": "3",
+            "length": 3,
+            "answer": "GYM"
+          }
+        ]
+      }
+    ]
+  },
+  "options": [],
+  "grid": [
+    [
+      {
+        "SquareID": 1,
+        "Number": "1",
+        "Blank": "",
+        "WordAcrossID": 1,
+        "WordDownID": 3,
+        "Letter": "H"
+      },
+      {
+        "SquareID": 2,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": 1,
+        "WordDownID": "",
+        "Letter": "O"
+      },
+      {
+        "SquareID": 3,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": 1,
+        "WordDownID": "",
+        "Letter": "U"
+      },
+      {
+        "SquareID": 4,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": 1,
+        "WordDownID": "",
+        "Letter": "S"
+      },
+      {
+        "SquareID": 5,
+        "Number": "2",
+        "Blank": "",
+        "WordAcrossID": 1,
+        "WordDownID": 4,
+        "Letter": "E"
+      }
+    ],
+    [
+      {
+        "SquareID": 6,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": "",
+        "WordDownID": 3,
+        "Letter": "A"
+      },
+      {
+        "SquareID": 7,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 8,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 9,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 10,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": "",
+        "WordDownID": 4,
+        "Letter": "A"
+      }
+    ],
+    [
+      {
+        "SquareID": 11,
+        "Number": "3",
+        "Blank": "",
+        "WordAcrossID": 2,
+        "WordDownID": 3,
+        "Letter": "T"
+      },
+      {
+        "SquareID": 12,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": 2,
+        "WordDownID": "",
+        "Letter": "I"
+      },
+      {
+        "SquareID": 13,
+        "Number": "4",
+        "Blank": "",
+        "WordAcrossID": 2,
+        "WordDownID": 5,
+        "Letter": "G"
+      },
+      {
+        "SquareID": 14,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": 2,
+        "WordDownID": "",
+        "Letter": "E"
+      },
+      {
+        "SquareID": 15,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": 2,
+        "WordDownID": 4,
+        "Letter": "R"
+      }
+    ],
+    [
+      {
+        "SquareID": 16,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 17,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 18,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": "",
+        "WordDownID": 5,
+        "Letter": "Y"
+      },
+      {
+        "SquareID": 19,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 20,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      }
+    ],
+    [
+      {
+        "SquareID": 21,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 22,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 23,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": "",
+        "WordDownID": 5,
+        "Letter": "M"
+      },
+      {
+        "SquareID": 24,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 25,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      }
+    ]
+  ],
+  "meta": {
+    "variant": "Crossword",
+    "slug": "crossword-tutorial-2",
+    "id": "tutorial-2",
+    "number": "",
+    "description": "",
+    "type": "crossword",
+    "section": "",
+    "difficulty": "Easy",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 2,
+      "steps": 3
+    }
+  },
+  "feedback": null
+}

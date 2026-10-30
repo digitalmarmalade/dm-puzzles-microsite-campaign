@@ -1,0 +1,36 @@
+{
+  "headline": "Word Wheel",
+  "meta": {
+    "id": "tutorial-1",
+    "title": "Word Wheel",
+    "difficulty": "Easy",
+    "type": "wordwheel",
+    "variant": "Word Wheel",
+    "slug": "wordwheel-tutorial-1",
+    "number": "",
+    "description": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 1,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 0,
+    "rowCount": 0,
+    "allowedValues": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "solution": "jack,pack,tack,jock,jackpot"
+  },
+  "copy": {
+    "title": "Word Wheel",
+    "gridsize": {
+      "type": "Standard",
+      "rows": 0,
+      "cols": 0
+    }
+  },
+  "celldata": "K,JACPOT",
+  "cluedata": "2,3,4",
+  "feedback": null
+}

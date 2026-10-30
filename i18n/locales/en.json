@@ -1,0 +1,1598 @@
+{
+    "auth": {
+        "bannerFreeTitle": "Your first puzzle today needs no account",
+        "bannerFreeBody": "Create a free account to play every puzzle and keep your streak and setup on every device.",
+        "freePlayUsed": "To keep playing today, log in or create a free account. It also keeps your streak and setup on every device.",
+        "loginPrompt": "Log in to keep your streak and your setup on every device.",
+        "loginToPlay": "You need to be logged in to play {name}",
+        "loginToFriends": "You need to be logged in to play in a friends league",
+        "loginToAccount": "You need to be logged in to view your account",
+        "loginToStats": "You need to be logged in to view your stats",
+        "bannerText": "Log in or create a free account to track your progress and play every puzzle.",
+        "logIn": "Log in",
+        "signUp": "Sign up",
+        "backHome": "Back to puzzles",
+        "locked": "Locked",
+        "loggedIn": "You're logged in",
+        "loggedOut": "You've been logged out"
+    },
+    "common": {
+        "refreshingPuzzles": "Refreshing your puzzle content…",
+        "cancel": "Cancel",
+        "submit": "Submit",
+        "back": "Back",
+        "update": "Update",
+        "enter": "Enter",
+        "select": "Select",
+        "or": "OR",
+        "create": "Create",
+        "join": "Join",
+        "ok": "OK",
+        "close": "Close",
+        "errSelectPuzzles": "Please select some puzzles",
+        "notifications": "Notifications",
+        "updateAvailable": "Update available — tap to refresh"
+    },
+    "nav": {
+        "home": "Home",
+        "puzzles": "Puzzles",
+        "achievements": "Achievements",
+        "stats": "Stats",
+        "friends": "Friends",
+        "account": "Account",
+        "menu": "Menu",
+        "toggleTheme": "Toggle theme"
+    },
+    "language": {
+        "label": "Language"
+    },
+    "footer": {
+        "copyright": "© {year} Digital Marmalade",
+        "backToTop": "Back to top"
+    },
+    "home": {
+        "welcome": {
+            "title": "New here?",
+            "body": "Jump straight in, or take a 30-second tour to tailor the site to you.",
+            "tour": "Take the tour",
+            "dismiss": "Maybe later"
+        },
+        "badges": {
+            "mostPlayed": "Most played",
+            "streak": "Streak {count}",
+            "lastTime": "Played last time"
+        },
+        "todaysPuzzles": "Today's Puzzles",
+        "allPuzzles": "All Puzzles",
+        "yourFavourites": "Your Favourites",
+        "forYou": "For You",
+        "yourPuzzles": {
+            "title": "Your Puzzles",
+            "reasons": {
+                "favourite": "One of your favourites",
+                "boosted": "You asked for more of these",
+                "stepUp": "Ready for a step up",
+                "morning": "Your usual morning puzzle",
+                "afternoon": "Your usual afternoon puzzle",
+                "evening": "Your usual evening puzzle",
+                "night": "Your usual late-night puzzle",
+                "played": "You play this a lot",
+                "streak": "Continue your streak",
+                "tour": "Matches your tour picks",
+                "missed": "Missed this one?",
+                "archive": "One from the archive",
+                "fromDay": "{day}'s puzzle",
+                "catchUp": "Catch up on this one",
+                "moreLike": "Liked today's? Try this one",
+                "worthALook": "Worth a look",
+                "yesterday": "Yesterday's puzzle",
+                "resume": "Pick up where you left off",
+                "likeCategory": {
+                    "words": "Because you like word games",
+                    "numbers": "Because you like number games",
+                    "logic": "Because you like logic games",
+                    "quiz": "Because you like quizzes"
+                }
+            },
+            "archiveTitle": "{name} No {number}",
+            "allDone": "All done for today",
+            "allDoneBody": "You've finished today's picks. Fancy one from the archive?",
+            "allDoneCta": "Browse the archive"
+        },
+        "favourite": "Add to favourites",
+        "unfavourite": "Remove from favourites",
+        "viewArchive": "View Archive",
+        "archive": "Archive",
+        "latestCompleted": "Latest puzzle completed",
+        "hideVariant": "Hide this variant",
+        "unhideVariant": "Show this variant",
+        "showHidden": "Show {count} hidden puzzle | Show {count} hidden puzzles",
+        "hideHidden": "Hide {count} hidden puzzle | Hide {count} hidden puzzles",
+        "variantHidden": "{name} hidden",
+        "allHidden": "All puzzles are hidden.",
+        "allHiddenCategory": "All puzzles in this category are hidden.",
+        "filterByType": "Filter by type",
+        "levelCount": "{count} level | {count} levels",
+        "completedCount": "{count} of {total} completed",
+        "showLevels": "Show levels for {name}",
+        "showFront": "Back to {name} card",
+        "categories": {
+            "all": "All",
+            "words": "Words",
+            "numbers": "Numbers",
+            "logic": "Logic",
+            "quiz": "Quiz",
+            "quick": "Quick"
+        }
+    },
+    "nudge": {
+        "label": "Suggestion",
+        "no": "No thanks",
+        "levelPrompt": "You're flying through {family} — ready to try {name}?",
+        "levelYes": "Yes, let's try it",
+        "levelDone": "{name} is in your favourites now."
+    },
+    "statsTeaser": {
+        "title": "Build Your Puzzle Profile",
+        "achievements": "Achievements waiting for you",
+        "signIn": "Sign in to track your stats and keep your streak and setup on every device.",
+        "play": "Play today's puzzles",
+        "body": "Play a few puzzles and your stats, streaks and player profile will start to fill in here."
+    },
+    "guide": {
+        "slides": {
+            "title": "How Sticky Puzzles works",
+            "goTo": "Slide {n}",
+            "back": "Back",
+            "next": "Next",
+            "close": "Close",
+            "tour": "Show me around",
+            "tryIt": "Try it",
+            "daily": {
+                "title": "A new set every day",
+                "text": "Fresh puzzles every morning, from crosswords to logic grids. Missed one? It's waiting in the archive."
+            },
+            "pick": {
+                "title": "Pick your puzzles",
+                "text": "Tap the ones you like. Your favourites go first in Your Puzzles. Tap the eye to hide any you'd rather not see."
+            },
+            "streak": {
+                "title": "Keep your streak going",
+                "text": "Play any puzzle each day to grow your streak."
+            },
+            "profile": {
+                "title": "Build your puzzle profile",
+                "text": "Unlock achievements and watch your stats grow as you play."
+            },
+            "free": {
+                "title": "Try a puzzle, no account needed",
+                "text": "Your first puzzle each day needs no account. Create a free account to play them all and keep your progress on every device."
+            }
+        },
+        "tour": {
+            "label": "Feature tour",
+            "count": "{n} of {total}",
+            "end": "End tour",
+            "next": "Next",
+            "done": "Done",
+            "play": "Play",
+            "later": "Not now",
+            "yourPuzzles": {
+                "title": "Your Puzzles",
+                "body": "We've picked these puzzles for you. The more you play, the better the picks get."
+            },
+            "today": {
+                "title": "Today's puzzles",
+                "body": "A new set every day. Tap ♡ on any puzzle to make it a favourite."
+            },
+            "summary": {
+                "title": "Streak and challenges",
+                "body": "Play every day to grow your streak, and tick off the daily and weekly challenges."
+            },
+            "all": {
+                "title": "Every puzzle",
+                "body": "Browse every puzzle and its archive. Tap ⓘ to see how to play."
+            },
+            "menu": {
+                "title": "The menu",
+                "body": "Your stats, account and settings live in here. Let's take a look."
+            },
+            "stats": {
+                "title": "Your stats",
+                "body": "See how you're doing this month, this year and over all time."
+            },
+            "free": {
+                "title": "No account needed",
+                "body": "Play your first puzzle each day without an account. Create a free one to play them all."
+            },
+            "ready": {
+                "title": "Ready to play?",
+                "body": "That's everything. Pick any puzzle to get started.",
+                "bodyWith": "Here's one to start with: today's {name}."
+            }
+        },
+        "tip": {
+            "dismiss": "Got it",
+            "yourPuzzles": "We've picked these puzzles for you."
+        }
+    },
+    "announcement": {
+        "label": "New puzzle: {name}",
+        "kicker": "New puzzle",
+        "play": "Play now",
+        "learn": "Learn how to play",
+        "dismiss": "Dismiss",
+        "body": {
+            "takuzu": "Fill the grid with two symbols. Keep every row and column balanced, and never three the same in a line."
+        }
+    },
+    "wrapped": {
+        "banner": {
+            "kicker": "Your summary for",
+            "title": "{month}",
+            "body": "What did you get up to in {month}?",
+            "cta": "Take a look",
+            "dismiss": "Hide"
+        },
+        "link": {
+            "cta": "Watch again"
+        },
+        "share": {
+            "button": "Share",
+            "text": "My {month} in puzzles",
+            "footer": "Play at {host}",
+            "voice": {
+                "solved": {
+                    "kicker": "I solved"
+                },
+                "days": {
+                    "kicker": "I played on"
+                },
+                "perfect": {
+                    "body": "I played on every day of {month}. That's some serious dedication."
+                },
+                "minutes": {
+                    "kicker": "I spent"
+                },
+                "top": {
+                    "kicker": "My most played"
+                },
+                "improved": {
+                    "time": {
+                        "within": "My last 3 averaged {now}, down from {before} for my first 3"
+                    },
+                    "words": {
+                        "within": "My last 3 found {now}% of words, up from {before}% in my first 3"
+                    }
+                },
+                "assists": {
+                    "crossword": {
+                        "on": {
+                            "body": "I started {month} without them and now pick {to} letters"
+                        }
+                    },
+                    "codeword": {
+                        "on": {
+                            "body": "I started {month} without them and now pick {to} letters"
+                        }
+                    },
+                    "sudoku": {
+                        "on": {
+                            "body": "I started {month} without them and now begin with {to}% of squares filled in"
+                        }
+                    }
+                },
+                "challenges": {
+                    "kicker": "I completed"
+                },
+                "medal": {
+                    "kicker": "I won"
+                }
+            }
+        },
+        "story": {
+            "label": "Your summary for {month}",
+            "close": "Close",
+            "prev": "Previous",
+            "next": "Next",
+            "slideOf": "Slide {n} of {total}"
+        },
+        "intro": {
+            "body": "Let's look back at your month in puzzles."
+        },
+        "solved": {
+            "kicker": "You solved",
+            "unit": "puzzle | puzzles"
+        },
+        "days": {
+            "kicker": "You played on",
+            "unit": "day out of {total} in {month} | days out of {total} in {month}"
+        },
+        "perfect": {
+            "kicker": "Every single day",
+            "title": "Perfect month",
+            "body": "You played on every day of {month}. That's some serious dedication."
+        },
+        "minutes": {
+            "kicker": "You spent",
+            "unit": "minute puzzling | minutes puzzling",
+            "hours": "That's {hours} h {minutes} min of brain time."
+        },
+        "top": {
+            "kicker": "Your most played",
+            "body": "{count} play | {count} plays"
+        },
+        "rising": {
+            "kicker": "On the rise",
+            "body": "{count} play, up from {prev} in {month} | {count} plays, up from {prev} in {month}",
+            "new": "{count} play, all new this month | {count} plays, all new this month"
+        },
+        "falling": {
+            "kicker": "Taking a back seat",
+            "body": "{count} play, down from {prev} in {month} | {count} plays, down from {prev} in {month}",
+            "none": "No plays this month, down from {prev} in {month}"
+        },
+        "improved": {
+            "time": {
+                "kicker": "Getting quicker",
+                "headline": "{saved} faster on average",
+                "month": "Averaging {now}, down from {before} in {month}",
+                "within": "Your last 3 averaged {now}, down from {before} for your first 3"
+            },
+            "words": {
+                "kicker": "Finding more words",
+                "headline": "Up {saved} points",
+                "month": "Finding {now}% of words, up from {before}% in {month}",
+                "within": "Your last 3 found {now}% of words, up from {before}% in your first 3"
+            }
+        },
+        "help": {
+            "less": {
+                "kicker": "Flying solo",
+                "unit": "of puzzles solved with no help",
+                "body": "Up from {prev}% in {month}"
+            },
+            "more": {
+                "kicker": "A helping hand",
+                "unit": "of puzzles solved with a little help",
+                "body": "Up from {prev}% in {month} — that's what it's there for"
+            }
+        },
+        "assists": {
+            "crossword": {
+                "fewer": {
+                    "kicker": "Fewer letter picks",
+                    "body": "From {from} letters at the start of {month} down to {to}"
+                },
+                "off": {
+                    "kicker": "No letter picks needed",
+                    "body": "From {from} letters at the start of {month} to none at all"
+                },
+                "more": {
+                    "kicker": "More letter picks",
+                    "body": "From {from} letters at the start of {month} up to {to}"
+                },
+                "on": {
+                    "kicker": "A head start",
+                    "body": "You started {month} without them and now pick {to} letters"
+                }
+            },
+            "codeword": {
+                "fewer": {
+                    "kicker": "Fewer letter picks",
+                    "body": "From {from} letters at the start of {month} down to {to}"
+                },
+                "off": {
+                    "kicker": "No letter picks needed",
+                    "body": "From {from} letters at the start of {month} to none at all"
+                },
+                "more": {
+                    "kicker": "More letter picks",
+                    "body": "From {from} letters at the start of {month} up to {to}"
+                },
+                "on": {
+                    "kicker": "A head start",
+                    "body": "You started {month} without them and now pick {to} letters"
+                }
+            },
+            "sudoku": {
+                "fewer": {
+                    "kicker": "Fewer starter squares",
+                    "body": "From {from}% of squares filled in at the start of {month} down to {to}%"
+                },
+                "off": {
+                    "kicker": "No starter squares needed",
+                    "body": "From {from}% of squares filled in at the start of {month} to none at all"
+                },
+                "more": {
+                    "kicker": "More starter squares",
+                    "body": "From {from}% of squares filled in at the start of {month} up to {to}%"
+                },
+                "on": {
+                    "kicker": "A head start",
+                    "body": "You started {month} without them and now begin with {to}% of squares filled in"
+                }
+            }
+        },
+        "challenges": {
+            "kicker": "You completed",
+            "unit": "challenge | challenges"
+        },
+        "outro": {
+            "title": "That's your {month}",
+            "body": "Here's to another great month of puzzles.",
+            "cta": "See all your stats",
+            "replay": "Watch again"
+        },
+        "medal": {
+            "kicker": "You won",
+            "title": "{tier} for {month}",
+            "solved": "{count} puzzle solved | {count} puzzles solved"
+        }
+    },
+    "profileAnnounce": {
+        "changed": "Your puzzle profile has changed",
+        "cta": "See your stats"
+    },
+    "achievements": {
+        "title": "Achievements",
+        "unlockedToast": "Achievement unlocked!",
+        "challengeTitle": "Challenges",
+        "timesAchieved": "{count} time | {count} times",
+        "descPuzzles": "Complete {target} puzzles",
+        "descPuzzles1": "Complete your first puzzle",
+        "descChallenges": "Complete {target} challenges",
+        "descChallenges1": "Complete your first challenge",
+        "descVariety": "Try {target} puzzle types",
+        "descVarietyAll": "Try every puzzle type",
+        "descStreak": "Reach a {target}-day streak",
+        "descDays": "Play on {target} different days",
+        "titlePuzzles1": "First puzzle",
+        "titlePuzzles10": "Getting started",
+        "titlePuzzles50": "Regular player",
+        "titlePuzzles100": "Puzzle enthusiast",
+        "titleChallenges1": "Challenge accepted",
+        "titleChallenges10": "Challenge champion",
+        "titleChallenges50": "Challenge master",
+        "titleVariety3": "Explorer",
+        "titleVariety5": "Well-rounded",
+        "titleVarietyAll": "Completionist",
+        "titleStreak3": "On a roll",
+        "titleStreak7": "Week warrior",
+        "titleStreak30": "Month master",
+        "titleDays7": "Committed",
+        "titleDays30": "Dedicated",
+        "titleChallenges100": "Challenge legend",
+        "titleClean10": "Sharpshooter",
+        "titleClean50": "Untouchable",
+        "titleClean100": "Flawless",
+        "descClean": "Complete {target} puzzles without a single check or reveal",
+        "earnedCount": "{count} earned",
+        "nextUp": "Next up",
+        "nextUpEmpty": "You've earned every badge on every track. Impressive.",
+        "earned": "Earned",
+        "earnedEmpty": "Solve your first puzzle to earn your first badge.",
+        "seeAll": "See all badges",
+        "seeAllEarned": "See all {count} earned",
+        "secretToast": "Secret badge found!",
+        "titleArchive10": "Time traveller",
+        "titleArchive50": "Archivist",
+        "titleArchive100": "Historian",
+        "descArchive": "Solve {target} puzzles from the archive",
+        "titleBests5": "Personal best",
+        "titleBests25": "Record breaker",
+        "descBests": "Beat your best time {target} times",
+        "titleClimber1": "Top of the ladder",
+        "descClimber1": "Finish the hardest level of a puzzle family",
+        "titleClimberAll": "Summit",
+        "descClimberAll": "Finish the hardest level of every puzzle family",
+        "tiers": {
+            "1": "Bronze",
+            "2": "Silver",
+            "3": "Gold"
+        },
+        "month": {
+            "title": "{month} goals",
+            "daysLeft": "{count} day left | {count} days left",
+            "progress": "{current} of {target}",
+            "tierAt": "{tier} {target}",
+            "tierEveryDay": "{tier} every day",
+            "goals": {
+                "puzzles": "Puzzles solved",
+                "days": "Days played",
+                "variety": "Every puzzle type",
+                "clean": "Clean solves"
+            },
+            "toastTitle": "Monthly goal reached!",
+            "toastBody": "{goal}: {tier} for {month}"
+        },
+        "months": {
+            "title": "Your months",
+            "inProgress": "In progress",
+            "played": "Played",
+            "none": "No play",
+            "seeAll": "See all"
+        },
+        "secrets": {
+            "title": "Secret",
+            "hint": "Some badges stay hidden until you find them.",
+            "more": "{count} more to find | {count} more to find"
+        },
+        "secret": {
+            "nightOwl": {
+                "title": "Night owl",
+                "desc": "Solve a puzzle after midnight",
+                "done": "You solved a puzzle after midnight"
+            },
+            "earlyBird": {
+                "title": "Early bird",
+                "desc": "Solve a puzzle before 7am",
+                "done": "You solved a puzzle before 7am"
+            },
+            "comeback": {
+                "title": "Welcome back",
+                "desc": "Come back after 30 days away",
+                "done": "You came back after 30 days away"
+            },
+            "lifeline": {
+                "title": "Lifeline",
+                "desc": "Save your streak",
+                "done": "You saved your streak"
+            },
+            "fullHouse": {
+                "title": "Full house",
+                "desc": "Finish every puzzle on the day it came out",
+                "done": "You finished every puzzle on the day it came out"
+            },
+            "ghost": {
+                "title": "Boo!",
+                "desc": "Solve a puzzle on Halloween",
+                "done": "You solved a puzzle on Halloween"
+            },
+            "spotless": {
+                "title": "Spotless",
+                "desc": "Solve 10 puzzles in a row with no checks, reveals or hints",
+                "done": "You solved 10 puzzles in a row with no checks, reveals or hints"
+            },
+            "weekend": {
+                "title": "Weekend break",
+                "desc": "Solve 5 puzzles in one weekend",
+                "done": "You solved 5 puzzles in one weekend"
+            },
+            "christmas": {
+                "title": "Christmas cracker",
+                "desc": "Solve a puzzle on Christmas Day",
+                "done": "You solved a puzzle on Christmas Day"
+            }
+        },
+        "donePuzzles": "You completed {target} puzzles",
+        "donePuzzles1": "You completed your first puzzle",
+        "doneChallenges": "You completed {target} challenges",
+        "doneChallenges1": "You completed your first challenge",
+        "doneVariety": "You tried {target} puzzle types",
+        "doneVarietyAll": "You tried every puzzle type",
+        "doneStreak": "You reached a {target}-day streak",
+        "doneDays": "You played on {target} different days",
+        "doneClean": "You completed {target} puzzles without a single check or reveal",
+        "doneArchive": "You solved {target} puzzles from the archive",
+        "doneBests": "You beat your best time {target} times",
+        "doneClimber1": "You finished the hardest level of a puzzle family",
+        "doneClimberAll": "You finished the hardest level of every puzzle family",
+        "challengeDone": "You completed {count} challenge | You completed {count} challenges",
+        "allTitle": "All badges",
+        "earnedTitle": "Your badges",
+        "earnedOn": "Earned {date}",
+        "tracks": {
+            "puzzles": "Puzzles solved",
+            "streak": "Streaks",
+            "days": "Days played",
+            "clean": "Clean solves",
+            "variety": "Puzzle types",
+            "archive": "Archive",
+            "bests": "Personal bests",
+            "climber": "Climber",
+            "challenges": "Challenges",
+            "anniversary": "Time with us",
+            "medals": "Monthly medals",
+            "golds": "Gold months"
+        },
+        "secretPill": "Secret",
+        "titlePuzzles250": "Puzzle devotee",
+        "titlePuzzles500": "Puzzle master",
+        "titlePuzzles1000": "Puzzle legend",
+        "titlePuzzles2500": "Puzzle immortal",
+        "titleClean250": "Precision",
+        "titleClean500": "Immaculate",
+        "titleClean1000": "Perfectionist",
+        "titleStreak100": "Century streak",
+        "titleStreak365": "Year-long streak",
+        "titleDays100": "Centurion",
+        "titleDays365": "A year of puzzles",
+        "titleDays1000": "Thousand days",
+        "titleArchive250": "Curator",
+        "titleArchive500": "Keeper of the archive",
+        "titleBests50": "Speed demon",
+        "titleBests100": "Unstoppable",
+        "titleAnniversary1m": "One month in",
+        "titleAnniversary6m": "Half a year",
+        "titleAnniversary1y": "First anniversary",
+        "titleAnniversary2y": "Two years",
+        "titleAnniversary3y": "Three years",
+        "titleAnniversary5y": "Five years",
+        "titleMedals3": "Medal collector",
+        "titleMedals12": "Medal cabinet",
+        "titleMedals24": "Hall of medals",
+        "titleGolds1": "Golden month",
+        "titleGolds6": "Gold rush",
+        "titleGolds12": "Golden year",
+        "descAnniversary1m": "Reach one month since your first puzzle",
+        "descAnniversary6m": "Reach six months since your first puzzle",
+        "descAnniversary1y": "Reach a year since your first puzzle",
+        "descAnniversary2y": "Reach two years since your first puzzle",
+        "descAnniversary3y": "Reach three years since your first puzzle",
+        "descAnniversary5y": "Reach five years since your first puzzle",
+        "doneAnniversary1m": "It's been a month since your first puzzle",
+        "doneAnniversary6m": "It's been six months since your first puzzle",
+        "doneAnniversary1y": "It's been a year since your first puzzle",
+        "doneAnniversary2y": "It's been two years since your first puzzle",
+        "doneAnniversary3y": "It's been three years since your first puzzle",
+        "doneAnniversary5y": "It's been five years since your first puzzle",
+        "descMedals": "Win a monthly medal in {target} different months",
+        "doneMedals": "You won a monthly medal in {target} months",
+        "descGolds": "Win a Gold monthly medal in {target} months",
+        "doneGolds": "You won Gold in {target} months",
+        "descGolds1": "Win a Gold monthly medal",
+        "doneGolds1": "You won a Gold monthly medal"
+    },
+    "stats": {
+        "title": "Stats",
+        "puzzleStatistics": "Puzzle statistics",
+        "totalPuzzles": "Puzzles completed",
+        "puzzleTypes": "Puzzle types",
+        "longestStreak": "Longest streak",
+        "daysPlayed": "Days played",
+        "bestDay": "Best day",
+        "thisMonth": "This month",
+        "lastMonth": "Last month",
+        "weeksPlays": "Week's plays",
+        "thisWeek": "This week",
+        "lastWeek": "Last week",
+        "average90": "90-day average",
+        "dataWindow": "Totals cover all your play; charts show the last 90 days",
+        "dataWindowAll": "Totals and charts cover all your play",
+        "noData": "Complete some puzzles to see your stats here.",
+        "allTime": "All time",
+        "period": "Time period",
+        "started": "Puzzles started",
+        "completed": "Puzzles completed",
+        "cleanSolves": "Clean solves",
+        "typesPlayed": "Puzzle types played",
+        "typePlays": "{name}: {count} completed",
+        "playsByMonth": "Plays by month",
+        "playsOverTime": "Plays over time",
+        "playsPerMonth": "Plays per month",
+        "playsPerYear": "Plays per year",
+        "averageLine": "Average"
+    },
+    "profile": {
+        "label": "Player Profile",
+        "newbie": {
+            "title": "Newbie",
+            "subtitle": "Just getting started."
+        },
+        "fanatic": {
+            "title": "{variant} Fanatic",
+            "subtitle": "{variant} is your go-to puzzle."
+        },
+        "numberCruncher": {
+            "title": "Number Cruncher",
+            "subtitle": "{v1} and {v2} are your happy places."
+        },
+        "wordsmith": {
+            "title": "Wordsmith",
+            "subtitle": "{v1} and {v2} are your happy places."
+        },
+        "logicBuff": {
+            "title": "Logic Buff",
+            "subtitle": "{v1} and {v2} are your happy places."
+        },
+        "quizzer": {
+            "title": "Quizzer",
+            "subtitle": "{v1} and {v2} are your happy places."
+        },
+        "dailyDevotee": {
+            "title": "Daily Devotee",
+            "subtitle": "You show up almost every day."
+        },
+        "weekendWarrior": {
+            "title": "Weekend Warrior",
+            "subtitle": "Saturdays and Sundays are your peak."
+        },
+        "earlyBird": {
+            "title": "Early Bird",
+            "subtitle": "You get the puzzle first."
+        },
+        "nightOwl": {
+            "title": "Night Owl",
+            "subtitle": "You save the best for last."
+        },
+        "allRounder": {
+            "title": "All-Rounder",
+            "subtitle": "You love a bit of everything."
+        }
+    },
+    "challenges": {
+        "aria": "Your challenges",
+        "today": "Today's puzzle",
+        "fromArchive": "From the archive",
+        "comeBackTomorrow": "Done for today. Come back tomorrow to continue.",
+        "pickIntro": "Play any of these to count towards it.",
+        "offTip": "Don't want to see challenges?",
+        "offAction": "Turn off",
+        "offKeep": "Keep them",
+        "offToast": "Challenges turned off. You can turn them back on in Account.",
+        "suggested": "Pick a challenge",
+        "complete": "Challenge complete!",
+        "completeToast": "Challenge complete!",
+        "expired": "Time's up",
+        "expiredBody": "You got to {current} of {target}. Fancy another go?",
+        "daysLeft": "{n} day left | {n} days left",
+        "endsToday": "Ends today",
+        "progress": "{current} of {target}",
+        "join": "Join",
+        "notNow": "Not now",
+        "play": "Play",
+        "leave": "Leave challenge",
+        "retry": "Try again",
+        "pickNew": "Pick new",
+        "dismiss": "Dismiss",
+        "typeWeek": {
+            "title": "A working week of {name}",
+            "body": "Complete {target} {name} puzzles in the next {days} days.",
+            "goal": "Complete {target} {name} puzzles."
+        },
+        "typeDay": {
+            "title": "Double {name}",
+            "body": "Complete {target} {name} puzzles today.",
+            "goal": "Complete {target} {name} puzzles."
+        },
+        "typeClean": {
+            "title": "Solo {name}",
+            "body": "Solve {target} {name} puzzles with no reveals or hints in the next {days} days.",
+            "goal": "Solve {target} {name} puzzles with no reveals or hints.",
+            "bodyGuesses": "Solve {target} {name} puzzles in 3 guesses or fewer in the next {days} days.",
+            "goalGuesses": "Solve {target} {name} puzzles in 3 guesses or fewer."
+        },
+        "stepUp": {
+            "title": "Step up to {name}",
+            "body": "Complete {target} {name} puzzles in the next {days} days.",
+            "goal": "Complete {target} {name} puzzles."
+        },
+        "revisit": {
+            "title": "Back to {name}",
+            "body": "It's been a while. Complete {target} {name} puzzles in the next {days} days.",
+            "goal": "Complete {target} {name} puzzles."
+        },
+        "groupWeek": {
+            "words": {
+                "title": "Wordsmith week",
+                "body": "Complete {target} word puzzles in the next {days} days.",
+                "goal": "Complete {target} word puzzles."
+            },
+            "numbers": {
+                "title": "Number cruncher",
+                "body": "Complete {target} number puzzles in the next {days} days.",
+                "goal": "Complete {target} number puzzles."
+            },
+            "logic": {
+                "title": "Logic week",
+                "body": "Complete {target} logic puzzles in the next {days} days.",
+                "goal": "Complete {target} logic puzzles."
+            },
+            "quick": {
+                "title": "Quick-fire week",
+                "body": "Complete {target} quick puzzles in the next {days} days.",
+                "goal": "Complete {target} quick puzzles."
+            }
+        },
+        "groupVariety": {
+            "words": {
+                "title": "Word sampler",
+                "body": "Play {target} different word puzzles in the next {days} days.",
+                "goal": "Play {target} different word puzzles."
+            },
+            "numbers": {
+                "title": "Number sampler",
+                "body": "Play {target} different number puzzles in the next {days} days.",
+                "goal": "Play {target} different number puzzles."
+            },
+            "logic": {
+                "title": "Logic sampler",
+                "body": "Play {target} different logic puzzles in the next {days} days.",
+                "goal": "Play {target} different logic puzzles."
+            },
+            "quick": {
+                "title": "Snack sampler",
+                "body": "Play {target} different quick puzzles in the next {days} days.",
+                "goal": "Play {target} different quick puzzles."
+            }
+        },
+        "coffee": {
+            "title": "Coffee break",
+            "body": "Complete {target} quick puzzles today.",
+            "goal": "Complete {target} quick puzzles."
+        },
+        "streak": {
+            "title": "Five days in a row",
+            "body": "Play on {target} days in a row.",
+            "goal": "Play on {target} days in a row.",
+            "expired": "You got to day {current} of {target}. Fancy another go?"
+        },
+        "explore": {
+            "title": "Something new",
+            "body": "Try {target} puzzle types you've never played in the next {days} days.",
+            "goal": "Try {target} puzzle types you've never played."
+        },
+        "mixDay": {
+            "title": "Mix it up",
+            "body": "Play {target} different puzzle types today.",
+            "goal": "Play {target} different puzzle types."
+        },
+        "marathon": {
+            "title": "Puzzle marathon",
+            "body": "Complete {target} puzzles today.",
+            "goal": "Complete {target} puzzles."
+        },
+        "fourDays": {
+            "title": "Four-day week",
+            "body": "Play on {target} different days in the next {days} days.",
+            "goal": "Play on {target} different days."
+        },
+        "spotless": {
+            "title": "Spotless week",
+            "body": "Solve {target} puzzles with no reveals or hints in the next {days} days.",
+            "goal": "Solve {target} puzzles with no reveals or hints."
+        },
+        "typeRun": {
+            "title": "{name} hat-trick",
+            "body": "Play {name} on {target} days in a row.",
+            "goal": "Play {name} on {target} days in a row."
+        },
+        "archive": {
+            "title": "Archive explorer",
+            "body": "Complete {target} puzzles from the archive in the next {days} days.",
+            "goal": "Complete {target} puzzles from the archive."
+        },
+        "favSweep": {
+            "title": "Favourites sweep",
+            "body": "Complete all {target} of your favourite puzzles today.",
+            "goal": "Complete all {target} of your favourite puzzles."
+        }
+    },
+    "summary": {
+        "aria": "Last 7 days summary",
+        "carouselAria": "Choose panel",
+        "title": "Last 7 days",
+        "puzzles": "Puzzles",
+        "types": "Puzzle types",
+        "mostPlayed": "Most played",
+        "noPuzzles": "No puzzles played in the last 7 days.",
+        "days": "Days played"
+    },
+    "streak": {
+        "aria": "Play streak",
+        "title": "Puzzle Streak",
+        "dayCount": "day | days",
+        "weekCount": "week | weeks",
+        "recentDaysAria": "Recent days"
+    },
+    "archive": {
+        "filterBy": "Filter by:",
+        "about": "About",
+        "recent": "Recent",
+        "noPuzzles": "No puzzles for this month.",
+        "otherLevels": "Other levels",
+        "statusFilterLabel": "Filter by status",
+        "statusAll": "All",
+        "statusUnplayed": "Unplayed",
+        "statusUnfinished": "Unfinished",
+        "statusCompleted": "Completed",
+        "playMostRecent": "Play the most recent",
+        "typeAchievements": {
+            "trained": "{name} Trained",
+            "descTrained": "Complete all {target} {name} tutorials",
+            "heading": "Achievements",
+            "nextUp": "Next up",
+            "moreToDiscover": "More to discover…",
+            "apprentice": "{name} Apprentice",
+            "expert": "{name} Expert",
+            "master": "{name} Master",
+            "purist": "{name} Purist",
+            "descPlay": "Complete {target} {name} puzzles",
+            "sharpSolver": "{name} Sharp Solver",
+            "descSharp": "Solve {target} {name} puzzles in 3 guesses or fewer",
+            "descCleanMistakes": "Solve {target} {name} puzzles with no mistakes or reveals",
+            "sharpEye": "{name} Sharp Eye",
+            "wordHawk": "{name} Word Hawk",
+            "fullHouse": "{name} Full House",
+            "descWordsPct": "Find {target}% of the words in a {name} puzzle",
+            "descPointsPct": "Score {target}% of the points in a {name} puzzle",
+            "descClean": "Solve {target} {name} puzzles with no checks or reveals"
+        },
+        "stats": {
+            "title": "{name} stats",
+            "completed": "Completed",
+            "averageTime": "Average time",
+            "bestTime": "Best time",
+            "longestStreak": "Longest streak",
+            "currentStreak": "Current streak",
+            "cleanSolves": "Clean solves",
+            "averageChecks": "Average checks",
+            "averageReveals": "Average reveals",
+            "averageMistakes": "Average mistakes",
+            "averageWordsFound": "Average words found",
+            "bestWordsFound": "Best words found",
+            "averageScore": "Average score",
+            "bestScore": "Best score",
+            "sharpSolves": "Sharp solves",
+            "averageGuesses": "Average guesses",
+            "bestGuesses": "Best guesses",
+            "guesses": "Guesses",
+            "notSolved": "Not solved",
+            "winRate": "Win %",
+            "guessDistribution": "Successful guesses",
+            "signedOut": "Sign in to track your progress",
+            "chartTitle": "Last 7 completed",
+            "chartTitlePlays": "Last 7 played",
+            "time": "Time",
+            "checks": "Checks",
+            "reveals": "Reveals",
+            "hints": "Hints",
+            "mistakes": "Mistakes",
+            "wordsFound": "Words found",
+            "score": "Score",
+            "average": "Average",
+            "persona": {
+                "newcomer": {"title": "Newcomer", "desc": "Just getting to know {name}."},
+                "comeback": {"title": "Welcome Back", "desc": "Good to see you back at {name}."},
+                "recordBreaker": {"title": "Record Breaker", "desc": "You've just set a new best {name} time."},
+                "improver": {"title": "On the Up", "desc": "Your {name} times are down {percent}% lately."},
+                "sharpshooter": {"title": "Sharpshooter", "desc": "You crack {name} in {guesses} guesses on average."},
+                "purist": {"title": "The Purist", "desc": "{clean} of your last {total} {name} solves needed no help."},
+                "clockwork": {"title": "Like Clockwork", "desc": "Your {name} solves take about {time}, every time."},
+                "nightOwl": {"title": "Night Owl", "desc": "Most of your {name} solves happen after dark."},
+                "earlyBird": {"title": "Early Bird", "desc": "You like your {name} first thing in the morning."},
+                "weekender": {"title": "Weekend Solver", "desc": "{name} is your weekend treat."},
+                "veteran": {"title": "The Veteran", "desc": "{count} {name} puzzles solved so far."},
+                "hintHunter": {"title": "Hint Hunter", "desc": "You're happy to take a hint on {name}."},
+                "allRounder": {"title": "Steady Solver", "desc": "A calm, all-round {name} solver."},
+                "unhurried": {"title": "Taking Your Time", "desc": "Your {name} solves are running a little longer lately. Savouring them?"},
+                "fewerReveals": {"title": "Revealing Less", "desc": "Your {name} reveals are down from {before} to {after} a game."},
+                "fewerChecks": {"title": "Checking Less", "desc": "Your {name} checks are down from {before} to {after} a game."},
+                "fewerHints": {"title": "Fewer Hints", "desc": "Your {name} hints are down from {before} to {after} a game."},
+                "fewerMistakes": {"title": "Fewer Slips", "desc": "Your {name} mistakes are down from {before} to {after} a game."},
+                "fewerGuesses": {"title": "Sharper Guesses", "desc": "Your {name} guesses are down from {before} to {after} a game."},
+                "findingMore": {"title": "Finding More", "desc": "You're finding more {name} words, up from {before}% to {after}%."},
+                "lunchBreak": {"title": "Lunch-Break Solver", "desc": "Most of your {name} solves happen around lunchtime."},
+                "eveningSolver": {"title": "Evening Unwinder", "desc": "You like to unwind with {name} in the evening."},
+                "movedMornings": {"title": "New Routine", "desc": "Your {name} has moved to the mornings lately."},
+                "movedAfternoons": {"title": "New Routine", "desc": "Your {name} has moved to the afternoons lately."},
+                "movedEvenings": {"title": "New Routine", "desc": "Your {name} has moved to the evenings lately."},
+                "movedNights": {"title": "New Routine", "desc": "Your {name} has moved to late nights lately."}
+            }
+        }
+    },
+    "puzzle": {
+        "notStarted": "Puzzle not started",
+        "halfComplete": "Puzzle is 50% complete",
+        "percentComplete": "Puzzle is {percent}% complete",
+        "statusNotStarted": "Not started",
+        "statusInProgress": "{percent}% complete",
+        "statusStarted": "Started",
+        "statusCompleted": "Completed",
+        "relatedHeading": "We think you might like",
+        "next": {
+            "streak": "Keep your {name} streak going",
+            "resume": "Pick up where you left off",
+            "snack": "Another snack-sized puzzle",
+            "archive": "One from the archive",
+            "nextArchive": "Next from the archive"
+        }
+    },
+    "account": {
+        "teaser": {
+            "title": "Your puzzles, everywhere",
+            "body": "Create a free account to keep your streak, stats and setup on every device, and play with friends.",
+            "streak": "Keep your streak going on every device",
+            "setup": "Your favourites and hidden puzzles follow you",
+            "achievements": "Unlock achievements and track your stats",
+            "friends": "Compete with friends in private leagues"
+        },
+        "title": "Account",
+        "fieldEmail": "Email",
+        "fieldUid": "UID",
+        "fieldName": "Name",
+        "logout": "Log Out",
+        "signInTitle": "Sign in to your account",
+        "createTitle": "Create account",
+        "yourEmail": "Your email",
+        "emailInvalid": "Please enter a valid email address",
+        "password": "Password",
+        "confirmPassword": "Confirm password",
+        "showPassword": "Show password",
+        "hidePassword": "Hide password",
+        "passwordMismatch": "Passwords do not match",
+        "passwordStrength": {
+            "weak": "Weak",
+            "fair": "Fair",
+            "good": "Good",
+            "strong": "Strong"
+        },
+        "noAccount": "Don’t have an account yet?",
+        "haveAccount": "Already have an account?",
+        "preferences": {
+            "title": "Preferences",
+            "showFeatured": "Show puzzle suggestions on your home page",
+            "showChallenges": "Show challenges",
+            "notifications": "Send me push notifications",
+            "notificationsBlocked": "Notifications are blocked. Enable them in your browser settings to receive updates.",
+            "replayTour": "Replay the welcome tour"
+        }
+    },
+    "notificationsPrompt": {
+        "title": "Stay in the loop?",
+        "body": "We can let you know when today's puzzles are ready and give you a nudge if your streak is at risk.",
+        "enable": "Yes, notify me",
+        "notNow": "Not now"
+    },
+    "installPrompt": {
+        "title": "Add puzzles to your Home Screen",
+        "body": "Open today's puzzles in one tap, full screen, without the browser bars.",
+        "step1": "Tap Share",
+        "step1Hint": "If you can't see it, tap ••• first.",
+        "step2": "Choose Add to Home Screen",
+        "step2Hint": "Scroll down, or tap View More if it's hidden.",
+        "step3": "Tap Add",
+        "step3Hint": "The icon appears on your Home Screen.",
+        "gotIt": "Got it",
+        "never": "Don't ask again"
+    },
+    "streakToast": {
+        "title": "Streak extended!",
+        "body": "{name} — {count} days in a row"
+    },
+    "streakFreeze": {
+        "saveBarLabel": "Save your streak",
+        "savedTitle": "Streak saved!",
+        "savedBody": "Your {n}-day streak lives on — keep it going!",
+        "title": "Streak broken",
+        "body": "All is not lost — save your streak by completing {target} puzzles today.",
+        "progress": "{done} of {target} puzzles today",
+        "earnedInline": "Streak saved!",
+        "start": "Let's go",
+        "continue": "Continue"
+    },
+    "streakModal": {
+        "dayTitle": "{n}-day streak!",
+        "weekTitle": "{n}-week streak!",
+        "dayBody": "Nice work — come back tomorrow to keep it going.",
+        "weekBody": "You've played every week — keep the run alive.",
+        "continue": "Continue"
+    },
+    "changelog": {
+        "title": "What's new",
+        "dismiss": "Got it"
+    },
+    "friends": {
+        "title": "Friends",
+        "welcome": {
+            "title": "Play with friends",
+            "body": "Start a private group, pick the puzzles you all play, and see who's on top each day.",
+            "point1": "Pick the puzzles you and your friends compete in",
+            "point2": "Times and scores side by side",
+            "point3": "A private leaderboard just for your group",
+            "point4": "Daily, monthly and yearly winners",
+            "create": "Create a group",
+            "join": "Join with a code"
+        },
+        "nameLabel": "Your name in groups",
+        "nameHelp": "Only people in your groups see this. You can change it any time.",
+        "errNoDisplayName": "Enter your name in groups",
+        "addDisplayName": "Add a display name",
+        "allFriendGroups": "All friend groups",
+        "groupSuffix": "a group",
+        "yourFriendGroups": "Your friend groups",
+        "join": {
+            "title": "Join a group",
+            "codeLabel": "Group code",
+            "codeHelp": "Ask the group owner for their code.",
+            "errNoCode": "Please enter a code",
+            "errCodeShort": "Code must be at least 6 characters long",
+            "fromLink": "We've filled in the code from your link.",
+            "submit": "Ask to join",
+            "approvalNote": "The group owner approves new members."
+        },
+        "create": {
+            "title": "Create a group",
+            "nameLabel": "Group name",
+            "includeHeading": "What puzzles would you like to include?",
+            "errNoName": "Enter a group name",
+            "generate": "Generate one",
+            "suggestions": [
+                "The Puzzle Pals",
+                "Cross Words Club",
+                "The Brain Trust",
+                "Grid Locked",
+                "The Clue Crew",
+                "Sudoku Squad",
+                "Word Nerds",
+                "The Daily Grind",
+                "Puzzle Posse",
+                "The Thinking Caps",
+                "Box Clever",
+                "The Quiz Kids",
+                "Cell Mates",
+                "Letter Getters",
+                "The Number Crunchers",
+                "Mind Benders",
+                "Across and Down",
+                "The Solve Squad",
+                "Tea and Teasers",
+                "Head Scratchers",
+                "The Riddle Me Thises",
+                "Clued Up",
+                "The Grey Matters",
+                "Wordy Wonders",
+                "The Big Brains",
+                "Cryptic Crusaders",
+                "The Midnight Solvers",
+                "Pencil Pushers",
+                "The Lateral Thinkers",
+                "Square Dancers",
+                "The Logic Bombs",
+                "Pun Intended",
+                "Eight Down",
+                "The Anagram Gang",
+                "Brain Freeze",
+                "Puzzled Pints",
+                "The Sharp Pencils",
+                "Fill in the Blanks",
+                "The Wise Owls",
+                "Number Nine",
+                "The Mensa Rejects",
+                "Nerd Herd",
+                "The Codebreakers",
+                "Tile Society",
+                "The Brainiacs",
+                "Quick Thinkers",
+                "Puzzle Party",
+                "The Smarty Pants",
+                "Coffee and Clues",
+                "Brains Over Brawn",
+                "The Grid Iron Club",
+                "Wit's End",
+                "The Clever Clogs",
+                "Hint Hunters",
+                "The Final Answer",
+                "Rack Your Brains",
+                "The Elementary Club",
+                "Mind Over Matter",
+                "The Morning Puzzlers",
+                "Think Tank"
+            ],
+            "submit": "Create"
+        },
+        "invite": {
+            "title": "Invite friends to {name}",
+            "intro": "Send your friends the link, or give them the code to enter on Join a group.",
+            "shareCode": "Group code",
+            "codePrefix": "Code:",
+            "copyCode": "Copy code",
+            "copyLink": "Copy join link",
+            "shareLink": "Share join link",
+            "copied": "Copied",
+            "shareText": "Join my puzzle group, {name}, on Sticky Puzzles",
+            "cardKicker": "You're invited",
+            "cardCode": "Code: {code}",
+            "cardBody": "Join my puzzle group on Sticky Puzzles",
+            "codeNote": "Keep an eye out! Players using your code or link will need your approval to join.",
+            "done": "Done"
+        },
+        "manage": {
+            "requestsTitle": "Requests to join",
+            "playersTitle": "Players ({n})",
+            "onlyOne": "It's just you so far. Invite some friends below.",
+            "inviteTitle": "Invite friends",
+            "puzzlesTitle": "Puzzles",
+            "puzzlesHelp": "Tap a puzzle to add or remove it. Changes save straight away.",
+            "saved": "Saved",
+            "errLastPuzzle": "Keep at least one puzzle",
+            "owner": "Owner",
+            "accepted": "{name} has joined the group",
+            "declinedToast": "{name}'s request was declined",
+            "removed": "{name} has been removed",
+            "deleteGroup": "Delete group",
+            "deleteTitle": "Delete {name}?",
+            "deleteBody": "This removes the group for everyone in it. It can't be undone.",
+            "deleteConfirm": "Delete group",
+            "deleted": "{name} has been deleted"
+        },
+        "view": {
+            "overall": "Overall",
+            "currentLeaders": "Current leaders",
+            "periodLeaders": "{period} leaders",
+            "periodWinners": "{period} winners",
+            "completedPuzzles": "Completed Puzzles",
+            "avgScore": "Average Score / Completion Time"
+        },
+        "list": {
+            "caption": "Groups",
+            "colName": "Group name",
+            "colRequests": "Requests",
+            "colActions": "Actions",
+            "owner": "Owner",
+            "awaitingApproval": "Awaiting Approval",
+            "leave": "Leave",
+            "manage": "Manage",
+            "view": "View",
+            "players": "Players",
+            "requests": "{count} request | {count} requests"
+        },
+        "members": {
+            "you": "You",
+            "declined": "Declined",
+            "accept": "Accept",
+            "decline": "Decline",
+            "remove": "Remove"
+        },
+        "modal": {
+            "changeDisplayName": "Change your display name",
+            "addDisplayName": "Add a display name",
+            "displayNameSr": "Pick a display name so your friends know who you are!",
+            "displayNameHelp": "This will only be visible to the people in your groups and you can change this at any time.",
+            "changeGroupName": "Change your group name",
+            "addGroupName": "Add a group name",
+            "removeMemberTitle": "Remove player",
+            "removeMemberBody": "Are you sure you want to remove {name} from {group}?",
+            "removeMemberConfirm": "Remove player"
+        },
+        "stats": {
+            "completedPuzzles": "Completed Puzzles",
+            "bestAvgScore": "Best Average Score",
+            "allPuzzles": "All puzzles",
+            "player": "Player",
+            "time": "Time",
+            "score": "Score",
+            "noCompletions": "No one in this group has completed this puzzle on this day yet.",
+            "leaveGroup": "Leave group",
+            "mostWins": "Most Wins",
+            "mostPlayed": "Most Played",
+            "titleOverall": "{stat} Overall",
+            "titleIn": "{stat} in {period}",
+            "date": "Date"
+        }
+    },
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "variantInfo": {
+        "open": "About {name}",
+        "videoComingSoon": "Video preview coming soon",
+        "playTime": "About {mins} min",
+        "play": "Play",
+        "playLatest": "Play latest"
+    },
+    "puzzleDescription": {
+        "gridfill": "Arrange blocks of the specified size to complete the grid as swiftly as possible.",
+        "headcoach": "Test your mental agility with a rapid-fire series of arithmetic puzzles.",
+        "pyramidplus": "Combine numbers at the base to form the sum in the peak.",
+        "quiz": "Test your knowledge in our multiple-choice quiz. Can you get full marks?",
+        "sudoku": "A game of logic and deduction. Fill the grid so that each row, column and sub-grid contains the digits 1–9.",
+        "wordsearch": "A familiar classic — hunt for hidden words in a grid. Timeless and perfect for all ages.",
+        "totalswipeout": "Rapidly face questions or statements and swipe right for yes, left for no. Fast-paced decision-making for all ages.",
+        "worumber": "Quiz meets calculation. Answer questions then quick maths to unlock the next step. 10 steps, 3 lives, a lot of brainpower.",
+        "wordwheel": "Find as many words as you can using the letters provided in the Word Wheel.",
+        "guessword": "Guess the hidden word — clues after each try reveal what fits. How few attempts do you need?",
+        "traintracks": "Lay a single track connecting the two ends. The numbers around the grid tell you how many pieces belong in each row and column.",
+        "crossword": "A mini brain teaser. How quickly can you complete our 9×9 grid?",
+        "5mquiz": "Our quick-fire quiz — 10 questions, 30 seconds each. Nice for a quick quiz hit.",
+        "slidepuzzle": "Slide the tiles to complete the image — but can you do it in the fewest moves possible?",
+        "2speedcrossword": "Two ways to play one crossword — race through the quick clues or take on the cryptic challenge.",
+        "huedoku": "A game of logic and deduction. Fill the grid so that each row, column and sub-grid contains the 6 colours.",
+        "takuzu": "A game of logic and balance. Fill the grid with two symbols so every row and column has the same number of each, and never three the same in a line.",
+        "codeword": "A code-cracking word puzzle. Every number in the grid stands for a different letter: work out which, and the words reveal themselves."
+    },
+    "tags": {
+        "gridfill": ["Spatial", "Blocks", "Speedy"],
+        "headcoach": ["Mental", "Arithmetic", "Rapid"],
+        "pyramidplus": ["Numbers", "Sums", "Layered"],
+        "quiz": ["Trivia", "Knowledge", "Curious"],
+        "sudoku": ["Logic", "Numbers", "Classic"],
+        "wordsearch": ["Multiplayer", "Words", "Hidden", "Relaxing"],
+        "totalswipeout": ["Snappy", "Instinctive", "Rapid"],
+        "worumber": ["Mixed", "Trivia", "Steps"],
+        "wordwheel": ["Words", "Letters", "Discover"],
+        "guessword": ["Wordplay", "Deduction", "Snappy"],
+        "traintracks": ["Logic", "Tracks", "Routes"],
+        "crossword": ["Multiplayer", "Words", "Clues", "Classic"],
+        "5mquiz": ["Punchy", "Trivia", "Timed"],
+        "slidepuzzle": ["Visual", "Tactile", "Tiles"],
+        "2speedcrossword": ["Words", "Cryptic", "Dual"],
+        "huedoku": ["Colourful", "Logic", "Grid"],
+        "takuzu": ["Logic", "Symbols", "Balance"],
+        "codeword": ["Words", "Code", "Deduction"]
+    },
+    "letters": {
+        "title": "Pick your help letters",
+        "consonants": "Consonants",
+        "vowels": "Vowels",
+        "count": "{n} of {max}",
+        "play": "Play",
+        "skip": "Play without help letters"
+    },
+    "cover": {
+        "number": "No {number}",
+        "play": "Play",
+        "includedIn": "Included in challenge | Included in challenges",
+        "lastTimeOf": "Last time · {name}",
+        "tutorials": "Tutorials",
+        "tutorialStep": "Puzzle {step}",
+        "start": "Start",
+        "replay": "Replay",
+        "completed": "Completed",
+        "assist": {
+            "crossword": {
+                "offerHarder": "You've solved your last 3 crosswords without help, so you'll pick fewer letters this time.",
+                "offerOff": "You've solved your last 3 crosswords without help, so we've turned letter picks off.",
+                "adjusted": "Based on your feedback, you can pick some letters to fill in before you start.",
+                "playWithout": "Play without help letters"
+            },
+            "codeword": {
+                "offerHarder": "You've solved your last 3 {name} puzzles without help, so you'll pick fewer letters this time.",
+                "offerOff": "You've solved your last 3 {name} puzzles without help, so we've turned letter picks off.",
+                "adjusted": "Based on your feedback, you can pick some letters to fill in before you start.",
+                "playWithout": "Play without help letters"
+            },
+            "sudoku": {
+                "offerHarder": "You've solved your last 3 puzzles without help, so we'll fill in fewer squares this time.",
+                "offerOff": "You've solved your last 3 puzzles without help, so we've turned starter squares off.",
+                "adjusted": "You told us you found {name} hard last time, so we'll fill in some extra cells before you start.",
+                "playWithout": "Play without starter squares"
+            }
+        }
+    },
+    "tutorial": {
+        "stepNamed": "Tutorial {step} of {steps}: {name}",
+        "stepOf": "Tutorial {step} of {steps}",
+        "singleSolved": "Tutorial complete!",
+        "singleMissed": "Not this time, but you've got the idea.",
+        "title": "Learn {name}",
+        "step": "Puzzle {step} of {steps}",
+        "goTo": "Go to puzzle {step}",
+        "frameTitle": "{name} practice puzzle {step} of {steps}",
+        "solved": "Solved! Ready for the next one?",
+        "next": "Next puzzle",
+        "allDone": "You've solved them all. You're ready for the real thing!",
+        "missed": "Not this time. Ready for the next one?",
+        "practiceDone": "That's the practice done. You're ready for the real thing!",
+        "start": "Let's go",
+        "brief": {
+            "crossword": {
+                "1": {
+                    "title": "Answer the clues",
+                    "text": "Read the clue, then type its answer into the grid. The number in a square shows where that answer starts."
+                },
+                "2": {
+                    "title": "Across and down",
+                    "text": "Answers run across or down and share letters where they cross, so each answer helps with the next."
+                },
+                "3": {
+                    "title": "Start with what you know",
+                    "text": "Some clues play with words. Fill in the ones you're sure of first; their letters will help with the rest."
+                }
+            },
+            "sudoku": {
+                "1": {
+                    "title": "Every number once",
+                    "text": "Fill the grid so each row, column and box has the numbers 1 to 4 once each. Tap a square, then a number."
+                },
+                "2": {
+                    "title": "A bigger grid",
+                    "text": "Now it's 1 to 6. Each box is 3 squares wide and 2 tall, and still needs every number once."
+                },
+                "3": {
+                    "title": "Only one place for it",
+                    "text": "Pick a number and look at a box that still needs it. Rows and columns that already have it rule squares out, and often only one is left. Stuck? Tap the bulb for a step."
+                }
+            },
+            "takuzu": {
+                "1": {
+                    "title": "Two symbols",
+                    "text": "Fill every square with one of the two symbols: tap a square to change it. Each row and column needs the same number of each, and never three the same in a line."
+                },
+                "2": {
+                    "title": "Spot the pairs",
+                    "text": "Two the same side by side? The squares at either end must be the other symbol. The same goes for a gap between two the same."
+                },
+                "3": {
+                    "title": "= and ×",
+                    "text": "An = between two squares means they're the same symbol, and an × means they're different. Use the signs with the rules you know to finish the grid."
+                }
+            },
+            "traintracks": {
+                "1": {
+                    "title": "Join A to B",
+                    "text": "Lay one track from A to B. The numbers say how many squares in each row and column have track. Tap a square to choose a piece."
+                },
+                "2": {
+                    "title": "Count it out",
+                    "text": "When a row or column has all its track, the rest of its squares stay empty. Use that to rule squares out."
+                },
+                "3": {
+                    "title": "Follow the route",
+                    "text": "Start from the stations and the piece you're given, and work out where the track must go. It never crosses itself or splits."
+                }
+            },
+            "gridfill": {
+                "1": {
+                    "title": "Build the blocks",
+                    "text": "Split the grid into rectangles. Each block covers exactly one number, and that number is how many squares it has. Drag across squares to draw a block."
+                },
+                "2": {
+                    "title": "Pick the shape",
+                    "text": "A 4 could be a square or a line of four. Choose a shape that doesn't cover another number."
+                },
+                "3": {
+                    "title": "Fill the grid",
+                    "text": "Every square must be in a block. Start with the numbers that only fit one way."
+                }
+            },
+            "headcoach": {
+                "1": {
+                    "title": "Follow the chain",
+                    "text": "Start with the number shown, then apply each step to your last answer. Type each answer on the keypad."
+                },
+                "2": {
+                    "title": "Work it out",
+                    "text": "Need somewhere to think? Tap the pencil to make notes. A wrong answer is marked, and you can try again."
+                },
+                "3": {
+                    "title": "The full chain",
+                    "text": "Eight steps, just like the daily puzzle. Take them one at a time, each from your last answer."
+                }
+            },
+            "huedoku": {
+                "1": {
+                    "title": "Every colour once",
+                    "text": "Fill the grid so each row, column and box has all four colours once. Tap a square, then a colour."
+                },
+                "2": {
+                    "title": "Six colours",
+                    "text": "Now there are six colours, and each box is 3 squares wide and 2 tall. Every row, column and box still needs each colour once."
+                },
+                "3": {
+                    "title": "Only one place for it",
+                    "text": "Pick a colour and look at a box that still needs it. Rows and columns that already have it rule squares out, and often only one is left. Stuck? Tap the bulb for a step."
+                }
+            },
+            "guessword": {
+                "1": {
+                    "title": "Green means right",
+                    "text": "Find the hidden five-letter word in six tries. Start by typing CHAIN and pressing Enter. Green letters are right and in the right place, so keep them where they are. Grey letters aren't in the word."
+                },
+                "2": {
+                    "title": "Yellow means move it",
+                    "text": "Start with EARTH. Yellow letters are in the word but in the wrong place, so try them somewhere else."
+                },
+                "3": {
+                    "title": "Use both colours",
+                    "text": "Start with BEARD. Keep your greens where they are and move your yellows around until the word fits."
+                }
+            },
+            "wordwheel": {
+                "1": {
+                    "title": "Spell with the wheel",
+                    "text": "Tap letters to make words of four letters or more, then press Enter. Every word must use the centre letter. There are five to find, and one uses every letter."
+                },
+                "2": {
+                    "title": "Doubles count twice",
+                    "text": "You can use each tile once per word, so a letter that's on the wheel twice can be used twice. Find the four words."
+                },
+                "3": {
+                    "title": "A full-size wheel",
+                    "text": "Five words to find. Plurals don't count. Stuck? Shuffle the letters to see them in a new way."
+                }
+            },
+            "wordsearch": {
+                "1": {
+                    "title": "Find the words",
+                    "text": "Drag from the first letter of a word to its last. Here the words read across or down. Find the three in the list."
+                },
+                "2": {
+                    "title": "Any direction",
+                    "text": "Words can also run backwards or diagonally. Find all four."
+                },
+                "3": {
+                    "title": "A bigger grid",
+                    "text": "Six words hiding in every direction. Stuck? Tap a word in the list to see its first letter."
+                }
+            },
+            "codeword": {
+              "1": {
+                "title": "Numbers are letters",
+                "text": "Each number stands for one letter, and the same number is always the same letter. T, I, L and E are done for you. Fill in the rest to finish the words."
+              },
+              "2": {
+                "title": "Same number, same letter",
+                "text": "When a number appears twice in a row, so does its letter, like the double E and double T here. Use them to finish the words."
+              },
+              "3": {
+                "title": "Start with what you know",
+                "text": "Words with most of their letters filled in are the easiest to crack. Start with those, then use each new letter to finish the rest."
+              }
+            }
+        }
+    },
+    "assistFeedback": {
+        "title": "How much help shall we give you next time?",
+        "letters": {
+            "title": "How many help letters shall we let you pick next time?",
+            "used": "You picked {n} help letter this time. | You picked {n} help letters this time.",
+            "unused": "You played without help letters this time.",
+            "choice": "{label} ({n})"
+        },
+        "choices": {
+            "none": "None",
+            "fewer": "Fewer",
+            "same": "The Same",
+            "more": "More",
+            "alotmore": "A Lot More"
+        }
+    },
+    "insights": {
+        "title": "What we've learned about you",
+        "intro": "We tailor the site to how you play. Here's what we currently think — remove anything that doesn't sound right and we'll stop using it.",
+        "groups": {
+            "likes": "Puzzles you seem to enjoy",
+            "time": "When you play",
+            "difficulty": "Difficulty",
+            "help": "Help settings",
+            "told": "Things you told us"
+        },
+        "likes": "{name} — played {count} time in the last 30 days | {name} — played {count} times in the last 30 days",
+        "time": {
+            "morning": "You usually play {name} in the morning",
+            "afternoon": "You usually play {name} in the afternoon",
+            "evening": "You usually play {name} in the evening",
+            "night": "You usually play {name} late at night"
+        },
+        "lean": {
+            "harder": {
+                "rating": "{name} felt too easy last time, so we lean towards its harder levels",
+                "purist": "You solve {name} without help, so we lean towards its harder levels",
+                "improver": "You're getting quicker at {name}, so we lean towards its harder levels"
+            },
+            "easier": {
+                "rating": "{name} felt hard last time, so we lean towards its easier levels",
+                "hintHunter": "You often use help on {name}, so we lean towards its easier levels",
+                "newcomer": "You're new to {name}, so we lean towards its easier levels"
+            }
+        },
+        "assists": {
+            "crossword": "{name}: you pick {level} letters to fill in",
+            "codeword": "{name}: you pick {level} letters to fill in",
+            "sudoku": "{name}: we fill in {level}% of the squares before you start"
+        },
+        "boosted": {
+            "words": "You asked for more word puzzles",
+            "numbers": "You asked for more number puzzles",
+            "logic": "You asked for more logic puzzles",
+            "quiz": "You asked for more quizzes"
+        },
+        "tour": "You picked {picks} in the tour",
+        "remove": "Remove",
+        "removeLabel": "Remove: {text}",
+        "removeAll": "Remove all",
+        "empty": "Nothing yet — play a few puzzles and we'll start tailoring the site to you.",
+        "allRemoved": "Nothing to show — you've removed everything we'd assumed.",
+        "restore": "Bring back {count} removed item | Bring back {count} removed items"
+    }
+}

@@ -1,0 +1,32 @@
+
+  .heading {
+    h1,h2 {
+      font-size: var(--home-h1-size);
+      line-height: 1.1;
+      font-weight: 700;
+      font-family: var(--home-font-display);
+      margin: 0;
+    }
+    h2 {
+      font-size: var(--home-h2-size);
+    }
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  h1 {
+    font-size: var(--page-h1-size);
+    margin: var(--page-h1-margin);
+  }
+  h2 {
+    font-size: var(--page-h2-size);
+    margin: var(--page-h2-margin);
+  }
+  h3 {
+    font-size: var(--page-h3-size);
+    margin: var(--page-h3-margin);
+  }
+  .reduced-h1 {
+    font-size: var(--home-h1-size);
+  }

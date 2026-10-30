@@ -1,0 +1,94 @@
+
+@import url('css/fonts.css');
+@import url('css/variables.css');
+@import url('css/theme.css');
+@import url('css/typography.css');
+@import url('css/animations.css');
+
+@import url('css/card.css');
+@import url('css/puzzle-icon.css');
+@import url('css/custom-select.css');
+@import url('css/form.css');
+@import url('css/toast.css');
+@import url('css/streak-modal.css');
+@import url('css/medal.css');
+@import url('css/home-highlights.css');
+@import url('css/light-dark-mode.css');
+
+@import url('css/utility.css');
+
+
+  body {
+    background-color: var(--app-bg, #fff);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sans, 'Helvetica Neue', Arial, sans-serif);
+    font-size: 1.6rem;
+    padding: var(--body-padding, 2rem);
+    padding-block-end: var(--login-banner-h, 0px);
+    color: var(--text-colour);
+    overflow-x: clip;
+
+    &:after {
+      pointer-events: none;
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 19;
+      
+    }
+
+  body > div:has(#app),
+  #app {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-inline-size: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-inline-size: 0;
+  }
+  * {
+    transition: background-color .2s ease, color .2s ease;
+  }
+}
+
+.scrollable {
+    overflow: auto;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-colour) transparent;
+}
+
+/* Chrome, Edge, Safari */
+.scrollable::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 999px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-colour);
+    border-radius: 999px;
+
+    @media (hover: hover) {
+        &:hover {
+            background: var(--scrollbar-hover);
+        }
+    }
+}
+
+  body > div:has(#app), 
+  #app {
+    display: flex;
+    flex-grow: 1;
+  }

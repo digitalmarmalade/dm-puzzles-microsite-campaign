@@ -1,0 +1,38 @@
+{
+  "puzzles": [
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "PILOT",
+        "E#I#O",
+        "TITLE"
+      ],
+      "words": ["PILOT", "TITLE", "PET", "LIT", "TOE"],
+      "given": "TILE"
+    },
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "CHEEK",
+        "H#A#I",
+        "EIGHT",
+        "A#E#T",
+        "PARTY"
+      ],
+      "words": ["CHEEK", "EIGHT", "PARTY", "CHEAP", "EAGER", "KITTY"],
+      "given": "ETAHIRG"
+    },
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "GRASS",
+        "R#C#T",
+        "EXTRA",
+        "E#O#T",
+        "NURSE"
+      ],
+      "words": ["GRASS", "EXTRA", "NURSE", "GREEN", "ACTOR", "STATE"],
+      "given": "ESTA"
+    }
+  ]
+}

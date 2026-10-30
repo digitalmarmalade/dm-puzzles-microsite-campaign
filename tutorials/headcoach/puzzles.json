@@ -1,0 +1,20 @@
+{
+  "_readme": "Source for the three tutorial Head Coach puzzles. Edit here, then run `npm run tutorials` to rebuild public/tutorials/headcoach/headcoach-*.json. Each step is applied to the previous answer. Steps the build understands: \"+ 5\", \"- 5\", \"× 5\", \"÷ 5\", \"double it\", \"triple it\", \"half of it\", \"square it\", \"1/3 of it\", \"25% of it\". It works out every answer and stops if one isn't a whole number.",
+  "puzzles": [
+    {
+      "difficulty": "Easy",
+      "start": 4,
+      "steps": ["+ 3", "double it", "- 4"]
+    },
+    {
+      "difficulty": "Easy",
+      "start": 10,
+      "steps": ["+ 6", "half of it", "× 3", "- 4", "÷ 5"]
+    },
+    {
+      "difficulty": "Easy",
+      "start": 12,
+      "steps": ["double it", "+ 6", "1/3 of it", "square it", "- 19", "÷ 9", "+ 27", "50% of it"]
+    }
+  ]
+}

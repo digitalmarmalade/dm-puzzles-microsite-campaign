@@ -1,0 +1,47 @@
+{
+  "_readme": "Source for the three tutorial Train Tracks. Edit here, then run `npm run tutorials` to rebuild public/tutorials/traintracks/traintracks-*.json. Each track row lists its squares: a piece is named by the two sides it joins (LR, TB, LT, LB, RT, RB), . is an empty square, and a * after a piece shows it at the start. Stations count rows and columns from 1. The build works out the row and column numbers and checks the track runs from A to B and has exactly one solution.",
+  "puzzles": [
+    {
+      "difficulty": "Easy",
+      "stations": {
+        "A": { "edge": "left", "row": 2 },
+        "B": { "edge": "bottom", "col": 3 }
+      },
+      "track": [
+        "RB LR LR LB",
+        "LT .  .  TB",
+        ".  .  RB LT",
+        ".  .  TB* ."
+      ]
+    },
+    {
+      "difficulty": "Easy",
+      "stations": {
+        "A": { "edge": "left", "row": 4 },
+        "B": { "edge": "right", "row": 1 }
+      },
+      "track": [
+        ".  .  .  RB LR",
+        ".  RB LR LT .",
+        ".  RT LR LB .",
+        "LB .  RB LT* .",
+        "RT LR LT .  ."
+      ]
+    },
+    {
+      "difficulty": "Easy",
+      "stations": {
+        "A": { "edge": "left", "row": 5 },
+        "B": { "edge": "bottom", "col": 4 }
+      },
+      "track": [
+        ".  .  RB LR LB .",
+        ".  .  TB .  RT LB",
+        "RB LR LT* . .  TB",
+        "TB .  .  RB LR LT",
+        "LT .  .  TB .  .",
+        ".  .  .  TB .  ."
+      ]
+    }
+  ]
+}

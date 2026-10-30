@@ -1,0 +1,154 @@
+{
+    "advent": {
+        "title": "Sfida dell'Avvento",
+        "kicker": "Sfida dell'Avvento {year}",
+        "banner": {
+            "teaserTitle": "24 porte. 24 giorni.",
+            "teaserBody": "Il calendario dell'Avvento apre il {date}. Una piccola sfida puzzle dietro ogni porta.",
+            "openTitle": "Apri la porta {day}",
+            "doneTitle": "Porta {day} completata",
+            "progress": "Hai completato {done} porte su {total}",
+            "cta": "Apri il calendario",
+            "teaserCta": "Dai un'occhiata",
+            "dismiss": "Nascondi",
+            "tap": "Tocca per aprire",
+            "award": {
+                "perfect": "Hai vinto la Stella d'oro",
+                "silver": "Hai vinto la Pallina d'argento",
+                "bronze": "Hai vinto la Campanella di bronzo",
+                "coal": "Hai vinto il Pezzo di carbone"
+            },
+            "awardPerfect": "Hai aperto tutte le 24 porte nel loro giorno.",
+            "awardPerfectCount": "Hai aperto tutte le 24 porte nel loro giorno, come {count} giocatori.",
+            "awardDone": "Hai completato {done} porte su {total}. Grazie per aver giocato!",
+            "calendarCta": "Vedi il tuo calendario"
+        },
+        "page": {
+            "intro": "Ogni giorno fino a Natale si apre una nuova porta. Dietro ognuna c'è una piccola sfida puzzle da completare quel giorno. Completa ogni porta nel suo giorno per restare perfetto.",
+            "opensOn": "La prima porta si apre il {date}",
+            "ended": "La sfida dell'Avvento è terminata. Grazie per aver giocato!",
+            "calendar": "Il calendario",
+            "howTitle": "Come funziona",
+            "how1": "Apri la porta di ogni giorno e completa la sfida quel giorno per restare perfetto.",
+            "how2": "Hai perso una porta? Puoi recuperarla fino al {date}. Non conta per il percorso perfetto, ma conta per il tuo premio.",
+            "how3": "Non puoi fallire. Più porte completi, migliore sarà il tuo premio."
+        },
+        "status": {
+            "perfect": "Finora sei perfetto",
+            "perfectDone": "Perfetto! Ogni porta nel suo giorno",
+            "notStarted": "Apri la porta di oggi per partecipare",
+            "signIn": "Crea un account gratuito per partecipare",
+            "signUp": "Registrati",
+            "logIn": "Accedi",
+            "perfectCount": "Sei 1 dei {count} giocatori che hanno aperto una porta al giorno",
+            "joinCount": "Unisciti ai {count} giocatori che hanno aperto una porta al giorno | Unisciti ai {count} giocatori che hanno aperto una porta al giorno",
+            "out": "Sei uscito il {date}, ma sei ancora sulla buona strada per: {award}",
+            "finishedPerfectCount": "Sei 1 dei {count} giocatori che hanno aperto ogni porta nel suo giorno",
+            "finished": "Hai concluso con: {award}",
+            "lateStart": "Non è troppo tardi. Apri la porta di oggi per iniziare il tuo calendario.",
+            "perfectTomorrow": "Torna domani per la porta {next}. Sei ancora perfetto.",
+            "perfectTomorrowCount": "Torna domani per la porta {next}. Sei 1 dei {count} giocatori ancora perfetti.",
+            "outCatchUp": "Sei uscito il {date}. Recupera le porte perse per ottenere: {award}."
+        },
+        "door": {
+            "label": "Porta {day}",
+            "locked": "Si apre il {date}",
+            "open": "Apri la porta {day}",
+            "today": "Oggi",
+            "done": "Completata nel giorno",
+            "late": "Recuperata",
+            "missed": "Da recuperare",
+            "noPuzzle": "Scegli un puzzle qualsiasi dalla home page.",
+            "goHome": "Vai ai puzzle di oggi",
+            "todayHint": "Fallo oggi per restare perfetto.",
+            "doneHint": "L'hai fatto nel giorno giusto. Ottimo lavoro!",
+            "lateHint": "Hai recuperato questa porta. Conta per il tuo premio.",
+            "missedHint": "Puoi ancora recuperarla fino al {date}. Non conta per il percorso perfetto, ma conta per il tuo premio.",
+            "close": "Chiudi",
+            "eligible": "Puzzle validi",
+            "reasonToday": "Puzzle di oggi",
+            "reasonArchive": "Dall'archivio",
+            "tomorrow": "La porta {day} si apre domani."
+        },
+        "task": {
+            "any": {
+                "short": "Un puzzle qualsiasi",
+                "title": "Risolvi un puzzle qualsiasi"
+            },
+            "two": {
+                "short": "2 puzzle",
+                "title": "Risolvi due puzzle in un giorno"
+            },
+            "three": {
+                "short": "3 puzzle",
+                "title": "Risolvi tre puzzle in un giorno"
+            },
+            "words": {
+                "short": "Parole",
+                "title": "Risolvi un puzzle di parole"
+            },
+            "numbers": {
+                "short": "Numeri",
+                "title": "Risolvi un puzzle di numeri"
+            },
+            "logic": {
+                "short": "Logica",
+                "title": "Risolvi un puzzle di logica"
+            },
+            "quick": {
+                "short": "Veloce",
+                "title": "Risolvi un puzzle veloce (4 minuti o meno)"
+            },
+            "clean": {
+                "short": "Senza aiuti",
+                "title": "Risolvi un puzzle senza verifiche, rivelazioni o suggerimenti"
+            },
+            "archive": {
+                "short": "Archivio",
+                "title": "Risolvi un puzzle dall'archivio"
+            },
+            "favourite": {
+                "short": "Preferito",
+                "title": "Risolvi uno dei tuoi puzzle preferiti"
+            },
+            "different": {
+                "short": "2 tipi",
+                "title": "Risolvi due tipi diversi di puzzle in un giorno"
+            },
+            "new": {
+                "short": "Qualcosa di nuovo",
+                "title": "Risolvi un puzzle a cui non giochi da un mese"
+            }
+        },
+        "award": {
+            "heading": "Premi",
+            "yours": "Il tuo premio",
+            "onTrack": "Sulla strada per",
+            "next": "Ancora {count} porta per {award} | Ancora {count} porte per {award}",
+            "perfect": {
+                "title": "Stella d'oro",
+                "desc": "Tutte le 24 porte completate nel loro giorno"
+            },
+            "silver": {
+                "title": "Pallina d'argento",
+                "desc": "18 o più porte completate"
+            },
+            "bronze": {
+                "title": "Campanella di bronzo",
+                "desc": "10 o più porte completate"
+            },
+            "coal": {
+                "title": "Pezzo di carbone",
+                "desc": "Hai partecipato"
+            }
+        },
+        "toast": {
+            "doneTitle": "Porta {day} completata!",
+            "doneBodyPerfect": "Sei ancora perfetto. Torna domani per la porta {next}.",
+            "doneBody": "Torna domani per la porta {next}.",
+            "lastBody": "Era l'ultima porta. Il tuo premio arriva il giorno di Natale.",
+            "lateTitle": "Porta {day} recuperata",
+            "lateBody": "Conta per il tuo premio."
+        }
+    }
+}

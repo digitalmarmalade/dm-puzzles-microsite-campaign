@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "id": "tutorial-1",
+    "title": "Head Coach",
+    "difficulty": "Easy",
+    "type": "headcoach",
+    "variant": "Head Coach",
+    "slug": "head-coach-tutorial-1",
+    "number": "",
+    "description": "",
+    "section": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 1,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 0,
+    "rowCount": 0,
+    "allowedValues": "1234567890",
+    "solution": "10"
+  },
+  "cluedata": [
+    {
+      "start": 4,
+      "answer": 10,
+      "difficulty": "Easy",
+      "data": [
+        {
+          "clue": "+ 3",
+          "result": 7
+        },
+        {
+          "clue": "double it",
+          "result": 14
+        },
+        {
+          "clue": "- 4",
+          "result": 10
+        }
+      ]
+    }
+  ],
+  "copy": {},
+  "feedback": null
+}

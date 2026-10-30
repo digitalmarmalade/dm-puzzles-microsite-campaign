@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 617 614" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --primary: #F17B2D;
+    }
+  </style>
+<rect x="4.57525" y="108.575" width="607.849" height="81.502" fill="white" stroke="#333333" stroke-width="9.1505"/>
+<rect x="4.57525" y="209.575" width="607.849" height="81.502" fill="white" stroke="#333333" stroke-width="9.1505"/>
+<rect x="4.57525" y="310.575" width="607.849" height="81.502" fill="white" stroke="#333333" stroke-width="9.1505"/>
+<rect x="4.57525" y="411.575" width="607.849" height="81.502" fill="white" stroke="#333333" stroke-width="9.1505"/>
+<path d="M78 133H548V167H78V133Z" fill="#CCCCCC"/>
+<rect y="11" width="557" height="34" fill="#CCCCCC"/>
+<rect y="52" width="374" height="34" fill="#CCCCCC"/>
+<rect style="fill: var(--primary); stroke: var(--primary)" x="417.575" y="522.575" width="194.85" height="53.8495" fill="#F17B2D" stroke="#F17B2D" stroke-width="9.1505"/>
+<rect x="78" y="234" width="264" height="34" fill="#CCCCCC"/>
+<rect x="78" y="335" width="385" height="34" fill="#CCCCCC"/>
+<rect x="78" y="436" width="505" height="34" fill="#CCCCCC"/>
+<rect style="fill: var(--primary); stroke: var(--primary)" x="32.5753" y="137.575" width="25.8495" height="24.8495" fill="#F17B2D" stroke="#F17B2D" stroke-width="9.1505"/>
+<rect style="fill: var(--primary); stroke: var(--primary)" x="32.5753" y="238.575" width="25.8495" height="24.8495" fill="#F17B2D" stroke="#F17B2D" stroke-width="9.1505"/>
+<rect style="fill: var(--primary); stroke: var(--primary)" x="32.5753" y="339.575" width="25.8495" height="24.8495" fill="#F17B2D" stroke="#F17B2D" stroke-width="9.1505"/>
+<rect style="fill: var(--primary); stroke: var(--primary)" x="32.5753" y="440.575" width="25.8495" height="24.8495" fill="#F17B2D" stroke="#F17B2D" stroke-width="9.1505"/>
+</svg>

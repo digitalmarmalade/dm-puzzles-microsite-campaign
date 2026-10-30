@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 626 626" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --primary: #F17B2D;
+    }
+  </style>
+<rect x="5" y="5" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="139" y="5" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="273" y="5" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="407" y="5" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="541" y="5" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="5" y="139" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect style="fill: var(--primary)" x="139" y="139" width="80.6508" height="80.6508" fill="#F17B2D" stroke="#333333" stroke-width="8.09135"/>
+<rect x="273" y="139" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="407" y="139" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="541" y="139" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="5" y="273" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="139" y="273" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="273" y="273" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="407" y="273" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="541" y="273" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="5" y="407" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="139" y="407" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="273" y="407" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="407" y="407" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="541" y="407" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="5" y="541" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="139" y="541" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="273" y="541" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="407" y="541" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<rect x="541" y="541" width="80.6508" height="80.6508" fill="white" stroke="#333333" stroke-width="8.09135"/>
+<path d="M28.5684 118.946L45.2841 102.23L49.463 106.409L32.7473 123.125L28.5684 118.946Z" fill="#333333"/>
+<path d="M45.2841 102.23L61.9998 118.946L57.8209 123.125L41.1052 106.409L45.2841 102.23Z" fill="#333333"/>
+<path d="M250.716 61.4314L234 44.7157L238.179 40.5367L254.895 57.2525L250.716 61.4314Z" fill="#333333"/>
+<path d="M234 44.7157L250.716 27.9999L254.895 32.1789L238.179 48.8946L234 44.7157Z" fill="#333333"/>
+<path d="M375.179 162L391.895 178.716L387.716 182.895L371 166.179L375.179 162Z" fill="#333333"/>
+<path d="M391.895 178.716L375.179 195.431L371 191.253L387.716 174.537L391.895 178.716Z" fill="#333333"/>
+<path d="M238.179 430L254.895 446.716L250.716 450.895L234 434.179L238.179 430Z" fill="#333333"/>
+<path d="M254.895 446.716L238.179 463.431L234 459.253L250.716 442.537L254.895 446.716Z" fill="#333333"/>
+<path d="M61.4314 508.179L44.7157 524.895L40.5367 520.716L57.2525 504L61.4314 508.179Z" fill="#333333"/>
+<path d="M44.7157 524.895L27.9999 508.179L32.1789 504L48.8946 520.716L44.7157 524.895Z" fill="#333333"/>
+<path d="M518.716 61.4314L502 44.7157L506.179 40.5367L522.895 57.2525L518.716 61.4314Z" fill="#333333"/>
+<path d="M502 44.7157L518.716 27.9999L522.895 32.1789L506.179 48.8946L502 44.7157Z" fill="#333333"/>
+</svg>

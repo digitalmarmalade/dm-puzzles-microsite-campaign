@@ -1,0 +1,397 @@
+.puzzle-card,
+.variant-card,
+.nav-variant-card {
+  --puzzle-tile-shadow: 241, 123, 45;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+  --puzzle-tile-text: #F17B2D;
+
+  --card-shadow: 0 1px 2px 0 rgba(var(--puzzle-tile-shadow), 0.20), 0 12px 30px 0 rgba(var(--puzzle-tile-shadow), 0.20);
+  --card-shadow-hover: 0 1px 2px 0 rgba(var(--puzzle-tile-shadow), 0.10), 0 17px 30px 0 rgba(var(--puzzle-tile-shadow), 0.15);
+  --card-shadow-small: 0 1px 2px 0 rgba(var(--puzzle-tile-shadow), 0.20), 0 4px 9px 0 rgba(var(--puzzle-tile-shadow), 0.20);
+}
+
+.puzzle-card--crossword,
+.theme--crossword {
+  --puzzle-tile-shadow: 241, 123, 45;
+  --puzzle-tile-text: #F17B2D;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--sudoku,
+.theme--sudoku {
+  --puzzle-tile-shadow: 180, 108, 108;
+  --puzzle-tile-text: #B46C6C;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--gridfill,
+.theme--gridfill {
+  --puzzle-tile-shadow: 125, 155, 166;
+  --puzzle-tile-text: #7D9BA6;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--wordwheel,
+.theme--wordwheel {
+  --puzzle-tile-shadow: 217, 160, 102;
+  --puzzle-tile-text: #D9A066;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--quiz,
+.theme--quiz {
+  --puzzle-tile-shadow: 143, 184, 168;
+  --puzzle-tile-text: #8FB8A8;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--head-coach,
+.theme--head-coach {
+  --puzzle-tile-shadow: 184, 160, 212;
+  --puzzle-tile-text: #B8A0D4;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--pyramid-plus,
+.theme--pyramid-plus {
+  --puzzle-tile-shadow: 228, 169, 168;
+  --puzzle-tile-text: #E4A9A8;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--total-swipeout,
+.theme--total-swipeout {
+  --puzzle-tile-shadow: 76, 92, 104;
+  --puzzle-tile-text: #4C5C68;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--slide-puzzle,
+.theme--slide-puzzle {
+  --puzzle-tile-shadow: 140, 122, 91;
+  --puzzle-tile-text: #8C7A5B;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--wordsearch,
+.theme--wordsearch {
+  --puzzle-tile-shadow: 195, 182, 89;
+  --puzzle-tile-text: #C3B659;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--worumber,
+.theme--worumber {
+  --puzzle-tile-shadow: 102, 116, 71;
+  --puzzle-tile-text: #667447;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--2-speed-crossword,
+.theme--2-speed-crossword {
+  --puzzle-tile-shadow: 166, 110, 142;
+  --puzzle-tile-text: #A66E8E;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--huedoku,
+  .theme--huedoku {
+  --puzzle-tile-shadow: 109, 139, 116;
+  --puzzle-tile-text: #6D8B74;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--guessword,
+  .theme--guessword {
+  --puzzle-tile-shadow: 173, 145, 197;
+  --puzzle-tile-text: #AD91C5;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--traintracks,
+  .theme--traintracks {
+  --puzzle-tile-shadow: 217, 114, 106;
+  --puzzle-tile-text: #D9726A;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--takuzu,
+  .theme--takuzu  {
+  --puzzle-tile-shadow: 217, 114, 106;
+  --puzzle-tile-text: #D9726A;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+.puzzle-card--codeword,
+  .theme--codeword {
+  --puzzle-tile-shadow: 157, 175, 90;
+  --puzzle-tile-text: #9DAF5A;
+  --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+}
+
+:root:not([data-theme-status]) {
+  @media (prefers-color-scheme: dark) {
+    .puzzle-card,
+    .variant-card,
+    .nav-variant-card {
+      --puzzle-tile-shadow: 241, 123, 45;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+      --puzzle-tile-text: #ffb685;
+    }
+
+    .puzzle-card--crossword,
+    .theme--crossword {
+      --puzzle-tile-shadow: 241, 123, 45;
+      --puzzle-tile-text: #ff9966;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+    }
+
+    .puzzle-card--sudoku,
+    .theme--sudoku {
+      --puzzle-tile-shadow: 180, 108, 108;
+      --puzzle-tile-text: #f2aaaa;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 100%, var(--card-background));
+    }
+
+    .puzzle-card--gridfill,
+    .theme--gridfill {
+      --puzzle-tile-shadow: 125, 155, 166;
+      --puzzle-tile-text: #9fc7d5;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--wordwheel,
+    .theme--wordwheel {
+      --puzzle-tile-shadow: 217, 160, 102;
+      --puzzle-tile-text: #f0c28e;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--quiz,
+    .theme--quiz {
+      --puzzle-tile-shadow: 143, 184, 168;
+      --puzzle-tile-text: #a8d7c3;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--head-coach,
+    .theme--head-coach {
+      --puzzle-tile-shadow: 184, 160, 212;
+      --puzzle-tile-text: #d2b6f0;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--pyramid-plus,
+    .theme--pyramid-plus {
+      --puzzle-tile-shadow: 228, 169, 168;
+      --puzzle-tile-text: #f3b1b0;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--total-swipeout,
+    .theme--total-swipeout {
+      --puzzle-tile-shadow: 76, 92, 104;
+      --puzzle-tile-text: #8fa3b3;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--slide-puzzle,
+    .theme--slide-puzzle {
+      --puzzle-tile-shadow: 140, 122, 91;
+      --puzzle-tile-text: #d5c09a;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--wordsearch,
+    .theme--wordsearch {
+      --puzzle-tile-shadow: 195, 182, 89;
+      --puzzle-tile-text: #e2d774;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--worumber,
+    .theme--worumber {
+      --puzzle-tile-shadow: 102, 116, 71;
+      --puzzle-tile-text: #b4c68d;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--2-speed-crossword,
+    .theme--2-speed-crossword {
+      --puzzle-tile-shadow: 166, 110, 142;
+      --puzzle-tile-text: #d98bb4;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--huedoku,
+  .theme--huedoku {
+      --puzzle-tile-shadow: 109, 139, 116;
+      --puzzle-tile-text: #99c5a7;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--guessword,
+      .theme--guessword {
+      --puzzle-tile-shadow: 203, 179, 220;
+      --puzzle-tile-text: #CBB3DC;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+    }
+
+    .puzzle-card--traintracks,
+      .theme--traintracks {
+      --puzzle-tile-shadow: 217, 114, 106;
+      --puzzle-tile-text: #f29b94;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--takuzu,
+    .theme--takuzu  {
+      --puzzle-tile-shadow: 217, 114, 106;
+      --puzzle-tile-text: #F29B94;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+
+    .puzzle-card--codeword,
+    .theme--codeword {
+      --puzzle-tile-shadow: 157, 175, 90;
+      --puzzle-tile-text: #CAD48A;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    }
+  }
+}
+
+:root[data-theme-status="dark"] {
+  .puzzle-card,
+  .variant-card,
+  .nav-variant-card {
+    --puzzle-tile-shadow: 241, 123, 45;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+    --puzzle-tile-text: #ffb685;
+  }
+
+  .puzzle-card--crossword,
+  .theme--crossword {
+    --puzzle-tile-shadow: 241, 123, 45;
+    --puzzle-tile-text: #ff9966;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--sudoku,
+  .theme--sudoku {
+    --puzzle-tile-shadow: 180, 108, 108;
+    --puzzle-tile-text: #f2aaaa;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--gridfill,
+  .theme--gridfill {
+    --puzzle-tile-shadow: 125, 155, 166;
+    --puzzle-tile-text: #9fc7d5;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--wordwheel,
+  .theme--wordwheel {
+    --puzzle-tile-shadow: 217, 160, 102;
+    --puzzle-tile-text: #f0c28e;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--quiz,
+  .theme--quiz {
+    --puzzle-tile-shadow: 143, 184, 168;
+    --puzzle-tile-text: #a8d7c3;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--head-coach,
+  .theme--head-coach {
+    --puzzle-tile-shadow: 184, 160, 212;
+    --puzzle-tile-text: #d2b6f0;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--pyramid-plus,
+  .theme--pyramid-plus {
+    --puzzle-tile-shadow: 228, 169, 168;
+    --puzzle-tile-text: #f3b1b0;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--total-swipeout,
+  .theme--total-swipeout {
+    --puzzle-tile-shadow: 76, 92, 104;
+    --puzzle-tile-text: #8fa3b3;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--slide-puzzle,
+  .theme--slide-puzzle {
+    --puzzle-tile-shadow: 140, 122, 91;
+    --puzzle-tile-text: #d5c09a;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--wordsearch,
+  .theme--wordsearch {
+    --puzzle-tile-shadow: 195, 182, 89;
+    --puzzle-tile-text: #e2d774;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--worumber,
+  .theme--worumber {
+    --puzzle-tile-shadow: 102, 116, 71;
+    --puzzle-tile-text: #b4c68d;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--2-speed-crossword,
+  .theme--2-speed-crossword {
+    --puzzle-tile-shadow: 166, 110, 142;
+    --puzzle-tile-text: #d98bb4;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--huedoku,
+  .theme--huedoku {
+    --puzzle-tile-shadow: 109, 139, 116;
+    --puzzle-tile-text: #99c5a7;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--guessword,
+      .theme--guessword {
+      --puzzle-tile-shadow: 203, 179, 220;
+      --puzzle-tile-text: #CBB3DC;
+      --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 10%, var(--card-background));
+    }
+
+  .puzzle-card--traintracks,
+      .theme--traintracks {
+    --puzzle-tile-shadow: 217, 114, 106;
+    --puzzle-tile-text: #f29b94;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--takuzu,
+  .theme--takuzu {
+    --puzzle-tile-shadow: 217, 114, 106;
+    --puzzle-tile-text: #F29B94;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--codeword,
+  .theme--codeword {
+    --puzzle-tile-shadow: 157, 175, 90;
+    --puzzle-tile-text: #CAD48A;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+  .puzzle-card--15 {
+    --puzzle-tile-shadow: 114, 153, 180;
+    --puzzle-tile-text: #90bddc;
+    --puzzle-tile-background: color-mix(in srgb, rgb(var(--puzzle-tile-shadow)) 50%, var(--card-background));
+  }
+
+}

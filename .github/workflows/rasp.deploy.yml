@@ -1,0 +1,15 @@
+name: RASP website deploy
+
+on:
+  push:
+    branches:
+      - deploy-rasp
+  workflow_dispatch:
+
+jobs:
+  deploy_rasp:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      environment: RASP
+      branch: deploy-rasp
+    secrets: inherit

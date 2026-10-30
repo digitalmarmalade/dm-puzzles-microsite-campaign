@@ -1,0 +1,35 @@
+{
+  "_readme": "Source for the three tutorial Cell Blocks (GridFill). Edit here, then run `npm run tutorials` to rebuild public/tutorials/gridfill/gridfill-*.json. Each letter is one block of the solution; its capital marks the square that shows the block's size. Blocks must be rectangles of 9 squares or fewer. The build checks the numbers have exactly one solution.",
+  "puzzles": [
+    {
+      "difficulty": "Easy",
+      "blocks": [
+        "aaAB",
+        "CcDb",
+        "Eedb",
+        "Ffdb"
+      ]
+    },
+    {
+      "difficulty": "Easy",
+      "blocks": [
+        "abbcc",
+        "abBCc",
+        "aDeee",
+        "AdeEe",
+        "afFGg"
+      ]
+    },
+    {
+      "difficulty": "Easy",
+      "blocks": [
+        "aaAaaa",
+        "BbcccC",
+        "bbdDdE",
+        "bbddde",
+        "FggHhe",
+        "fgGIie"
+      ]
+    }
+  ]
+}

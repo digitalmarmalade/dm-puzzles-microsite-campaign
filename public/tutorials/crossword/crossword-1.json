@@ -1,0 +1,162 @@
+{
+  "headline": "",
+  "type": "crossword",
+  "copy": {
+    "title": "",
+    "id": "tutorial-1",
+    "type": "block",
+    "crosswordtype": "Crossword",
+    "gridsize": {
+      "type": "Standard",
+      "cols": "3",
+      "rows": "3"
+    },
+    "settings": {
+      "solution": "CATO  W  ",
+      "solution_hashed": "1c23e9ff1e5b0106c803340639762fdb"
+    },
+    "hints": {},
+    "words": [
+      {
+        "id": 1,
+        "x": "1-3",
+        "y": "1",
+        "solution": "CAT"
+      },
+      {
+        "id": 2,
+        "x": "1",
+        "y": "1-3",
+        "solution": "COW"
+      }
+    ],
+    "clues": [
+      {
+        "name": "Clues",
+        "title": "Across",
+        "clues": [
+          {
+            "word": 1,
+            "number": 1,
+            "clue": "Pet that purrs",
+            "format": "3",
+            "length": 3,
+            "answer": "CAT"
+          }
+        ]
+      },
+      {
+        "name": "Clues",
+        "title": "Down",
+        "clues": [
+          {
+            "word": 2,
+            "number": 1,
+            "clue": "Farm animal that says moo",
+            "format": "3",
+            "length": 3,
+            "answer": "COW"
+          }
+        ]
+      }
+    ]
+  },
+  "options": [],
+  "grid": [
+    [
+      {
+        "SquareID": 1,
+        "Number": "1",
+        "Blank": "",
+        "WordAcrossID": 1,
+        "WordDownID": 2,
+        "Letter": "C"
+      },
+      {
+        "SquareID": 2,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": 1,
+        "WordDownID": "",
+        "Letter": "A"
+      },
+      {
+        "SquareID": 3,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": 1,
+        "WordDownID": "",
+        "Letter": "T"
+      }
+    ],
+    [
+      {
+        "SquareID": 4,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": "",
+        "WordDownID": 2,
+        "Letter": "O"
+      },
+      {
+        "SquareID": 5,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 6,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      }
+    ],
+    [
+      {
+        "SquareID": 7,
+        "Number": "",
+        "Blank": "",
+        "WordAcrossID": "",
+        "WordDownID": 2,
+        "Letter": "W"
+      },
+      {
+        "SquareID": 8,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      },
+      {
+        "SquareID": 9,
+        "Number": "",
+        "Blank": "blank",
+        "WordAcrossID": "",
+        "WordDownID": "",
+        "Letter": ""
+      }
+    ]
+  ],
+  "meta": {
+    "variant": "Crossword",
+    "slug": "crossword-tutorial-1",
+    "id": "tutorial-1",
+    "number": "",
+    "description": "",
+    "type": "crossword",
+    "section": "",
+    "difficulty": "Easy",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 1,
+      "steps": 3
+    }
+  },
+  "feedback": null
+}

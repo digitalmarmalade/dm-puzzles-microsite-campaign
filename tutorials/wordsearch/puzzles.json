@@ -1,0 +1,42 @@
+{
+  "_readme": "Source for the three tutorial Wordsearches. Edit here, then run `npm run tutorials` to rebuild public/tutorials/wordsearch/wordsearch-*.json. `grid` is the letters row by row; the build finds each word (in any of the eight directions) and fails unless it appears exactly once.",
+  "puzzles": [
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "STARF",
+        "UHZLP",
+        "NWQIK",
+        "MOONC",
+        "BXDGV"
+      ],
+      "words": ["SUN", "STAR", "MOON"]
+    },
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "BARKWR",
+        "HJUCYO",
+        "LPGVMO",
+        "ZEEERT",
+        "KDAHWX",
+        "GPNFCY"
+      ],
+      "words": ["BARK", "ROOT", "TREE", "LEAF"]
+    },
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "SKPBGYFJ",
+        "TZRAINXV",
+        "OBSHKPCD",
+        "RFGNDYJU",
+        "MHVNOKPO",
+        "XQIBCWGL",
+        "YWKFJPVC",
+        "BREDNUHT"
+      ],
+      "words": ["RAIN", "SNOW", "WIND", "STORM", "CLOUD", "THUNDER"]
+    }
+  ]
+}

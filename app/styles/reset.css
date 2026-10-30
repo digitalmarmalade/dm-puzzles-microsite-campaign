@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  block-size: 100%;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  min-block-size: 100%;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+img,
+picture {
+  display: block;
+  max-inline-size: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.sr-only {
+  block-size: auto;
+  border: 0;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

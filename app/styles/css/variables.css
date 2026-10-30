@@ -1,0 +1,362 @@
+:root {
+
+  color-scheme: light dark; 
+
+
+  /*-- Base --*/
+  --app-bg: #FEF8F4;
+  --app-bg-rgb: 254,248,244;
+  --primary: #f17b2d;
+  --text-on-primary: #fff;
+  --primary-rgb: 241,123,45;
+  --text-colour: #212121;
+  --text-rgb: 33,33,33;
+  --text-opposite: #fff;
+  --text-colour-secondary: #666;
+  --text-recessed: #999;
+  --positive: #0CB349;
+  --positive-rgb: 12,179,73;
+  --danger: #AA0B0B;
+  --danger-rgb: 170,11,11;
+  --attention: #F17B2D;
+  --border-radius: 10px;
+  --border-radius-inner: 5px;
+  --table-border: rgba(0,0,0,.2);
+  --tint-panel: rgba(0,0,0,.05);
+  --highlight-bg: rgba(0,0,0,.02);
+  --highlight-fg: #666;
+
+  --scrollbar-colour: rgba(var(--primary-rgb),.25);
+  --scrollbar-hover: rgba(var(--primary-rgb),.5);
+
+  --not-favourited: #bbb;
+  --favourited: #900;
+
+  --body-padding: 0;
+  --container-max-width: 1240px;
+  --container-narrow-max-width: 60rem;
+  
+  --vertical-rhythm: 3rem;
+  --vertical-rhythm-half: calc(var(--vertical-rhythm) / 2);
+  --vertical-rhythmx2: calc(var(--vertical-rhythm) * 2);
+
+  /*-- Grid gutter --*/
+  --grid-gap: 1rem;
+  
+  /*-- Header --*/
+
+  --header-max-width: 1140px;
+  --header-padding: 1rem 0;
+
+  --footer-max-width: var(--header-max-width);
+
+  /*-- Buttons --*/
+
+  --button-px: 2rem;
+  --button-py: 1.2rem;
+  --button-primary: var(--primary);
+  --button-primary-foreground: #fff;
+  --button-primary-hover: #DC600F;
+  --button-secondary: var(--text-colour);
+  --button-secondary-foreground: #fff;
+  --button-tertiary: #fff;
+  --button-tertiary-foreground: var(--text-colour);
+  --button-tertiary-hover: var(--app-bg);
+  --button-font-size: 1.6rem;
+  --text-button-font-size: 1.3rem;
+
+  --button-calendar-background: #fff;
+  --button-calendar-foreground: var(--text-colour);
+  --button-calendar-selected-background: var(--text-colour);
+  --button-calendar-selected-foreground: #fff;
+  --button-calendar-inactive: rgba(0,0,0,.05);
+
+  /*-- Puzzle cards --*/
+  
+  --card-background: #fff;
+  --card-background-rgb: 255,255,255;
+  --card-border: hsla(265, 7%, 33%, 0.1);
+  --card-shadow: 0 1px 2px 0 rgba(var(--puzzle-tile-shadow), 0.20), 0 12px 30px 0 rgba(var(--puzzle-tile-shadow), 0.20);
+  --card-shadow-hover: 0 1px 2px 0 rgba(var(--puzzle-tile-shadow), 0.10), 0 17px 30px 0 rgba(var(--puzzle-tile-shadow), 0.15);
+  --card-shadow-small: 0 1px 2px 0 rgba(var(--puzzle-tile-shadow), 0.20), 0 4px 9px 0 rgba(var(--puzzle-tile-shadow), 0.20);
+  --card-gap: 2rem;
+  --card-padding: 3rem 1.5rem;
+  --puzzle-card-padding: .5rem 1rem 2rem;
+  --card-text: var(--text-colour);
+  --card-secondary-text: var(--text-colour-secondary);
+  --card-title-size: 1.6rem;
+  --card-date-size: 1.3rem;
+  --card-icon-size: 8rem;
+  --card-svg-size: 50%;
+  --card-archive-size: 1.1rem;
+  --card-status-padding: 1rem;
+
+  --variant-icon-size: 6rem;
+  --variant-title-size: 1.6rem;
+  --variant-padding: 1.5rem;
+
+  /*-- Other cards --*/
+
+  --card-main-padding: 2rem;
+  --card-main-gap: 3rem;
+
+  /*-- Navigation --*/
+
+  --space-before-nav: 0;
+  --space-after-nav: 0;
+  --nav-link: var(--text-colour);
+  --nav-link-hover: var(--primary);
+  --nav-variant-icon-size: 6rem;
+  --nav-variant-title-size: 1.6rem;
+  --nav-variant-padding: 2rem;
+
+
+  /*-- Typography --*/
+
+  --font-sans: 'Lato', sans-serif;
+  --font-display: 'Lato', sans-serif;
+
+  --page-h1-size: 3.2rem;
+  --page-h1-margin: 0;
+
+  --page-h2-size: 2.4rem;
+  --page-h2-margin: 0;
+
+  --page-h3-size: 2rem;
+  --page-h3-margin: 0 0 0.3rem;
+
+  --home-h1-size: 2.4rem;
+  --home-h2-size: 2.4rem;
+
+  /*-- Default theme --*/
+
+  --puzzle-tile-shadow: 241, 123, 45;
+  --puzzle-tile-background: #FEF8F4;
+  --puzzle-tile-text: #F17B2D;
+  --checkbox-off-background: rgba(0,0,0,.03);
+  --checkbox-border: rgba(0,0,0,.5);
+
+  --spin-colour-1: color-mix(in srgb, var(--primary), var(--text-colour) 20%);
+  --spin-colour-2: color-mix(in srgb, var(--primary), #fff 90%);
+
+  /*-- Modal --*/
+
+  --modal-padding: 4rem;
+  --modal-bg: var(--card-background);
+  --modal-fg: var(--text-colour);
+  --modal-transition-length: .2s;
+
+  @media (width >= 600px) {
+
+    /*-- Base --*/ 
+    --body-padding: 0 5rem;
+
+    /*-- Buttons --*/
+    --text-button-font-size: 1.6rem;
+
+    /*-- Nav --*/
+   
+    /*-- Puzzle cards --*/
+    --card-padding: 4rem 3rem;
+    --puzzle-card-padding: 1.5rem 1.5rem 3rem;
+    --card-title-size: 1.8rem;
+    --card-date-size: 1.4rem;
+    --card-archive-size: 1.3rem;
+    --variant-padding: 2rem;
+
+    /*-- Modal --*/
+
+    --modal-padding: 10rem 6rem;
+  }
+
+  @media (width >= 720px) {
+
+    --grid-gap: 3rem;
+
+    --header-padding: 2rem;
+
+    /*-- Other cards --*/
+
+    --card-main-padding: 3rem;
+
+
+    --space-before-nav: 4rem;
+    --space-after-nav: 2rem;
+    
+    /*-- Typography --*/
+
+    --page-h1-size: 5rem;
+    --home-h1-size: 3.2rem;
+    --home-h2-size: 3.2rem;
+  }
+
+  @media (width >= 1024px) {
+
+    --card-main-padding: 4rem 3rem;
+  }
+
+  @media (width >= 1200px) {
+
+    --card-main-padding: 6rem 5rem;
+    --card-main-gap: 5rem;
+  }
+
+}
+
+:root:not([data-theme-status]) {
+  @media (prefers-color-scheme: dark) {
+    /* -- Base -- */
+    --app-bg: #190E25;
+    --app-bg-rgb: 25,14,37;
+    --primary: #f17b2d;             
+    --primary-rgb: 241,123,45;
+    --text-colour: #e7e7e7;
+    --text-rgb: 231, 231, 231; 
+    --text-opposite: #2c1941;
+    --text-colour-secondary: #a7a7a7;  
+    --text-recessed: #555;
+    --positive: #19c56a;
+    --positive-rgb: 25,197,106;
+    --danger: #ff5a5a;
+    --danger-rgb: 255,90,90;
+    --attention: #f17b2d;
+    --table-border: rgba(255,255,255,.1);
+    --scrollbar-colour: rgba(var(--primary-rgb),.25);
+    --scrollbar-hover: rgba(var(--primary-rgb),.5);
+    --tint-panel: rgba(255,255,255,.05);
+    --highlight-bg: var(--tint-panel);
+    --highlight-fg: rgba(255,255,255,.6);
+
+    --not-favourited: rgba(255,255,255,.3);
+    --favourited: var(--danger);
+    --text-on-primary: #fff;
+
+    /* Buttons */
+    --button-primary: var(--primary);
+    --button-primary-foreground: #0a0b0c;
+    --button-primary-hover: #ff8e48;
+
+
+    --button-secondary: #2a2f36;
+    --button-secondary-foreground: #fff;
+    --button-tertiary: var(--card-background);
+    --button-tertiary-foreground: var(--text-colour);
+    --button-tertiary-hover: var(--puzzle-tile-background);
+    --button-font-size: 1.6rem;
+    --text-button-font-size: 1.3rem;
+
+    --button-calendar-background: var(--card-background);
+    --button-calendar-foreground: var(--text-colour);
+    --button-calendar-selected-background: var(--primary);
+    --button-calendar-selected-foreground: var(--button-primary-foreground);
+    --button-calendar-inactive: rgba(255,255,255,.05);
+
+    /* Cards & Surfaces */
+    --card-background: #000E23;
+    --card-background-rgb: 0, 14, 35;
+    --card-border: hsla(0, 0%, 100%, 0.15);
+    --card-shadow: 0 1px 2px rgba(0,0,0,.5), 0 12px 30px rgba(0,0,0,.45);
+    --card-shadow-hover: 0 1px 2px rgba(0,0,0,.5), 0 17px 30px rgba(0,0,0,.5);
+    --card-shadow-small: 0 1px 2px rgba(0,0,0,.45), 0 4px 9px rgba(0,0,0,.4);
+    --card-text: var(--text-colour);
+    --card-secondary-text: var(--text-colour-secondary);
+
+    /* Nav */
+    --nav-link: var(--text-colour);
+    --nav-link-hover: var(--primary);
+
+    /* Puzzle theme */
+    --puzzle-tile-shadow: 241, 123, 45;
+    --puzzle-tile-background: #1a1e24;
+    --puzzle-tile-text: #ffd7bf;
+    --checkbox-off-background: rgba(255,255,255,.06);
+    --checkbox-border: rgba(255,255,255,.45);
+
+    --spin-colour-1: color-mix(in srgb, var(--primary), var(--app-bg) 75%);
+    --spin-colour-2: color-mix(in srgb, var(--primary), var(--text-colour) 50%);
+
+    /* Modal */
+    --modal-bg: var(--card-background);
+    --modal-fg: var(--text-colour);
+
+  }
+
+}
+
+:root[data-theme-status="dark"] {
+    /* -- Base -- */
+    --app-bg: #190E25;
+    --app-bg-rgb: 25,14,37;
+    --primary: #f17b2d;         
+    --primary-rgb: 241,123,45;
+    --text-colour: #e7e7e7;
+    --text-rgb: 231, 231, 231;
+    --text-opposite: #2c1941;
+    --text-colour-secondary: #a7a7a7;
+    --text-recessed: #555;
+    --positive: #19c56a;
+    --positive-rgb: 25,197,106;
+    --danger: #ff5a5a;
+    --danger-rgb: 255,90,90;
+    --attention: #f17b2d;
+    --table-border: rgba(255,255,255,.1);
+    --scrollbar-colour: rgba(var(--primary-rgb),.25);
+    --scrollbar-hover: rgba(var(--primary-rgb),.5);
+    --tint-panel: rgba(255,255,255,.05);
+    --highlight-bg: var(--tint-panel);
+    --highlight-fg: rgba(255,255,255,.6);
+
+    --not-favourited: rgba(255,255,255,.3);
+    --favourited: var(--danger);
+    --text-on-primary: #fff;
+
+    /* Buttons */
+    --button-primary: var(--primary);
+    --button-primary-foreground: #0a0b0c;
+    --button-primary-hover: #ff8e48;
+
+    --button-secondary: #2a2f36;
+    --button-secondary-foreground: #fff;
+    --button-tertiary: var(--card-background);
+    --button-tertiary-foreground: var(--text-colour);
+    --button-tertiary-hover: var(--puzzle-tile-background);
+    --button-font-size: 1.6rem;
+    --text-button-font-size: 1.3rem;
+
+    --button-calendar-background: var(--card-background);
+    --button-calendar-foreground: var(--text-colour);
+    --button-calendar-selected-background: var(--primary);
+    --button-calendar-selected-foreground: var(--button-primary-foreground);
+    --button-calendar-inactive: rgba(255,255,255,.05);
+
+    /* Cards & Surfaces */
+    --card-background: #000E23;
+    --card-background-rgb: 0, 14, 35;
+    --card-border: hsla(0, 0%, 100%, 0.15);
+    --card-shadow: 0 1px 2px rgba(0,0,0,.5), 0 12px 30px rgba(0,0,0,.45);
+    --card-shadow-hover: 0 1px 2px rgba(0,0,0,.5), 0 17px 30px rgba(0,0,0,.5);
+    --card-shadow-small: 0 1px 2px rgba(0,0,0,.45), 0 4px 9px rgba(0,0,0,.4);
+    --card-text: var(--text-colour);
+    --card-secondary-text: var(--text-colour-secondary);
+
+    --spin-colour-1: color-mix(in srgb, var(--primary), var(--app-bg) 75%);
+    --spin-colour-2: color-mix(in srgb, var(--primary), var(--text-colour) 50%);
+
+    /* Nav */
+    --nav-link: var(--text-colour);
+    --nav-link-hover: var(--primary);
+
+    /* Puzzle theme */
+    --puzzle-tile-shadow: 241, 123, 45;
+    --puzzle-tile-background: #1a1e24;
+    --puzzle-tile-text: #ffd7bf;
+    --checkbox-off-background: rgba(255,255,255,.06);
+    --checkbox-border: rgba(255,255,255,.45);
+
+    /* Modal */
+    --modal-bg: var(--card-background);
+    --modal-fg: var(--text-colour);
+ 
+  }
+
+  

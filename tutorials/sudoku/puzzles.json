@@ -1,0 +1,40 @@
+{
+  "_readme": "Source for the three tutorial sudokus. Edit here, then run `npm run tutorials` to rebuild public/tutorials/sudoku/sudoku-*.json. Grid rows use . for an empty square. `box` is a box's width and height in squares. The build checks every grid has exactly one solution. `\"teaches\": \"onlyPlace\"` also makes the build check the grid has squares that are the only place in their box for a number but could take others, and that it finishes with just those and one-number-left squares.",
+  "puzzles": [
+    {
+      "difficulty": "Easy",
+      "box": [2, 2],
+      "grid": [
+        "4..1",
+        "1.3.",
+        ".41.",
+        ".142"
+      ]
+    },
+    {
+      "difficulty": "Easy",
+      "box": [3, 2],
+      "grid": [
+        "3.2.4.",
+        "45.23.",
+        "136...",
+        "..5613",
+        "513...",
+        ".243.1"
+      ]
+    },
+    {
+      "difficulty": "Easy",
+      "box": [3, 2],
+      "teaches": "onlyPlace",
+      "grid": [
+        "..56.3",
+        "..6.52",
+        "3.2.6.",
+        ".5132.",
+        "513246",
+        "264531"
+      ]
+    }
+  ]
+}

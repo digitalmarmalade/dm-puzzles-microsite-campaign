@@ -1,0 +1,8 @@
+{
+  "_readme": "Source for the three tutorial Word Wheels. Edit here, then run `npm run tutorials` to rebuild public/tutorials/wordwheel/wordwheel-*.json. `centre` is the middle letter and `outer` the ring (6 to 10 letters; a letter may appear twice). Each word needs four letters or more, must use the centre and can only use each tile once; the build checks that. `ranks` are the found-word counts where the progress bar's markers sit.",
+  "puzzles": [
+    { "difficulty": "Easy", "centre": "K", "outer": "JACPOT", "words": ["jack", "pack", "tack", "jock", "jackpot"], "ranks": [2, 3, 4] },
+    { "difficulty": "Easy", "centre": "Z", "outer": "FIZLING", "words": ["fizz", "zing", "fizzing", "fizzling"], "ranks": [2, 3] },
+    { "difficulty": "Easy", "centre": "W", "outer": "CLOCKORK", "words": ["crow", "wool", "work", "cowl", "clockwork"], "ranks": [2, 3, 4] }
+  ]
+}

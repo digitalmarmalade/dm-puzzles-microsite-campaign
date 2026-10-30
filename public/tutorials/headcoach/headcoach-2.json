@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "tutorial-2",
+    "title": "Head Coach",
+    "difficulty": "Easy",
+    "type": "headcoach",
+    "variant": "Head Coach",
+    "slug": "head-coach-tutorial-2",
+    "number": "",
+    "description": "",
+    "section": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 2,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 0,
+    "rowCount": 0,
+    "allowedValues": "1234567890",
+    "solution": "4"
+  },
+  "cluedata": [
+    {
+      "start": 10,
+      "answer": 4,
+      "difficulty": "Easy",
+      "data": [
+        {
+          "clue": "+ 6",
+          "result": 16
+        },
+        {
+          "clue": "half of it",
+          "result": 8
+        },
+        {
+          "clue": "× 3",
+          "result": 24
+        },
+        {
+          "clue": "- 4",
+          "result": 20
+        },
+        {
+          "clue": "÷ 5",
+          "result": 4
+        }
+      ]
+    }
+  ],
+  "copy": {},
+  "feedback": null
+}

@@ -1,0 +1,173 @@
+.streak-dialog {
+    --streak-on: var(--text-on-primary, #fff);
+    --streak-ink: var(--primary);
+    --streak-base: var(--primary);
+    --streak-surface: linear-gradient(180deg, var(--primary), color-mix(in srgb, var(--primary) 88%, #000));
+    --modal-bg: var(--streak-surface);
+    --modal-fg: var(--streak-on);
+    --button-primary: var(--streak-on);
+    --button-primary-hover: color-mix(in srgb, var(--streak-on) 88%, transparent);
+
+    .sp-modal__dialog {
+        isolation: isolate;
+    }
+
+    .sp-modal__dialog::before {
+        content: '';
+        position: absolute;
+        inset: 1rem;
+        border: 1px solid color-mix(in srgb, var(--streak-on) 50%, transparent);
+        border-radius: .6rem;
+        pointer-events: none;
+    }
+
+    .sp-modal__close {
+        color: var(--streak-on);
+    }
+
+    .sp-modal__footer .button {
+        --button-fg: var(--streak-ink);
+    }
+}
+
+.streak-broken {
+    --streak-on: var(--app-bg);
+    --streak-ink: var(--text-colour);
+    --streak-base: var(--text-colour);
+    --streak-surface: linear-gradient(180deg, color-mix(in srgb, var(--text-colour) 85%, #fff), color-mix(in srgb, var(--text-colour) 92%, #000));
+}
+
+.streak-strip {
+    --streak-dot-size: 4.2rem;
+    --streak-dot-gap: 1.4rem;
+    --streak-font-size: 1.6rem;
+    --streak-dot-step: calc(var(--streak-dot-size) + var(--streak-dot-gap));
+    --streak-faint: color-mix(in srgb, var(--streak-on) 28%, var(--streak-base));
+    --spin-colour-1: color-mix(in srgb, var(--streak-on) 35%, transparent);
+    --spin-colour-2: var(--streak-on);
+    inline-size: 100%;
+    block-size: 9rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.streak-strip__track {
+    display: flex;
+    align-items: center;
+    gap: var(--streak-dot-gap);
+    transition: transform .8s cubic-bezier(.3, .7, .3, 1);
+    will-change: transform;
+    position: relative;
+    z-index: 1;
+}
+.streak-strip__track::before {
+    content: '';
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline: 0 50%;
+    block-size: .8rem;
+    transform: translateY(-50%);
+    background-color: var(--streak-on);
+    z-index: -1;
+}
+.streak-dot {
+    flex: 0 0 auto;
+    inline-size: var(--streak-dot-size);
+    block-size: var(--streak-dot-size);
+    border: .2rem solid transparent;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--streak-faint);
+    color: var(--streak-on);
+    font-weight: 700;
+    font-size: var(--streak-font-size);
+    transition:
+        inline-size .8s cubic-bezier(.3, .7, .3, 1),
+        block-size .8s cubic-bezier(.3, .7, .3, 1),
+        font-size .8s cubic-bezier(.3, .7, .3, 1),
+        border-width .8s cubic-bezier(.3, .7, .3, 1),
+        margin .8s cubic-bezier(.3, .7, .3, 1),
+        background .8s ease,
+        box-shadow .8s ease;
+}
+.streak-dot--achieved {
+    background: var(--streak-on);
+    color: var(--streak-ink);
+    box-shadow: inset 0 0 0 .1rem var(--streak-ink);
+}
+.streak-dot--active {
+    --streak-dot-size: 7.7rem;
+    --streak-font-size: 3.2rem;
+    position: relative;
+    margin-inline: -.35rem;
+    border-width: .3rem;
+}
+.streak-dot--celebrate::after {
+    content: '';
+    position: absolute;
+    inset: -0.4rem;
+    border-radius: inherit;
+    padding: 0.32rem;
+    background: conic-gradient(
+        from var(--streak-angle),
+        var(--spin-colour-1),
+        var(--spin-colour-2) 50%,
+        var(--spin-colour-1)
+    );
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    animation:
+        streak-dot-spin 3s linear infinite,
+        streak-dot-ring-in .45s ease-out both;
+    pointer-events: none;
+
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    }
+}
+@property --streak-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes streak-dot-spin {
+    to { --streak-angle: 360deg; }
+}
+@keyframes streak-dot-ring-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.streak-strip--week .streak-dot {
+    border-radius: .4rem;
+
+    &.streak-dot--active {
+        border-radius: .6rem;
+    }
+}
+.streak-strip--broken .streak-strip__track::before {
+    inset-inline-end: calc(50% + 7rem);
+}
+.streak-dot--broken svg {
+    inline-size: 5.6rem;
+    block-size: 5.6rem;
+    animation: streak-burst-in 600ms ease-out .2s both;
+
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    }
+}
+@keyframes streak-burst-in {
+    0% { transform: scale(0) rotate(0deg); opacity: 0; }
+    60% { transform: scale(1.08) rotate(270deg); opacity: 1; }
+    80% { transform: scale(.96) rotate(350deg); }
+    100% { transform: scale(1) rotate(360deg); }
+}

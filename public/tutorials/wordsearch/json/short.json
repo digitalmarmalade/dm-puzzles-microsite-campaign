@@ -1,0 +1,29 @@
+{
+	"meta": {
+		"id": "15",
+		"title": "4 May 2020",
+		"difficulty": "",
+		"date": "",
+		"variant": "Wordsearch",
+		"slug": "wordsearch-no-0002",
+		"number": "0001",
+		"archive": "archive.json",
+		"related": "Crossword"
+	},
+	"settings": {
+		"colCount": 14,
+		"rowCount": 17,
+		"allowedValues": "",
+		"solution": "67,119;113,1;213,161"
+	},
+	"celldata": "ERSWRITBFHMQHMLCFNIHFIMEKECLIGSTCYRPNERSTPDNIPMEOUWOJRIJOCNVGNGVNXCTEFCCEIPAOSYIRLKTOGTVWVBJVKLRAYRXROVCYEQYOGNFCDAEPRTWFTWJSPXIMTYUXISXCPWXTUIXXWSAPUOMRXAQXNSHOYTHGIINBSSKFGBLEUTNPYBAGTNAEXFDGKHLJERIHTSOCGNYCGUFDAALAKCAJJFTWALRUSDOLPHING",
+	"cluedata": "CIVET,CROCODILE,DINGO",
+	"copy": {
+		"date-publish": "Thursday, 02 July 2020",
+		"date-publish-email": "02 July 2020",
+		"date-publish-analytics": "2020\/07\/02 00:00 Thursday",
+		"date-release": "Thursday, 02 July 2020",
+		"date-solution": "Thursday, 02 July 2020",
+		"id": "0002"
+	}
+}

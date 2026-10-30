@@ -1,0 +1,154 @@
+{
+    "advent": {
+        "title": "Reto de Adviento",
+        "kicker": "Reto de Adviento {year}",
+        "banner": {
+            "teaserTitle": "24 puertas. 24 días.",
+            "teaserBody": "El calendario de Adviento abre el {date}. Un pequeño reto de puzles detrás de cada puerta.",
+            "openTitle": "Abre la puerta {day}",
+            "doneTitle": "Puerta {day} completada",
+            "progress": "Has completado {done} de {total} puertas",
+            "cta": "Abrir el calendario",
+            "teaserCta": "Echar un vistazo",
+            "dismiss": "Ocultar",
+            "tap": "Toca para abrir",
+            "award": {
+                "perfect": "Has ganado la Estrella dorada",
+                "silver": "Has ganado la Bola de plata",
+                "bronze": "Has ganado la Campana de bronce",
+                "coal": "Has ganado el Trozo de carbón"
+            },
+            "awardPerfect": "Abriste las 24 puertas en su día.",
+            "awardPerfectCount": "Abriste las 24 puertas en su día, como {count} jugadores.",
+            "awardDone": "Completaste {done} de {total} puertas. ¡Gracias por jugar!",
+            "calendarCta": "Ver tu calendario"
+        },
+        "page": {
+            "intro": "Cada día hasta Navidad se abre una puerta nueva. Detrás de cada una hay un pequeño reto de puzles para ese día. Completa cada puerta en su día para seguir perfecto.",
+            "opensOn": "La primera puerta se abre el {date}",
+            "ended": "El reto de Adviento ha terminado. ¡Gracias por jugar!",
+            "calendar": "El calendario",
+            "howTitle": "Cómo funciona",
+            "how1": "Abre la puerta de cada día y completa el reto ese mismo día para seguir perfecto.",
+            "how2": "¿Te has saltado una puerta? Puedes recuperarla hasta el {date}. No cuenta para el pleno perfecto, pero sí para tu premio.",
+            "how3": "No puedes fallar. Cuantas más puertas completes, mejor será tu premio."
+        },
+        "status": {
+            "perfect": "Perfecto hasta ahora",
+            "perfectDone": "¡Perfecto! Cada puerta en su día",
+            "notStarted": "Abre la puerta de hoy para participar",
+            "signIn": "Crea una cuenta gratuita para participar",
+            "signUp": "Regístrate",
+            "logIn": "Iniciar sesión",
+            "perfectCount": "Eres 1 de los {count} jugadores que han abierto una puerta cada día",
+            "joinCount": "Únete a los {count} jugadores que han abierto una puerta cada día | Únete a los {count} jugadores que han abierto una puerta cada día",
+            "out": "Te quedaste fuera el {date}, pero sigues en camino de conseguir: {award}",
+            "finishedPerfectCount": "Eres 1 de los {count} jugadores que abrieron cada puerta en su día",
+            "finished": "Terminaste con: {award}",
+            "lateStart": "No es demasiado tarde. Abre la puerta de hoy para empezar tu calendario.",
+            "perfectTomorrow": "Vuelve mañana para la puerta {next}. Sigues perfecto.",
+            "perfectTomorrowCount": "Vuelve mañana para la puerta {next}. Eres 1 de los {count} jugadores que siguen perfectos.",
+            "outCatchUp": "Te quedaste fuera el {date}. Recupera las puertas perdidas para conseguir: {award}."
+        },
+        "door": {
+            "label": "Puerta {day}",
+            "locked": "Se abre el {date}",
+            "open": "Abrir la puerta {day}",
+            "today": "Hoy",
+            "done": "Completada en su día",
+            "late": "Recuperada",
+            "missed": "Recuperar",
+            "noPuzzle": "Elige cualquier puzle de la página de inicio.",
+            "goHome": "Ir a los puzles de hoy",
+            "todayHint": "Hazlo hoy para seguir perfecto.",
+            "doneHint": "Lo hiciste en su día. ¡Buen trabajo!",
+            "lateHint": "Has recuperado esta puerta. Cuenta para tu premio.",
+            "missedHint": "Aún puedes recuperarla hasta el {date}. No cuenta para el pleno perfecto, pero sí para tu premio.",
+            "close": "Cerrar",
+            "eligible": "Puzles que cuentan",
+            "reasonToday": "Puzle de hoy",
+            "reasonArchive": "Del archivo",
+            "tomorrow": "La puerta {day} se abre mañana."
+        },
+        "task": {
+            "any": {
+                "short": "Cualquier puzle",
+                "title": "Resuelve cualquier puzle"
+            },
+            "two": {
+                "short": "2 puzles",
+                "title": "Resuelve dos puzles en un día"
+            },
+            "three": {
+                "short": "3 puzles",
+                "title": "Resuelve tres puzles en un día"
+            },
+            "words": {
+                "short": "Palabras",
+                "title": "Resuelve un puzle de palabras"
+            },
+            "numbers": {
+                "short": "Números",
+                "title": "Resuelve un puzle de números"
+            },
+            "logic": {
+                "short": "Lógica",
+                "title": "Resuelve un puzle de lógica"
+            },
+            "quick": {
+                "short": "Rapidito",
+                "title": "Resuelve un puzle rápido (4 minutos o menos)"
+            },
+            "clean": {
+                "short": "Sin ayuda",
+                "title": "Resuelve un puzle sin comprobaciones, revelaciones ni pistas"
+            },
+            "archive": {
+                "short": "Archivo",
+                "title": "Resuelve un puzle del archivo"
+            },
+            "favourite": {
+                "short": "Favorito",
+                "title": "Resuelve uno de tus puzles favoritos"
+            },
+            "different": {
+                "short": "2 tipos",
+                "title": "Resuelve dos tipos de puzle distintos en un día"
+            },
+            "new": {
+                "short": "Algo nuevo",
+                "title": "Resuelve un puzle al que no hayas jugado en el último mes"
+            }
+        },
+        "award": {
+            "heading": "Premios",
+            "yours": "Tu premio",
+            "onTrack": "En camino a",
+            "next": "{count} puerta más para {award} | {count} puertas más para {award}",
+            "perfect": {
+                "title": "Estrella dorada",
+                "desc": "Las 24 puertas completadas en su día"
+            },
+            "silver": {
+                "title": "Bola de plata",
+                "desc": "18 puertas o más completadas"
+            },
+            "bronze": {
+                "title": "Campana de bronce",
+                "desc": "10 puertas o más completadas"
+            },
+            "coal": {
+                "title": "Trozo de carbón",
+                "desc": "Participaste"
+            }
+        },
+        "toast": {
+            "doneTitle": "¡Puerta {day} completada!",
+            "doneBodyPerfect": "Sigues perfecto. Vuelve mañana para la puerta {next}.",
+            "doneBody": "Vuelve mañana para la puerta {next}.",
+            "lastBody": "Era la última puerta. Tu premio llega el día de Navidad.",
+            "lateTitle": "Puerta {day} recuperada",
+            "lateBody": "Cuenta para tu premio."
+        }
+    }
+}

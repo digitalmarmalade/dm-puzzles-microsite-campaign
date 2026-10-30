@@ -1,0 +1,221 @@
+.home-highlight {
+    position: relative;
+    background: var(--highlight-bg, #fff);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius, 10px);
+    padding: 0 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--highlight-fg);
+    min-block-size: 100%;
+}
+
+.home-highlight__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-block-size: 4.4rem;
+}
+
+.home-highlight h2 {
+    font-size: 1.2rem; 
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.home-highlight__tabs {
+    display: flex;
+    gap: .4rem;
+    flex-wrap: wrap;
+}
+
+.home-highlight__tab {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .2rem .9rem;
+    border: none;
+    font: inherit;
+    color: var(--highlight-fg);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: color .15s ease;
+    background: transparent;
+
+    @media (hover: hover) {
+        &:hover {
+        }
+    }
+}
+
+.home-highlight__tab--active {
+    color: var(--primary)
+}
+
+.home-highlight__tab-tick {
+    inline-size: 1.6rem;
+    block-size: 1.6rem;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--text-on-primary);
+    display: grid;
+    place-items: center;
+    flex: none;
+}
+.home-highlight__tab-tick svg {
+    inline-size: 1.2rem;
+    block-size: 1.2rem;
+}
+
+.home-highlight__menu-wrap { position: relative; }
+
+.home-highlight__menu-toggle {
+    inline-size: 2.8rem;
+    block-size: 2.8rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    color: var(--text-colour);
+
+    @media (hover: hover) {
+        &:hover {
+            background: rgba(0, 0, 0, .04);
+        }
+    }
+}
+.home-highlight__menu-toggle svg { 
+    inline-size: 1.6rem; 
+    block-size: 1.6rem; 
+}
+
+.home-highlight__body {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-grow: 1;
+}
+
+.home-highlight__text { 
+  display: flex; 
+  flex-direction: column; 
+  gap: .2rem; 
+  min-inline-size: 0; 
+  flex: 1 1 auto; 
+}
+
+.home-highlight__title {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 0 0 1.5rem;
+
+    &:has(.home-highlight__title-tick) {
+        gap: .5rem;
+    }
+}
+.home-highlight__bar {
+    color: var(--text-colour-secondary, #777);
+}
+.home-highlight__title-tick {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 2.2rem;
+    block-size: 2.2rem;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--text-on-primary);
+}
+.home-highlight__title-tick svg {
+    inline-size: 60%;
+    block-size: 60%;
+}
+
+.home-highlight__progress {
+    margin: 0;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    background: var(--app-bg);
+    padding: .5rem;
+    border-radius: var(--border-radius-inner);
+}
+
+.home-highlight__body--complete .home-highlight__progress {
+    font-weight: 600;
+}
+.home-highlight__tick {
+    inline-size: 1.4rem;
+    block-size: 1.4rem;
+    color: var(--favourited, var(--primary, #2e7d32));
+}
+.home-highlight__menu--floating {
+    margin: 0;
+    padding: .4rem;
+    list-style: none;
+    background: var(--card-background, #fff);
+    border: 1px solid var(--card-border);
+    border-radius: .8rem;
+    box-shadow: var(--card-shadow-hover, 0 4px 20px rgba(0, 0, 0, .1));
+    min-inline-size: 22rem;
+}
+.home-highlight__menu--floating li { list-style: none; }
+.home-highlight__menu--floating li button {
+    display: block;
+    inline-size: 100%;
+    text-align: start;
+    padding: .8rem 1rem;
+    background: none;
+    border: none;
+    font: inherit;
+    font-size: 1.3rem;
+    color: inherit;
+    cursor: pointer;
+    border-radius: .5rem;
+
+    @media (hover: hover) {
+        &:hover {        background: rgba(0, 0, 0, .05);
+        }
+    }
+}
+.home-highlight__menu--floating .home-highlight__menu-divider {
+    block-size: 1px;
+    background: var(--card-border);
+    margin: .4rem .4rem;
+}
+
+.home-highlight__stat {
+    flex: 1 1 0;
+    min-inline-size: 0;
+    text-align: center;
+}
+
+.home-highlight__stat-value {
+    margin: 0;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.home-highlight__stat-label {
+    margin: 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+.home-highlight__empty {
+    margin: 0;
+    font-size: 1.2rem;
+}

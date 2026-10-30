@@ -1,0 +1,154 @@
+{
+    "advent": {
+        "title": "Adventschallenge",
+        "kicker": "Adventschallenge {year}",
+        "banner": {
+            "teaserTitle": "24 Türchen. 24 Tage.",
+            "teaserBody": "Der Adventskalender öffnet am {date}. Hinter jedem Türchen wartet eine kleine Rätselaufgabe.",
+            "openTitle": "Öffne Türchen {day}",
+            "doneTitle": "Türchen {day} geschafft",
+            "progress": "Du hast {done} von {total} Türchen geschafft",
+            "cta": "Kalender öffnen",
+            "teaserCta": "Reinschauen",
+            "dismiss": "Ausblenden",
+            "tap": "Zum Öffnen tippen",
+            "award": {
+                "perfect": "Du hast den Goldenen Stern verdient",
+                "silver": "Du hast die Silberne Kugel verdient",
+                "bronze": "Du hast die Bronzene Glocke verdient",
+                "coal": "Du hast das Stück Kohle verdient"
+            },
+            "awardPerfect": "Du hast alle 24 Türchen an ihrem Tag geöffnet.",
+            "awardPerfectCount": "Du hast alle 24 Türchen an ihrem Tag geöffnet, als 1 von {count}.",
+            "awardDone": "Du hast {done} von {total} Türchen geschafft. Danke fürs Mitspielen!",
+            "calendarCta": "Zum Kalender"
+        },
+        "page": {
+            "intro": "Bis Weihnachten öffnet sich jeden Tag ein neues Türchen. Dahinter wartet eine kleine Rätselaufgabe für diesen Tag. Schaffe jedes Türchen an seinem Tag, um perfekt zu bleiben.",
+            "opensOn": "Das erste Türchen öffnet sich am {date}",
+            "ended": "Die Adventschallenge ist vorbei. Danke fürs Mitspielen!",
+            "calendar": "Der Kalender",
+            "howTitle": "So funktioniert's",
+            "how1": "Öffne jeden Tag das Türchen und erledige die Aufgabe am selben Tag, um perfekt zu bleiben.",
+            "how2": "Ein Türchen verpasst? Du kannst es bis zum {date} nachholen. Es zählt nicht für „perfekt“, aber für deine Auszeichnung.",
+            "how3": "Du kannst nicht verlieren. Je mehr Türchen du schaffst, desto besser deine Auszeichnung."
+        },
+        "status": {
+            "perfect": "Bisher perfekt",
+            "perfectDone": "Perfekt! Jedes Türchen an seinem Tag",
+            "notStarted": "Öffne das heutige Türchen, um mitzumachen",
+            "signIn": "Erstelle ein kostenloses Konto, um mitzumachen",
+            "signUp": "Registrieren",
+            "logIn": "Anmelden",
+            "perfectCount": "Du bist 1 von {count}, die jeden Tag ein Türchen geöffnet haben",
+            "joinCount": "Schließ dich {count} Spielern an, die jeden Tag ein Türchen geöffnet haben | Schließ dich {count} Spielern an, die jeden Tag ein Türchen geöffnet haben",
+            "out": "Du bist am {date} ausgestiegen, bist aber weiter auf Kurs für: {award}",
+            "finishedPerfectCount": "Du bist 1 von {count}, die jedes Türchen an seinem Tag geöffnet haben",
+            "finished": "Dein Ergebnis: {award}",
+            "lateStart": "Es ist noch nicht zu spät. Öffne das heutige Türchen und starte deinen Kalender.",
+            "perfectTomorrow": "Komm morgen für Türchen {next} wieder. Du bist noch perfekt.",
+            "perfectTomorrowCount": "Komm morgen für Türchen {next} wieder. Du bist 1 von {count}, die noch perfekt sind.",
+            "outCatchUp": "Du bist am {date} ausgestiegen. Hol verpasste Türchen nach, um dir das zu sichern: {award}."
+        },
+        "door": {
+            "label": "Türchen {day}",
+            "locked": "Öffnet am {date}",
+            "open": "Türchen {day} öffnen",
+            "today": "Heute",
+            "done": "Am Tag geschafft",
+            "late": "Nachgeholt",
+            "missed": "Nachholen",
+            "noPuzzle": "Wähle ein beliebiges Rätsel auf der Startseite.",
+            "goHome": "Zu den heutigen Rätseln",
+            "todayHint": "Erledige das heute, um perfekt zu bleiben.",
+            "doneHint": "Du hast es am richtigen Tag geschafft. Super!",
+            "lateHint": "Du hast dieses Türchen nachgeholt. Es zählt für deine Auszeichnung.",
+            "missedHint": "Du kannst es noch bis zum {date} nachholen. Es zählt nicht für „perfekt“, aber für deine Auszeichnung.",
+            "close": "Schließen",
+            "eligible": "Diese Rätsel zählen",
+            "reasonToday": "Heutiges Rätsel",
+            "reasonArchive": "Aus dem Archiv",
+            "tomorrow": "Türchen {day} öffnet sich morgen."
+        },
+        "task": {
+            "any": {
+                "short": "Beliebiges Rätsel",
+                "title": "Löse ein beliebiges Rätsel"
+            },
+            "two": {
+                "short": "2 Rätsel",
+                "title": "Löse an einem Tag zwei Rätsel"
+            },
+            "three": {
+                "short": "3 Rätsel",
+                "title": "Löse an einem Tag drei Rätsel"
+            },
+            "words": {
+                "short": "Wörter",
+                "title": "Löse ein Worträtsel"
+            },
+            "numbers": {
+                "short": "Zahlen",
+                "title": "Löse ein Zahlenrätsel"
+            },
+            "logic": {
+                "short": "Logik",
+                "title": "Löse ein Logikrätsel"
+            },
+            "quick": {
+                "short": "Kurz & knapp",
+                "title": "Löse ein schnelles Rätsel (4 Minuten oder weniger)"
+            },
+            "clean": {
+                "short": "Ohne Hilfe",
+                "title": "Löse ein Rätsel ohne Prüfen, Aufdecken oder Hinweise"
+            },
+            "archive": {
+                "short": "Archiv",
+                "title": "Löse ein Rätsel aus dem Archiv"
+            },
+            "favourite": {
+                "short": "Favorit",
+                "title": "Löse eines deiner Lieblingsrätsel"
+            },
+            "different": {
+                "short": "2 Arten",
+                "title": "Löse an einem Tag zwei verschiedene Rätselarten"
+            },
+            "new": {
+                "short": "Etwas Neues",
+                "title": "Löse ein Rätsel, das du seit einem Monat nicht gespielt hast"
+            }
+        },
+        "award": {
+            "heading": "Auszeichnungen",
+            "yours": "Deine Auszeichnung",
+            "onTrack": "Auf Kurs für",
+            "next": "Noch {count} Türchen bis {award} | Noch {count} Türchen bis {award}",
+            "perfect": {
+                "title": "Goldener Stern",
+                "desc": "Alle 24 Türchen an ihrem Tag geschafft"
+            },
+            "silver": {
+                "title": "Silberne Kugel",
+                "desc": "18 oder mehr Türchen geschafft"
+            },
+            "bronze": {
+                "title": "Bronzene Glocke",
+                "desc": "10 oder mehr Türchen geschafft"
+            },
+            "coal": {
+                "title": "Stück Kohle",
+                "desc": "Mitgemacht"
+            }
+        },
+        "toast": {
+            "doneTitle": "Türchen {day} geschafft!",
+            "doneBodyPerfect": "Du bist noch perfekt. Komm morgen für Türchen {next} wieder.",
+            "doneBody": "Komm morgen für Türchen {next} wieder.",
+            "lastBody": "Das war das letzte Türchen. Deine Auszeichnung kommt am ersten Weihnachtstag.",
+            "lateTitle": "Türchen {day} nachgeholt",
+            "lateBody": "Es zählt für deine Auszeichnung."
+        }
+    }
+}

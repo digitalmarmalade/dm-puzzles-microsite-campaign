@@ -1,0 +1,81 @@
+name: Static site deploy (shared)
+
+#  Builds the Nuxt site and syncs it to an S3 bucket. Called by the per-site
+#  workflows (games.deploy.yml, rasp.deploy.yml). The named GitHub environment
+#  supplies the build settings as variables and the bucket and AWS keys as secrets.
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: GitHub environment holding the build variables and S3_* secrets
+        required: true
+        type: string
+      branch:
+        description: The only branch allowed to deploy to this environment
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    concurrency:
+      group: deploy-${{ inputs.environment }}
+      cancel-in-progress: false
+    steps:
+      - name: Only deploy from ${{ inputs.branch }}
+        if: github.ref != format('refs/heads/{0}', inputs.branch)
+        run: |
+          echo "::error::${{ inputs.environment }} deploys only from '${{ inputs.branch }}', not '${{ github.ref_name }}'."
+          exit 1
+
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          aws-access-key-id: ${{ secrets.S3_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.S3_DEFAULT_REGION }}
+
+      #  Every variable visible to this job (environment, then repo and org level) goes
+      #  into .env. Empty values are skipped: Nuxt treats an empty env var as set and
+      #  would override its default with "". None of these are secret, so print them.
+      - name: Write .env from ${{ inputs.environment }} variables
+        env:
+          VARS: ${{ toJSON(vars) }}
+        run: |
+          jq -r 'to_entries[] | select(.value != "") | "\(.key)=\(.value)"' <<< "$VARS" > .env
+          if [ ! -s .env ]; then
+            echo "::error::No variables set in the ${{ inputs.environment }} environment."
+            exit 1
+          fi
+          cat .env
+
+      - name: Build dist assets
+        env:
+          GIT_COMMIT: ${{ github.sha }}
+        run: |
+          npm ci
+          npm run generate
+
+      #  The excluded files and folders live only in the bucket (managed outside this
+      #  repo). Folder patterns need the trailing /* to match the files inside them.
+      - name: Deploy dist to S3 bucket
+        run: |
+          aws s3 sync .output/public s3://${{ secrets.S3_BUCKET }}/ \
+            --exclude "archive.json" \
+            --exclude "archive-json-only.json" \
+            --exclude "firebaseConfig.json" \
+            --exclude "data/*" \
+            --exclude "puzzle-icons/*" \
+            --exclude "tools/*" \
+            --exclude "gameplay/*"

@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "id": "tutorial-2",
+    "title": "Wordsearch",
+    "difficulty": "Easy",
+    "type": "wordsearch",
+    "variant": "Wordsearch",
+    "slug": "wordsearch-tutorial-2",
+    "number": "",
+    "description": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 2,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 6,
+    "rowCount": 6,
+    "allowedValues": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "solution": "1,4;6,24;24,21;13,34"
+  },
+  "copy": {
+    "title": "Wordsearch"
+  },
+  "celldata": "BARKWRHJUCYOLPGVMOZEEERTKDAHWXGPNFCY",
+  "cluedata": "BARK,ROOT,TREE,LEAF",
+  "feedback": null
+}

@@ -1,0 +1,1592 @@
+{
+    "auth": {
+        "bannerFreeTitle": "Votre premier jeu du jour, sans compte",
+        "bannerFreeBody": "Créez un compte gratuit pour jouer à tous les jeux et garder votre série et vos réglages sur tous vos appareils.",
+        "freePlayUsed": "Pour continuer à jouer aujourd'hui, connectez-vous ou créez un compte gratuit. Vous garderez aussi votre série et vos réglages sur tous vos appareils.",
+        "loginPrompt": "Connectez-vous pour garder votre série et vos réglages sur tous vos appareils.",
+        "loginToPlay": "Vous devez être connecté pour jouer à {name}",
+        "loginToFriends": "Vous devez être connecté pour participer à une ligue entre amis",
+        "loginToAccount": "Vous devez être connecté pour accéder à votre compte",
+        "loginToStats": "Vous devez être connecté pour voir vos statistiques",
+        "bannerText": "Connectez-vous ou créez un compte gratuit pour suivre votre progression et jouer à tous les jeux.",
+        "logIn": "Se connecter",
+        "signUp": "S'inscrire",
+        "backHome": "Retour aux puzzles",
+        "locked": "Verrouillé",
+        "loggedIn": "Vous êtes connecté",
+        "loggedOut": "Vous avez été déconnecté"
+    },
+    "common": {
+        "refreshingPuzzles": "Actualisation de vos puzzles…",
+        "cancel": "Annuler",
+        "submit": "Envoyer",
+        "back": "Retour",
+        "update": "Mettre à jour",
+        "enter": "Valider",
+        "select": "Sélectionner",
+        "or": "OU",
+        "create": "Créer",
+        "join": "Rejoindre",
+        "ok": "OK",
+        "close": "Fermer",
+        "errSelectPuzzles": "Veuillez sélectionner des casse-têtes",
+        "notifications": "Notifications",
+        "updateAvailable": "Mise à jour disponible – appuyez pour rafraîchir"
+    },
+    "nav": {
+        "home": "Accueil",
+        "puzzles": "Casse-têtes",
+        "achievements": "Succès",
+        "stats": "Statistiques",
+        "friends": "Amis",
+        "account": "Compte",
+        "menu": "Menu",
+        "toggleTheme": "Changer de thème"
+    },
+    "language": {
+        "label": "Langue"
+    },
+    "footer": {
+        "copyright": "© {year} Digital Marmalade",
+        "backToTop": "Retour en haut"
+    },
+    "home": {
+        "welcome": {
+            "title": "Nouveau ici ?",
+            "body": "Lancez-vous, ou suivez une visite de 30 secondes pour personnaliser le site.",
+            "tour": "Faire la visite",
+            "dismiss": "Plus tard"
+        },
+        "badges": {
+            "mostPlayed": "Le plus joué",
+            "streak": "Série {count}",
+            "lastTime": "Joué la dernière fois"
+        },
+        "todaysPuzzles": "Casse-têtes du jour",
+        "allPuzzles": "Tous les casse-têtes",
+        "yourFavourites": "Vos favoris",
+        "forYou": "Pour vous",
+        "yourPuzzles": {
+            "title": "Vos puzzles",
+            "reasons": {
+                "favourite": "L'un de vos favoris",
+                "boosted": "Vous en avez demandé plus",
+                "stepUp": "Prêt pour un niveau au-dessus",
+                "morning": "Votre puzzle habituel du matin",
+                "afternoon": "Votre puzzle habituel de l'après-midi",
+                "evening": "Votre puzzle habituel du soir",
+                "night": "Votre puzzle habituel de fin de soirée",
+                "played": "Vous y jouez souvent",
+                "streak": "Continuez votre série",
+                "tour": "Correspond à vos choix de la visite",
+                "missed": "Vous l'avez manqué ?",
+                "archive": "Un puzzle des archives",
+                "fromDay": "Le puzzle de {day}",
+                "catchUp": "Rattrapez celui-ci",
+                "moreLike": "Vous avez aimé celui du jour ? Essayez celui-ci",
+                "worthALook": "À découvrir",
+                "yesterday": "Le puzzle d'hier",
+                "resume": "Reprenez où vous en étiez",
+                "likeCategory": {
+                    "words": "Parce que vous aimez les jeux de lettres",
+                    "numbers": "Parce que vous aimez les jeux de chiffres",
+                    "logic": "Parce que vous aimez les jeux de logique",
+                    "quiz": "Parce que vous aimez les quiz"
+                }
+            },
+            "archiveTitle": "{name} n° {number}",
+            "allDone": "Tout est fait pour aujourd'hui",
+            "allDoneBody": "Vous avez terminé la sélection du jour. Envie d'un puzzle des archives ?",
+            "allDoneCta": "Parcourir les archives"
+        },
+        "favourite": "Ajouter aux favoris",
+        "unfavourite": "Retirer des favoris",
+        "viewArchive": "Voir les archives",
+        "archive": "Archives",
+        "latestCompleted": "Dernier casse-tête terminé",
+        "hideVariant": "Masquer cette variante",
+        "unhideVariant": "Afficher cette variante",
+        "showHidden": "Afficher {count} casse-tête masqué | Afficher {count} casse-têtes masqués",
+        "hideHidden": "Masquer {count} casse-tête masqué | Masquer {count} casse-têtes masqués",
+        "variantHidden": "{name} masqué",
+        "allHidden": "Tous les casse-têtes sont masqués.",
+        "allHiddenCategory": "Tous les casse-têtes de cette catégorie sont masqués.",
+        "filterByType": "Filtrer par type",
+        "levelCount": "{count} niveau | {count} niveaux",
+        "completedCount": "{count} sur {total} terminés",
+        "showLevels": "Afficher les niveaux de {name}",
+        "showFront": "Retour à la carte {name}",
+        "categories": {
+            "all": "Tous",
+            "words": "Mots",
+            "numbers": "Nombres",
+            "logic": "Logique",
+            "quiz": "Quiz",
+            "quick": "Rapides"
+        }
+    },
+    "nudge": {
+        "label": "Suggestion",
+        "no": "Non merci",
+        "levelPrompt": "Vous enchaînez les {family} — prêt à essayer {name} ?",
+        "levelYes": "Oui, essayons",
+        "levelDone": "{name} fait maintenant partie de vos favoris."
+    },
+    "statsTeaser": {
+        "title": "Créez votre profil de joueur",
+        "achievements": "Des succès vous attendent",
+        "signIn": "Connectez-vous pour suivre vos statistiques et garder votre série et vos réglages sur tous vos appareils.",
+        "play": "Jouer aux jeux du jour",
+        "body": "Jouez à quelques jeux et vos statistiques, vos séries et votre profil de joueur apparaîtront ici."
+    },
+    "guide": {
+        "slides": {
+            "title": "Comment fonctionne Sticky Puzzles",
+            "goTo": "Diapositive {n}",
+            "back": "Retour",
+            "next": "Suivant",
+            "close": "Fermer",
+            "tour": "Faire la visite",
+            "tryIt": "Essayer",
+            "daily": {
+                "title": "De nouveaux jeux chaque jour",
+                "text": "Des jeux tout frais chaque matin, des mots croisés aux grilles de logique. Vous en avez manqué un ? Il vous attend dans les archives."
+            },
+            "pick": {
+                "title": "Choisissez vos jeux",
+                "text": "Touchez ceux qui vous plaisent. Vos favoris passent en premier dans Vos jeux. Touchez l'œil pour masquer ceux que vous ne voulez pas voir."
+            },
+            "streak": {
+                "title": "Gardez votre série",
+                "text": "Jouez à n'importe quel jeu chaque jour pour prolonger votre série."
+            },
+            "profile": {
+                "title": "Créez votre profil de joueur",
+                "text": "Débloquez des succès et regardez vos statistiques grandir au fil du jeu."
+            },
+            "free": {
+                "title": "Un jeu sans compte",
+                "text": "Votre premier jeu de chaque jour ne demande pas de compte. Créez un compte gratuit pour jouer à tous et garder votre progression sur tous vos appareils."
+            }
+        },
+        "tour": {
+            "label": "Visite guidée",
+            "count": "{n} sur {total}",
+            "end": "Terminer la visite",
+            "next": "Suivant",
+            "done": "Terminé",
+            "play": "Jouer",
+            "later": "Plus tard",
+            "yourPuzzles": {
+                "title": "Vos jeux",
+                "body": "Nous avons choisi ces jeux pour vous. Plus vous jouez, meilleures sont les suggestions."
+            },
+            "today": {
+                "title": "Les jeux du jour",
+                "body": "Une nouvelle sélection chaque jour. Touchez ♡ sur un jeu pour l'ajouter à vos favoris."
+            },
+            "summary": {
+                "title": "Série et défis",
+                "body": "Jouez chaque jour pour prolonger votre série et relevez les défis du jour et de la semaine."
+            },
+            "all": {
+                "title": "Tous les jeux",
+                "body": "Parcourez tous les jeux et leurs archives. Touchez ⓘ pour voir comment jouer."
+            },
+            "menu": {
+                "title": "Le menu",
+                "body": "Vos statistiques, votre compte et vos réglages sont ici. Jetons un œil."
+            },
+            "stats": {
+                "title": "Vos statistiques",
+                "body": "Voyez vos résultats du mois, de l'année et depuis le début."
+            },
+            "free": {
+                "title": "Sans compte",
+                "body": "Jouez à votre premier jeu de chaque jour sans compte. Créez-en un gratuitement pour jouer à tous."
+            },
+            "ready": {
+                "title": "Prêt à jouer ?",
+                "body": "C'est tout. Choisissez un jeu pour commencer.",
+                "bodyWith": "Pour commencer : le {name} du jour."
+            }
+        },
+        "tip": {
+            "dismiss": "Compris",
+            "yourPuzzles": "Nous avons choisi ces jeux pour vous."
+        }
+    },
+    "announcement": {
+        "label": "Nouveau puzzle : {name}",
+        "kicker": "Nouveau puzzle",
+        "play": "Jouer",
+        "learn": "Apprendre à jouer",
+        "dismiss": "Fermer",
+        "body": {
+            "takuzu": "Remplissez la grille avec deux symboles. Chaque ligne et colonne doit être équilibrée, sans jamais trois symboles identiques à la suite."
+        }
+    },
+    "wrapped": {
+        "banner": {
+            "kicker": "Votre bilan de",
+            "title": "{month}",
+            "body": "Qu'avez-vous fait en {month} ?",
+            "cta": "Voir",
+            "dismiss": "Masquer"
+        },
+        "link": {
+            "cta": "Revoir"
+        },
+        "share": {
+            "button": "Partager",
+            "text": "Mon mois de {month} en puzzles",
+            "footer": "Jouez sur {host}",
+            "voice": {
+                "solved": {
+                    "kicker": "J'ai résolu"
+                },
+                "days": {
+                    "kicker": "J'ai joué"
+                },
+                "perfect": {
+                    "body": "J'ai joué chaque jour de {month}. Quelle assiduité !"
+                },
+                "minutes": {
+                    "kicker": "J'ai passé"
+                },
+                "top": {
+                    "kicker": "Mon plus joué"
+                },
+                "improved": {
+                    "time": {
+                        "within": "Mes 3 dernières parties : {now} en moyenne, contre {before} pour les 3 premières"
+                    },
+                    "words": {
+                        "within": "Mes 3 dernières parties : {now} % des mots, contre {before} % pour les 3 premières"
+                    }
+                },
+                "assists": {
+                    "crossword": {
+                        "on": {
+                            "body": "J'ai commencé {month} sans elles et j'en choisis maintenant {to}"
+                        }
+                    },
+                    "codeword": {
+                        "on": {
+                            "body": "J'ai commencé {month} sans elles et j'en choisis maintenant {to}"
+                        }
+                    },
+                    "sudoku": {
+                        "on": {
+                            "body": "J'ai commencé {month} sans elles et je démarre maintenant avec {to} % de cases remplies"
+                        }
+                    }
+                },
+                "challenges": {
+                    "kicker": "J'ai relevé"
+                },
+                "medal": {
+                    "kicker": "J'ai gagné"
+                }
+            }
+        },
+        "story": {
+            "label": "Votre bilan de {month}",
+            "close": "Fermer",
+            "prev": "Précédent",
+            "next": "Suivant",
+            "slideOf": "Diapositive {n} sur {total}"
+        },
+        "intro": {
+            "body": "Revenons sur votre mois de puzzles."
+        },
+        "solved": {
+            "kicker": "Vous avez résolu",
+            "unit": "puzzle | puzzles"
+        },
+        "days": {
+            "kicker": "Vous avez joué",
+            "unit": "jour sur {total} en {month} | jours sur {total} en {month}"
+        },
+        "perfect": {
+            "kicker": "Tous les jours",
+            "title": "Mois parfait",
+            "body": "Vous avez joué chaque jour de {month}. Quelle assiduité !"
+        },
+        "minutes": {
+            "kicker": "Vous avez passé",
+            "unit": "minute à jouer | minutes à jouer",
+            "hours": "Soit {hours} h {minutes} min de réflexion."
+        },
+        "top": {
+            "kicker": "Votre plus joué",
+            "body": "{count} partie | {count} parties"
+        },
+        "rising": {
+            "kicker": "En hausse",
+            "body": "{count} partie, contre {prev} en {month} | {count} parties, contre {prev} en {month}",
+            "new": "{count} partie, une nouveauté ce mois-ci | {count} parties, une nouveauté ce mois-ci"
+        },
+        "falling": {
+            "kicker": "En retrait",
+            "body": "{count} partie, contre {prev} en {month} | {count} parties, contre {prev} en {month}",
+            "none": "Aucune partie ce mois-ci, contre {prev} en {month}"
+        },
+        "improved": {
+            "time": {
+                "kicker": "De plus en plus rapide",
+                "headline": "{saved} plus rapide en moyenne",
+                "month": "Moyenne de {now}, contre {before} en {month}",
+                "within": "Vos 3 dernières parties : {now} en moyenne, contre {before} pour les 3 premières"
+            },
+            "words": {
+                "kicker": "Plus de mots trouvés",
+                "headline": "+{saved} points",
+                "month": "{now} % des mots trouvés, contre {before} % en {month}",
+                "within": "Vos 3 dernières parties : {now} % des mots, contre {before} % pour les 3 premières"
+            }
+        },
+        "help": {
+            "less": {
+                "kicker": "En solo",
+                "unit": "des puzzles résolus sans aide",
+                "body": "Contre {prev} % en {month}"
+            },
+            "more": {
+                "kicker": "Un petit coup de pouce",
+                "unit": "des puzzles résolus avec un peu d'aide",
+                "body": "Contre {prev} % en {month} — c'est fait pour ça"
+            }
+        },
+        "assists": {
+            "crossword": {
+                "fewer": {
+                    "kicker": "Moins de lettres choisies",
+                    "body": "De {from} lettres début {month} à {to}"
+                },
+                "off": {
+                    "kicker": "Plus besoin de lettres",
+                    "body": "De {from} lettres début {month} à aucune"
+                },
+                "more": {
+                    "kicker": "Plus de lettres choisies",
+                    "body": "De {from} lettres début {month} à {to}"
+                },
+                "on": {
+                    "kicker": "Un coup de pouce",
+                    "body": "Vous avez commencé {month} sans elles et en choisissez maintenant {to}"
+                }
+            },
+            "codeword": {
+                "fewer": {
+                    "kicker": "Moins de lettres choisies",
+                    "body": "De {from} lettres début {month} à {to}"
+                },
+                "off": {
+                    "kicker": "Plus besoin de lettres",
+                    "body": "De {from} lettres début {month} à aucune"
+                },
+                "more": {
+                    "kicker": "Plus de lettres choisies",
+                    "body": "De {from} lettres début {month} à {to}"
+                },
+                "on": {
+                    "kicker": "Un coup de pouce",
+                    "body": "Vous avez commencé {month} sans elles et en choisissez maintenant {to}"
+                }
+            },
+            "sudoku": {
+                "fewer": {
+                    "kicker": "Moins de cases de départ",
+                    "body": "De {from} % de cases remplies début {month} à {to} %"
+                },
+                "off": {
+                    "kicker": "Plus besoin de cases de départ",
+                    "body": "De {from} % de cases remplies début {month} à aucune"
+                },
+                "more": {
+                    "kicker": "Plus de cases de départ",
+                    "body": "De {from} % de cases remplies début {month} à {to} %"
+                },
+                "on": {
+                    "kicker": "Un coup de pouce",
+                    "body": "Vous avez commencé {month} sans elles et démarrez maintenant avec {to} % de cases remplies"
+                }
+            }
+        },
+        "challenges": {
+            "kicker": "Vous avez relevé",
+            "unit": "défi | défis"
+        },
+        "outro": {
+            "title": "Voilà votre mois de {month}",
+            "body": "À un autre super mois de puzzles !",
+            "cta": "Voir toutes vos stats",
+            "replay": "Revoir"
+        },
+        "medal": {
+            "kicker": "Vous avez gagné",
+            "title": "{tier} en {month}",
+            "solved": "{count} puzzle résolu | {count} puzzles résolus"
+        }
+    },
+    "profileAnnounce": {
+        "changed": "Votre profil de joueur a changé",
+        "cta": "Voir vos statistiques"
+    },
+    "achievements": {
+        "title": "Succès",
+        "unlockedToast": "Succès débloqué !",
+        "challengeTitle": "Défis",
+        "timesAchieved": "{count} fois | {count} fois",
+        "descPuzzles": "Terminer {target} casse-têtes",
+        "descPuzzles1": "Terminer votre premier casse-tête",
+        "descChallenges": "Terminer {target} défis",
+        "descChallenges1": "Terminer votre premier défi",
+        "descVariety": "Essayer {target} types de casse-têtes",
+        "descVarietyAll": "Essayer tous les types de casse-têtes",
+        "descStreak": "Atteindre une série de {target} jours",
+        "descDays": "Jouer sur {target} jours différents",
+        "titlePuzzles1": "Premier casse-tête",
+        "titlePuzzles10": "Un bon début",
+        "titlePuzzles50": "Joueur régulier",
+        "titlePuzzles100": "Amateur de casse-têtes",
+        "titleChallenges1": "Défi accepté",
+        "titleChallenges10": "Champion des défis",
+        "titleChallenges50": "Maître des défis",
+        "titleVariety3": "Explorateur",
+        "titleVariety5": "Polyvalent",
+        "titleVarietyAll": "Complétionniste",
+        "titleStreak3": "En forme",
+        "titleStreak7": "Guerrier de la semaine",
+        "titleStreak30": "Maître du mois",
+        "titleDays7": "Engagé",
+        "titleDays30": "Dévoué",
+        "titleChallenges100": "Légende des défis",
+        "titleClean10": "Tireur d'élite",
+        "titleClean50": "Intouchable",
+        "titleClean100": "Sans faute",
+        "descClean": "Terminez {target} puzzles sans aucune vérification ni révélation",
+        "earnedCount": "{count} obtenus",
+        "nextUp": "Prochains objectifs",
+        "nextUpEmpty": "Vous avez obtenu tous les badges de chaque série. Impressionnant.",
+        "earned": "Obtenus",
+        "earnedEmpty": "Résolvez votre premier puzzle pour obtenir votre premier badge.",
+        "seeAll": "Voir tous les badges",
+        "seeAllEarned": "Voir les {count} badges obtenus",
+        "secretToast": "Badge secret trouvé !",
+        "titleArchive10": "Voyageur temporel",
+        "titleArchive50": "Archiviste",
+        "titleArchive100": "Historien",
+        "descArchive": "Résolvez {target} puzzles des archives",
+        "titleBests5": "Record personnel",
+        "titleBests25": "Briseur de records",
+        "descBests": "Battez votre meilleur temps {target} fois",
+        "titleClimber1": "Au sommet de l’échelle",
+        "descClimber1": "Terminez le niveau le plus difficile d’une famille de puzzles",
+        "titleClimberAll": "Sommet",
+        "descClimberAll": "Terminez le niveau le plus difficile de chaque famille de puzzles",
+        "tiers": {
+            "1": "Bronze",
+            "2": "Argent",
+            "3": "Or"
+        },
+        "month": {
+            "title": "Objectifs de {month}",
+            "daysLeft": "{count} jour restant | {count} jours restants",
+            "progress": "{current} sur {target}",
+            "tierAt": "{tier} {target}",
+            "tierEveryDay": "{tier} chaque jour",
+            "goals": {
+                "puzzles": "Puzzles résolus",
+                "days": "Jours joués",
+                "variety": "Tous les types de puzzles",
+                "clean": "Résolutions parfaites"
+            },
+            "toastTitle": "Objectif du mois atteint !",
+            "toastBody": "{goal} : {tier} pour {month}"
+        },
+        "months": {
+            "title": "Vos mois",
+            "inProgress": "En cours",
+            "played": "Joué",
+            "none": "Pas joué",
+            "seeAll": "Tout voir"
+        },
+        "secrets": {
+            "title": "Secrets",
+            "hint": "Certains badges restent cachés jusqu’à ce que vous les trouviez.",
+            "more": "Encore {count} à trouver | Encore {count} à trouver"
+        },
+        "secret": {
+            "nightOwl": {
+                "title": "Oiseau de nuit",
+                "desc": "Résolvez un puzzle après minuit",
+                "done": "Vous avez résolu un puzzle après minuit"
+            },
+            "earlyBird": {
+                "title": "Lève-tôt",
+                "desc": "Résolvez un puzzle avant 7 h",
+                "done": "Vous avez résolu un puzzle avant 7 h"
+            },
+            "comeback": {
+                "title": "Bon retour",
+                "desc": "Revenez après 30 jours d’absence",
+                "done": "Vous êtes revenu après 30 jours d’absence"
+            },
+            "lifeline": {
+                "title": "Bouée de sauvetage",
+                "desc": "Sauvez votre série",
+                "done": "Vous avez sauvé votre série"
+            },
+            "fullHouse": {
+                "title": "Carton plein",
+                "desc": "Terminez tous les puzzles le jour de leur sortie",
+                "done": "Vous avez terminé tous les puzzles le jour de leur sortie"
+            },
+            "ghost": {
+                "title": "Bouh !",
+                "desc": "Résolvez un puzzle le jour d'Halloween",
+                "done": "Vous avez résolu un puzzle le jour d'Halloween"
+            },
+            "spotless": {
+                "title": "Impeccable",
+                "desc": "Résolvez 10 puzzles d'affilée sans vérification, révélation ni indice",
+                "done": "Vous avez résolu 10 puzzles d'affilée sans vérification, révélation ni indice"
+            },
+            "weekend": {
+                "title": "Week-end détente",
+                "desc": "Résolvez 5 puzzles en un seul week-end",
+                "done": "Vous avez résolu 5 puzzles en un seul week-end"
+            },
+            "christmas": {
+                "title": "Puzzle de Noël",
+                "desc": "Résolvez un puzzle le jour de Noël",
+                "done": "Vous avez résolu un puzzle le jour de Noël"
+            }
+        },
+        "donePuzzles": "Vous avez terminé {target} puzzles",
+        "donePuzzles1": "Vous avez terminé votre premier puzzle",
+        "doneChallenges": "Vous avez relevé {target} défis",
+        "doneChallenges1": "Vous avez relevé votre premier défi",
+        "doneVariety": "Vous avez essayé {target} types de puzzles",
+        "doneVarietyAll": "Vous avez essayé tous les types de puzzles",
+        "doneStreak": "Vous avez atteint une série de {target} jours",
+        "doneDays": "Vous avez joué {target} jours différents",
+        "doneClean": "Vous avez terminé {target} puzzles sans aucune vérification ni révélation",
+        "doneArchive": "Vous avez résolu {target} puzzles des archives",
+        "doneBests": "Vous avez battu votre meilleur temps {target} fois",
+        "doneClimber1": "Vous avez terminé le niveau le plus difficile d’une famille de puzzles",
+        "doneClimberAll": "Vous avez terminé le niveau le plus difficile de chaque famille de puzzles",
+        "challengeDone": "Vous avez relevé {count} défi | Vous avez relevé {count} défis",
+        "allTitle": "Tous les badges",
+        "earnedTitle": "Vos badges",
+        "earnedOn": "Obtenu le {date}",
+        "tracks": {
+            "puzzles": "Puzzles résolus",
+            "streak": "Séries",
+            "days": "Jours joués",
+            "clean": "Résolutions parfaites",
+            "variety": "Types de puzzles",
+            "archive": "Archives",
+            "bests": "Records personnels",
+            "climber": "Grimpeur",
+            "challenges": "Défis",
+            "anniversary": "Ancienneté",
+            "medals": "Médailles mensuelles",
+            "golds": "Mois en or"
+        },
+        "secretPill": "Secret",
+        "titlePuzzles250": "Fervent du puzzle",
+        "titlePuzzles500": "Maître du puzzle",
+        "titlePuzzles1000": "Légende du puzzle",
+        "titlePuzzles2500": "Immortel du puzzle",
+        "titleClean250": "Précision",
+        "titleClean500": "Impeccable",
+        "titleClean1000": "Perfectionniste",
+        "titleStreak100": "Série centenaire",
+        "titleStreak365": "Série d'un an",
+        "titleDays100": "Centurion",
+        "titleDays365": "Une année de puzzles",
+        "titleDays1000": "Mille jours",
+        "titleArchive250": "Conservateur",
+        "titleArchive500": "Gardien des archives",
+        "titleBests50": "Fusée",
+        "titleBests100": "Inarrêtable",
+        "titleAnniversary1m": "Un mois déjà",
+        "titleAnniversary6m": "Six mois",
+        "titleAnniversary1y": "Premier anniversaire",
+        "titleAnniversary2y": "Deux ans",
+        "titleAnniversary3y": "Trois ans",
+        "titleAnniversary5y": "Cinq ans",
+        "descAnniversary1m": "Atteignez un mois depuis votre premier puzzle",
+        "descAnniversary6m": "Atteignez six mois depuis votre premier puzzle",
+        "descAnniversary1y": "Atteignez un an depuis votre premier puzzle",
+        "descAnniversary2y": "Atteignez deux ans depuis votre premier puzzle",
+        "descAnniversary3y": "Atteignez trois ans depuis votre premier puzzle",
+        "descAnniversary5y": "Atteignez cinq ans depuis votre premier puzzle",
+        "doneAnniversary1m": "Un mois depuis votre premier puzzle",
+        "doneAnniversary6m": "Six mois depuis votre premier puzzle",
+        "doneAnniversary1y": "Un an depuis votre premier puzzle",
+        "doneAnniversary2y": "Deux ans depuis votre premier puzzle",
+        "doneAnniversary3y": "Trois ans depuis votre premier puzzle",
+        "doneAnniversary5y": "Cinq ans depuis votre premier puzzle",
+        "descMedals": "Gagnez une médaille mensuelle sur {target} mois différents",
+        "doneMedals": "Vous avez gagné une médaille mensuelle sur {target} mois",
+        "descGolds": "Gagnez l'or sur {target} mois",
+        "doneGolds": "Vous avez gagné l'or sur {target} mois",
+        "descGolds1": "Gagnez une médaille d'or mensuelle",
+        "doneGolds1": "Vous avez gagné une médaille d'or mensuelle"
+    },
+    "stats": {
+        "title": "Statistiques",
+        "puzzleStatistics": "Statistiques des casse-têtes",
+        "totalPuzzles": "Casse-têtes terminés",
+        "puzzleTypes": "Types de casse-têtes",
+        "longestStreak": "Plus longue série",
+        "daysPlayed": "Jours joués",
+        "bestDay": "Meilleure journée",
+        "thisMonth": "Ce mois-ci",
+        "lastMonth": "Mois dernier",
+        "weeksPlays": "Parties de la semaine",
+        "thisWeek": "Cette semaine",
+        "lastWeek": "Semaine dernière",
+        "average90": "Moyenne sur 90 jours",
+        "dataWindow": "Les totaux couvrent toutes vos parties ; les graphiques montrent les 90 derniers jours",
+        "dataWindowAll": "Les totaux et les graphiques couvrent toutes vos parties",
+        "noData": "Terminez quelques casse-têtes pour voir vos statistiques ici.",
+        "allTime": "Depuis le début",
+        "period": "Période",
+        "started": "Jeux commencés",
+        "completed": "Jeux terminés",
+        "cleanSolves": "Résolutions sans aide",
+        "typesPlayed": "Types de jeux joués",
+        "typePlays": "{name} : {count} terminés",
+        "playsByMonth": "Parties par mois",
+        "playsOverTime": "Parties au fil du temps",
+        "playsPerMonth": "Parties par mois",
+        "playsPerYear": "Parties par an",
+        "averageLine": "Moyenne"
+    },
+    "profile": {
+        "label": "Profil du joueur",
+        "newbie": {
+            "title": "Débutant",
+            "subtitle": "Vous commencez à peine."
+        },
+        "fanatic": {
+            "title": "Fan de {variant}",
+            "subtitle": "{variant} est votre casse-tête favori."
+        },
+        "numberCruncher": {
+            "title": "Cracks des chiffres",
+            "subtitle": "{v1} et {v2} sont vos préférés."
+        },
+        "wordsmith": {
+            "title": "Amoureux des mots",
+            "subtitle": "{v1} et {v2} sont vos préférés."
+        },
+        "logicBuff": {
+            "title": "Amateur de logique",
+            "subtitle": "{v1} et {v2} sont vos préférés."
+        },
+        "quizzer": {
+            "title": "Quizzeur",
+            "subtitle": "{v1} et {v2} sont vos préférés."
+        },
+        "dailyDevotee": {
+            "title": "Assidu au quotidien",
+            "subtitle": "Vous jouez presque tous les jours."
+        },
+        "weekendWarrior": {
+            "title": "Guerrier du week-end",
+            "subtitle": "Samedi et dimanche sont vos jours forts."
+        },
+        "earlyBird": {
+            "title": "Lève-tôt",
+            "subtitle": "Vous êtes le premier au rendez-vous."
+        },
+        "nightOwl": {
+            "title": "Oiseau de nuit",
+            "subtitle": "Vous gardez le meilleur pour la fin."
+        },
+        "allRounder": {
+            "title": "Touche-à-tout",
+            "subtitle": "Vous aimez un peu de tout."
+        }
+    },
+    "challenges": {
+        "aria": "Vos défis",
+        "today": "Puzzle du jour",
+        "fromArchive": "Dans les archives",
+        "comeBackTomorrow": "C'est fait pour aujourd'hui. Revenez demain pour continuer.",
+        "pickIntro": "Jouez à l'un d'eux pour avancer.",
+        "offTip": "Vous ne voulez pas voir les défis ?",
+        "offAction": "Désactiver",
+        "offKeep": "Les garder",
+        "offToast": "Défis désactivés. Vous pouvez les réactiver dans Compte.",
+        "suggested": "Choisissez un défi",
+        "complete": "Défi relevé !",
+        "completeToast": "Défi relevé !",
+        "expired": "Temps écoulé",
+        "expiredBody": "Vous êtes arrivé à {current} sur {target}. On retente ?",
+        "daysLeft": "{n} jour restant | {n} jours restants",
+        "endsToday": "Se termine aujourd'hui",
+        "progress": "{current} sur {target}",
+        "join": "Relever",
+        "notNow": "Pas maintenant",
+        "play": "Jouer",
+        "leave": "Quitter le défi",
+        "retry": "Réessayer",
+        "pickNew": "En choisir un",
+        "dismiss": "Ignorer",
+        "typeWeek": {
+            "title": "Une semaine de {name}",
+            "body": "Terminez {target} puzzles {name} dans les {days} prochains jours.",
+            "goal": "Terminez {target} puzzles {name}."
+        },
+        "typeDay": {
+            "title": "Double {name}",
+            "body": "Terminez {target} puzzles {name} aujourd'hui.",
+            "goal": "Terminez {target} puzzles {name}."
+        },
+        "typeClean": {
+            "title": "{name} en solo",
+            "body": "Résolvez {target} puzzles {name} sans révélation ni indice dans les {days} prochains jours.",
+            "goal": "Résolvez {target} puzzles {name} sans révélation ni indice.",
+            "bodyGuesses": "Résolvez {target} puzzles {name} en 3 essais ou moins dans les {days} prochains jours.",
+            "goalGuesses": "Résolvez {target} puzzles {name} en 3 essais ou moins."
+        },
+        "stepUp": {
+            "title": "Passez à {name}",
+            "body": "Terminez {target} puzzles {name} dans les {days} prochains jours.",
+            "goal": "Terminez {target} puzzles {name}."
+        },
+        "revisit": {
+            "title": "Retour à {name}",
+            "body": "Ça faisait longtemps. Terminez {target} puzzles {name} dans les {days} prochains jours.",
+            "goal": "Terminez {target} puzzles {name}."
+        },
+        "groupWeek": {
+            "words": {
+                "title": "Semaine des mots",
+                "body": "Terminez {target} jeux de lettres dans les {days} prochains jours.",
+                "goal": "Terminez {target} jeux de lettres."
+            },
+            "numbers": {
+                "title": "Fou des chiffres",
+                "body": "Terminez {target} jeux de chiffres dans les {days} prochains jours.",
+                "goal": "Terminez {target} jeux de chiffres."
+            },
+            "logic": {
+                "title": "Semaine logique",
+                "body": "Terminez {target} jeux de logique dans les {days} prochains jours.",
+                "goal": "Terminez {target} jeux de logique."
+            },
+            "quick": {
+                "title": "Semaine express",
+                "body": "Terminez {target} jeux rapides dans les {days} prochains jours.",
+                "goal": "Terminez {target} jeux rapides."
+            }
+        },
+        "groupVariety": {
+            "words": {
+                "title": "Assortiment de mots",
+                "body": "Jouez à {target} jeux de lettres différents dans les {days} prochains jours.",
+                "goal": "Jouez à {target} jeux de lettres différents."
+            },
+            "numbers": {
+                "title": "Assortiment de chiffres",
+                "body": "Jouez à {target} jeux de chiffres différents dans les {days} prochains jours.",
+                "goal": "Jouez à {target} jeux de chiffres différents."
+            },
+            "logic": {
+                "title": "Assortiment logique",
+                "body": "Jouez à {target} jeux de logique différents dans les {days} prochains jours.",
+                "goal": "Jouez à {target} jeux de logique différents."
+            },
+            "quick": {
+                "title": "Assortiment express",
+                "body": "Jouez à {target} jeux rapides différents dans les {days} prochains jours.",
+                "goal": "Jouez à {target} jeux rapides différents."
+            }
+        },
+        "coffee": {
+            "title": "Pause café",
+            "body": "Terminez {target} jeux rapides aujourd'hui.",
+            "goal": "Terminez {target} jeux rapides."
+        },
+        "streak": {
+            "title": "Cinq jours d'affilée",
+            "body": "Jouez {target} jours d'affilée.",
+            "goal": "Jouez {target} jours d'affilée.",
+            "expired": "Vous êtes arrivé au jour {current} sur {target}. On retente ?"
+        },
+        "explore": {
+            "title": "Quelque chose de nouveau",
+            "body": "Essayez {target} types de puzzles auxquels vous n'avez jamais joué dans les {days} prochains jours.",
+            "goal": "Essayez {target} types de puzzles auxquels vous n'avez jamais joué."
+        },
+        "mixDay": {
+            "title": "Variez les plaisirs",
+            "body": "Jouez à {target} types de puzzles différents aujourd'hui.",
+            "goal": "Jouez à {target} types de puzzles différents."
+        },
+        "marathon": {
+            "title": "Marathon de puzzles",
+            "body": "Terminez {target} puzzles aujourd'hui.",
+            "goal": "Terminez {target} puzzles."
+        },
+        "fourDays": {
+            "title": "Semaine de quatre jours",
+            "body": "Jouez {target} jours différents dans les {days} prochains jours.",
+            "goal": "Jouez {target} jours différents."
+        },
+        "spotless": {
+            "title": "Semaine impeccable",
+            "body": "Résolvez {target} puzzles sans révélation ni indice dans les {days} prochains jours.",
+            "goal": "Résolvez {target} puzzles sans révélation ni indice."
+        },
+        "typeRun": {
+            "title": "Triplé de {name}",
+            "body": "Jouez à {name} {target} jours d'affilée.",
+            "goal": "Jouez à {name} {target} jours d'affilée."
+        },
+        "archive": {
+            "title": "Explorateur d'archives",
+            "body": "Terminez {target} puzzles des archives dans les {days} prochains jours.",
+            "goal": "Terminez {target} puzzles des archives."
+        },
+        "favSweep": {
+            "title": "Tour des favoris",
+            "body": "Terminez vos {target} puzzles favoris aujourd'hui.",
+            "goal": "Terminez vos {target} puzzles favoris."
+        }
+    },
+    "summary": {
+        "aria": "Résumé des 7 derniers jours",
+        "carouselAria": "Choisir un panneau",
+        "title": "7 derniers jours",
+        "puzzles": "Casse-têtes",
+        "types": "Types de casse-tête",
+        "mostPlayed": "Le plus joué",
+        "noPuzzles": "Aucun jeu joué ces 7 derniers jours.",
+        "days": "Jours joués"
+    },
+    "streak": {
+        "aria": "Série de jeu",
+        "title": "Série de puzzles",
+        "dayCount": "jour | jours",
+        "weekCount": "semaine | semaines",
+        "recentDaysAria": "Jours récents"
+    },
+    "archive": {
+        "filterBy": "Filtrer par :",
+        "about": "À propos de",
+        "recent": "Récents",
+        "noPuzzles": "Aucun casse-tête pour ce mois.",
+        "otherLevels": "Autres niveaux",
+        "statusFilterLabel": "Filtrer par statut",
+        "statusAll": "Tous",
+        "statusUnplayed": "Non joués",
+        "statusUnfinished": "En cours",
+        "statusCompleted": "Terminés",
+        "playMostRecent": "Jouer le plus récent",
+        "typeAchievements": {
+            "trained": "{name} : formé",
+            "descTrained": "Terminer les {target} tutoriels de {name}",
+            "heading": "Succès",
+            "nextUp": "À suivre",
+            "moreToDiscover": "Encore à découvrir…",
+            "apprentice": "Apprenti {name}",
+            "expert": "Expert {name}",
+            "master": "Maître {name}",
+            "purist": "Puriste {name}",
+            "descPlay": "Terminez {target} puzzles {name}",
+            "sharpSolver": "{name} Fin Limier",
+            "descSharp": "Résolvez {target} puzzles {name} en 3 essais ou moins",
+            "descCleanMistakes": "Résolvez {target} puzzles {name} sans erreur ni révélation",
+            "sharpEye": "{name} Œil de lynx",
+            "wordHawk": "{name} Faucon des mots",
+            "fullHouse": "{name} Grand Chelem",
+            "descWordsPct": "Trouvez {target}% des mots dans un puzzle {name}",
+            "descPointsPct": "Marquez {target}% des points dans un puzzle {name}",
+            "descClean": "Résolvez {target} puzzles {name} sans vérification ni révélation"
+        },
+        "stats": {
+            "title": "Statistiques {name}",
+            "completed": "Terminés",
+            "averageTime": "Temps moyen",
+            "bestTime": "Meilleur temps",
+            "longestStreak": "Plus longue série",
+            "currentStreak": "Série actuelle",
+            "cleanSolves": "Sans aide",
+            "averageChecks": "Vérifications (moy.)",
+            "averageReveals": "Révélations (moy.)",
+            "averageMistakes": "Erreurs (moy.)",
+            "averageWordsFound": "Mots trouvés (moy.)",
+            "bestWordsFound": "Meilleur mots trouvés",
+            "averageScore": "Score (moy.)",
+            "bestScore": "Meilleur score",
+            "sharpSolves": "Résolutions expertes",
+            "averageGuesses": "Essais (moy.)",
+            "bestGuesses": "Meilleurs essais",
+            "guesses": "Essais",
+            "notSolved": "Non résolu",
+            "winRate": "% de victoires",
+            "guessDistribution": "Essais réussis",
+            "signedOut": "Connectez-vous pour suivre votre progression",
+            "chartTitle": "7 derniers terminés",
+            "chartTitlePlays": "7 derniers joués",
+            "time": "Temps",
+            "checks": "Vérifications",
+            "reveals": "Révélations",
+            "hints": "Indices",
+            "mistakes": "Erreurs",
+            "wordsFound": "Mots trouvés",
+            "score": "Score",
+            "average": "Moyenne",
+            "persona": {
+                "newcomer": {"title": "Nouveau venu", "desc": "Vous découvrez {name}."},
+                "comeback": {"title": "Bon retour", "desc": "Ravi de vous revoir sur {name}."},
+                "recordBreaker": {"title": "Record battu", "desc": "Vous venez de signer votre meilleur temps sur {name}."},
+                "improver": {"title": "En progrès", "desc": "Vos temps sur {name} ont baissé de {percent} % récemment."},
+                "sharpshooter": {"title": "Tireur d'élite", "desc": "Vous trouvez {name} en {guesses} essais en moyenne."},
+                "purist": {"title": "Le Puriste", "desc": "{clean} de vos {total} dernières parties de {name} sans aucune aide."},
+                "clockwork": {"title": "Réglé comme une horloge", "desc": "Vos parties de {name} durent environ {time}, à chaque fois."},
+                "nightOwl": {"title": "Oiseau de nuit", "desc": "Vous jouez surtout à {name} une fois la nuit tombée."},
+                "earlyBird": {"title": "Lève-tôt", "desc": "Vous aimez jouer à {name} dès le matin."},
+                "weekender": {"title": "Joueur du week-end", "desc": "{name}, c'est votre plaisir du week-end."},
+                "veteran": {"title": "Le Vétéran", "desc": "{count} grilles de {name} résolues jusqu'ici."},
+                "hintHunter": {"title": "Chasseur d'indices", "desc": "Vous prenez volontiers un indice sur {name}."},
+                "allRounder": {"title": "Joueur posé", "desc": "Un adepte polyvalent et serein de {name}."},
+                "unhurried": {"title": "Sans se presser", "desc": "Vos parties de {name} durent un peu plus longtemps ces derniers temps. Vous savourez ?"},
+                "fewerReveals": {"title": "Moins de révélations", "desc": "Vos révélations sur {name} sont passées de {before} à {after} par partie."},
+                "fewerChecks": {"title": "Moins de vérifications", "desc": "Vos vérifications sur {name} sont passées de {before} à {after} par partie."},
+                "fewerHints": {"title": "Moins d'indices", "desc": "Vos indices sur {name} sont passés de {before} à {after} par partie."},
+                "fewerMistakes": {"title": "Moins d'erreurs", "desc": "Vos erreurs sur {name} sont passées de {before} à {after} par partie."},
+                "fewerGuesses": {"title": "Essais plus affûtés", "desc": "Vos essais sur {name} sont passés de {before} à {after} par partie."},
+                "findingMore": {"title": "Toujours plus de mots", "desc": "Vous trouvez plus de mots sur {name} : de {before} % à {after} %."},
+                "lunchBreak": {"title": "Joueur de la pause déjeuner", "desc": "Vous jouez surtout à {name} à l'heure du déjeuner."},
+                "eveningSolver": {"title": "Détente du soir", "desc": "Vous aimez vous détendre avec {name} le soir."},
+                "movedMornings": {"title": "Nouvelle routine", "desc": "Votre {name} est passé au matin ces derniers temps."},
+                "movedAfternoons": {"title": "Nouvelle routine", "desc": "Votre {name} est passé à l'après-midi ces derniers temps."},
+                "movedEvenings": {"title": "Nouvelle routine", "desc": "Votre {name} est passé au soir ces derniers temps."},
+                "movedNights": {"title": "Nouvelle routine", "desc": "Votre {name} est passé à la nuit ces derniers temps."}
+            }
+        }
+    },
+    "puzzle": {
+        "notStarted": "Casse-tête non commencé",
+        "halfComplete": "Casse-tête complété à 50 %",
+        "percentComplete": "Casse-tête complété à {percent} %",
+        "statusNotStarted": "Non commencé",
+        "statusInProgress": "Complété à {percent} %",
+        "statusStarted": "Commencé",
+        "statusCompleted": "Terminé",
+        "relatedHeading": "Nous pensons que vous pourriez aimer",
+        "next": {
+            "streak": "Prolongez votre série de {name}",
+            "resume": "Reprenez où vous en étiez",
+            "snack": "Un autre puzzle express",
+            "archive": "Un puzzle des archives",
+            "nextArchive": "Le suivant dans les archives"
+        }
+    },
+    "account": {
+        "teaser": {
+            "title": "Vos jeux, partout",
+            "body": "Créez un compte gratuit pour garder votre série, vos statistiques et vos réglages sur tous vos appareils, et jouer entre amis.",
+            "streak": "Votre série continue sur tous vos appareils",
+            "setup": "Vos favoris et jeux masqués vous suivent",
+            "achievements": "Débloquez des succès et suivez vos statistiques",
+            "friends": "Affrontez vos amis dans une ligue privée"
+        },
+        "title": "Compte",
+        "fieldEmail": "E-mail",
+        "fieldUid": "UID",
+        "fieldName": "Nom",
+        "logout": "Se déconnecter",
+        "signInTitle": "Connectez-vous à votre compte",
+        "createTitle": "Créer un compte",
+        "yourEmail": "Votre e-mail",
+        "emailInvalid": "Veuillez saisir une adresse e-mail valide",
+        "password": "Mot de passe",
+        "confirmPassword": "Confirmez le mot de passe",
+        "showPassword": "Afficher le mot de passe",
+        "hidePassword": "Masquer le mot de passe",
+        "passwordMismatch": "Les mots de passe ne correspondent pas",
+        "passwordStrength": {
+            "weak": "Faible",
+            "fair": "Moyen",
+            "good": "Bon",
+            "strong": "Fort"
+        },
+        "noAccount": "Vous n’avez pas encore de compte ?",
+        "haveAccount": "Vous avez déjà un compte ?",
+        "preferences": {
+            "title": "Préférences",
+            "showFeatured": "Afficher les suggestions de puzzles sur votre page d’accueil",
+            "showChallenges": "Afficher les défis",
+            "notifications": "M’envoyer des notifications push",
+            "notificationsBlocked": "Les notifications sont bloquées. Activez-les dans les paramètres de votre navigateur pour recevoir les mises à jour.",
+            "replayTour": "Revoir la présentation de bienvenue"
+        }
+    },
+    "notificationsPrompt": {
+        "title": "Rester informé ?",
+        "body": "Nous pouvons vous prévenir dès que les puzzles du jour sont prêts, et vous donner un petit rappel si votre série est en danger.",
+        "enable": "Oui, prévenez-moi",
+        "notNow": "Pas maintenant"
+    },
+    "installPrompt": {
+        "title": "Ajoutez les puzzles à votre écran d'accueil",
+        "body": "Ouvrez les puzzles du jour d'un seul geste, en plein écran, sans les barres du navigateur.",
+        "step1": "Touchez Partager",
+        "step1Hint": "Si vous ne le voyez pas, touchez d'abord •••.",
+        "step2": "Choisissez Sur l'écran d'accueil",
+        "step2Hint": "Faites défiler vers le bas, ou touchez Afficher plus s'il est masqué.",
+        "step3": "Touchez Ajouter",
+        "step3Hint": "L'icône apparaît sur votre écran d'accueil.",
+        "gotIt": "Compris",
+        "never": "Ne plus demander"
+    },
+    "streakToast": {
+        "title": "Série prolongée !",
+        "body": "{name} — {count} jours d'affilée"
+    },
+    "streakFreeze": {
+        "saveBarLabel": "Sauvez votre série",
+        "savedTitle": "Série sauvée !",
+        "savedBody": "Votre série de {n} jours continue — ne lâchez rien !",
+        "title": "Série interrompue",
+        "body": "Tout n'est pas perdu — sauvez votre série en terminant {target} puzzles aujourd'hui.",
+        "progress": "{done} sur {target} puzzles aujourd'hui",
+        "earnedInline": "Série sauvée !",
+        "start": "C'est parti",
+        "continue": "Continuer"
+    },
+    "streakModal": {
+        "dayTitle": "Série de {n} jours !",
+        "weekTitle": "Série de {n} semaines !",
+        "dayBody": "Bien joué — reviens demain pour continuer la série.",
+        "weekBody": "Tu as joué chaque semaine — garde le rythme.",
+        "continue": "Continuer"
+    },
+    "changelog": {
+        "title": "Nouveautés",
+        "dismiss": "Compris"
+    },
+    "friends": {
+        "title": "Amis",
+        "welcome": {
+            "title": "Jouez entre amis",
+            "body": "Créez un groupe privé, choisissez les jeux auxquels vous jouez tous et voyez qui est en tête chaque jour.",
+            "point1": "Choisissez les jeux sur lesquels vous vous affrontez",
+            "point2": "Temps et scores côte à côte",
+            "point3": "Un classement privé rien que pour votre groupe",
+            "point4": "Des gagnants du jour, du mois et de l'année",
+            "create": "Créer un groupe",
+            "join": "Rejoindre avec un code"
+        },
+        "nameLabel": "Votre nom dans les groupes",
+        "nameHelp": "Seules les personnes de vos groupes le voient. Vous pouvez le modifier à tout moment.",
+        "errNoDisplayName": "Saisissez votre nom dans les groupes",
+        "addDisplayName": "Ajouter un nom d’affichage",
+        "allFriendGroups": "Tous les groupes d’amis",
+        "groupSuffix": "un groupe",
+        "yourFriendGroups": "Vos groupes d’amis",
+        "join": {
+            "title": "Rejoindre un groupe",
+            "codeLabel": "Code du groupe",
+            "codeHelp": "Demandez le code au propriétaire du groupe.",
+            "errNoCode": "Veuillez saisir un code",
+            "errCodeShort": "Le code doit comporter au moins 6 caractères",
+            "fromLink": "Nous avons rempli le code depuis votre lien.",
+            "submit": "Demander à rejoindre",
+            "approvalNote": "Le propriétaire du groupe valide les nouveaux membres."
+        },
+        "create": {
+            "title": "Créer un groupe",
+            "nameLabel": "Nom du groupe",
+            "includeHeading": "Quels casse-têtes souhaitez-vous inclure ?",
+            "errNoName": "Saisissez un nom de groupe",
+            "generate": "En générer un",
+            "suggestions": [
+                "Les Pros du Puzzle",
+                "Les Cerveaux",
+                "Le Club des Mots",
+                "La Grille Infernale",
+                "Les As de l'Indice",
+                "L'Escouade Sudoku",
+                "Les Accros aux Mots",
+                "Le Café Casse-tête",
+                "Les Têtes Chercheuses",
+                "Les Méninges",
+                "Les Fins Limiers",
+                "Les Rois de la Case",
+                "Les Mordus du Jeu",
+                "Les Déchiffreurs",
+                "Les Matheux",
+                "Les Casse-têtes",
+                "Horizontal et Vertical",
+                "La Bande à Neurones",
+                "Thé et Énigmes",
+                "Les Malins",
+                "Les Esprits Vifs",
+                "Les Petits Génies",
+                "Le Club des Malins",
+                "Les Chasseurs d'Indices",
+                "Les Rois du Mot Croisé",
+                "Les Matins Malins",
+                "Les Cases Vides",
+                "Les Neurones Actifs",
+                "Les Cracks",
+                "Les Sherlock",
+                "Les Crayons Taillés",
+                "Les Fous de Logique",
+                "Les Anagrammes",
+                "La Matière Grise",
+                "Le Cercle des Énigmes",
+                "Les Champions du Jour",
+                "Les Grosses Têtes",
+                "Les Lettrés",
+                "Le Club du Mardi",
+                "Les Petites Cellules Grises",
+                "Les Futés",
+                "Les Experts",
+                "Les Énigmatiques",
+                "Les Têtes Bien Faites",
+                "Les Joyeux Cogiteurs",
+                "Le Gang des Grilles",
+                "Les Inspecteurs",
+                "Les Pros du Chiffre",
+                "Café et Grilles",
+                "Les Insomniaques",
+                "Les Mots Fléchés",
+                "Les Mordus de Logique",
+                "Le Cerveau Collectif",
+                "Les Rapides",
+                "Les Astucieux",
+                "Les Philosophes",
+                "Les Hiboux",
+                "Les Code-Breakers",
+                "La Ligue des Malins",
+                "Réponse Finale"
+            ],
+            "submit": "Créer"
+        },
+        "invite": {
+            "title": "Invitez des amis dans {name}",
+            "intro": "Envoyez le lien à vos amis, ou donnez-leur le code à saisir dans Rejoindre un groupe.",
+            "shareCode": "Code du groupe",
+            "codePrefix": "Code :",
+            "copyCode": "Copier le code",
+            "copyLink": "Copier le lien",
+            "shareLink": "Partager le lien",
+            "copied": "Copié",
+            "shareText": "Rejoins mon groupe de jeux, {name}, sur Sticky Puzzles",
+            "cardKicker": "Vous êtes invité",
+            "cardCode": "Code : {code}",
+            "cardBody": "Rejoins mon groupe de jeux sur Sticky Puzzles",
+            "codeNote": "Restez attentif ! Les joueurs qui utilisent votre code ou votre lien devront obtenir votre approbation pour rejoindre le groupe.",
+            "done": "Terminé"
+        },
+        "manage": {
+            "requestsTitle": "Demandes d'adhésion",
+            "playersTitle": "Joueurs ({n})",
+            "onlyOne": "Vous êtes seul pour l'instant. Invitez des amis ci-dessous.",
+            "inviteTitle": "Inviter des amis",
+            "puzzlesTitle": "Jeux",
+            "puzzlesHelp": "Touchez un jeu pour l'ajouter ou le retirer. Les modifications sont enregistrées tout de suite.",
+            "saved": "Enregistré",
+            "errLastPuzzle": "Gardez au moins un jeu",
+            "owner": "Propriétaire",
+            "accepted": "{name} a rejoint le groupe",
+            "declinedToast": "La demande de {name} a été refusée",
+            "removed": "{name} a été retiré du groupe",
+            "deleteGroup": "Supprimer le groupe",
+            "deleteTitle": "Supprimer {name} ?",
+            "deleteBody": "Le groupe sera supprimé pour tous ses membres. Cette action est irréversible.",
+            "deleteConfirm": "Supprimer le groupe",
+            "deleted": "{name} a été supprimé"
+        },
+        "view": {
+            "overall": "Global",
+            "currentLeaders": "Leaders actuels",
+            "periodLeaders": "Leaders de {period}",
+            "periodWinners": "Gagnants de {period}",
+            "completedPuzzles": "Casse-têtes terminés",
+            "avgScore": "Score moyen / temps de réalisation"
+        },
+        "list": {
+            "caption": "Groupes",
+            "colName": "Nom du groupe",
+            "colRequests": "Demandes",
+            "colActions": "Actions",
+            "owner": "Propriétaire",
+            "awaitingApproval": "En attente d’approbation",
+            "leave": "Quitter",
+            "manage": "Gérer",
+            "view": "Voir",
+            "players": "Joueurs",
+            "requests": "{count} demande | {count} demandes"
+        },
+        "members": {
+            "you": "Vous",
+            "declined": "Refusé",
+            "accept": "Accepter",
+            "decline": "Refuser",
+            "remove": "Supprimer"
+        },
+        "modal": {
+            "changeDisplayName": "Modifier votre nom d’affichage",
+            "addDisplayName": "Ajouter un nom d’affichage",
+            "displayNameSr": "Choisissez un nom d’affichage pour que vos amis sachent qui vous êtes !",
+            "displayNameHelp": "Il ne sera visible que par les membres de vos groupes et vous pourrez le modifier à tout moment.",
+            "changeGroupName": "Modifier le nom de votre groupe",
+            "addGroupName": "Ajouter un nom de groupe",
+            "removeMemberTitle": "Retirer un joueur",
+            "removeMemberBody": "Êtes-vous sûr(e) de vouloir retirer {name} de {group} ?",
+            "removeMemberConfirm": "Retirer le joueur"
+        },
+        "stats": {
+            "completedPuzzles": "Casse-têtes terminés",
+            "bestAvgScore": "Meilleur score moyen",
+            "allPuzzles": "Tous les casse-têtes",
+            "player": "Joueur",
+            "time": "Temps",
+            "score": "Score",
+            "noCompletions": "Personne dans ce groupe n’a encore terminé ce casse-tête ce jour-là.",
+            "leaveGroup": "Quitter le groupe",
+            "mostWins": "Plus de victoires",
+            "mostPlayed": "Plus de parties jouées",
+            "titleOverall": "{stat} au total",
+            "titleIn": "{stat} en {period}",
+            "date": "Date"
+        }
+    },
+    "months": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+    "variantInfo": {
+        "open": "À propos de {name}",
+        "videoComingSoon": "Aperçu vidéo bientôt disponible",
+        "playTime": "Environ {mins} min",
+        "play": "Jouer",
+        "playLatest": "Jouer le dernier"
+    },
+    "puzzleDescription": {
+        "gridfill": "Placez des blocs de la taille indiquée pour compléter la grille le plus rapidement possible.",
+        "headcoach": "Testez votre agilité mentale avec une série éclair de calculs.",
+        "pyramidplus": "Combinez les nombres à la base pour former la somme au sommet.",
+        "quiz": "Testez vos connaissances avec notre quiz à choix multiples. Ferez-vous un sans-faute ?",
+        "sudoku": "Un jeu de logique et de déduction. Remplissez la grille pour que chaque ligne, colonne et sous-grille contienne les chiffres 1 à 9.",
+        "wordsearch": "Un grand classique — traquez les mots cachés dans la grille. Intemporel et parfait pour tous les âges.",
+        "totalswipeout": "Enchaînez questions et affirmations : glissez à droite pour oui, à gauche pour non. Décisions rapides pour tous.",
+        "worumber": "Le quiz rencontre le calcul. Répondez aux questions, puis faites vite les maths pour débloquer l'étape suivante. 10 étapes, 3 vies, beaucoup de matière grise.",
+        "wordwheel": "Trouvez le plus de mots possible avec les lettres proposées dans la Roue des mots.",
+        "guessword": "Devinez le mot caché — après chaque essai, les indices révèlent ce qui colle. En combien de tentatives y arriverez-vous ?",
+        "traintracks": "Tracez une voie continue reliant les deux extrémités. Les chiffres autour de la grille indiquent combien de pièces vont dans chaque ligne et colonne.",
+        "crossword": "Un mini casse-tête. À quelle vitesse compléterez-vous notre grille 9×9 ?",
+        "5mquiz": "Notre quiz éclair — 10 questions, 30 secondes chacune. Idéal pour une pause quiz rapide.",
+        "slidepuzzle": "Faites glisser les tuiles pour reconstituer l'image — saurez-vous le faire en un minimum de coups ?",
+        "2speedcrossword": "Deux façons de jouer une même grille — enchaînez les définitions rapides ou relevez le défi cryptique.",
+        "huedoku": "Un jeu de logique et de déduction. Remplissez la grille pour que chaque ligne, colonne et sous-grille contienne les 6 couleurs.",
+        "takuzu": "Un jeu de logique et d'équilibre. Remplissez la grille avec deux symboles pour que chaque ligne et colonne en contienne autant de chaque, sans jamais trois identiques à la suite.",
+        "codeword": "Un jeu de mots à décoder. Chaque numéro de la grille correspond à une lettre différente : trouvez laquelle et les mots se révèlent."
+    },
+    "tags": {
+        "gridfill": ["Spatial", "Blocs", "Rapide"],
+        "headcoach": ["Mental", "Calcul", "Éclair"],
+        "pyramidplus": ["Nombres", "Additions", "Étagé"],
+        "quiz": ["Culture", "Savoir", "Curieux"],
+        "sudoku": ["Logique", "Nombres", "Classique"],
+        "wordsearch": ["Multijoueur", "Mots", "Cachés", "Détente"],
+        "totalswipeout": ["Vif", "Instinct", "Éclair"],
+        "worumber": ["Mixte", "Culture", "Étapes"],
+        "wordwheel": ["Mots", "Lettres", "Découverte"],
+        "guessword": ["Jeu de mots", "Déduction", "Vif"],
+        "traintracks": ["Logique", "Rails", "Itinéraires"],
+        "crossword": ["Multijoueur", "Mots", "Indices", "Classique"],
+        "5mquiz": ["Punchy", "Culture", "Chrono"],
+        "slidepuzzle": ["Visuel", "Tactile", "Tuiles"],
+        "2speedcrossword": ["Mots", "Cryptique", "Double"],
+        "huedoku": ["Coloré", "Logique", "Grille"],
+        "takuzu": ["Logique", "Symboles", "Équilibre"],
+        "codeword": ["Mots", "Code", "Déduction"]
+    },
+    "letters": {
+        "title": "Choisissez vos lettres d'aide",
+        "consonants": "Consonnes",
+        "vowels": "Voyelles",
+        "count": "{n} sur {max}",
+        "play": "Jouer",
+        "skip": "Jouer sans lettres d'aide"
+    },
+    "cover": {
+        "number": "N° {number}",
+        "play": "Jouer",
+        "includedIn": "Compte pour un défi | Compte pour des défis",
+        "lastTimeOf": "La dernière fois · {name}",
+        "tutorials": "Tutoriels",
+        "tutorialStep": "Puzzle {step}",
+        "start": "Commencer",
+        "replay": "Rejouer",
+        "completed": "Terminé",
+        "assist": {
+            "crossword": {
+                "offerHarder": "Vous avez résolu vos 3 derniers mots croisés sans aide, vous choisirez donc moins de lettres cette fois.",
+                "offerOff": "Vous avez résolu vos 3 derniers mots croisés sans aide, nous avons donc désactivé le choix de lettres.",
+                "adjusted": "D'après vos retours, vous pouvez choisir des lettres à placer avant de commencer.",
+                "playWithout": "Jouer sans lettres d'aide"
+            },
+            "codeword": {
+                "offerHarder": "Vous avez résolu vos 3 derniers {name} sans aide, vous choisirez donc moins de lettres cette fois.",
+                "offerOff": "Vous avez résolu vos 3 derniers {name} sans aide, nous avons donc désactivé le choix de lettres.",
+                "adjusted": "D'après vos retours, vous pouvez choisir des lettres à placer avant de commencer.",
+                "playWithout": "Jouer sans lettres d'aide"
+            },
+            "sudoku": {
+                "offerHarder": "Vous avez résolu vos 3 dernières grilles sans aide, nous remplirons donc moins de cases cette fois.",
+                "offerOff": "Vous avez résolu vos 3 dernières grilles sans aide, nous avons donc désactivé les cases de départ.",
+                "adjusted": "Vous nous avez dit avoir trouvé {name} difficile la dernière fois, nous remplirons donc quelques cases en plus avant de commencer.",
+                "playWithout": "Jouer sans cases de départ"
+            }
+        }
+    },
+    "tutorial": {
+        "stepNamed": "Tutoriel {step} sur {steps} : {name}",
+        "stepOf": "Tutoriel {step} sur {steps}",
+        "singleSolved": "Tutoriel terminé !",
+        "singleMissed": "Pas cette fois, mais vous avez compris le principe.",
+        "title": "Apprendre {name}",
+        "step": "Casse-tête {step} sur {steps}",
+        "goTo": "Aller au casse-tête {step}",
+        "frameTitle": "Casse-tête d'entraînement {name} {step} sur {steps}",
+        "solved": "Résolu ! Prêt pour le suivant ?",
+        "next": "Casse-tête suivant",
+        "allDone": "Vous les avez tous résolus. Vous êtes prêt pour le vrai !",
+        "missed": "Pas cette fois. Prêt pour le suivant ?",
+        "practiceDone": "L'entraînement est terminé. Vous êtes prêt pour le vrai !",
+        "start": "C'est parti",
+        "brief": {
+            "crossword": {
+                "1": {
+                    "title": "Répondez aux indices",
+                    "text": "Lisez l'indice, puis tapez la réponse dans la grille. Le numéro d'une case indique où commence la réponse."
+                },
+                "2": {
+                    "title": "Horizontal et vertical",
+                    "text": "Les réponses vont à l'horizontale ou à la verticale et partagent des lettres là où elles se croisent : chaque réponse aide pour la suivante."
+                },
+                "3": {
+                    "title": "Commencez par le plus sûr",
+                    "text": "Certains indices jouent sur les mots. Remplissez d'abord ce dont vous êtes sûr : ces lettres vous aideront pour le reste."
+                }
+            },
+            "sudoku": {
+                "1": {
+                    "title": "Chaque chiffre une fois",
+                    "text": "Remplissez la grille pour que chaque ligne, colonne et bloc contienne les chiffres 1 à 4 une seule fois. Touchez une case, puis un chiffre."
+                },
+                "2": {
+                    "title": "Une grille plus grande",
+                    "text": "Maintenant, c'est de 1 à 6. Chaque bloc fait 3 cases de large et 2 de haut, et doit toujours contenir chaque chiffre une fois."
+                },
+                "3": {
+                    "title": "Une seule place possible",
+                    "text": "Choisissez un chiffre et regardez un bloc où il manque encore. Les lignes et colonnes qui le contiennent déjà éliminent des cases, et souvent il n'en reste qu'une. Bloqué ? Touchez l'ampoule pour une étape."
+                }
+            },
+            "takuzu": {
+                "1": {
+                    "title": "Deux symboles",
+                    "text": "Remplissez chaque case avec l'un des deux symboles : touchez une case pour le changer. Chaque ligne et colonne doit en avoir autant de chaque, sans jamais trois identiques à la suite."
+                },
+                "2": {
+                    "title": "Repérez les paires",
+                    "text": "Deux identiques côte à côte ? Les cases à chaque bout doivent être l'autre symbole. Pareil pour une case entre deux identiques."
+                },
+                "3": {
+                    "title": "= et ×",
+                    "text": "Un = entre deux cases signifie qu'elles ont le même symbole, et un × qu'elles sont différentes. Utilisez ces signes avec les règles que vous connaissez pour terminer la grille."
+                }
+            },
+            "traintracks": {
+                "1": {
+                    "title": "Reliez A à B",
+                    "text": "Posez une seule voie de A à B. Les nombres indiquent combien de cases de chaque ligne et colonne ont des rails. Touchez une case pour choisir une pièce."
+                },
+                "2": {
+                    "title": "Comptez les rails",
+                    "text": "Quand une ligne ou une colonne a tous ses rails, ses autres cases restent vides. Servez-vous-en pour éliminer des cases."
+                },
+                "3": {
+                    "title": "Suivez le tracé",
+                    "text": "Partez des gares et de la pièce donnée, et déduisez où la voie doit passer. Elle ne se croise jamais et ne se divise pas."
+                }
+            },
+            "gridfill": {
+                "1": {
+                    "title": "Formez les blocs",
+                    "text": "Découpez la grille en rectangles. Chaque bloc contient un seul nombre, qui indique combien de cases il couvre. Faites glisser sur les cases pour tracer un bloc."
+                },
+                "2": {
+                    "title": "Choisissez la forme",
+                    "text": "Un 4 peut être un carré ou une ligne de quatre. Choisissez une forme qui ne couvre pas un autre nombre."
+                },
+                "3": {
+                    "title": "Remplissez la grille",
+                    "text": "Chaque case doit appartenir à un bloc. Commencez par les nombres qui ne rentrent que d'une seule façon."
+                }
+            },
+            "headcoach": {
+                "1": {
+                    "title": "Suivez la chaîne",
+                    "text": "Partez du nombre affiché, puis appliquez chaque étape à votre dernière réponse. Tapez chaque réponse sur le pavé numérique."
+                },
+                "2": {
+                    "title": "Faites vos calculs",
+                    "text": "Besoin de réfléchir ? Touchez le crayon pour prendre des notes. Une mauvaise réponse est signalée, et vous pouvez réessayer."
+                },
+                "3": {
+                    "title": "La chaîne complète",
+                    "text": "Huit étapes, comme dans le jeu du jour. Faites-les une par une, à partir de votre dernière réponse."
+                }
+            },
+            "huedoku": {
+                "1": {
+                    "title": "Chaque couleur une fois",
+                    "text": "Remplissez la grille pour que chaque ligne, colonne et bloc contienne les quatre couleurs une seule fois. Touchez une case, puis une couleur."
+                },
+                "2": {
+                    "title": "Six couleurs",
+                    "text": "Il y a maintenant six couleurs, et chaque bloc fait 3 cases de large et 2 de haut. Chaque ligne, colonne et bloc doit toujours contenir chaque couleur une fois."
+                },
+                "3": {
+                    "title": "Une seule place possible",
+                    "text": "Choisissez une couleur et regardez un bloc où elle manque encore. Les lignes et colonnes qui la contiennent déjà éliminent des cases, et souvent il n'en reste qu'une. Bloqué ? Touchez l'ampoule pour une étape."
+                }
+            },
+            "guessword": {
+                "1": {
+                    "title": "Vert, c'est juste",
+                    "text": "Trouvez le mot caché de cinq lettres en six essais. Tapez d'abord CHAIN et appuyez sur Entrée. Les lettres vertes sont justes et bien placées : laissez-les où elles sont. Les lettres grises ne sont pas dans le mot."
+                },
+                "2": {
+                    "title": "Jaune, à déplacer",
+                    "text": "Commencez par EARTH. Les lettres jaunes sont dans le mot mais mal placées : essayez-les ailleurs."
+                },
+                "3": {
+                    "title": "Les deux couleurs",
+                    "text": "Commencez par BEARD. Gardez les vertes à leur place et déplacez les jaunes jusqu'à ce que le mot tienne."
+                }
+            },
+            "wordwheel": {
+                "1": {
+                    "title": "Écrivez avec la roue",
+                    "text": "Touchez des lettres pour former des mots de quatre lettres ou plus, puis appuyez sur Entrée. Chaque mot doit contenir la lettre du centre. Il y a cinq mots anglais à trouver, et l'un d'eux utilise toutes les lettres."
+                },
+                "2": {
+                    "title": "Les doubles comptent deux fois",
+                    "text": "Chaque case ne sert qu'une fois par mot : une lettre présente deux fois sur la roue peut donc servir deux fois. Trouvez les quatre mots."
+                },
+                "3": {
+                    "title": "Une roue complète",
+                    "text": "Cinq mots à trouver. Les pluriels ne comptent pas. Bloqué ? Mélangez les lettres pour les voir autrement."
+                }
+            },
+            "wordsearch": {
+                "1": {
+                    "title": "Trouvez les mots",
+                    "text": "Faites glisser de la première lettre d'un mot jusqu'à la dernière. Ici, les mots se lisent horizontalement ou verticalement. Trouvez les trois de la liste."
+                },
+                "2": {
+                    "title": "Dans tous les sens",
+                    "text": "Les mots peuvent aussi s'écrire à l'envers ou en diagonale. Trouvez les quatre."
+                },
+                "3": {
+                    "title": "Une grille plus grande",
+                    "text": "Six mots cachés dans tous les sens. Bloqué ? Touchez un mot de la liste pour voir sa première lettre."
+                }
+            },
+            "codeword": {
+              "1": {
+                "title": "Les chiffres sont des lettres",
+                "text": "Chaque numéro correspond à une lettre, et le même numéro est toujours la même lettre. T, I, L et E sont déjà placés. Complétez le reste pour terminer les mots."
+              },
+              "2": {
+                "title": "Même numéro, même lettre",
+                "text": "Quand un numéro apparaît deux fois de suite, sa lettre aussi, comme le double E et le double T ici. Servez-vous-en pour terminer les mots."
+              },
+              "3": {
+                "title": "Partez de ce que vous savez",
+                "text": "Les mots dont la plupart des lettres sont déjà placées sont les plus faciles à trouver. Commencez par eux, puis utilisez chaque nouvelle lettre pour finir le reste."
+              }
+            }
+        }
+    },
+    "assistFeedback": {
+        "title": "Combien d'aide voulez-vous la prochaine fois ?",
+        "letters": {
+            "title": "Combien de lettres d'aide voulez-vous choisir la prochaine fois ?",
+            "used": "Vous avez choisi {n} lettre d'aide cette fois. | Vous avez choisi {n} lettres d'aide cette fois.",
+            "unused": "Vous avez joué sans lettres d'aide cette fois.",
+            "choice": "{label} ({n})"
+        },
+        "choices": {
+            "none": "Aucune",
+            "fewer": "Moins",
+            "same": "Pareil",
+            "more": "Plus",
+            "alotmore": "Beaucoup plus"
+        }
+    },
+    "insights": {
+        "title": "Ce que nous avons appris sur vous",
+        "intro": "Nous adaptons le site à votre façon de jouer. Voici ce que nous pensons actuellement — supprimez ce qui ne vous correspond pas et nous cesserons de l'utiliser.",
+        "groups": {
+            "likes": "Les puzzles que vous semblez aimer",
+            "time": "Quand vous jouez",
+            "difficulty": "Difficulté",
+            "help": "Réglages d'aide",
+            "told": "Ce que vous nous avez dit"
+        },
+        "likes": "{name} — joué {count} fois ces 30 derniers jours | {name} — joué {count} fois ces 30 derniers jours",
+        "time": {
+            "morning": "Vous jouez généralement à {name} le matin",
+            "afternoon": "Vous jouez généralement à {name} l'après-midi",
+            "evening": "Vous jouez généralement à {name} le soir",
+            "night": "Vous jouez généralement à {name} tard le soir"
+        },
+        "lean": {
+            "harder": {
+                "rating": "{name} vous a semblé trop facile la dernière fois, nous privilégions donc ses niveaux plus difficiles",
+                "purist": "Vous résolvez {name} sans aide, nous privilégions donc ses niveaux plus difficiles",
+                "improver": "Vous êtes de plus en plus rapide à {name}, nous privilégions donc ses niveaux plus difficiles"
+            },
+            "easier": {
+                "rating": "{name} vous a semblé difficile la dernière fois, nous privilégions donc ses niveaux plus faciles",
+                "hintHunter": "Vous utilisez souvent l'aide sur {name}, nous privilégions donc ses niveaux plus faciles",
+                "newcomer": "Vous débutez à {name}, nous privilégions donc ses niveaux plus faciles"
+            }
+        },
+        "assists": {
+            "crossword": "{name} : vous choisissez {level} lettres à placer",
+            "codeword": "{name} : vous choisissez {level} lettres à placer",
+            "sudoku": "{name} : nous remplissons {level} % des cases avant de commencer"
+        },
+        "boosted": {
+            "words": "Vous avez demandé plus de jeux de lettres",
+            "numbers": "Vous avez demandé plus de jeux de chiffres",
+            "logic": "Vous avez demandé plus de jeux de logique",
+            "quiz": "Vous avez demandé plus de quiz"
+        },
+        "tour": "Vous avez choisi {picks} pendant la visite",
+        "remove": "Supprimer",
+        "removeLabel": "Supprimer : {text}",
+        "removeAll": "Tout supprimer",
+        "empty": "Rien pour l'instant — jouez à quelques puzzles et nous commencerons à adapter le site pour vous.",
+        "allRemoved": "Rien à afficher — vous avez supprimé tout ce que nous avions supposé.",
+        "restore": "Rétablir {count} élément supprimé | Rétablir {count} éléments supprimés"
+    }
+}

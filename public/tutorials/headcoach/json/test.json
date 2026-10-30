@@ -1,0 +1,78 @@
+
+{
+    "meta":
+    {
+        "title": "Head Coach No 256",
+        "difficulty": "Medium",
+        "date": "23 Jan 2023",
+        "id": 256,
+        "type": "headcoach",
+        "author": "Brainiac",
+        "number": 256
+    },
+    "settings":
+    {
+        "colCount": 0,
+        "rowCount": 0,
+        "allowedValues": "1234567890",
+        "solution": "57"
+    },
+    "cluedata": [
+        {
+            "name": null,
+            "difficulty": "Easy",
+            "start": 0,
+            "answer": 57,
+            "data": [
+                {
+                    "clue": "&divide; 4",
+                    "result": 14
+                },
+                {
+                    "clue": "1\/2 of it",
+                    "result": 7
+                },
+                {
+                    "clue": "square it",
+                    "result": 49
+                },
+                {
+                    "clue": "&divide; 7",
+                    "result": 7
+                },
+                {
+                    "clue": "+ 31",
+                    "result": 38
+                },
+                {
+                    "clue": "1\/2 of it",
+                    "result": 19
+                },
+                {
+                    "clue": "- 15",
+                    "result": 4
+                },
+                {
+                    "clue": "cube it",
+                    "result": 64
+                },
+                {
+                    "clue": "+ 12",
+                    "result": 76
+                },
+                {
+                    "clue": "75% of it",
+                    "result": 57
+                }
+            ]
+        }
+    ],
+    "copy":
+    {
+        "date-publish": "Wednesday, 10 April 2019",
+        "date-publish-email": "10 April 2019",
+        "date-publish-analytics": "2019\/04\/10 13:36 Wednesday",
+        "date-release": "Wednesday, 10 April 2019",
+        "date-solution": "Wednesday, 10 April 2019"
+    }
+}

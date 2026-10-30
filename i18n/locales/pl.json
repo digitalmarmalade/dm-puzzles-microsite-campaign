@@ -1,0 +1,1592 @@
+{
+    "auth": {
+        "bannerFreeTitle": "Pierwsza dzisiejsza łamigłówka bez konta",
+        "bannerFreeBody": "Załóż darmowe konto, aby grać we wszystkie łamigłówki i zachować serię oraz ustawienia na każdym urządzeniu.",
+        "freePlayUsed": "Aby grać dalej, zaloguj się lub załóż darmowe konto. Zachowasz też serię i ustawienia na każdym urządzeniu.",
+        "loginPrompt": "Zaloguj się, aby zachować serię i ustawienia na każdym urządzeniu.",
+        "loginToPlay": "Musisz być zalogowany, aby zagrać w {name}",
+        "loginToFriends": "Musisz być zalogowany, aby grać w lidze znajomych",
+        "loginToAccount": "Musisz być zalogowany, aby wyświetlić swoje konto",
+        "loginToStats": "Musisz być zalogowany, aby wyświetlić swoje statystyki",
+        "bannerText": "Zaloguj się lub załóż darmowe konto, aby śledzić postępy i grać we wszystkie łamigłówki.",
+        "logIn": "Zaloguj się",
+        "signUp": "Załóż konto",
+        "backHome": "Powrót do łamigłówek",
+        "locked": "Zablokowane",
+        "loggedIn": "Jesteś zalogowany",
+        "loggedOut": "Zostałeś wylogowany"
+    },
+    "common": {
+        "refreshingPuzzles": "Odświeżamy Twoje łamigłówki…",
+        "cancel": "Anuluj",
+        "submit": "Wyślij",
+        "back": "Wstecz",
+        "update": "Aktualizuj",
+        "enter": "Wprowadź",
+        "select": "Wybierz",
+        "or": "LUB",
+        "create": "Utwórz",
+        "join": "Dołącz",
+        "ok": "OK",
+        "close": "Zamknij",
+        "errSelectPuzzles": "Wybierz kilka łamigłówek",
+        "notifications": "Powiadomienia",
+        "updateAvailable": "Dostępna aktualizacja – dotknij, aby odświeżyć"
+    },
+    "nav": {
+        "home": "Strona główna",
+        "puzzles": "Łamigłówki",
+        "achievements": "Osiągnięcia",
+        "stats": "Statystyki",
+        "friends": "Znajomi",
+        "account": "Konto",
+        "menu": "Menu",
+        "toggleTheme": "Przełącz motyw"
+    },
+    "language": {
+        "label": "Język"
+    },
+    "footer": {
+        "copyright": "© {year} Digital Marmalade",
+        "backToTop": "Powrót do góry"
+    },
+    "home": {
+        "welcome": {
+            "title": "Nowy tutaj?",
+            "body": "Zacznij od razu albo obejrzyj 30-sekundowy przewodnik, aby dostosować stronę.",
+            "tour": "Zobacz przewodnik",
+            "dismiss": "Później"
+        },
+        "badges": {
+            "mostPlayed": "Najczęściej grane",
+            "streak": "Passa {count}",
+            "lastTime": "Grane ostatnim razem"
+        },
+        "todaysPuzzles": "Dzisiejsze łamigłówki",
+        "allPuzzles": "Wszystkie łamigłówki",
+        "yourFavourites": "Twoje ulubione",
+        "forYou": "Dla Ciebie",
+        "yourPuzzles": {
+            "title": "Twoje łamigłówki",
+            "reasons": {
+                "favourite": "Jedna z Twoich ulubionych",
+                "boosted": "Prosiłeś o więcej takich",
+                "stepUp": "Gotowy na wyższy poziom",
+                "morning": "Twoja zwykła poranna łamigłówka",
+                "afternoon": "Twoja zwykła popołudniowa łamigłówka",
+                "evening": "Twoja zwykła wieczorna łamigłówka",
+                "night": "Twoja zwykła późnowieczorna łamigłówka",
+                "played": "Często w to grasz",
+                "streak": "Kontynuuj passę",
+                "tour": "Pasuje do wyborów z przewodnika",
+                "missed": "Pominięta?",
+                "archive": "Jedna z archiwum",
+                "fromDay": "Łamigłówka – {day}",
+                "catchUp": "Nadrób tę",
+                "moreLike": "Podobała ci się dzisiejsza? Spróbuj tej",
+                "worthALook": "Warto spróbować",
+                "yesterday": "Wczorajsza łamigłówka",
+                "resume": "Kontynuuj tam, gdzie skończyłeś",
+                "likeCategory": {
+                    "words": "Bo lubisz gry słowne",
+                    "numbers": "Bo lubisz gry liczbowe",
+                    "logic": "Bo lubisz gry logiczne",
+                    "quiz": "Bo lubisz quizy"
+                }
+            },
+            "archiveTitle": "{name} nr {number}",
+            "allDone": "Na dziś wszystko zrobione",
+            "allDoneBody": "Dzisiejszy wybór ukończony. Może coś z archiwum?",
+            "allDoneCta": "Przeglądaj archiwum"
+        },
+        "favourite": "Dodaj do ulubionych",
+        "unfavourite": "Usuń z ulubionych",
+        "viewArchive": "Zobacz archiwum",
+        "archive": "Archiwum",
+        "latestCompleted": "Ostatnio ukończona łamigłówka",
+        "hideVariant": "Ukryj ten wariant",
+        "unhideVariant": "Pokaż ten wariant",
+        "showHidden": "Pokaż {count} ukrytą łamigłówkę | Pokaż {count} ukrytych łamigłówek",
+        "hideHidden": "Ukryj {count} ukrytą łamigłówkę | Ukryj {count} ukrytych łamigłówek",
+        "variantHidden": "{name} ukryty",
+        "allHidden": "Wszystkie łamigłówki są ukryte.",
+        "allHiddenCategory": "Wszystkie łamigłówki w tej kategorii są ukryte.",
+        "filterByType": "Filtruj według typu",
+        "levelCount": "{count} poziom | {count} poziomy",
+        "completedCount": "Ukończono {count} z {total}",
+        "showLevels": "Pokaż poziomy dla {name}",
+        "showFront": "Powrót do karty {name}",
+        "categories": {
+            "all": "Wszystkie",
+            "words": "Słowne",
+            "numbers": "Liczbowe",
+            "logic": "Logiczne",
+            "quiz": "Quiz",
+            "quick": "Szybkie"
+        }
+    },
+    "nudge": {
+        "label": "Sugestia",
+        "no": "Nie, dziękuję",
+        "levelPrompt": "Świetnie idzie ci {family} — spróbujesz {name}?",
+        "levelYes": "Tak, spróbujmy",
+        "levelDone": "{name} jest teraz w twoich ulubionych."
+    },
+    "statsTeaser": {
+        "title": "Zbuduj swój profil gracza",
+        "achievements": "Czekające na ciebie osiągnięcia",
+        "signIn": "Zaloguj się, aby śledzić statystyki i zachować serię oraz ustawienia na każdym urządzeniu.",
+        "play": "Zagraj w dzisiejsze łamigłówki",
+        "body": "Rozwiąż kilka łamigłówek, a tutaj pojawią się twoje statystyki, serie i profil gracza."
+    },
+    "guide": {
+        "slides": {
+            "title": "Jak działa Sticky Puzzles",
+            "goTo": "Slajd {n}",
+            "back": "Wstecz",
+            "next": "Dalej",
+            "close": "Zamknij",
+            "tour": "Oprowadź mnie",
+            "tryIt": "Wypróbuj",
+            "daily": {
+                "title": "Nowe łamigłówki każdego dnia",
+                "text": "Świeże łamigłówki każdego ranka, od krzyżówek po siatki logiczne. Coś cię ominęło? Czeka w archiwum."
+            },
+            "pick": {
+                "title": "Wybierz swoje łamigłówki",
+                "text": "Dotknij tych, które lubisz. Ulubione trafią na początek Twoich łamigłówek. Dotknij oka, aby ukryć te, których nie chcesz widzieć."
+            },
+            "streak": {
+                "title": "Utrzymaj serię",
+                "text": "Graj codziennie w dowolną łamigłówkę, aby wydłużać serię."
+            },
+            "profile": {
+                "title": "Zbuduj swój profil gracza",
+                "text": "Zdobywaj osiągnięcia i obserwuj, jak rosną twoje statystyki."
+            },
+            "free": {
+                "title": "Łamigłówka bez konta",
+                "text": "Pierwsza łamigłówka każdego dnia nie wymaga konta. Załóż darmowe konto, aby grać we wszystkie i zachować postępy na każdym urządzeniu."
+            }
+        },
+        "tour": {
+            "label": "Przewodnik",
+            "count": "{n} z {total}",
+            "end": "Zakończ",
+            "next": "Dalej",
+            "done": "Gotowe",
+            "play": "Graj",
+            "later": "Nie teraz",
+            "yourPuzzles": {
+                "title": "Twoje łamigłówki",
+                "body": "Wybraliśmy dla Ciebie te łamigłówki. Im więcej grasz, tym lepszy będzie wybór."
+            },
+            "today": {
+                "title": "Dzisiejsze łamigłówki",
+                "body": "Codziennie nowy zestaw. Dotknij ♡ na łamigłówce, aby dodać ją do ulubionych."
+            },
+            "summary": {
+                "title": "Seria i wyzwania",
+                "body": "Graj codziennie, aby wydłużać serię, i zaliczaj wyzwania dzienne i tygodniowe."
+            },
+            "all": {
+                "title": "Wszystkie łamigłówki",
+                "body": "Przeglądaj wszystkie łamigłówki i ich archiwa. Dotknij ⓘ, aby zobaczyć zasady."
+            },
+            "menu": {
+                "title": "Menu",
+                "body": "Tu znajdziesz statystyki, konto i ustawienia. Zajrzyjmy."
+            },
+            "stats": {
+                "title": "Twoje statystyki",
+                "body": "Zobacz, jak ci idzie w tym miesiącu, w tym roku i od początku."
+            },
+            "free": {
+                "title": "Bez konta",
+                "body": "Pierwszą łamigłówkę każdego dnia rozwiążesz bez konta. Załóż darmowe, aby grać we wszystkie."
+            },
+            "ready": {
+                "title": "Gotowy do gry?",
+                "body": "To wszystko. Wybierz łamigłówkę, aby zacząć.",
+                "bodyWith": "Na początek: dzisiejsza łamigłówka {name}."
+            }
+        },
+        "tip": {
+            "dismiss": "Rozumiem",
+            "yourPuzzles": "Wybraliśmy dla Ciebie te łamigłówki."
+        }
+    },
+    "announcement": {
+        "label": "Nowa łamigłówka: {name}",
+        "kicker": "Nowa łamigłówka",
+        "play": "Zagraj teraz",
+        "learn": "Naucz się grać",
+        "dismiss": "Zamknij",
+        "body": {
+            "takuzu": "Wypełnij siatkę dwoma symbolami. Każdy wiersz i kolumna muszą być zrównoważone i nigdy trzy takie same obok siebie."
+        }
+    },
+    "wrapped": {
+        "banner": {
+            "kicker": "Podsumowanie:",
+            "title": "{month}",
+            "body": "Co działo się w miesiącu {month}?",
+            "cta": "Zobacz",
+            "dismiss": "Ukryj"
+        },
+        "link": {
+            "cta": "Obejrzyj ponownie"
+        },
+        "share": {
+            "button": "Udostępnij",
+            "text": "Mój {month} w łamigłówkach",
+            "footer": "Graj na {host}",
+            "voice": {
+                "solved": {
+                    "kicker": "Moje rozwiązane"
+                },
+                "days": {
+                    "kicker": "Moje dni gry"
+                },
+                "perfect": {
+                    "body": "Codzienna gra przez cały {month}. Co za wytrwałość!"
+                },
+                "minutes": {
+                    "kicker": "Mój czas gry"
+                },
+                "top": {
+                    "kicker": "Moje najczęściej grane"
+                },
+                "improved": {
+                    "time": {
+                        "within": "Moje ostatnie 3: średnio {now}, pierwsze 3: {before}"
+                    },
+                    "words": {
+                        "within": "Moje ostatnie 3: {now}% słów, pierwsze 3: {before}%"
+                    }
+                },
+                "assists": {
+                    "crossword": {
+                        "on": {
+                            "body": "Na początku miesiąca ({month}) bez nich, teraz wybieram {to} liter"
+                        }
+                    },
+                    "codeword": {
+                        "on": {
+                            "body": "Na początku miesiąca ({month}) bez nich, teraz wybieram {to} liter"
+                        }
+                    },
+                    "sudoku": {
+                        "on": {
+                            "body": "Na początku miesiąca ({month}) bez nich, teraz zaczynam z {to}% wypełnionych pól"
+                        }
+                    }
+                },
+                "challenges": {
+                    "kicker": "Moje ukończone"
+                },
+                "medal": {
+                    "kicker": "Zdobywam"
+                }
+            }
+        },
+        "story": {
+            "label": "Podsumowanie: {month}",
+            "close": "Zamknij",
+            "prev": "Poprzedni",
+            "next": "Następny",
+            "slideOf": "Slajd {n} z {total}"
+        },
+        "intro": {
+            "body": "Spójrzmy wstecz na miesiąc z łamigłówkami."
+        },
+        "solved": {
+            "kicker": "Rozwiązane",
+            "unit": "łamigłówka | łamigłówki"
+        },
+        "days": {
+            "kicker": "Dni gry",
+            "unit": "dzień z {total} w miesiącu {month} | dni z {total} w miesiącu {month}"
+        },
+        "perfect": {
+            "kicker": "Każdego dnia",
+            "title": "Idealny miesiąc",
+            "body": "Grano każdego dnia w miesiącu: {month}. Co za wytrwałość!"
+        },
+        "minutes": {
+            "kicker": "Czas gry",
+            "unit": "minuta | minuty",
+            "hours": "To {hours} godz. {minutes} min treningu dla mózgu."
+        },
+        "top": {
+            "kicker": "Najczęściej grane",
+            "body": "{count} gra | {count} gry"
+        },
+        "rising": {
+            "kicker": "Na fali wznoszącej",
+            "body": "{count} gra, wcześniej {prev} w miesiącu {month} | {count} gry, wcześniej {prev} w miesiącu {month}",
+            "new": "{count} gra, nowość w tym miesiącu | {count} gry, nowość w tym miesiącu"
+        },
+        "falling": {
+            "kicker": "Na dalszym planie",
+            "body": "{count} gra, wcześniej {prev} w miesiącu {month} | {count} gry, wcześniej {prev} w miesiącu {month}",
+            "none": "Brak gier w tym miesiącu, wcześniej {prev} w miesiącu {month}"
+        },
+        "improved": {
+            "time": {
+                "kicker": "Coraz szybciej",
+                "headline": "Średnio o {saved} szybciej",
+                "month": "Średnio {now}, wcześniej {before} w miesiącu {month}",
+                "within": "Ostatnie 3: średnio {now}, pierwsze 3: {before}"
+            },
+            "words": {
+                "kicker": "Więcej znalezionych słów",
+                "headline": "+{saved} pkt",
+                "month": "Znaleziono {now}% słów, wcześniej {before}% w miesiącu {month}",
+                "within": "Ostatnie 3: {now}% słów, pierwsze 3: {before}%"
+            }
+        },
+        "help": {
+            "less": {
+                "kicker": "Bez pomocy",
+                "unit": "łamigłówek rozwiązanych bez pomocy",
+                "body": "Wcześniej {prev}% w miesiącu {month}"
+            },
+            "more": {
+                "kicker": "Mała pomoc",
+                "unit": "łamigłówek rozwiązanych z niewielką pomocą",
+                "body": "Wcześniej {prev}% w miesiącu {month} — od tego właśnie jest"
+            }
+        },
+        "assists": {
+            "crossword": {
+                "fewer": {
+                    "kicker": "Mniej wybranych liter",
+                    "body": "Od {from} liter na początku {month} do {to}"
+                },
+                "off": {
+                    "kicker": "Litery już niepotrzebne",
+                    "body": "Od {from} liter na początku {month} do zera"
+                },
+                "more": {
+                    "kicker": "Więcej wybranych liter",
+                    "body": "Od {from} liter na początku {month} do {to}"
+                },
+                "on": {
+                    "kicker": "Mały fory",
+                    "body": "Zacząłeś {month} bez nich, a teraz wybierasz {to} liter"
+                }
+            },
+            "codeword": {
+                "fewer": {
+                    "kicker": "Mniej wybranych liter",
+                    "body": "Od {from} liter na początku {month} do {to}"
+                },
+                "off": {
+                    "kicker": "Litery już niepotrzebne",
+                    "body": "Od {from} liter na początku {month} do zera"
+                },
+                "more": {
+                    "kicker": "Więcej wybranych liter",
+                    "body": "Od {from} liter na początku {month} do {to}"
+                },
+                "on": {
+                    "kicker": "Mały fory",
+                    "body": "Zacząłeś {month} bez nich, a teraz wybierasz {to} liter"
+                }
+            },
+            "sudoku": {
+                "fewer": {
+                    "kicker": "Mniej pól startowych",
+                    "body": "Od {from}% wypełnionych pól na początku {month} do {to}%"
+                },
+                "off": {
+                    "kicker": "Pola startowe już niepotrzebne",
+                    "body": "Od {from}% wypełnionych pól na początku {month} do zera"
+                },
+                "more": {
+                    "kicker": "Więcej pól startowych",
+                    "body": "Od {from}% wypełnionych pól na początku {month} do {to}%"
+                },
+                "on": {
+                    "kicker": "Mały fory",
+                    "body": "Zacząłeś {month} bez nich, a teraz zaczynasz z {to}% wypełnionych pól"
+                }
+            }
+        },
+        "challenges": {
+            "kicker": "Ukończyłeś",
+            "unit": "wyzwanie | wyzwania"
+        },
+        "outro": {
+            "title": "Tak minął {month}",
+            "body": "Za kolejny świetny miesiąc z łamigłówkami!",
+            "cta": "Zobacz wszystkie statystyki",
+            "replay": "Obejrzyj ponownie"
+        },
+        "medal": {
+            "kicker": "Zdobywasz",
+            "title": "{tier} za {month}",
+            "solved": "Rozwiązane łamigłówki: {count} | Rozwiązane łamigłówki: {count}"
+        }
+    },
+    "profileAnnounce": {
+        "changed": "Twój profil gracza się zmienił",
+        "cta": "Zobacz statystyki"
+    },
+    "achievements": {
+        "title": "Osiągnięcia",
+        "unlockedToast": "Osiągnięcie odblokowane!",
+        "challengeTitle": "Wyzwania",
+        "timesAchieved": "{count} raz | {count} razy",
+        "descPuzzles": "Ukończ {target} łamigłówek",
+        "descPuzzles1": "Ukończ swoją pierwszą łamigłówkę",
+        "descChallenges": "Ukończ {target} wyzwań",
+        "descChallenges1": "Ukończ swoje pierwsze wyzwanie",
+        "descVariety": "Wypróbuj {target} typów łamigłówek",
+        "descVarietyAll": "Wypróbuj każdy typ łamigłówki",
+        "descStreak": "Osiągnij passę {target} dni",
+        "descDays": "Zagraj w {target} różnych dni",
+        "titlePuzzles1": "Pierwsza łamigłówka",
+        "titlePuzzles10": "Dobry początek",
+        "titlePuzzles50": "Regularny gracz",
+        "titlePuzzles100": "Miłośnik łamigłówek",
+        "titleChallenges1": "Wyzwanie przyjęte",
+        "titleChallenges10": "Mistrz wyzwań",
+        "titleChallenges50": "Władca wyzwań",
+        "titleVariety3": "Odkrywca",
+        "titleVariety5": "Wszechstronny",
+        "titleVarietyAll": "Perfekcjonista",
+        "titleStreak3": "W formie",
+        "titleStreak7": "Tygodniowy wojownik",
+        "titleStreak30": "Mistrz miesiąca",
+        "titleDays7": "Zaangażowany",
+        "titleDays30": "Oddany",
+        "titleChallenges100": "Legenda wyzwań",
+        "titleClean10": "Snajper",
+        "titleClean50": "Nietykalny",
+        "titleClean100": "Bezbłędnie",
+        "descClean": "Ukończ {target} łamigłówek bez ani jednego sprawdzenia czy odkrycia",
+        "earnedCount": "Zdobyte: {count}",
+        "nextUp": "Następne cele",
+        "nextUpEmpty": "Masz wszystkie odznaki z każdej serii. Imponujące.",
+        "earned": "Zdobyte",
+        "earnedEmpty": "Rozwiąż pierwszą łamigłówkę, aby zdobyć pierwszą odznakę.",
+        "seeAll": "Zobacz wszystkie odznaki",
+        "seeAllEarned": "Zobacz wszystkie zdobyte ({count})",
+        "secretToast": "Znaleziono sekretną odznakę!",
+        "titleArchive10": "Podróżnik w czasie",
+        "titleArchive50": "Archiwista",
+        "titleArchive100": "Historyk",
+        "descArchive": "Rozwiąż łamigłówki z archiwum: {target}",
+        "titleBests5": "Rekord życiowy",
+        "titleBests25": "Pogromca rekordów",
+        "descBests": "Pobij swój najlepszy czas: {target} razy",
+        "titleClimber1": "Na szczycie drabiny",
+        "descClimber1": "Ukończ najtrudniejszy poziom rodziny łamigłówek",
+        "titleClimberAll": "Szczyt",
+        "descClimberAll": "Ukończ najtrudniejszy poziom każdej rodziny łamigłówek",
+        "tiers": {
+            "1": "Brąz",
+            "2": "Srebro",
+            "3": "Złoto"
+        },
+        "month": {
+            "title": "Cele na {month}",
+            "daysLeft": "Został {count} dzień | Zostało {count} dni",
+            "progress": "{current} z {target}",
+            "tierAt": "{tier} {target}",
+            "tierEveryDay": "{tier} codziennie",
+            "goals": {
+                "puzzles": "Rozwiązane łamigłówki",
+                "days": "Dni gry",
+                "variety": "Każdy rodzaj łamigłówki",
+                "clean": "Czyste rozwiązania"
+            },
+            "toastTitle": "Cel miesiąca osiągnięty!",
+            "toastBody": "{goal}: {tier} – {month}"
+        },
+        "months": {
+            "title": "Twoje miesiące",
+            "inProgress": "W toku",
+            "played": "Grano",
+            "none": "Bez gry",
+            "seeAll": "Zobacz wszystkie"
+        },
+        "secrets": {
+            "title": "Sekretne",
+            "hint": "Niektóre odznaki pozostają ukryte, dopóki ich nie znajdziesz.",
+            "more": "Do znalezienia: {count} | Do znalezienia: {count}"
+        },
+        "secret": {
+            "nightOwl": {
+                "title": "Nocny marek",
+                "desc": "Rozwiąż łamigłówkę po północy",
+                "done": "Rozwiązano łamigłówkę po północy"
+            },
+            "earlyBird": {
+                "title": "Ranny ptaszek",
+                "desc": "Rozwiąż łamigłówkę przed 7:00",
+                "done": "Rozwiązano łamigłówkę przed 7:00"
+            },
+            "comeback": {
+                "title": "Witaj ponownie",
+                "desc": "Wróć po 30 dniach przerwy",
+                "done": "Powrót po 30 dniach przerwy"
+            },
+            "lifeline": {
+                "title": "Koło ratunkowe",
+                "desc": "Uratuj swoją serię",
+                "done": "Uratowano serię"
+            },
+            "fullHouse": {
+                "title": "Komplet",
+                "desc": "Ukończ wszystkie łamigłówki w dniu ich premiery",
+                "done": "Ukończono wszystkie łamigłówki w dniu ich premiery"
+            },
+            "ghost": {
+                "title": "Buu!",
+                "desc": "Rozwiąż łamigłówkę w Halloween",
+                "done": "Rozwiązano łamigłówkę w Halloween"
+            },
+            "spotless": {
+                "title": "Bez skazy",
+                "desc": "Rozwiąż 10 łamigłówek z rzędu bez sprawdzania, odkrywania i podpowiedzi",
+                "done": "Rozwiązano 10 łamigłówek z rzędu bez sprawdzania, odkrywania i podpowiedzi"
+            },
+            "weekend": {
+                "title": "Weekendowy relaks",
+                "desc": "Rozwiąż 5 łamigłówek w jeden weekend",
+                "done": "Rozwiązano 5 łamigłówek w jeden weekend"
+            },
+            "christmas": {
+                "title": "Świąteczna łamigłówka",
+                "desc": "Rozwiąż łamigłówkę w Boże Narodzenie",
+                "done": "Rozwiązano łamigłówkę w Boże Narodzenie"
+            }
+        },
+        "donePuzzles": "Ukończone łamigłówki: {target}",
+        "donePuzzles1": "Ukończono pierwszą łamigłówkę",
+        "doneChallenges": "Ukończone wyzwania: {target}",
+        "doneChallenges1": "Ukończono pierwsze wyzwanie",
+        "doneVariety": "Wypróbowane rodzaje łamigłówek: {target}",
+        "doneVarietyAll": "Wypróbowano każdy rodzaj łamigłówki",
+        "doneStreak": "Osiągnięto serię {target} dni",
+        "doneDays": "Dni gry: {target}",
+        "doneClean": "Łamigłówki ukończone bez sprawdzania i odkrywania: {target}",
+        "doneArchive": "Rozwiązane łamigłówki z archiwum: {target}",
+        "doneBests": "Pobity najlepszy czas: {target} razy",
+        "doneClimber1": "Ukończono najtrudniejszy poziom rodziny łamigłówek",
+        "doneClimberAll": "Ukończono najtrudniejszy poziom każdej rodziny łamigłówek",
+        "challengeDone": "Ukończone wyzwania: {count} | Ukończone wyzwania: {count}",
+        "allTitle": "Wszystkie odznaki",
+        "earnedTitle": "Twoje odznaki",
+        "earnedOn": "Zdobyto {date}",
+        "tracks": {
+            "puzzles": "Rozwiązane łamigłówki",
+            "streak": "Serie",
+            "days": "Dni gry",
+            "clean": "Czyste rozwiązania",
+            "variety": "Rodzaje łamigłówek",
+            "archive": "Archiwum",
+            "bests": "Rekordy życiowe",
+            "climber": "Wspinacz",
+            "challenges": "Wyzwania",
+            "anniversary": "Staż",
+            "medals": "Medale miesiąca",
+            "golds": "Złote miesiące"
+        },
+        "secretPill": "Sekretna",
+        "titlePuzzles250": "Miłośnik łamigłówek",
+        "titlePuzzles500": "Mistrz łamigłówek",
+        "titlePuzzles1000": "Legenda łamigłówek",
+        "titlePuzzles2500": "Nieśmiertelny łamigłówkowicz",
+        "titleClean250": "Precyzja",
+        "titleClean500": "Nieskazitelność",
+        "titleClean1000": "Perfekcjonista",
+        "titleStreak100": "Seria stu dni",
+        "titleStreak365": "Roczna seria",
+        "titleDays100": "Centurion",
+        "titleDays365": "Rok łamigłówek",
+        "titleDays1000": "Tysiąc dni",
+        "titleArchive250": "Kurator",
+        "titleArchive500": "Strażnik archiwum",
+        "titleBests50": "Błyskawica",
+        "titleBests100": "Nie do zatrzymania",
+        "titleAnniversary1m": "Miesiąc z nami",
+        "titleAnniversary6m": "Pół roku",
+        "titleAnniversary1y": "Pierwsza rocznica",
+        "titleAnniversary2y": "Dwa lata",
+        "titleAnniversary3y": "Trzy lata",
+        "titleAnniversary5y": "Pięć lat",
+        "descAnniversary1m": "Miesiąc od pierwszej łamigłówki",
+        "descAnniversary6m": "Pół roku od pierwszej łamigłówki",
+        "descAnniversary1y": "Rok od pierwszej łamigłówki",
+        "descAnniversary2y": "Dwa lata od pierwszej łamigłówki",
+        "descAnniversary3y": "Trzy lata od pierwszej łamigłówki",
+        "descAnniversary5y": "Pięć lat od pierwszej łamigłówki",
+        "doneAnniversary1m": "Minął miesiąc od pierwszej łamigłówki",
+        "doneAnniversary6m": "Minęło pół roku od pierwszej łamigłówki",
+        "doneAnniversary1y": "Minął rok od pierwszej łamigłówki",
+        "doneAnniversary2y": "Minęły dwa lata od pierwszej łamigłówki",
+        "doneAnniversary3y": "Minęły trzy lata od pierwszej łamigłówki",
+        "doneAnniversary5y": "Minęło pięć lat od pierwszej łamigłówki",
+        "descMedals": "Zdobądź medal miesiąca w różnych miesiącach: {target}",
+        "doneMedals": "Miesiące z medalem: {target}",
+        "descGolds": "Zdobądź złoto w miesiącach: {target}",
+        "doneGolds": "Miesiące ze złotem: {target}",
+        "descGolds1": "Zdobądź złoty medal miesiąca",
+        "doneGolds1": "Zdobyto złoty medal miesiąca"
+    },
+    "stats": {
+        "title": "Statystyki",
+        "puzzleStatistics": "Statystyki łamigłówek",
+        "totalPuzzles": "Ukończone łamigłówki",
+        "puzzleTypes": "Typy łamigłówek",
+        "longestStreak": "Najdłuższa passa",
+        "daysPlayed": "Zagrane dni",
+        "bestDay": "Najlepszy dzień",
+        "thisMonth": "W tym miesiącu",
+        "lastMonth": "W ubiegłym miesiącu",
+        "weeksPlays": "Rozgrywki w tym tygodniu",
+        "thisWeek": "W tym tygodniu",
+        "lastWeek": "W ubiegłym tygodniu",
+        "average90": "Średnia z 90 dni",
+        "dataWindow": "Sumy obejmują całą twoją grę; wykresy pokazują ostatnie 90 dni",
+        "dataWindowAll": "Sumy i wykresy obejmują całą twoją grę",
+        "noData": "Ukończ kilka łamigłówek, aby zobaczyć tutaj swoje statystyki.",
+        "allTime": "Od początku",
+        "period": "Okres",
+        "started": "Rozpoczęte łamigłówki",
+        "completed": "Ukończone łamigłówki",
+        "cleanSolves": "Rozwiązane bez pomocy",
+        "typesPlayed": "Rozegrane typy łamigłówek",
+        "typePlays": "{name}: ukończono {count}",
+        "playsByMonth": "Gry według miesięcy",
+        "playsOverTime": "Gry w czasie",
+        "playsPerMonth": "Gry na miesiąc",
+        "playsPerYear": "Gry na rok",
+        "averageLine": "Średnia"
+    },
+    "profile": {
+        "label": "Profil gracza",
+        "newbie": {
+            "title": "Nowicjusz",
+            "subtitle": "Dopiero zaczynasz."
+        },
+        "fanatic": {
+            "title": "Fan {variant}",
+            "subtitle": "{variant} to twoja ulubiona łamigłówka."
+        },
+        "numberCruncher": {
+            "title": "Miłośnik liczb",
+            "subtitle": "{v1} i {v2} to twoje ulubione."
+        },
+        "wordsmith": {
+            "title": "Mistrz słowa",
+            "subtitle": "{v1} i {v2} to twoje ulubione."
+        },
+        "logicBuff": {
+            "title": "Fan logiki",
+            "subtitle": "{v1} i {v2} to twoje ulubione."
+        },
+        "quizzer": {
+            "title": "Fan quizów",
+            "subtitle": "{v1} i {v2} to twoje ulubione."
+        },
+        "dailyDevotee": {
+            "title": "Codzienny gracz",
+            "subtitle": "Grasz prawie codziennie."
+        },
+        "weekendWarrior": {
+            "title": "Wojownik weekendu",
+            "subtitle": "Sobota i niedziela to twój szczyt."
+        },
+        "earlyBird": {
+            "title": "Ranny ptaszek",
+            "subtitle": "Zaczynasz jako pierwszy."
+        },
+        "nightOwl": {
+            "title": "Nocny marek",
+            "subtitle": "Najlepsze zostawiasz na koniec."
+        },
+        "allRounder": {
+            "title": "Wszechstronny",
+            "subtitle": "Lubisz odrobinę wszystkiego."
+        }
+    },
+    "challenges": {
+        "aria": "Twoje wyzwania",
+        "today": "Dzisiejsza łamigłówka",
+        "fromArchive": "Z archiwum",
+        "comeBackTomorrow": "Na dziś gotowe. Wróć jutro, aby kontynuować.",
+        "pickIntro": "Każda z nich się liczy.",
+        "offTip": "Nie chcesz widzieć wyzwań?",
+        "offAction": "Wyłącz",
+        "offKeep": "Zostaw",
+        "offToast": "Wyzwania wyłączone. Możesz je włączyć ponownie w Koncie.",
+        "suggested": "Wybierz wyzwanie",
+        "complete": "Wyzwanie ukończone!",
+        "completeToast": "Wyzwanie ukończone!",
+        "expired": "Czas minął",
+        "expiredBody": "Udało się {current} z {target}. Spróbujesz jeszcze raz?",
+        "daysLeft": "Został {n} dzień | Zostały {n} dni",
+        "endsToday": "Kończy się dziś",
+        "progress": "{current} z {target}",
+        "join": "Dołącz",
+        "notNow": "Nie teraz",
+        "play": "Graj",
+        "leave": "Opuść wyzwanie",
+        "retry": "Spróbuj ponownie",
+        "pickNew": "Wybierz nowe",
+        "dismiss": "Odrzuć",
+        "typeWeek": {
+            "title": "Tydzień z {name}",
+            "body": "Ukończ {target} łamigłówek {name} w ciągu najbliższych {days} dni.",
+            "goal": "Ukończ {target} łamigłówek {name}."
+        },
+        "typeDay": {
+            "title": "Podwójne {name}",
+            "body": "Ukończ dziś {target} łamigłówki {name}.",
+            "goal": "Ukończ {target} łamigłówki {name}."
+        },
+        "typeClean": {
+            "title": "{name} solo",
+            "body": "Rozwiąż {target} łamigłówki {name} bez odkrywania i podpowiedzi w ciągu najbliższych {days} dni.",
+            "goal": "Rozwiąż {target} łamigłówki {name} bez odkrywania i podpowiedzi.",
+            "bodyGuesses": "Rozwiąż {target} łamigłówki {name} w maksymalnie 3 próbach w ciągu najbliższych {days} dni.",
+            "goalGuesses": "Rozwiąż {target} łamigłówki {name} w maksymalnie 3 próbach."
+        },
+        "stepUp": {
+            "title": "Poziom wyżej: {name}",
+            "body": "Ukończ {target} łamigłówki {name} w ciągu najbliższych {days} dni.",
+            "goal": "Ukończ {target} łamigłówki {name}."
+        },
+        "revisit": {
+            "title": "Powrót do {name}",
+            "body": "Dawno nie grałeś. Ukończ {target} łamigłówki {name} w ciągu najbliższych {days} dni.",
+            "goal": "Ukończ {target} łamigłówki {name}."
+        },
+        "groupWeek": {
+            "words": {
+                "title": "Tydzień słów",
+                "body": "Ukończ {target} gier słownych w ciągu najbliższych {days} dni.",
+                "goal": "Ukończ {target} gier słownych."
+            },
+            "numbers": {
+                "title": "Pogromca liczb",
+                "body": "Ukończ {target} gier liczbowych w ciągu najbliższych {days} dni.",
+                "goal": "Ukończ {target} gier liczbowych."
+            },
+            "logic": {
+                "title": "Tydzień logiki",
+                "body": "Ukończ {target} gier logicznych w ciągu najbliższych {days} dni.",
+                "goal": "Ukończ {target} gier logicznych."
+            },
+            "quick": {
+                "title": "Błyskawiczny tydzień",
+                "body": "Ukończ {target} szybkich gier w ciągu najbliższych {days} dni.",
+                "goal": "Ukończ {target} szybkich gier."
+            }
+        },
+        "groupVariety": {
+            "words": {
+                "title": "Słowny przegląd",
+                "body": "Zagraj w {target} różne gry słowne w ciągu najbliższych {days} dni.",
+                "goal": "Zagraj w {target} różne gry słowne."
+            },
+            "numbers": {
+                "title": "Liczbowy przegląd",
+                "body": "Zagraj w {target} różne gry liczbowe w ciągu najbliższych {days} dni.",
+                "goal": "Zagraj w {target} różne gry liczbowe."
+            },
+            "logic": {
+                "title": "Logiczny przegląd",
+                "body": "Zagraj w {target} różne gry logiczne w ciągu najbliższych {days} dni.",
+                "goal": "Zagraj w {target} różne gry logiczne."
+            },
+            "quick": {
+                "title": "Szybki przegląd",
+                "body": "Zagraj w {target} różne szybkie gry w ciągu najbliższych {days} dni.",
+                "goal": "Zagraj w {target} różne szybkie gry."
+            }
+        },
+        "coffee": {
+            "title": "Przerwa na kawę",
+            "body": "Ukończ dziś {target} szybkie gry.",
+            "goal": "Ukończ {target} szybkie gry."
+        },
+        "streak": {
+            "title": "Pięć dni z rzędu",
+            "body": "Graj przez {target} dni z rzędu.",
+            "goal": "Graj przez {target} dni z rzędu.",
+            "expired": "Udało się dojść do dnia {current} z {target}. Spróbujesz jeszcze raz?"
+        },
+        "explore": {
+            "title": "Coś nowego",
+            "body": "Wypróbuj {target} rodzaje łamigłówek, w które jeszcze nie grałeś, w ciągu najbliższych {days} dni.",
+            "goal": "Wypróbuj {target} rodzaje łamigłówek, w które jeszcze nie grałeś."
+        },
+        "mixDay": {
+            "title": "Mieszanka",
+            "body": "Zagraj dziś w {target} różne rodzaje łamigłówek.",
+            "goal": "Zagraj w {target} różne rodzaje łamigłówek."
+        },
+        "marathon": {
+            "title": "Maraton łamigłówek",
+            "body": "Ukończ dziś {target} łamigłówek.",
+            "goal": "Ukończ {target} łamigłówek."
+        },
+        "fourDays": {
+            "title": "Czterodniowy tydzień",
+            "body": "Graj w {target} różne dni w ciągu najbliższych {days} dni.",
+            "goal": "Graj w {target} różne dni."
+        },
+        "spotless": {
+            "title": "Nienaganny tydzień",
+            "body": "Rozwiąż {target} łamigłówki bez odkrywania i podpowiedzi w ciągu najbliższych {days} dni.",
+            "goal": "Rozwiąż {target} łamigłówki bez odkrywania i podpowiedzi."
+        },
+        "typeRun": {
+            "title": "Hat-trick: {name}",
+            "body": "Graj w {name} przez {target} dni z rzędu.",
+            "goal": "Graj w {name} przez {target} dni z rzędu."
+        },
+        "archive": {
+            "title": "Odkrywca archiwum",
+            "body": "Ukończ {target} łamigłówki z archiwum w ciągu najbliższych {days} dni.",
+            "goal": "Ukończ {target} łamigłówki z archiwum."
+        },
+        "favSweep": {
+            "title": "Runda ulubionych",
+            "body": "Ukończ dziś wszystkie {target} ulubione łamigłówki.",
+            "goal": "Ukończ wszystkie {target} ulubione łamigłówki."
+        }
+    },
+    "summary": {
+        "aria": "Podsumowanie ostatnich 7 dni",
+        "carouselAria": "Wybierz panel",
+        "title": "Ostatnie 7 dni",
+        "puzzles": "Łamigłówki",
+        "types": "Typy łamigłówek",
+        "mostPlayed": "Najczęściej grane",
+        "noPuzzles": "Brak gier w ciągu ostatnich 7 dni.",
+        "days": "Dni gry"
+    },
+    "streak": {
+        "aria": "Passa gry",
+        "title": "Seria łamigłówek",
+        "dayCount": "dzień | dni",
+        "weekCount": "tydzień | tygodnie",
+        "recentDaysAria": "Ostatnie dni"
+    },
+    "archive": {
+        "filterBy": "Filtruj według:",
+        "about": "O grze",
+        "recent": "Ostatnie",
+        "noPuzzles": "Brak łamigłówek na ten miesiąc.",
+        "otherLevels": "Inne poziomy",
+        "statusFilterLabel": "Filtruj według stanu",
+        "statusAll": "Wszystkie",
+        "statusUnplayed": "Niegrane",
+        "statusUnfinished": "Niedokończone",
+        "statusCompleted": "Ukończone",
+        "playMostRecent": "Zagraj najnowszą",
+        "typeAchievements": {
+            "trained": "{name}: ukończone szkolenie",
+            "descTrained": "Ukończ wszystkie samouczki ({target}) dla: {name}",
+            "heading": "Osiągnięcia",
+            "nextUp": "Następne",
+            "moreToDiscover": "Więcej do odkrycia…",
+            "apprentice": "Adept {name}",
+            "expert": "Ekspert {name}",
+            "master": "Mistrz {name}",
+            "purist": "Purysta {name}",
+            "descPlay": "Ukończ {target} łamigłówek {name}",
+            "sharpSolver": "{name} Bystry Gracz",
+            "descSharp": "Rozwiąż {target} łamigłówek {name} w 3 próbach lub mniej",
+            "descCleanMistakes": "Rozwiąż {target} łamigłówek {name} bez błędów i odkryć",
+            "sharpEye": "{name} Sokoli Wzrok",
+            "wordHawk": "{name} Łowca Słów",
+            "fullHouse": "{name} Komplet",
+            "descWordsPct": "Znajdź {target}% słów w łamigłówce {name}",
+            "descPointsPct": "Zdobądź {target}% punktów w łamigłówce {name}",
+            "descClean": "Rozwiąż {target} łamigłówek {name} bez sprawdzeń i odkryć"
+        },
+        "stats": {
+            "title": "Statystyki {name}",
+            "completed": "Ukończone",
+            "averageTime": "Średni czas",
+            "bestTime": "Najlepszy czas",
+            "longestStreak": "Najdłuższa seria",
+            "currentStreak": "Obecna seria",
+            "cleanSolves": "Bez podpowiedzi",
+            "averageChecks": "Średnie sprawdzenia",
+            "averageReveals": "Średnie odkrycia",
+            "averageMistakes": "Średnie błędy",
+            "averageWordsFound": "Średnio znalezione słowa",
+            "bestWordsFound": "Najwięcej znalezionych słów",
+            "averageScore": "Średni wynik",
+            "bestScore": "Najlepszy wynik",
+            "sharpSolves": "Celne rozwiązania",
+            "averageGuesses": "Średnie próby",
+            "bestGuesses": "Najlepsze próby",
+            "guesses": "Próby",
+            "notSolved": "Nierozwiązane",
+            "winRate": "% wygranych",
+            "guessDistribution": "Udane próby",
+            "signedOut": "Zaloguj się, aby śledzić swoje postępy",
+            "chartTitle": "Ostatnie 7 ukończonych",
+            "chartTitlePlays": "Ostatnie 7 rozegranych",
+            "time": "Czas",
+            "checks": "Sprawdzenia",
+            "reveals": "Odkrycia",
+            "hints": "Podpowiedzi",
+            "mistakes": "Błędy",
+            "wordsFound": "Znalezione słowa",
+            "score": "Wynik",
+            "average": "Średnia",
+            "persona": {
+                "newcomer": {"title": "Nowicjusz", "desc": "Dopiero poznajesz {name}."},
+                "comeback": {"title": "Witaj ponownie", "desc": "Miło znów widzieć cię w {name}."},
+                "recordBreaker": {"title": "Rekordzista", "desc": "Właśnie padł twój nowy rekord czasu w {name}."},
+                "improver": {"title": "Na fali", "desc": "Twoje czasy w {name} spadły ostatnio o {percent}%."},
+                "sharpshooter": {"title": "Snajper", "desc": "Rozwiązujesz {name} średnio w {guesses} próbach."},
+                "purist": {"title": "Purysta", "desc": "{clean} z twoich ostatnich {total} rozwiązań {name} bez żadnej pomocy."},
+                "clockwork": {"title": "Jak w zegarku", "desc": "Twoje gry w {name} trwają za każdym razem około {time}."},
+                "nightOwl": {"title": "Nocny marek", "desc": "W {name} grasz głównie po zmroku."},
+                "earlyBird": {"title": "Ranny ptaszek", "desc": "Lubisz grać w {name} z samego rana."},
+                "weekender": {"title": "Weekendowy gracz", "desc": "{name} to twoja weekendowa przyjemność."},
+                "veteran": {"title": "Weteran", "desc": "Rozwiązane dotąd łamigłówki {name}: {count}."},
+                "hintHunter": {"title": "Łowca podpowiedzi", "desc": "Chętnie korzystasz z podpowiedzi w {name}."},
+                "allRounder": {"title": "Spokojny gracz", "desc": "Wszechstronny, spokojny gracz w {name}."},
+                "unhurried": {"title": "Bez pośpiechu", "desc": "Twoje gry w {name} trwają ostatnio nieco dłużej. Delektujesz się?"},
+                "fewerReveals": {"title": "Mniej odkryć", "desc": "Odkrycia w {name} spadły z {before} do {after} na grę."},
+                "fewerChecks": {"title": "Mniej sprawdzeń", "desc": "Sprawdzenia w {name} spadły z {before} do {after} na grę."},
+                "fewerHints": {"title": "Mniej podpowiedzi", "desc": "Podpowiedzi w {name} spadły z {before} do {after} na grę."},
+                "fewerMistakes": {"title": "Mniej błędów", "desc": "Błędy w {name} spadły z {before} do {after} na grę."},
+                "fewerGuesses": {"title": "Celniejsze próby", "desc": "Próby w {name} spadły z {before} do {after} na grę."},
+                "findingMore": {"title": "Coraz więcej słów", "desc": "Znajdujesz więcej słów w {name}: z {before}% do {after}%."},
+                "lunchBreak": {"title": "Gracz z przerwy na lunch", "desc": "W {name} grasz głównie w porze lunchu."},
+                "eveningSolver": {"title": "Wieczorny relaks", "desc": "Lubisz odpoczywać przy {name} wieczorem."},
+                "movedMornings": {"title": "Nowy rytm", "desc": "Ostatnio grasz w {name} rano."},
+                "movedAfternoons": {"title": "Nowy rytm", "desc": "Ostatnio grasz w {name} po południu."},
+                "movedEvenings": {"title": "Nowy rytm", "desc": "Ostatnio grasz w {name} wieczorem."},
+                "movedNights": {"title": "Nowy rytm", "desc": "Ostatnio grasz w {name} późną nocą."}
+            }
+        }
+    },
+    "puzzle": {
+        "notStarted": "Łamigłówka nierozpoczęta",
+        "halfComplete": "Łamigłówka ukończona w 50%",
+        "percentComplete": "Łamigłówka ukończona w {percent}%",
+        "statusNotStarted": "Nierozpoczęta",
+        "statusInProgress": "Ukończona w {percent}%",
+        "statusStarted": "Rozpoczęta",
+        "statusCompleted": "Ukończona",
+        "relatedHeading": "Myślimy, że może ci się spodobać",
+        "next": {
+            "streak": "Nie przerywaj serii: {name}",
+            "resume": "Kontynuuj tam, gdzie skończyłeś",
+            "snack": "Kolejna szybka łamigłówka",
+            "archive": "Jedna z archiwum",
+            "nextArchive": "Następna z archiwum"
+        }
+    },
+    "account": {
+        "teaser": {
+            "title": "Twoje łamigłówki, wszędzie",
+            "body": "Załóż darmowe konto, aby zachować serię, statystyki i ustawienia na każdym urządzeniu oraz grać ze znajomymi.",
+            "streak": "Twoja seria trwa na każdym urządzeniu",
+            "setup": "Ulubione i ukryte łamigłówki są zawsze z tobą",
+            "achievements": "Zdobywaj osiągnięcia i śledź statystyki",
+            "friends": "Rywalizuj ze znajomymi w prywatnej lidze"
+        },
+        "title": "Konto",
+        "fieldEmail": "E-mail",
+        "fieldUid": "UID",
+        "fieldName": "Imię",
+        "logout": "Wyloguj się",
+        "signInTitle": "Zaloguj się na swoje konto",
+        "createTitle": "Utwórz konto",
+        "yourEmail": "Twój e-mail",
+        "emailInvalid": "Wprowadź prawidłowy adres e-mail",
+        "password": "Hasło",
+        "confirmPassword": "Potwierdź hasło",
+        "showPassword": "Pokaż hasło",
+        "hidePassword": "Ukryj hasło",
+        "passwordMismatch": "Hasła nie są zgodne",
+        "passwordStrength": {
+            "weak": "Słabe",
+            "fair": "Średnie",
+            "good": "Dobre",
+            "strong": "Silne"
+        },
+        "noAccount": "Nie masz jeszcze konta?",
+        "haveAccount": "Masz już konto?",
+        "preferences": {
+            "title": "Preferencje",
+            "showFeatured": "Pokaż sugestie puzzli na stronie głównej",
+            "showChallenges": "Pokaż wyzwania",
+            "notifications": "Wysyłaj mi powiadomienia push",
+            "notificationsBlocked": "Powiadomienia są zablokowane. Włącz je w ustawieniach przeglądarki, aby otrzymywać aktualizacje.",
+            "replayTour": "Odtwórz samouczek powitalny"
+        }
+    },
+    "notificationsPrompt": {
+        "title": "Chcesz być na bieżąco?",
+        "body": "Damy Ci znać, gdy dzisiejsze puzzle będą gotowe, i przypomnimy, jeśli Twoja passa jest zagrożona.",
+        "enable": "Tak, powiadamiaj",
+        "notNow": "Nie teraz"
+    },
+    "installPrompt": {
+        "title": "Dodaj łamigłówki do ekranu początkowego",
+        "body": "Otwieraj dzisiejsze łamigłówki jednym dotknięciem, na pełnym ekranie, bez pasków przeglądarki.",
+        "step1": "Stuknij Udostępnij",
+        "step1Hint": "Jeśli go nie widzisz, najpierw stuknij •••.",
+        "step2": "Wybierz Do ekranu początkowego",
+        "step2Hint": "Przewiń w dół lub stuknij Pokaż więcej, jeśli opcja jest ukryta.",
+        "step3": "Stuknij Dodaj",
+        "step3Hint": "Ikona pojawi się na ekranie początkowym.",
+        "gotIt": "Rozumiem",
+        "never": "Nie pytaj ponownie"
+    },
+    "streakToast": {
+        "title": "Passa przedłużona!",
+        "body": "{name} — {count} dni z rzędu"
+    },
+    "streakFreeze": {
+        "saveBarLabel": "Uratuj swoją passę",
+        "savedTitle": "Passa uratowana!",
+        "savedBody": "Twoja {n}-dniowa passa trwa — tak trzymaj!",
+        "title": "Passa przerwana",
+        "body": "Nie wszystko stracone — uratuj swoją passę, kończąc dziś {target} łamigłówki.",
+        "progress": "{done} z {target} łamigłówek dzisiaj",
+        "earnedInline": "Passa uratowana!",
+        "start": "Zaczynamy",
+        "continue": "Dalej"
+    },
+    "streakModal": {
+        "dayTitle": "Passa {n} dni!",
+        "weekTitle": "Passa {n} tygodni!",
+        "dayBody": "Świetnie — wróć jutro, aby utrzymać passę.",
+        "weekBody": "Grasz co tydzień — utrzymaj passę.",
+        "continue": "Dalej"
+    },
+    "changelog": {
+        "title": "Co nowego",
+        "dismiss": "Rozumiem"
+    },
+    "friends": {
+        "title": "Znajomi",
+        "welcome": {
+            "title": "Graj ze znajomymi",
+            "body": "Załóż prywatną grupę, wybierzcie łamigłówki, w które gracie, i sprawdzajcie, kto prowadzi każdego dnia.",
+            "point1": "Wybierzcie łamigłówki, w których rywalizujecie",
+            "point2": "Czasy i wyniki obok siebie",
+            "point3": "Prywatny ranking tylko dla Twojej grupy",
+            "point4": "Zwycięzcy dnia, miesiąca i roku",
+            "create": "Utwórz grupę",
+            "join": "Dołącz z kodem"
+        },
+        "nameLabel": "Twoje imię w grupach",
+        "nameHelp": "Widzą je tylko osoby z Twoich grup. Możesz je zmienić w każdej chwili.",
+        "errNoDisplayName": "Wpisz swoje imię do grup",
+        "addDisplayName": "Dodaj nazwę wyświetlaną",
+        "allFriendGroups": "Wszystkie grupy znajomych",
+        "groupSuffix": "grupa",
+        "yourFriendGroups": "Twoje grupy znajomych",
+        "join": {
+            "title": "Dołącz do grupy",
+            "codeLabel": "Kod grupy",
+            "codeHelp": "Poproś właściciela grupy o kod.",
+            "errNoCode": "Wprowadź kod",
+            "errCodeShort": "Kod musi mieć co najmniej 6 znaków",
+            "fromLink": "Uzupełniliśmy kod z Twojego linku.",
+            "submit": "Poproś o dołączenie",
+            "approvalNote": "Właściciel grupy zatwierdza nowych członków."
+        },
+        "create": {
+            "title": "Utwórz grupę",
+            "nameLabel": "Nazwa grupy",
+            "includeHeading": "Jakie łamigłówki chcesz uwzględnić?",
+            "errNoName": "Wpisz nazwę grupy",
+            "generate": "Wygeneruj",
+            "suggestions": [
+                "Łamigłówkowa Ekipa",
+                "Mózgowcy",
+                "Klub Słowa",
+                "Kratkowa Banda",
+                "Łowcy Wskazówek",
+                "Drużyna Sudoku",
+                "Słowne Świry",
+                "Kawiarnia Zagadek",
+                "Bystrzaki",
+                "Myśliciele",
+                "Spryciarze",
+                "Królowie Kratek",
+                "Rozwiązywacze",
+                "Deszyfranci",
+                "Liczydła",
+                "Łamacze Głów",
+                "Poziomo i Pionowo",
+                "Neuronowa Paczka",
+                "Herbata i Zagadki",
+                "Główkujący",
+                "Szybkie Umysły",
+                "Mali Geniusze",
+                "Klub Sprytnych",
+                "Tropiciele Wskazówek",
+                "Królowie Krzyżówek",
+                "Ranne Ptaszki",
+                "Puste Kratki",
+                "Aktywne Neurony",
+                "Asy",
+                "Sherlocki",
+                "Ostre Ołówki",
+                "Fani Logiki",
+                "Anagramowa Banda",
+                "Szare Komórki",
+                "Krąg Zagadek",
+                "Mistrzowie Dnia",
+                "Wielkie Mózgi",
+                "Literaci",
+                "Wtorkowy Klub",
+                "Małe Szare Komórki",
+                "Cwaniaki",
+                "Eksperci",
+                "Zagadkowi",
+                "Tęgie Głowy",
+                "Weseli Myśliciele",
+                "Kratkowy Gang",
+                "Detektywi",
+                "Magicy Liczb",
+                "Kawa i Kratki",
+                "Nocne Marki",
+                "Krzyżówkowicze",
+                "Logicy",
+                "Zbiorowy Mózg",
+                "Błyskawice",
+                "Przebiegli",
+                "Filozofowie",
+                "Mądre Sowy",
+                "Łamacze Kodów",
+                "Liga Sprytnych",
+                "Ostateczna Odpowiedź"
+            ],
+            "submit": "Utwórz"
+        },
+        "invite": {
+            "title": "Zaproś znajomych do {name}",
+            "intro": "Wyślij znajomym link albo podaj im kod do wpisania w Dołącz do grupy.",
+            "shareCode": "Kod grupy",
+            "codePrefix": "Kod:",
+            "copyCode": "Kopiuj kod",
+            "copyLink": "Kopiuj link",
+            "shareLink": "Udostępnij link",
+            "copied": "Skopiowano",
+            "shareText": "Dołącz do mojej grupy łamigłówek {name} w Sticky Puzzles",
+            "cardKicker": "Zaproszenie",
+            "cardCode": "Kod: {code}",
+            "cardBody": "Dołącz do mojej grupy łamigłówek w Sticky Puzzles",
+            "codeNote": "Uwaga! Gracze używający twojego kodu lub linku będą potrzebować twojej zgody, aby dołączyć.",
+            "done": "Gotowe"
+        },
+        "manage": {
+            "requestsTitle": "Prośby o dołączenie",
+            "playersTitle": "Gracze ({n})",
+            "onlyOne": "Na razie jesteś tu sam. Zaproś znajomych poniżej.",
+            "inviteTitle": "Zaproś znajomych",
+            "puzzlesTitle": "Łamigłówki",
+            "puzzlesHelp": "Dotknij łamigłówki, aby ją dodać lub usunąć. Zmiany zapisują się od razu.",
+            "saved": "Zapisano",
+            "errLastPuzzle": "Zostaw co najmniej jedną łamigłówkę",
+            "owner": "Właściciel",
+            "accepted": "{name} dołącza do grupy",
+            "declinedToast": "Prośba gracza {name} została odrzucona",
+            "removed": "Usunięto gracza {name}",
+            "deleteGroup": "Usuń grupę",
+            "deleteTitle": "Usunąć {name}?",
+            "deleteBody": "Grupa zostanie usunięta dla wszystkich członków. Tej operacji nie można cofnąć.",
+            "deleteConfirm": "Usuń grupę",
+            "deleted": "Usunięto {name}"
+        },
+        "view": {
+            "overall": "Ogółem",
+            "currentLeaders": "Aktualni liderzy",
+            "periodLeaders": "Liderzy okresu {period}",
+            "periodWinners": "Zwycięzcy okresu {period}",
+            "completedPuzzles": "Ukończone łamigłówki",
+            "avgScore": "Średni wynik / czas ukończenia"
+        },
+        "list": {
+            "caption": "Grupy",
+            "colName": "Nazwa grupy",
+            "colRequests": "Prośby",
+            "colActions": "Działania",
+            "owner": "Właściciel",
+            "awaitingApproval": "Oczekuje na akceptację",
+            "leave": "Opuść",
+            "manage": "Zarządzaj",
+            "view": "Zobacz",
+            "players": "Gracze",
+            "requests": "Prośby: {count}"
+        },
+        "members": {
+            "you": "Ty",
+            "declined": "Odrzucony",
+            "accept": "Akceptuj",
+            "decline": "Odrzuć",
+            "remove": "Usuń"
+        },
+        "modal": {
+            "changeDisplayName": "Zmień nazwę wyświetlaną",
+            "addDisplayName": "Dodaj nazwę wyświetlaną",
+            "displayNameSr": "Wybierz nazwę wyświetlaną, aby znajomi wiedzieli, kim jesteś!",
+            "displayNameHelp": "Będzie ona widoczna tylko dla członków twoich grup i możesz ją zmienić w każdej chwili.",
+            "changeGroupName": "Zmień nazwę grupy",
+            "addGroupName": "Dodaj nazwę grupy",
+            "removeMemberTitle": "Usuń gracza",
+            "removeMemberBody": "Czy na pewno chcesz usunąć {name} z grupy {group}?",
+            "removeMemberConfirm": "Usuń gracza"
+        },
+        "stats": {
+            "completedPuzzles": "Ukończone łamigłówki",
+            "bestAvgScore": "Najlepszy średni wynik",
+            "allPuzzles": "Wszystkie łamigłówki",
+            "player": "Gracz",
+            "time": "Czas",
+            "score": "Wynik",
+            "noCompletions": "Nikt z tej grupy nie ukończył jeszcze tej łamigłówki w tym dniu.",
+            "leaveGroup": "Opuść grupę",
+            "mostWins": "Najwięcej wygranych",
+            "mostPlayed": "Najczęściej grane",
+            "titleOverall": "{stat} ogółem",
+            "titleIn": "{stat} w okresie {period}",
+            "date": "Data"
+        }
+    },
+    "months": ["styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"],
+    "variantInfo": {
+        "open": "O {name}",
+        "videoComingSoon": "Podgląd wideo już wkrótce",
+        "playTime": "Około {mins} min",
+        "play": "Graj",
+        "playLatest": "Zagraj w najnowszą"
+    },
+    "puzzleDescription": {
+        "gridfill": "Ułóż bloki o wskazanym rozmiarze, aby jak najszybciej wypełnić całą siatkę.",
+        "headcoach": "Sprawdź swoją sprawność umysłową w błyskawicznej serii zadań arytmetycznych.",
+        "pyramidplus": "Połącz liczby u podstawy, aby uzyskać sumę na szczycie.",
+        "quiz": "Sprawdź swoją wiedzę w quizie wielokrotnego wyboru. Uda ci się zdobyć komplet punktów?",
+        "sudoku": "Gra logiki i dedukcji. Wypełnij siatkę tak, aby każdy wiersz, kolumna i podkwadrat zawierały cyfry od 1 do 9.",
+        "wordsearch": "Ponadczasowy klasyk — wyszukaj ukryte słowa w siatce. Doskonałe dla każdego wieku.",
+        "totalswipeout": "Szybko reaguj na pytania i stwierdzenia: przesuń w prawo dla tak, w lewo dla nie. Błyskawiczne decyzje dla wszystkich.",
+        "worumber": "Quiz spotyka rachunki. Odpowiedz na pytanie, potem szybki rachunek, by odblokować kolejny krok. 10 kroków, 3 życia, sporo myślenia.",
+        "wordwheel": "Znajdź jak najwięcej słów, używając liter z Koła Słów.",
+        "guessword": "Odgadnij ukryte słowo — po każdej próbie wskazówki podpowiadają, co pasuje. W ilu próbach się uda?",
+        "traintracks": "Ułóż jeden ciągły tor łączący oba końce. Liczby wokół siatki wskazują, ile elementów należy umieścić w każdym wierszu i kolumnie.",
+        "crossword": "Mała łamigłówka. Jak szybko ukończysz naszą siatkę 9×9?",
+        "5mquiz": "Nasz błyskawiczny quiz — 10 pytań po 30 sekund. Świetny na szybką dawkę wiedzy.",
+        "slidepuzzle": "Przesuwaj kafelki, aby ułożyć obrazek — uda ci się w jak najmniejszej liczbie ruchów?",
+        "2speedcrossword": "Dwa sposoby na tę samą krzyżówkę — przelatuj przez szybkie hasła albo zmierz się z kryptycznym wyzwaniem.",
+        "huedoku": "Gra logiki i dedukcji. Wypełnij siatkę tak, aby każdy wiersz, kolumna i podkwadrat zawierały 6 kolorów.",
+        "takuzu": "Gra logiki i równowagi. Wypełnij siatkę dwoma symbolami tak, aby w każdym wierszu i kolumnie było ich tyle samo i nigdy trzy takie same obok siebie.",
+        "codeword": "Słowna łamigłówka do złamania szyfru. Każda liczba w siatce oznacza inną literę: odkryj, którą, a słowa same się ujawnią."
+    },
+    "tags": {
+        "gridfill": ["Przestrzenne", "Bloki", "Szybkie"],
+        "headcoach": ["Umysł", "Arytmetyka", "Błyskawiczne"],
+        "pyramidplus": ["Liczby", "Sumy", "Warstwowe"],
+        "quiz": ["Wiedza", "Ciekawostki", "Ciekawe"],
+        "sudoku": ["Logika", "Liczby", "Klasyczne"],
+        "wordsearch": ["Wieloosobowa", "Słowa", "Ukryte", "Relaks"],
+        "totalswipeout": ["Żwawe", "Instynkt", "Szybkie"],
+        "worumber": ["Mieszane", "Wiedza", "Etapy"],
+        "wordwheel": ["Słowa", "Litery", "Odkrywcze"],
+        "guessword": ["Gra słów", "Dedukcja", "Zwinne"],
+        "traintracks": ["Logika", "Tory", "Trasy"],
+        "crossword": ["Wieloosobowa", "Słowa", "Tropy", "Klasyczne"],
+        "5mquiz": ["Zwięzłe", "Wiedza", "Czas"],
+        "slidepuzzle": ["Wizualne", "Dotykowe", "Kafelki"],
+        "2speedcrossword": ["Słowa", "Kryptyczne", "Podwójne"],
+        "huedoku": ["Kolorowe", "Logika", "Siatka"],
+        "takuzu": ["Logika", "Symbole", "Równowaga"],
+        "codeword": ["Słowa", "Szyfr", "Dedukcja"]
+    },
+    "letters": {
+        "title": "Wybierz litery pomocy",
+        "consonants": "Spółgłoski",
+        "vowels": "Samogłoski",
+        "count": "{n} z {max}",
+        "play": "Graj",
+        "skip": "Graj bez liter pomocy"
+    },
+    "cover": {
+        "number": "Nr {number}",
+        "play": "Graj",
+        "includedIn": "Liczy się do wyzwania | Liczy się do wyzwań",
+        "lastTimeOf": "Ostatnio · {name}",
+        "tutorials": "Samouczki",
+        "tutorialStep": "Łamigłówka {step}",
+        "start": "Start",
+        "replay": "Powtórz",
+        "completed": "Ukończono",
+        "assist": {
+            "crossword": {
+                "offerHarder": "Rozwiązałeś ostatnie 3 krzyżówki bez pomocy, więc tym razem wybierzesz mniej liter.",
+                "offerOff": "Rozwiązałeś ostatnie 3 krzyżówki bez pomocy, więc wyłączyliśmy wybór liter.",
+                "adjusted": "Na podstawie Twojej opinii możesz wybrać kilka liter do wpisania przed startem.",
+                "playWithout": "Graj bez liter pomocy"
+            },
+            "codeword": {
+                "offerHarder": "Rozwiązałeś ostatnie 3 łamigłówki {name} bez pomocy, więc tym razem wybierzesz mniej liter.",
+                "offerOff": "Rozwiązałeś ostatnie 3 łamigłówki {name} bez pomocy, więc wyłączyliśmy wybór liter.",
+                "adjusted": "Na podstawie Twojej opinii możesz wybrać kilka liter do wpisania przed startem.",
+                "playWithout": "Graj bez liter pomocy"
+            },
+            "sudoku": {
+                "offerHarder": "Rozwiązałeś ostatnie 3 łamigłówki bez pomocy, więc tym razem wypełnimy mniej pól.",
+                "offerOff": "Rozwiązałeś ostatnie 3 łamigłówki bez pomocy, więc wyłączyliśmy pola startowe.",
+                "adjusted": "Dałeś nam znać, że ostatnio {name} sprawiło Ci trudność, więc przed startem wypełnimy kilka dodatkowych pól.",
+                "playWithout": "Graj bez pól startowych"
+            }
+        }
+    },
+    "tutorial": {
+        "stepNamed": "Samouczek {step} z {steps}: {name}",
+        "stepOf": "Samouczek {step} z {steps}",
+        "singleSolved": "Samouczek ukończony!",
+        "singleMissed": "Tym razem się nie udało, ale zasada jest już jasna.",
+        "title": "Naucz się: {name}",
+        "step": "Łamigłówka {step} z {steps}",
+        "goTo": "Przejdź do łamigłówki {step}",
+        "frameTitle": "Łamigłówka ćwiczeniowa {name}: {step} z {steps}",
+        "solved": "Rozwiązane! Gotowy na następną?",
+        "next": "Następna łamigłówka",
+        "allDone": "Rozwiązałeś wszystkie. Jesteś gotowy na prawdziwą!",
+        "missed": "Tym razem się nie udało. Gotowy na następną?",
+        "practiceDone": "Trening zakończony. Jesteś gotowy na prawdziwą!",
+        "start": "Zaczynamy",
+        "brief": {
+            "crossword": {
+                "1": {
+                    "title": "Odpowiadaj na hasła",
+                    "text": "Przeczytaj hasło i wpisz odpowiedź w diagram. Numer w kratce pokazuje, gdzie zaczyna się odpowiedź."
+                },
+                "2": {
+                    "title": "Poziomo i pionowo",
+                    "text": "Odpowiedzi biegną poziomo lub pionowo i mają wspólne litery tam, gdzie się krzyżują, więc każda pomaga przy następnej."
+                },
+                "3": {
+                    "title": "Zacznij od pewniaków",
+                    "text": "Niektóre hasła to gra słów. Najpierw wpisz to, czego jesteś pewien – te litery pomogą przy reszcie."
+                }
+            },
+            "sudoku": {
+                "1": {
+                    "title": "Każda cyfra raz",
+                    "text": "Wypełnij diagram tak, by każdy wiersz, kolumna i blok miały cyfry od 1 do 4 dokładnie raz. Dotknij kratki, a potem cyfry."
+                },
+                "2": {
+                    "title": "Większy diagram",
+                    "text": "Teraz cyfry od 1 do 6. Każdy blok ma 3 kratki szerokości i 2 wysokości i nadal potrzebuje każdej cyfry raz."
+                },
+                "3": {
+                    "title": "Tylko jedno miejsce",
+                    "text": "Wybierz cyfrę i spójrz na blok, w którym jej jeszcze brakuje. Wiersze i kolumny, w których już jest, wykluczają kratki – często zostaje tylko jedna. Utknąłeś? Dotknij żarówki, by zobaczyć krok."
+                }
+            },
+            "takuzu": {
+                "1": {
+                    "title": "Dwa symbole",
+                    "text": "Wypełnij każdą kratkę jednym z dwóch symboli – dotknij kratki, by go zmienić. Każdy wiersz i kolumna potrzebują tyle samo obu, a nigdy trzech takich samych z rzędu."
+                },
+                "2": {
+                    "title": "Szukaj par",
+                    "text": "Dwa takie same obok siebie? Kratki na obu końcach muszą mieć drugi symbol. To samo dotyczy luki między dwoma takimi samymi."
+                },
+                "3": {
+                    "title": "= i ×",
+                    "text": "Znak = między dwoma polami oznacza ten sam symbol, a × – różne symbole. Użyj znaków razem z poznanymi zasadami, aby wypełnić siatkę."
+                }
+            },
+            "traintracks": {
+                "1": {
+                    "title": "Połącz A z B",
+                    "text": "Ułóż jeden tor od A do B. Liczby mówią, ile kratek w każdym wierszu i kolumnie ma tory. Dotknij kratki, by wybrać element."
+                },
+                "2": {
+                    "title": "Licz tory",
+                    "text": "Gdy wiersz lub kolumna ma już wszystkie tory, pozostałe kratki zostają puste. Wykorzystaj to, by wykluczać kratki."
+                },
+                "3": {
+                    "title": "Podążaj trasą",
+                    "text": "Zacznij od stacji i podanego elementu i ustal, którędy musi biec tor. Nigdy się nie krzyżuje ani nie rozgałęzia."
+                }
+            },
+            "gridfill": {
+                "1": {
+                    "title": "Buduj bloki",
+                    "text": "Podziel diagram na prostokąty. Każdy blok zawiera dokładnie jedną liczbę, która mówi, ile ma kratek. Przeciągnij po kratkach, by narysować blok."
+                },
+                "2": {
+                    "title": "Wybierz kształt",
+                    "text": "4 może być kwadratem lub rzędem czterech kratek. Wybierz kształt, który nie zakrywa innej liczby."
+                },
+                "3": {
+                    "title": "Wypełnij diagram",
+                    "text": "Każda kratka musi należeć do bloku. Zacznij od liczb, które pasują tylko na jeden sposób."
+                }
+            },
+            "headcoach": {
+                "1": {
+                    "title": "Podążaj za łańcuchem",
+                    "text": "Zacznij od pokazanej liczby i wykonuj każdy krok na swojej ostatniej odpowiedzi. Wpisuj odpowiedzi na klawiaturze."
+                },
+                "2": {
+                    "title": "Policz to",
+                    "text": "Potrzebujesz miejsca na obliczenia? Dotknij ołówka, by robić notatki. Błędna odpowiedź zostanie oznaczona i możesz spróbować ponownie."
+                },
+                "3": {
+                    "title": "Cały łańcuch",
+                    "text": "Osiem kroków, jak w codziennej łamigłówce. Wykonuj je po kolei, zawsze od ostatniej odpowiedzi."
+                }
+            },
+            "huedoku": {
+                "1": {
+                    "title": "Każdy kolor raz",
+                    "text": "Wypełnij diagram tak, by każdy wiersz, kolumna i blok miały wszystkie cztery kolory dokładnie raz. Dotknij kratki, a potem koloru."
+                },
+                "2": {
+                    "title": "Sześć kolorów",
+                    "text": "Teraz jest sześć kolorów, a każdy blok ma 3 kratki szerokości i 2 wysokości. Każdy wiersz, kolumna i blok nadal potrzebują każdego koloru raz."
+                },
+                "3": {
+                    "title": "Tylko jedno miejsce",
+                    "text": "Wybierz kolor i spójrz na blok, w którym go jeszcze brakuje. Wiersze i kolumny, w których już jest, wykluczają kratki – często zostaje tylko jedna. Utknąłeś? Dotknij żarówki, by zobaczyć krok."
+                }
+            },
+            "guessword": {
+                "1": {
+                    "title": "Zielony to trafienie",
+                    "text": "Znajdź ukryte pięcioliterowe słowo w sześciu próbach. Zacznij od wpisania CHAIN i naciśnij Enter. Zielone litery są dobre i na dobrym miejscu, więc zostaw je tam. Szarych liter nie ma w słowie."
+                },
+                "2": {
+                    "title": "Żółty to przestaw",
+                    "text": "Zacznij od EARTH. Żółte litery są w słowie, ale na złym miejscu, więc spróbuj ich gdzie indziej."
+                },
+                "3": {
+                    "title": "Oba kolory naraz",
+                    "text": "Zacznij od BEARD. Zostaw zielone litery na miejscu i przestawiaj żółte, aż słowo będzie pasować."
+                }
+            },
+            "wordwheel": {
+                "1": {
+                    "title": "Układaj z koła",
+                    "text": "Stukaj w litery, by ułożyć słowa z co najmniej czterech liter, i naciśnij Enter. Każde słowo musi zawierać literę ze środka. Do znalezienia jest pięć angielskich słów, a jedno wykorzystuje wszystkie litery."
+                },
+                "2": {
+                    "title": "Podwójne liczą się dwa razy",
+                    "text": "Każde pole można użyć raz w słowie, więc litera, która jest na kole dwa razy, może pojawić się dwa razy. Znajdź cztery słowa."
+                },
+                "3": {
+                    "title": "Pełne koło",
+                    "text": "Do znalezienia jest pięć słów. Liczba mnoga się nie liczy. Utknąłeś? Przetasuj litery, by spojrzeć na nie inaczej."
+                }
+            },
+            "wordsearch": {
+                "1": {
+                    "title": "Znajdź słowa",
+                    "text": "Przeciągnij od pierwszej litery słowa do ostatniej. Tutaj słowa biegną poziomo albo pionowo. Znajdź trzy słowa z listy."
+                },
+                "2": {
+                    "title": "W każdym kierunku",
+                    "text": "Słowa mogą też biec wspak albo po skosie. Znajdź wszystkie cztery."
+                },
+                "3": {
+                    "title": "Większa siatka",
+                    "text": "Sześć słów ukrytych we wszystkich kierunkach. Utknąłeś? Stuknij słowo na liście, by zobaczyć jego pierwszą literę."
+                }
+            },
+            "codeword": {
+              "1": {
+                "title": "Liczby to litery",
+                "text": "Każda liczba oznacza jedną literę, a ta sama liczba to zawsze ta sama litera. T, I, L i E są już wpisane. Uzupełnij resztę, by dokończyć słowa."
+              },
+              "2": {
+                "title": "Ta sama liczba, ta sama litera",
+                "text": "Gdy liczba występuje dwa razy z rzędu, jej litera też, jak podwójne E i podwójne T tutaj. Wykorzystaj je, by dokończyć słowa."
+              },
+              "3": {
+                "title": "Zacznij od tego, co wiesz",
+                "text": "Słowa, w których jest już większość liter, najłatwiej rozszyfrować. Zacznij od nich, a potem wykorzystaj każdą nową literę do reszty."
+              }
+            }
+        }
+    },
+    "assistFeedback": {
+        "title": "Ile pomocy chcesz następnym razem?",
+        "letters": {
+            "title": "Ile liter pomocy chcesz wybrać następnym razem?",
+            "used": "Tym razem wybrano {n} literę pomocy. | Tym razem wybrano {n} liter pomocy.",
+            "unused": "Tym razem grano bez liter pomocy.",
+            "choice": "{label} ({n})"
+        },
+        "choices": {
+            "none": "Wcale",
+            "fewer": "Mniej",
+            "same": "Tyle samo",
+            "more": "Więcej",
+            "alotmore": "Dużo więcej"
+        }
+    },
+    "insights": {
+        "title": "Czego się o Tobie dowiedzieliśmy",
+        "intro": "Dopasowujemy stronę do sposobu gry. Oto, co obecnie zakładamy — usuń wszystko, co się nie zgadza, a przestaniemy z tego korzystać.",
+        "groups": {
+            "likes": "Łamigłówki, które chyba lubisz",
+            "time": "Kiedy grasz",
+            "difficulty": "Poziom trudności",
+            "help": "Ustawienia pomocy",
+            "told": "Co nam przekazano"
+        },
+        "likes": "{name} — {count} gra w ostatnich 30 dniach | {name} — {count} gry w ostatnich 30 dniach",
+        "time": {
+            "morning": "{name}: zwykle rano",
+            "afternoon": "{name}: zwykle po południu",
+            "evening": "{name}: zwykle wieczorem",
+            "night": "{name}: zwykle późno w nocy"
+        },
+        "lean": {
+            "harder": {
+                "rating": "{name} ostatnio wydawało się za łatwe, więc proponujemy trudniejsze poziomy",
+                "purist": "{name} rozwiązywane bez pomocy, więc proponujemy trudniejsze poziomy",
+                "improver": "Coraz szybsze rozwiązywanie {name}, więc proponujemy trudniejsze poziomy"
+            },
+            "easier": {
+                "rating": "{name} ostatnio wydawało się trudne, więc proponujemy łatwiejsze poziomy",
+                "hintHunter": "Częste korzystanie z pomocy w {name}, więc proponujemy łatwiejsze poziomy",
+                "newcomer": "Początki z {name}, więc proponujemy łatwiejsze poziomy"
+            }
+        },
+        "assists": {
+            "crossword": "{name}: wybierasz {level} liter do wpisania",
+            "codeword": "{name}: wybierasz {level} liter do wpisania",
+            "sudoku": "{name}: przed startem wypełniamy {level}% pól"
+        },
+        "boosted": {
+            "words": "Prośba o więcej łamigłówek słownych",
+            "numbers": "Prośba o więcej łamigłówek liczbowych",
+            "logic": "Prośba o więcej łamigłówek logicznych",
+            "quiz": "Prośba o więcej quizów"
+        },
+        "tour": "Wybrane w przewodniku: {picks}",
+        "remove": "Usuń",
+        "removeLabel": "Usuń: {text}",
+        "removeAll": "Usuń wszystko",
+        "empty": "Na razie nic — rozwiąż kilka łamigłówek, a zaczniemy dopasowywać stronę.",
+        "allRemoved": "Nic do pokazania — usunięto wszystkie nasze założenia.",
+        "restore": "Przywróć {count} usunięty element | Przywróć {count} usunięte elementy"
+    }
+}

@@ -1,0 +1,88 @@
+{
+  "version": "http://ipuz.org/v2",
+  "kind": [
+    "http://ipuz.org/sudoku#1"
+  ],
+  "title": "Huedoku",
+  "difficulty": "Easy",
+  "boxes": true,
+  "dimensions": {
+    "width": 4,
+    "height": 4
+  },
+  "settings": {
+    "boxColCount": 2,
+    "boxRowCount": 2
+  },
+  "puzzle": [
+    [
+      0,
+      4,
+      0,
+      2
+    ],
+    [
+      3,
+      0,
+      0,
+      4
+    ],
+    [
+      4,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      4,
+      0
+    ]
+  ],
+  "solution": [
+    [
+      1,
+      4,
+      3,
+      2
+    ],
+    [
+      3,
+      2,
+      1,
+      4
+    ],
+    [
+      4,
+      3,
+      2,
+      1
+    ],
+    [
+      2,
+      1,
+      4,
+      3
+    ]
+  ],
+  "meta": {
+    "variant": "Huedoku",
+    "slug": "huedoku-tutorial-1",
+    "mode": "colour",
+    "id": "tutorial-1",
+    "number": "",
+    "description": "",
+    "type": "sudoku",
+    "section": "",
+    "difficulty": "Easy",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 1,
+      "steps": 3
+    }
+  },
+  "copy": {},
+  "feedback": null
+}

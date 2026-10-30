@@ -1,0 +1,61 @@
+{
+  "_readme": "Source for the three tutorial crosswords. Edit here, then run `npm run tutorials` to rebuild public/tutorials/crossword-*.json. Grid rows use # for a black square. Clues are keyed by answer; write a multi-word answer with spaces (e.g. \"ICE CREAM\") and its grid letters without them.",
+  "puzzles": [
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "CAT",
+        "O##",
+        "W##"
+      ],
+      "across": {
+        "CAT": "Pet that purrs"
+      },
+      "down": {
+        "COW": "Farm animal that says moo"
+      }
+    },
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "HOUSE",
+        "A###A",
+        "TIGER",
+        "##Y##",
+        "##M##"
+      ],
+      "across": {
+        "HOUSE": "Home with a roof and a front door",
+        "TIGER": "Big striped cat"
+      },
+      "down": {
+        "HAT": "It's worn on your head",
+        "EAR": "You hear with it",
+        "GYM": "Place to work out"
+      }
+    },
+    {
+      "difficulty": "Medium",
+      "grid": [
+        "PLANET#",
+        "E####E#",
+        "A####A#",
+        "ROBIN##",
+        "####EGG",
+        "####S##",
+        "##OTTER"
+      ],
+      "across": {
+        "PLANET": "Mars or Venus, for example",
+        "ROBIN": "Red-breasted garden bird",
+        "EGG": "It might be boiled, fried or scrambled",
+        "OTTER": "Playful river swimmer"
+      },
+      "down": {
+        "PEAR": "Fruit that sounds like a couple",
+        "TEA": "Brew often served with milk",
+        "NEST": "3 Across might build one"
+      }
+    }
+  ]
+}

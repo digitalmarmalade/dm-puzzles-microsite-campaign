@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Word Wheel tutorial</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <script>
+  (function () {
+    try {
+      var t = new URLSearchParams(location.search).get('theme');
+      if (t === 'dark' || t === 'light') {
+        document.documentElement.setAttribute('data-theme-status', t);
+      }
+    } catch (e) { /* URLSearchParams unavailable — leave OS preference in charge */ }
+  })();
+</script>
+    <meta name="theme-color" content="#FFFFFF">
+
+    <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/lato-regular-webfont.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="./assets/fonts/lato-medium-webfont.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="./assets/fonts/lato-semibold-webfont.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="./assets/fonts/lato-bold-webfont.woff2" crossorigin />
+
+    <link rel="stylesheet" href="./css/main.css?v=a534e57d7a" />
+    <link rel="stylesheet" href="./css/brand.css?v=d41d8cd98f" />
+
+    <style>
+  #spinner {
+    background: var(--app-bg, #fff);
+    inset: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100000;
+  }
+
+  #innaThaSpinner {
+    inset: 0;
+    position: absolute;
+  }
+
+  .provider-logo { 
+    block-size: 6rem;
+    inline-size: 3.9rem;
+    inset: 50% auto auto 50%;
+    position: fixed;
+    transform: translate(-50%, -50%); 
+  }
+
+  .spinner-path {
+    block-size: 10rem;
+    inline-size: 10rem;
+    inset: 50% auto auto 50%;
+    position: relative;
+    transform: translate(-50%, 0);
+  }
+
+  .spinner-path > * {
+    animation: spinner 3s infinite;
+  }
+
+  .spinner-path > *:after {
+    block-size: 1.4rem;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    inline-size: 1.4rem;
+    position: absolute;
+  }
+
+  .spinner-path > *:nth-child(1) {
+    animation-delay: .5s;
+  }
+
+  .spinner-path > *:nth-child(1):after {
+    background: #F17B2D;
+  }
+
+  .spinner-path > *:nth-child(2) {
+    animation-delay: 1s;
+  }
+
+  .spinner-path > *:nth-child(2):after {
+    background: #F17B2D;
+  }
+
+  .spinner-path > *:nth-child(3) {
+    animation-delay: 1.5;
+  }
+
+  .spinner-path > *:nth-child(3):after {
+    background: #F17B2D;
+  }
+
+  .spinner-path > *:nth-child(4) {
+    animation-delay: 2s;
+  }
+
+  .spinner-path > *:nth-child(4):after {
+    background: #F17B2D;
+  }
+
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+          <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.prod.js"></script>
+    
+    <script src="https://unpkg.com/tiny-emitter@2.1.0/dist/tinyemitter.min.js"></script>
+
+    <script>
+    /*! modernizr 3.3.1 (Custom Build) | MIT *
+    * https://modernizr.com/download/?-touchevents-setclasses !*/
+    !function (e, n, t) { function o(e, n) { return typeof e === n } function s() { var e, n, t, s, a, i, r; for (var l in c) if (c.hasOwnProperty(l)) { if (e = [], n = c[l], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (t = 0; t < n.options.aliases.length; t++)e.push(n.options.aliases[t].toLowerCase()); for (s = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)i = e[a], r = i.split("."), 1 === r.length ? Modernizr[r[0]] = s : (!Modernizr[r[0]] || Modernizr[r[0]] instanceof Boolean || (Modernizr[r[0]] = Boolean(Modernizr[r[0]])), Modernizr[r[0]][r[1]] = s), f.push((s ? "" : "no-") + r.join("-")) } } function a(e) { var n = u.className, t = Modernizr._config.classPrefix || ""; if (p && (n = n.baseVal), Modernizr._config.enableJSClass) { var o = new RegExp("(^|\\s)" + t + "no-js(\\s|$)"); n = n.replace(o, "$1" + t + "js$2") } Modernizr._config.enableClasses && (n += " " + t + e.join(" " + t), p ? u.className.baseVal = n : u.className = n) } function i() { return "function" != typeof n.createElement ? n.createElement(arguments[0]) : p ? n.createElementNS.call(n, "http://www.w3.org/2000/svg", arguments[0]) : n.createElement.apply(n, arguments) } function r() { var e = n.body; return e || (e = i(p ? "svg" : "body"), e.fake = !0), e } function l(e, t, o, s) { var a, l, f, c, d = "modernizr", p = i("div"), h = r(); if (parseInt(o, 10)) for (; o--;)f = i("div"), f.id = s ? s[o] : d + (o + 1), p.appendChild(f); return a = i("style"), a.type = "text/css", a.id = "s" + d, (h.fake ? h : p).appendChild(a), h.appendChild(p), a.styleSheet ? a.styleSheet.cssText = e : a.appendChild(n.createTextNode(e)), p.id = d, h.fake && (h.style.background = "", h.style.overflow = "hidden", c = u.style.overflow, u.style.overflow = "hidden", u.appendChild(h)), l = t(p, e), h.fake ? (h.parentNode.removeChild(h), u.style.overflow = c, u.offsetHeight) : p.parentNode.removeChild(p), !!l } var f = [], c = [], d = { _version: "3.3.1", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function (e, n) { var t = this; setTimeout(function () { n(t[e]) }, 0) }, addTest: function (e, n, t) { c.push({ name: e, fn: n, options: t }) }, addAsyncTest: function (e) { c.push({ name: null, fn: e }) } }, Modernizr = function () { }; Modernizr.prototype = d, Modernizr = new Modernizr; var u = n.documentElement, p = "svg" === u.nodeName.toLowerCase(), h = d._config.usePrefixes ? " -webkit- -moz- -o- -ms- ".split(" ") : ["", ""]; d._prefixes = h; var m = d.testStyles = l; Modernizr.addTest("touch", function () { var t; if ("ontouchstart" in e || e.DocumentTouch && n instanceof DocumentTouch) t = !0; else { var o = ["@media (", h.join("touch-enabled),("), "heartz", ")", "{#modernizr{top:9px;position:absolute}}"].join(""); m(o, function (e) { t = 9 === e.offsetTop }) } return t }), s(), a(f), delete d.addTest, delete d.addAsyncTest; for (var v = 0; v < Modernizr._q.length; v++)Modernizr._q[v](); e.Modernizr = Modernizr }(window, document);
+</script>
+
+    <style>
+      @keyframes sp-fade-in {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      #err {
+        background-color: var(--error, tomato);
+        border-radius: 4px;
+        color: #fff;
+        font-size: 1.4rem;
+        inline-size: min((100vw - (var(--app-margin) * 2)), 400px);
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        padding-block: var(--space-2x);
+        padding-inline: var(--space-4x);
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        text-wrap: pretty;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.3s;
+        z-index: 100000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg width="0" height="0" style="display: none">
+  <symbol 
+    xmlns="http://www.w3.org/2000/svg"
+    id="iconSettings" 
+    fill="none"
+    viewBox="0 0 21 21">
+    <circle style="fill: var(--fill, currentColor)" cx="2.5" cy="10.5" r="1.5" fill="#333"/>
+    <circle style="fill: var(--fill, currentColor)" cx="10.5" cy="10.5" r="1.5" fill="#333"/>
+    <circle style="fill: var(--fill, currentColor)" cx="18.5" cy="10.5" r="1.5" fill="#333"/>
+  </symbol>
+  <symbol 
+    xmlns="http://www.w3.org/2000/svg"
+    id="iconCheck"
+    fill="none" 
+    viewBox="0 0 21 21">
+    <g style="fill: var(--fill, currentColor)" fill="#333" clip-path="url(#iconSettings-c1)">
+      <path fill-rule="evenodd" d="M2.5 2.5h17v17h-17v-17Zm1 1v7h7v-7h-7Zm8 0v7h7v-7h-7Zm7 8h-7v7h7v-7Zm-8 7v-7h-7v7h7Z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M18.76 2.5h-8v8h8v-8ZM9.92 5.26l-.74-.74-2.96 2.96L4.74 6 4 6.74l2.22 2.22 3.7-3.7Z" clip-rule="evenodd"/>
+      <path d="m13.586 12.914 3.535 3.536-.707.707-3.535-3.536.707-.707Z"/>
+      <path d="m17.121 13.621-3.535 3.536-.707-.707 3.535-3.536.707.707Z"/>
+    </g>
+    <defs>
+      <clipPath id="iconSettings-c1">
+        <path fill="#fff" d="M2 2h18v18H2z"/>
+      </clipPath>
+    </defs>
+  </symbol>
+  <symbol 
+    xmlns="http://www.w3.org/2000/svg"
+    id="iconReveal"
+    fill="none" 
+    viewBox="0 0 21 21">
+    <g fill="#333" clip-path="url(#iconReveal-c1)">
+      <path fill-rule="evenodd" d="M8.5.5v4.576c.326-.05.66-.076 1-.076V1.5H14V6h-1.034A6.535 6.535 0 0 1 15 8.034V7h4.5v4.5H16c0 .34-.026.674-.076 1H20.5V.5h-12ZM15 6V1.5h4.5V6H15ZM6.5 8h1v5.5h5v1h-6V8Z" clip-rule="evenodd"/>
+      <path d="M9.298 17.08a5.553 5.553 0 0 1-5.416-6.77 5.54 5.54 0 0 1 6.633-4.171 5.553 5.553 0 0 1 4.199 6.633 5.581 5.581 0 0 1-5.471 4.336l.055-.027Zm-.055-9.19a3.693 3.693 0 0 0-3.583 2.872 3.665 3.665 0 0 0 3.542 4.486 3.693 3.693 0 0 0 3.583-2.872 3.68 3.68 0 0 0-3.583-4.473"/>
+      <path d="M5.323 14.074 0 19.273l1.31 1.34 5.322-5.198-1.309-1.34ZM15 1h5v5h-5z"/>
+    </g>
+    <defs>
+      <clipPath id="iconReveal-c1">
+        <path fill="#fff" d="M0 0h21v21H0z"/>
+      </clipPath>
+    </defs>
+  </symbol>
+  <symbol 
+    id="iconClose"
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 21 21">
+    <path 
+      style="stroke: var(--fill, currentColor)"
+      stroke="#333" 
+      stroke-linecap="round" 
+      d="M15.657 4.657 4.343 15.97m11.314 0L4.343 4.657"/>
+  </symbol>
+  <symbol 
+    id="iconArrowLeft"
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 16 16">
+    <path style="fill: var(--fill, currentColor)" fill="#CCC" d="m3.81 8.38 6.067-6.094 1.103 1.108-6.067 6.095L3.81 8.381Z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#CCC" d="m4.913 7.273 6.067 6.095-1.103 1.108L3.81 8.381l1.103-1.108Z"/>
+  </symbol>
+  <symbol 
+    id="iconArrowRight"
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 16 16">
+    <path style="fill: var(--fill, currentColor)" fill="#CCC" d="M12.19 8.38 6.123 2.287 5.02 3.394l6.067 6.095 1.103-1.108Z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#CCC" d="M11.087 7.273 5.02 13.368l1.103 1.108 6.067-6.095-1.103-1.108Z"/>
+  </symbol>
+  <symbol 
+    id="iconGrid" 
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 21 21">
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M2.533 4h2v2h-2zM2.533 7h2v2h-2zM2.533 10h2v2h-2z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M2.533 8h2v7h-2zM2.533 16h2v2h-2zM14.533 4h2v2h-2zM14.533 7h2v2h-2zM14.533 10h2v2h-2z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M14.533 8h2v7h-2zM14.533 16h2v2h-2zM11.533 4h2v2h-2zM11.533 7h2v2h-2zM11.533 10h2v2h-2zM11.533 13h2v4h-2z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M11.533 16h2v2h-2zM8.533 4h2v2h-2zM8.533 7h2v2h-2z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M8.533 8h2v6h-2z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M8.533 13h2v2h-2zM8.533 16h2v2h-2zM5.533 4h2v4h-2z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M5.533 7h7v2h-7zM5.533 10h2v2h-2zM5.533 13h7v2h-7zM5.533 16h2v2h-2z"/>
+    <path fill="#fff" stroke="#333" d="M2.5 3.5h15v15h-15z"/>
+    <path style="stroke: var(--fill, currentColor)" stroke="#333" d="M5.5 4v14M17 6.5H3M8.5 4v14M17 9.5H3M11.5 4v14M17 12.5H3M14.5 4v14M17 15.5H3"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M6 4h2v2H6zM12 4h2v2h-2zM6 16h2v2H6zM12 16h2v2h-2zM6 10h2v2H6zM12 10h2v2h-2z"/>
+  </symbol>
+  <symbol
+    id="iconEndGame"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24">
+    <path d="M6.5 21.5V3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+    <path d="M6.5 4C9 2.6 11 4.6 13.5 3.6C15.2 2.9 16.9 3.7 18 3v7.5c-1.1.7-2.8-.1-4.5.6C11 12.1 9 10.1 6.5 11.5V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+  </symbol>
+  <symbol 
+    id="iconList" 
+    xmlns="http://www.w3.org/2000/svg"  
+    fill="none" 
+    viewBox="0 0 21 21">
+    <rect style="fill: var(--fill, currentColor)" width="13" height="2" x="5" y="4" fill="#333" rx="1"/>
+    <rect style="fill: var(--fill, currentColor)" width="7" height="2" x="5" y="7" fill="#333" rx="1"/>
+    <rect style="fill: var(--fill, currentColor)" width="11" height="2" x="5" y="10" fill="#333" rx="1"/>
+    <rect style="fill: var(--fill, currentColor)" width="10" height="2" x="5" y="13" fill="#333" rx="1"/>
+    <rect style="fill: var(--fill, currentColor)" width="13" height="2" x="5" y="16" fill="#333" rx="1"/>
+    <rect style="fill: var(--fill, currentColor)" width="2" height="2" x="2" y="4" fill="#333" rx="1"/>
+    <rect style="fill: var(--fill, currentColor)" width="2" height="2" x="2" y="7" fill="#333" rx="1"/>
+    <rect style="fill: var(--fill, currentColor)" width="2" height="2" x="2" y="10" fill="#333" rx="1"/>
+    <rect style="fill: var(--fill, currentColor)" width="2" height="2" x="2" y="13" fill="#333" rx="1"/>
+    <rect style="fill: var(--fill, currentColor)" width="2" height="2" x="2" y="16" fill="#333" rx="1"/>
+  </symbol>
+  <symbol 
+    id="iconReset"
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 24 24">
+    <path d="M10 9H5c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1s1 .4 1 1v4h4c.6 0 1 .4 1 1s-.4 1-1 1" fill="currentColor" /><path d="M12 21c-1.1 0-2.2-.2-3.2-.6-1.8-.7-3.3-1.9-4.4-3.5-.3-.5-.2-1.1.3-1.4s1.1-.2 1.4.3c.8 1.2 2 2.2 3.4 2.7s2.9.6 4.4.2c1.4-.4 2.7-1.3 3.6-2.5s1.4-2.6 1.5-4.1c0-1.5-.4-3-1.3-4.2s-2.1-2.1-3.5-2.6-2.9-.5-4.4 0c-1.4.5-2.6 1.4-3.5 2.6-.3.5-.9.6-1.4.3s-.6-1-.2-1.4C5.8 5.2 7.4 4 9.2 3.4s3.8-.6 5.6 0 3.4 1.8 4.5 3.4 1.7 3.4 1.6 5.4c0 1.9-.7 3.8-1.9 5.3s-2.8 2.6-4.7 3.2c-.6.2-1.5.3-2.3.3" fill="currentColor" />
+  </symbol>
+  <symbol 
+    id="iconHelp" 
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 512 512">
+    <path d="M485.725 167.186c-80.797-208.91-378.756-208.91-458.599.429-.286.811-.572 1.574-.859 2.385-73.547 197.557 122.818 389.773 318.134 314.89 66.727-25.613 117.762-79.319 141.562-141.562 22.609-58.905 18.889-135.124-.238-176.142m-109.701 23.18c16.598 43.165 28.904 77.554.048 130.115-.048 0-.048.048-.048.095-34.628 63.245-112.849 89.144-178.432 57.522-48.603-23.466-77.125-71.974-77.125-122.675 0-18.125 3.625-36.488 11.257-54.088 45.216-103.834 190.117-110.034 244.3-10.969M165.731 42.746l14.452 83.23c-21.845 12.973-40.16 31.241-53.086 53.086L43.82 164.657c23.419-54.66 67.251-98.492 121.911-121.911M43.82 346.285l83.277-14.452c12.926 21.845 31.194 40.16 53.086 53.086l-14.452 83.278c-54.66-23.419-98.492-67.3-121.911-121.912m303.539 121.912-14.452-83.23c21.845-12.973 40.16-31.289 53.134-53.134l83.23 14.452c-23.419 54.612-67.252 98.493-121.912 121.912M386.04 179.11c-12.974-21.845-31.289-40.16-53.134-53.134l14.452-83.23c54.66 23.419 98.493 67.252 121.912 121.912z" fill="currentColor" />
+  </symbol>
+  <symbol 
+    id="iconShuffle" 
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 40 40">
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M2.381 11.429a1.19 1.19 0 0 1 1.19-1.19h2.5a5.953 5.953 0 0 1 4.643 2.201l3.334 4.096a1.19 1.19 0 0 1-.179 1.678 1.191 1.191 0 0 1-1.678-.178L8.857 13.94a3.57 3.57 0 0 0-2.786-1.321h-2.5a1.19 1.19 0 0 1-1.19-1.19Zm32.798 18.06-3.572-2.382a1.19 1.19 0 0 0-1.19-.06 1.19 1.19 0 0 0-.655 1.048v1.19h-3.69a3.572 3.572 0 0 1-2.762-1.32l-3.334-4.096a1.194 1.194 0 0 0-1.857 1.5l3.31 4.095a5.952 5.952 0 0 0 4.643 2.203h3.69v1.19a1.191 1.191 0 0 0 .63 1.048 1.19 1.19 0 0 0 1.191-.06l3.572-2.38a1.19 1.19 0 0 0 0-1.977h.024Zm-9.108-16.87h3.69v1.19a1.19 1.19 0 0 0 .632 1.048 1.19 1.19 0 0 0 1.19-.06l3.572-2.38a1.19 1.19 0 0 0 0-1.976L31.583 8.06a1.19 1.19 0 0 0-1.19 0 1.19 1.19 0 0 0-.631.988v1.19h-3.69a5.953 5.953 0 0 0-4.643 2.203L8.809 27.916a3.571 3.571 0 0 1-2.738 1.369h-2.5a1.19 1.19 0 1 0 0 2.38h2.5a5.953 5.953 0 0 0 4.643-2.202l12.62-15.476a3.57 3.57 0 0 1 2.738-1.369Z"/>
+  </symbol>
+  <symbol 
+    id="iconPrint"
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 21 21">
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M1 7h19v9h-3v1h3a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v-1H1V7Z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" fill-rule="evenodd" d="M16 14H5v5h11v-5ZM4 13v7h13v-7H4Z" clip-rule="evenodd"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="m15.5 5-3-3.5V5h3Z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" fill-rule="evenodd" d="M4 1h8.73l3.857 4.5H12V2H5v4.5H4V1Zm9 1.852L14.413 4.5H13V2.852Z" clip-rule="evenodd"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M20 7H1v9h3v-3h13v3h3V7Z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" fill-rule="evenodd" d="M8 12.941h5.059V18H8v-5.059Zm.632.632v1.581h1.581v-1.58h-1.58Zm2.214 0v1.581h1.58v-1.58h-1.58Zm1.58 2.214h-1.58v1.58h1.58v-1.58Zm-2.213 1.58v-1.58h-1.58v1.58h1.58Z" clip-rule="evenodd"/>
+    <path style="fill: var(--fill, currentColor)" fill="#333" d="M10.5 13.5h2v2h-2z"/>
+  </symbol>
+  <symbol 
+    id="iconUndo" 
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 24 24">
+    <path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L3.71 8.71C3.08 8.08 2 8.52 2 9.41V15c0 .55.45 1 1 1h5.59c.89 0 1.34-1.08.71-1.71l-1.91-1.91c1.39-1.16 3.16-1.88 5.12-1.88 3.16 0 5.89 1.84 7.19 4.5.27.56.91.84 1.5.64.71-.23 1.07-1.04.75-1.72C20.23 10.42 16.65 8 12.5 8" fill="currentColor"/>
+  </symbol>
+  <symbol 
+    id="iconPencil"
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 21 21">
+    <path style="fill: var(--fill, currentColor)" fill="#000" d="M2.5 19 6 17.75 3.75 15.5 2.5 19Z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#000" fill-rule="evenodd" d="M15.5.7929 20.7071 6 9.7741 16.9331l-8.1 2.8928 2.8929-8.1L15.5.7929ZM5.2051 12.9122l-.8778 2.458 1.8025 1.8025 2.458-.8778-3.3827-3.3827ZM9.5 15.7929 8.7071 15 18.5 5.2071 19.2929 6 9.5 15.7929ZM17.7929 4.5 17 3.7071 7.2071 13.5 8 14.2929 17.7929 4.5ZM6.5 12.7929 16.2929 3 15.5 2.2071 5.7071 12l.7929.7929Zm-1.4122 4.752L3.955 16.4122l-.6292 1.7619 1.7619-.6292Z" clip-rule="evenodd"/>
+    <path style="fill: var(--fill, currentColor)" fill="#000" d="m17 3.7071.7929.7929L8 14.2929 7.2071 13.5 17 3.7071Z"/>
+  </symbol>
+  <symbol 
+    id="iconDelete"
+    xmlns="http://www.w3.org/2000/svg" 
+    fill="none" 
+    viewBox="0 0 22 22">
+    <path style="fill: var(--fill, currentColor)" fill="#333" fill-rule="evenodd" d="M7.5 3a.5.5 0 0 0-.39.188l-6 7.5a.5.5 0 0 0 .01.637l6 7a.5.5 0 0 0 .38.175h13a.5.5 0 0 0 .5-.5V3.5a.5.5 0 0 0-.5-.5h-13Zm8.513 5.985a.475.475 0 0 0-.672-.672l-2.015 2.015-2.015-2.015a.475.475 0 0 0-.672.672L12.654 11l-2.015 2.015a.475.475 0 0 0 .672.672l2.015-2.015 2.015 2.015a.475.475 0 1 0 .672-.672L13.998 11l2.015-2.015Z" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="iconHint" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 491.535 491.535">
+    <path d="M306.545 367.594H185.003c-9.041 0-16.382 7.338-16.382 16.385 0 9.05 7.341 16.384 16.382 16.384h121.542c9.041 0 16.389-7.334 16.389-16.384 0-9.047-7.348-16.385-16.389-16.385M213.917 464.367v8.926c0 10.076 8.157 18.242 18.239 18.242h27.233c10.062 0 18.239-8.166 18.239-18.242v-8.926c20.642-1.467 36.981-18.498 36.981-39.506H176.92c.001 21.008 16.357 38.039 36.997 39.506M245.777 0C155.084 0 81.561 73.516 81.561 164.207c0 38.268 13.164 73.396 35.152 101.287 19.444 24.647 37.874 51.592 53.76 78.688h150.583c16.049-27.353 34.146-53.793 53.78-78.707 21.968-27.878 35.139-63.011 35.139-101.27C409.975 73.517 336.451 0 245.777 0m.273 56.971c-58.297 0-105.702 47.412-105.702 105.692 0 9.048-7.327 16.385-16.389 16.385-9.056 0-16.383-7.337-16.383-16.385 0-76.346 62.114-138.46 138.474-138.46 9.034 0 16.383 7.334 16.383 16.382s-7.349 16.386-16.383 16.386" fill="currentColor" />
+  </symbol>
+  
+  
+  <symbol id="iconIncorrect" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+    <path style="fill: var(--fill, currentColor)" fill="#C83D42" d="M2.5 0 15 12.5 12.5 15 0 2.5 2.5 0Z"/>
+    <path style="fill: var(--fill, currentColor)" fill="#C83D42" d="M15 2.5 2.5 15 0 12.5 12.5 0 15 2.5Z"/>
+  </symbol>
+  <symbol id="iconCorrect" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+    <path style="fill: var(--fill, currentColor)" fill="#98CB52" fill-rule="evenodd" d="m16 4.2857-2-2-8 7.9999-4-4-2 2 6 6 10-10Z" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="iconStopwatch" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22">
+    <g clip-path="url(#iconStopwatch-ca)">
+      <path style="fill: var(--fill, currentColor)" fill="#fff" d="m17.8442 6.955.8233-.8234a.819.819 0 0 0 0-1.1585.819.819 0 0 0-1.1585 0l-.8234.8234c-1.3814-1.151-3.06-1.8464-4.8505-2.0092V2.1385h.7919a.8193.8193 0 0 0 0-1.6385H9.4046a.8193.8193 0 0 0 0 1.6385h.7919v1.6488c-4.4822.4076-8.0559 4.173-8.0559 8.8375C2.1406 17.53 6.11 21.5 11.016 21.5c4.905 0 8.875-3.9694 8.875-8.8752 0-2.0954-.7216-4.0797-2.0467-5.6698Zm-6.8285 12.9065c-3.9902 0-7.2367-3.2464-7.2367-7.2367 0-3.9902 3.2465-7.2366 7.2367-7.2366 3.9904 0 7.2367 3.2464 7.2367 7.2366 0 3.9903-3.2463 7.2367-7.2367 7.2367Zm3.7967-11.0332a.8193.8193 0 0 1 0 1.1585L11.595 13.204a.819.819 0 0 1-1.1585 0 .8192.8192 0 0 1 0-1.1585l3.2172-3.2173a.8194.8194 0 0 1 1.1587 0Z"/>
+    </g>
+    <defs>
+      <clipPath id="iconStopwatch-ca">
+        <path style="fill: var(--fill, currentColor)" fill="#fff" d="M.5.5h21v21H.5z"/>
+      </clipPath>
+    </defs>
+  </symbol>
+  
+  <symbol id="iconKeyDelete" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <path style="fill: var(--icon-fill, currentColor);" fill="#212121" fill-rule="evenodd" d="M21.714 4.571H8.762c-.338 0-.658.15-.875.407l-5.773 6.857a1.143 1.143 0 0 0 0 1.472l5.773 6.858c.217.258.537.406.875.406h12.952c.631 0 1.143-.511 1.143-1.142V5.714c0-.63-.512-1.143-1.143-1.143ZM8.762 3.43c-.675 0-1.315.297-1.749.813L1.24 11.1a2.286 2.286 0 0 0 0 2.945L7.013 20.9a2.286 2.286 0 0 0 1.749.813h12.952A2.286 2.286 0 0 0 24 19.43V5.714a2.286 2.286 0 0 0-2.286-2.285H8.762Z" clip-rule="evenodd"/>
+    <path style="fill: var(--icon-fill, currentColor);" fill="#212121" d="M8.762 4.571h12.952c.631 0 1.143.512 1.143 1.143V19.43c0 .63-.512 1.142-1.143 1.142H8.762c-.338 0-.658-.148-.875-.406l-5.773-6.857a1.143 1.143 0 0 1 0-1.473l5.773-6.857c.217-.258.537-.407.875-.407Z"/>
+    <path style="stroke: var(--icon-cross, #fff);" stroke="#fff" stroke-linecap="round" d="m17.322 9.322-7.215 7.216m7.215 0-7.215-7.216"/>
+  </symbol>
+  <symbol id="iconExternalWindow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+    <path style="fill: var(--icon-fill, currentColor);" fill="#0A0A0A" fill-rule="evenodd" d="M2 2v14h14V9h2v7c0 1.1-.9 2-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h7v2H2Zm9 0V0h7v7h-2V3.41l-9.83 9.83-1.41-1.41L14.59 2H11Z" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="iconClock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 42 42">
+    <g clip-path="url(#iconClock__clippath-a)">
+      <path style="fill: var(--icon-fill, currentColor);" fill="#1D1D1B" d="M26.373 1.767h-10.5v3.5h10.5v-3.5zm-7 22.75h3.5v-10.5h-3.5v10.5zm14.052-11.585 2.485-2.485a19.332 19.332 0 0 0-2.467-2.467l-2.485 2.485A15.683 15.683 0 0 0 21.123 7c-8.698 0-15.75 7.053-15.75 15.75 0 8.698 7.035 15.75 15.75 15.75s15.75-7.052 15.75-15.75c0-3.692-1.295-7.105-3.448-9.818zM21.123 35.017a12.241 12.241 0 0 1-12.25-12.25c0-6.772 5.477-12.25 12.25-12.25 6.772 0 12.25 5.478 12.25 12.25 0 6.773-5.478 12.25-12.25 12.25z"/>
+    </g>
+    <defs>
+      <clipPath id="iconClock__clippath-a">
+        <path fill="#fff" d="M0 0h42v42H0z"/>
+      </clipPath>
+    </defs>
+  </symbol>
+  <symbol id="iconCheckInCircle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48">
+    <circle style="fill: var(--icon-background-fill, #069);" cx="24" cy="24" r="24" fill="#069"/>
+    <path style="fill: var(--icon-fill, #fff);" fill="#fff" d="M21 28.17 16.83 24l-1.42 1.41L21 31l12-12-1.41-1.41L21 28.17Z"/>
+  </symbol>
+  <symbol id="iconTwitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path style="fill: var(--icon-fill, currentColor);" d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"/>
+  </symbol>
+  <symbol id="iconFacebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path style="fill: var(--icon-fill, currentColor);" d="M288 176v-64c0-17.664 14.336-32 32-32h32V0h-64c-53.024 0-96 42.976-96 96v80h-64v80h64v256h96V256h64l32-80h-96z"/>
+  </symbol>
+  <symbol id="iconArrowRightAlt" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 4 8">
+    <path style="fill: var(--icon-fill, currentColor);" fill="#fff" fill-rule="evenodd" d="m0 .5 2.052 3.449L0 7.5h.584L4 3.97.584.5H0z" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="iconSymbol1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <path d="M50 0L100 50L50 100L0 50L50 0Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="iconSymbol2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="currentColor"/>
+  </symbol>
+  <symbol id="iconShare" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.5C12.2106 1.5 12.4111 1.58979 12.5508 1.74665L15.6498 5.22655C15.9194 5.52931 15.8914 5.9923 15.5872 6.26066C15.283 6.52903 14.8178 6.50113 14.5482 6.19837L12.736 4.16344V13.5422C12.736 13.9468 12.4065 14.2748 12 14.2748C11.5935 14.2748 11.264 13.9468 11.264 13.5422V8.85283V4.16344L9.4518 6.19837C9.18217 6.50113 8.717 6.52903 8.4128 6.26066C8.10861 5.9923 8.08059 5.52931 8.35021 5.22655L11.4492 1.74665C11.5889 1.58979 11.7894 1.5 12 1.5ZM3 13.3366C3 10.7743 5.08698 8.69706 7.66141 8.69706H8.0746C8.48109 8.69706 8.81062 9.02504 8.81062 9.42962C8.81062 9.8342 8.48109 10.1622 8.0746 10.1622H7.66141C5.89996 10.1622 4.47202 11.5834 4.47202 13.3366V17.8605C4.47202 19.6137 5.89996 21.0349 7.66141 21.0349H16.3386C18.1 21.0349 19.528 19.6136 19.528 17.8605V13.3366C19.528 11.5834 18.1 10.1622 16.3386 10.1622H15.9254C15.5189 10.1622 15.1894 9.8342 15.1894 9.42962C15.1894 9.02504 15.5189 8.69706 15.9254 8.69706H16.3386C18.913 8.69706 21 10.7742 21 13.3366V17.8605C21 20.4228 18.913 22.5 16.3386 22.5H7.66141C5.08698 22.5 3 20.4228 3 17.8605V13.3366Z" fill="currentColor"/>
+  </symbol>
+<symbol id="iconRocket" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M22.3875 1.79536C22.3687 1.71099 22.3031 1.64536 22.2234 1.62193C19.4765 0.951614 13.1343 3.34224 9.6984 6.77818C9.08434 7.38755 8.52653 8.04849 8.02966 8.75161C6.97028 8.65786 5.91091 8.73755 5.00622 9.1313C2.45622 10.2516 1.71559 13.1813 1.50466 14.4376C1.46247 14.6813 1.62653 14.9157 1.87497 14.9579C1.91716 14.9626 1.95934 14.9672 2.00153 14.9626L6.09372 14.5126C6.09841 14.8219 6.11716 15.1313 6.14997 15.436C6.16872 15.6469 6.26715 15.8485 6.41715 15.9985L8.00153 17.5782C8.15153 17.7282 8.35309 17.8266 8.56403 17.8454C8.86872 17.8782 9.17341 17.8969 9.48278 17.9016L9.03278 21.9891C9.00465 22.2376 9.18747 22.4626 9.43591 22.486C9.47809 22.4907 9.52028 22.4907 9.55778 22.4813C10.814 22.2797 13.7484 21.5391 14.864 18.9891C15.2578 18.0844 15.3375 17.0297 15.2484 15.9751C15.9562 15.4782 16.6172 14.9157 17.2265 14.3063C20.6718 10.8797 23.0484 4.67818 22.3875 1.79536ZM16.964 10.2141C16.0875 11.0907 14.6625 11.0954 13.7859 10.2141C12.9047 9.33755 12.9047 7.91255 13.7859 7.0313C14.6625 6.15005 16.0875 6.15005 16.9687 7.0313C17.8453 7.91255 17.8453 9.33755 16.964 10.2141Z" fill="currentColor"/>
+    <path d="M7.89375 18.722C7.63594 18.9798 7.22344 19.0782 6.72656 19.1673C5.61094 19.3548 4.62656 18.3938 4.82812 17.2688C4.90313 16.8423 5.13281 16.2423 5.27344 16.1016C5.35313 16.022 5.35781 15.8907 5.27812 15.811C5.23125 15.7641 5.17031 15.7407 5.10469 15.7501C4.48125 15.8251 3.9 16.111 3.45938 16.5516C2.35313 17.6579 2.25 21.7501 2.25 21.7501C2.25 21.7501 6.34687 21.647 7.44844 20.5407C7.89375 20.0954 8.175 19.5188 8.25 18.8907C8.26875 18.6985 8.02969 18.5813 7.89375 18.722Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="iconPause" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g style="fill: var(--fill, currentColor)">
+      <rect x="5.5" y="4" width="3.5" height="13" rx="1"/>
+      <rect x="12" y="4" width="3.5" height="13" rx="1"/>
+    </g>
+  </symbol>
+  <symbol id="iconPlay" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      style="fill: var(--fill, currentColor)"
+      d="M6.5 4.4a1 1 0 0 1 1.52-.85l9.1 5.6a1 1 0 0 1 0 1.7l-9.1 5.6a1 1 0 0 1-1.52-.85V4.4Z"/>
+  </symbol>
+  <symbol id="iconTime" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="m23.1255 8.60666 1.0979-1.09781c.4266-.42661.4266-1.11832 0-1.54471-.4266-.4266-1.1181-.4266-1.5448 0l-1.0978 1.09781c-1.8418-1.53467-4.0799-2.46179-6.4674-2.67883v-2.1984h1.0559c.6033 0 1.0923-.48919 1.0923-1.09247C17.2616.488983 16.7726 0 16.1693 0h-4.2966c-.6032 0-1.0922.488983-1.0922 1.09225 0 .60328.489 1.09247 1.0922 1.09247h1.056v2.1984C6.95236 4.92657 2.1875 9.94714 2.1875 16.1664 2.1875 22.7066 7.48001 28 14.0211 28c6.5401 0 11.8335-5.2925 11.8335-11.8336 0-2.7938-.9622-5.4395-2.7291-7.55974M14.0209 25.8153c-5.32025 0-9.64889-4.3285-9.64889-9.6489 0-5.3203 4.32864-9.64876 9.64889-9.64876 5.3205 0 9.649 4.32846 9.649 9.64876 0 5.3204-4.3285 9.6489-9.649 9.6489m5.0623-14.711c.4266.4266.4266 1.1184 0 1.5447l-4.2898 4.2898c-.4266.4266-1.1183.4266-1.5447 0-.4266-.4266-.4266-1.1183 0-1.5447l4.2895-4.2898c.4266-.4266 1.1184-.4266 1.545 0" fill="currentColor"/>
+  </symbol>
+  <symbol id="iconChat" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+    <path id="Vector" d="M20.2999 13.25C20.2984 14.6025 19.2024 15.6985 17.85 15.7H10.5C10.443 15.7 10.3872 15.7139 10.3369 15.7403L4.33752 18.898L4.89294 16.1201C4.91396 16.017 4.88765 15.91 4.82117 15.8287C4.75469 15.7472 4.65505 15.7 4.54995 15.7H3.14995C1.79746 15.6985 0.701489 14.6025 0.699951 13.25V4.15001C0.701489 2.79752 1.79746 1.70155 3.14995 1.70001H17.85C19.2024 1.70155 20.2984 2.79752 20.2999 4.15001V13.25Z" stroke="currentColor"/>
+    <circle id="Ellipse 16" cx="6.5" cy="9" r="1" fill="currentColor"/>
+    <circle id="Ellipse 17" cx="10.5" cy="9" r="1" fill="currentColor"/>
+    <circle id="Ellipse 18" cx="14.5" cy="9" r="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="iconCompetition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512">
+    <path d="m90.41 205.443-22.291-14.021c-16.373-10.298-27.599-27.146-30.797-46.223-6.034-36.007 17.619-70.238 53.064-77.626V30.892c-1.003 0-2.017.062-3.039.234l-.33.056C30.332 40.68-8.056 94.527 1.444 151.212c4.911 29.307 22.154 55.186 47.308 71.006l49.222 30.958c-4.749-15.1-7.379-31.128-7.564-47.733M424.997 31.183l-.344-.058c-1.022-.171-2.036-.233-3.039-.233v36.681c35.439 7.379 59.098 41.615 53.064 77.626-3.198 19.078-14.422 35.925-30.797 46.225l-22.291 14.02c-.183 16.605-2.815 32.633-7.563 47.733l49.222-30.958c25.153-15.819 42.395-41.7 47.308-71.006 9.499-56.686-28.889-110.531-85.56-120.03M114.639 8.28v195.307c0 77.946 63.413 141.36 141.36 141.36s141.36-63.413 141.36-141.36V8.28zm218.616 152.005-24.241 23.629c-3.077 2.999-4.481 7.321-3.754 11.556l5.723 33.364c1.829 10.665-9.365 18.799-18.943 13.763l-29.964-15.753c-3.803-2-8.347-2-12.151 0l-29.964 15.753c-9.578 5.035-20.773-3.098-18.943-13.763l5.723-33.364c.726-4.235-.678-8.557-3.754-11.556l-24.241-23.629c-7.749-7.554-3.473-20.714 7.236-22.269l33.5-4.868c4.253-.618 7.928-3.289 9.83-7.143l14.981-30.357c4.789-9.704 18.627-9.704 23.416 0l14.981 30.357c1.901 3.854 5.578 6.524 9.83 7.143l33.5 4.868c10.708 1.557 14.984 14.717 7.235 22.269M307.365 420.471c-2.493-.258-5.022-.394-7.583-.394h-16.671v-50.875h-54.223v50.875h-16.671c-2.561 0-5.091.136-7.583.394-36.624 3.793-65.185 34.747-65.185 72.373v10.875h233.099v-10.875c0-37.626-28.56-68.58-65.183-72.373" fill="currentColor"/>
+  </symbol>
+  <symbol id="iconTogether" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512">
+    <path d="M438.09 273.32h-39.596c4.036 11.05 6.241 22.975 6.241 35.404v149.65c0 5.182-.902 10.156-2.543 14.782h65.461c24.453 0 44.346-19.894 44.346-44.346v-81.581c.001-40.753-33.155-73.909-73.909-73.909M107.265 308.725c0-12.43 2.205-24.354 6.241-35.404H73.91c-40.754 0-73.91 33.156-73.91 73.91v81.581c0 24.452 19.893 44.346 44.346 44.346h65.462c-1.641-4.628-2.543-9.601-2.543-14.783zM301.261 234.815h-90.522c-40.754 0-73.91 33.156-73.91 73.91v149.65c0 8.163 6.618 14.782 14.782 14.782h208.778c8.164 0 14.782-6.618 14.782-14.782v-149.65c0-40.754-33.156-73.91-73.91-73.91M256 38.84c-49.012 0-88.886 39.874-88.886 88.887 0 33.245 18.349 62.28 45.447 77.524 12.853 7.23 27.671 11.362 43.439 11.362s30.586-4.132 43.439-11.362c27.099-15.244 45.447-44.28 45.447-77.524 0-49.012-39.874-88.887-88.886-88.887M99.918 121.689c-36.655 0-66.475 29.82-66.475 66.475s29.82 66.475 66.475 66.475c9.298 0 18.152-1.926 26.195-5.388 13.906-5.987 25.372-16.585 32.467-29.86 4.98-9.317 7.813-19.946 7.813-31.227 0-36.654-29.82-66.475-66.475-66.475M412.082 121.689c-36.655 0-66.475 29.82-66.475 66.475 0 11.282 2.833 21.911 7.813 31.227 7.095 13.276 18.561 23.874 32.467 29.86 8.043 3.462 16.897 5.388 26.195 5.388 36.655 0 66.475-29.82 66.475-66.475s-29.82-66.475-66.475-66.475" fill="currentColor"/>
+  </symbol>
+  <symbol id="iconEnter" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 22">
+    <path fill="#fff" d="M16.7969 1.5a.9842.9842 0 0 0-.9844.9844v11.1562A1.3122 1.3122 0 0 1 14.5 14.9531H7.3609l1.929-1.9289a.9844.9844 0 0 0-1.3922-1.3922l-3.6094 3.6094a.9848.9848 0 0 0 0 1.3922l3.6094 3.6094A.9844.9844 0 0 0 9.29 18.8508l-1.929-1.9289H14.5a3.2813 3.2813 0 0 0 3.2813-3.2813V2.4844a.9844.9844 0 0 0-.9844-.9844Z"/>
+  </symbol>
+  <symbol id="iconLife" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 17">
+    <path style="fill: var(--fill, currentColor); stroke: var(--stroke, currentColor);" fill="#F17B2D" stroke="#F17B2D" d="M14.7307 2.655c-.8282-.8983-1.9647-1.3931-3.2003-1.3931-.9236 0-1.7694.292-2.514.8678-.3758.2906-.7162.6462-1.0164 1.0613-.3-.415-.6406-.7706-1.0165-1.0613-.7445-.5758-1.5903-.8678-2.5139-.8678-1.2356 0-2.3722.4948-3.2004 1.393C.4508 3.5429 0 4.7558 0 6.0705c0 1.3531.5043 2.5918 1.587 3.8982.9684 1.1685 2.3604 2.3548 3.9723 3.7285.5504.4691 1.1743 1.0008 1.8222 1.5672a.9387.9387 0 0 0 1.2368.0003c.6478-.5665 1.272-1.0985 1.8227-1.5679 1.6117-1.3734 3.0037-2.5596 3.9722-3.7283C15.4958 8.6622 16 7.4235 16 6.0702c0-1.3145-.4508-2.5274-1.2693-3.4152Z"/>
+  </symbol>
+  <symbol id="iconMultiplayer" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <path d="M18.375 14.7656H16.0781V12.4688C16.0781 12.2947 16.009 12.1278 15.8859 12.0047C15.7628 11.8816 15.5959 11.8125 15.4219 11.8125C15.2478 11.8125 15.0809 11.8816 14.9578 12.0047C14.8348 12.1278 14.7656 12.2947 14.7656 12.4688V14.7656H12.4688C12.2947 14.7656 12.1278 14.8348 12.0047 14.9578C11.8816 15.0809 11.8125 15.2478 11.8125 15.4219C11.8125 15.5959 11.8816 15.7628 12.0047 15.8859C12.1278 16.009 12.2947 16.0781 12.4688 16.0781H14.7656V18.375C14.7656 18.549 14.8348 18.716 14.9578 18.839C15.0809 18.9621 15.2478 19.0312 15.4219 19.0312C15.5959 19.0312 15.7628 18.9621 15.8859 18.839C16.009 18.716 16.0781 18.549 16.0781 18.375V16.0781H18.375C18.549 16.0781 18.716 16.009 18.839 15.8859C18.9621 15.7628 19.0312 15.5959 19.0312 15.4219C19.0312 15.2478 18.9621 15.0809 18.839 14.9578C18.716 14.8348 18.549 14.7656 18.375 14.7656Z"  style="fill: var(--fill, currentColor)" fill="#333"/>
+    <path d="M10.5 19.0312H3.9375C3.76345 19.0312 3.59653 18.9621 3.47346 18.839C3.35039 18.716 3.28125 18.549 3.28125 18.375C3.28351 16.4612 4.04478 14.6264 5.39807 13.2731C6.75136 11.9198 8.58616 11.1585 10.5 11.1562C11.7684 11.1602 12.9956 10.7062 13.9561 9.87768C14.9166 9.0492 15.5458 7.9019 15.728 6.64665C15.9103 5.39139 15.6334 4.11252 14.9482 3.04508C14.2631 1.97764 13.2157 1.19335 11.9985 0.836354C10.7814 0.479356 9.47627 0.573637 8.32308 1.10187C7.16988 1.6301 6.24608 2.5568 5.72145 3.71163C5.19682 4.86647 5.10662 6.17186 5.46741 7.38788C5.82821 8.6039 6.61577 9.64886 7.68534 10.3307C6.01707 10.915 4.57123 12.0025 3.5473 13.4434C2.52337 14.8843 1.97182 16.6074 1.96875 18.375C1.96875 18.8971 2.17617 19.3979 2.54538 19.7671C2.9146 20.1363 3.41536 20.3438 3.9375 20.3438H10.5C10.674 20.3438 10.841 20.2746 10.964 20.1515C11.0871 20.0285 11.1562 19.8615 11.1562 19.6875C11.1562 19.5135 11.0871 19.3465 10.964 19.2235C10.841 19.1004 10.674 19.0312 10.5 19.0312ZM6.5625 5.90625C6.5625 5.12749 6.79343 4.36621 7.22609 3.71869C7.65875 3.07117 8.2737 2.56649 8.99318 2.26847C9.71267 1.97045 10.5044 1.89248 11.2682 2.04441C12.032 2.19634 12.7336 2.57135 13.2842 3.12202C13.8349 3.67269 14.2099 4.37428 14.3618 5.13808C14.5138 5.90188 14.4358 6.69358 14.1378 7.41307C13.8398 8.13255 13.3351 8.7475 12.6876 9.18016C12.04 9.61282 11.2788 9.84375 10.5 9.84375C9.45603 9.84271 8.45512 9.42753 7.71692 8.68933C6.97872 7.95113 6.56354 6.95022 6.5625 5.90625Z"  style="fill: var(--fill, currentColor)" fill="#333"/>
+
+  </symbol>
+  <symbol id="iconSend" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+    <path d="M18.6025 2.75C18.4371 2.69987 18.2605 2.69987 18.095 2.75L2.34505 8C2.18704 8.05248 2.04729 8.14895 1.9422 8.27808C1.83711 8.40721 1.77104 8.56364 1.75174 8.729C1.73245 8.89437 1.76074 9.06181 1.83328 9.21166C1.90583 9.36152 2.01962 9.48756 2.1613 9.575L8.0763 13.2588L18.6025 2.75Z" style="fill: var(--fill, currentColor)" fill="#333"/>
+    <path d="M8.69769 13.9238L12.3814 19.8388C12.4603 19.9648 12.5699 20.0688 12.7 20.1407C12.8302 20.2127 12.9765 20.2503 13.1252 20.25H13.2302C13.3942 20.2308 13.5495 20.1655 13.678 20.0618C13.8065 19.958 13.9031 19.82 13.9564 19.6637L19.2064 3.91375C19.2566 3.7483 19.2566 3.5717 19.2064 3.40625L8.69769 13.9238Z" style="fill: var(--fill, currentColor)" fill="#333"/>
+  </symbol>
+  <symbol id="iconTrash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path style="fill: var(--fill, currentColor);" d="M115.744 495H397l52.415-349.429H63.33zm257.143-28h-233.03L95.844 173.571H416.9zm-38.229-351.191H470.5v-28H334.658V17H178.087v70.809H41.5v28zM206.087 45h100.571v42.809H206.087z"/>
+    <path style="fill: var(--fill, currentColor);" d="M242.372 256h28v128.571h-28zm64.303 126.9 16.067-128.535 27.775 3.472-16.067 128.536zM162.069 257.672l27.775-3.472 16.067 128.535-27.775 3.472z"/>
+  </symbol>
+  <symbol id="iconRotate" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path style="fill: var(--fill, currentColor)" d="M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h-1.5c-.34-2.98-2.06-5.5-4.48-6.98zM10.23 1.75l1.06 1.06-7.24 7.24-1.06-1.06zM1.75 13.77l6.48 6.48c.39.39 1.02.39 1.41 0l8.48-8.48c.39-.39.39-1.02 0-1.41L11.64 3.88c-.39-.39-1.02-.39-1.41 0L1.75 12.36c-.39.39-.39 1.02 0 1.41zm9.2-9.2 4.24 4.24-8.48 8.48-4.24-4.24zM7.52 21.48C4.25 19.94 1.91 16.76 1.55 13h1.5c.34 2.98 2.06 5.5 4.48 6.98z"/>
+  </symbol>
+  <symbol id="iconEmail" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path style="fill: var(--fill, currentColor)" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm.4 2 7.05 4.7a1 1 0 0 0 1.1 0L20.6 6H4.4ZM20 8.2l-6.34 4.23a3 3 0 0 1-3.32 0L4 8.2V18h16V8.2Z"/>
+  </symbol>
+  <symbol id="iconCopy" viewBox="0 0 477.867 477.867" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path style="fill: var(--fill, currentColor)" d="M341.333 85.333H51.2c-28.277 0-51.2 22.923-51.2 51.2v290.133c0 28.277 22.923 51.2 51.2 51.2h290.133c28.277 0 51.2-22.923 51.2-51.2V136.533c0-28.277-22.923-51.2-51.2-51.2zM358.4 426.667c0 9.426-7.641 17.067-17.067 17.067H51.2c-9.426 0-17.067-7.641-17.067-17.067V136.533c0-9.426 7.641-17.067 17.067-17.067h290.133c9.426 0 17.067 7.641 17.067 17.067v290.134z"/>
+    <path style="fill: var(--fill, currentColor)" d="M426.667 0h-307.2c-28.277 0-51.2 22.923-51.2 51.2 0 9.426 7.641 17.067 17.067 17.067S102.4 60.626 102.4 51.2s7.641-17.067 17.067-17.067h307.2c9.426 0 17.067 7.641 17.067 17.067v307.2c0 9.426-7.641 17.067-17.067 17.067s-17.067 7.641-17.067 17.067 7.641 17.067 17.067 17.067c28.277 0 51.2-22.923 51.2-51.2V51.2c0-28.277-22.923-51.2-51.2-51.2z"/>
+  </symbol>
+  <symbol id="iconMore" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle style="fill: var(--fill, currentColor)" cx="2.5" cy="10.5" r="1.5"/>
+    <circle style="fill: var(--fill, currentColor)" cx="10.5" cy="10.5" r="1.5"/>
+    <circle style="fill: var(--fill, currentColor)" cx="18.5" cy="10.5" r="1.5"/>
+  </symbol>
+  <symbol id="iconCreate" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M1 8h14M8 1v14"/>
+  </symbol>
+  <symbol id="iconJoin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path style="fill: var(--fill, currentColor)" d="M6.707 5.293a1 1 0 00-1.414 1.414l1.414-1.414zm10.586 13a1 1 0 001-1v-9a1 1 0 10-2 0v8h-8a1 1 0 000 2h9zm-12-11.586L16.586 18 18 16.586 6.707 5.293 5.293 6.707z"/>
+  </symbol>
+</svg>
+
+    <p class="no-js-message" id="noJS">Javascript is required to play this puzzle. Please enable Javascript in your browser to continue.</p>
+
+    <div id="err"></div>
+
+    <div id="spinner">
+  <div id="innaThaSpinner">
+    <div class="spinner-path" aria-hidden="true">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="provider-logo" viewbox=" 0 0 39 60">
+      <title>Puzzle loading...</title>
+      <path fill="#F17B2D" d="M17 19a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+      <path fill="#F17B2D" fill-rule="evenodd" d="M0 20.03v35.958C0 58.214 1.71 60 3.849 60c2.138 0 3.905-1.786 3.905-4.012V39.941c.029-2.166 1.768-3.923 3.878-3.923 2.138 0 3.905 1.786 3.905 4.011v7.965c0 2.196 1.74 4.012 3.906 4.012 2.138 0 3.906-1.786 3.906-4.012V40c0-2.196 1.739-4.012 3.905-4.012 2.081 0 3.735 1.845 3.878 3.924v.059c0 2.225 1.767 4.04 3.934 4.04 2.166 0 3.934-1.815 3.934-4.04V20C39 8.96 30.276 0 19.529 0 8.78 0 0 8.99 0 20.03zM18 18a4 4 0 1 1-8 0 4 4 0 0 1 8 0zm8 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" clip-rule="evenodd"/>
+      <path fill="#F17B2D" d="M29 19a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+    </svg>
+  </div>
+</div>
+
+    <div id="app" v-cloak>
+      <div
+        @click.stop="wrapperClicked"
+        :class="[
+          { 'completed': isCompleted },
+          { 'celebrating': celebrating },
+          { 'no-timer': !user.timer },
+          { 'no-number': !source.meta.number },
+          { 'microsite': config.isMicrosite }]">
+
+        <div
+          class="overlay"
+          ref="overlay"
+          @click.stop.prevent="() => hideModal()"
+          :data-state="overlayState"
+          aria-hidden="true"></div>
+
+        <div class="game game--wordwheel">
+          <div class="content-wrapper" data-area="main">
+            <div ref="gameAndWords" id="gameAndWords" class="game-and-words">
+              <main ref="gameplayContainer" id="gameplayContainer" class="gameplay-container">
+                <div ref="gameplay" id="gameplay" class="gameplay">
+                    <component-progress></component-progress>
+                    <div class="game-input-holder">
+  <component-game-input></component-game-input>
+  <div class="game-feedback" role="status" aria-live="polite">
+    <span
+      v-for="item in feedback"
+      :key="item.id"
+      :class="['game-feedback__item', 'game-feedback__item--' + item.tone]"
+      :style="item.delay ? { animationDelay: item.delay + 'ms' } : null"
+      @animationend="hideFeedback(item.id)">{{ item.text }}</span>
+  </div>
+</div>
+
+                    <component-grid></component-grid>
+                    <component-game-actions></component-game-actions>
+
+                </div>
+              </main>
+
+              <div id="foundWordsWrapper" class="found-words-wrapper">
+    <component-found-words></component-found-words>
+  </div>
+            </div>
+          </div>
+
+          <div class="rotate-device">
+  <svg class="icon rotate-device__icon" data-icon="Rotate" data-size="92" aria-hidden="true" viewBox="0 0 24 24">
+    <use href="#iconRotate"></use>
+  </svg>
+  <div class="rotate-device__message" v-html="lang.general_rotate_message"></div>
+</div>
+
+          <div 
+  ref="endGame"
+  class="action-modal"
+  data-actions="endGame"
+  data-variant="horizontal"
+  :data-state="modals.visible.indexOf('endGame') >= 0 ? 'open' : 'closed'"
+  :aria-hidden="modals.visible.indexOf('endGame') >= 0 ? 'false' : 'true'"
+  :tabindex="modals.visible.indexOf('endGame') >= 0 ? '0' : '-1'"
+  :aria-label="lang.modal_quit_aria_label"
+>
+  <header class="action-modal__header">
+    <h2 class="action-modal__title" v-html="lang.modal_quit_text"></h2>
+
+    <button @click.stop.prevent="() => hideModal('endGame')" class="action-modal__close">
+      <svg class="icon" data-size="20" aria-hidden="true" viewBox="0 0 21 21">
+        <title v-html="lang.modal_quit_close"></title>
+        <use href="#iconClose"></use>
+      </svg>
+      <span class="sr-only" v-html="lang.modal_reset_close"></span>
+    </button>
+  </header>
+
+  <div class="action-modal__content">
+    <div>
+      <p><strong v-html="langReplace(wordsUntilNextRank === 1 ? 'modal_quit_title_one' : 'modal_quit_title')"></strong></p>
+      <p v-html="lang.modal_quit_confirm"></p>
+    </div>
+
+    <ul class="action-modal__actions" role="menu">
+      <li role="presentation">
+        <button
+          class="block-button"
+          @click.stop.prevent="endGame"
+          role="menuitem"
+          data-variant="primary"
+          v-html="lang.general_yes"
+        ></button>
+      </li>
+      <li role="presentation">
+        <button
+          class="block-button"
+          @click.stop.prevent="() => hideModal('endGame')"
+          role="menuitem"
+          data-variant="secondary"
+          v-html="lang.general_no"
+        ></button>
+      </li>
+    </ul>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <script>document.getElementById('noJS').style.display = 'none';</script>
+
+    <script src="js/polyfills.js?v=ee19697c1f"></script>
+    <script src="js/class.dm-storage.js?v=478d1a251a"></script>
+    <script src="js/class.storage-idb.js?v=e0d5fd5802"></script>
+    <script src="js/class.dm-timer.js?v=af61d1de27"></script>
+    <script src="js/core-puzzle.js?v=c9daff42d3"></script>
+    <script src="js/core-puzzle-vue.js?v=c415b0bed0"></script>
+    <script src="js/polygon-setup.js?v=15fb14e535"></script>
+    <script src="js/polygon.js?v=ba796d9653"></script>
+    <script src="js/polygon-vue.js?v=8e9b84051a"></script>
+    <script src="js/guide.js?v=bf01c27bd8"></script>
+    <script src="js/share-image.js?v=121004bd23"></script>
+    <script src="js/class.dm-logger.js?v=cb7ec98780"></script>
+    <script src="js/class.dm-puzzle-channel.global.js?v=7a377a2d37"></script>
+    <script src="js/class.dm-puzzle-progress-buffer.global.js?v=23aa1415f1"></script>
+    <script src="js/channel.js?v=ad11f0c0a1"></script>
+    <script src="js/tutorial.js?v=df5d353177"></script>
+    <script src="js/vendor/confetti.min.js?v=d9f29ac216"></script>
+
+    <script>
+      vm = Vue.createApp({
+        beforeMount: app.vue.beforeMount || (() => {}),
+        computed:    app.vue.computed    || {},
+        created:     app.vue.created     || (() => {}),
+        data:        (() => app.vue.data || {}),
+        methods:     app.vue.methods     || {},
+        mounted:     app.vue.mounted     || (() => {}),
+        watch:       app.vue.watch       || {},
+      });
+    </script>
+
+    
+<!--  component: "game-input"  -->
+<script>
+vm.component('component-game-input', {
+  template: '<p   id="gameInput"   class="game-input"   :style="{      fontWeight: hasWord ? \'900\' : \'400\',     letterSpacing: hasWord ? \'0.2em\' : \'0px\',     textTransform: hasWord ? \'uppercase\' : \'none\',   }"   :aria-label="$root.lang.grid_input_aria_label"   aria-live="polite"   v-html="display"></p> ',
+  props: [],
+  computed: {
+    hasWord: () => !!app.vue.data.user.currentWord,
+    display() {
+      const word = app.vue.data.user.currentWord || '';
+      const centreLetter = app.vue.data.user.letters[0].text;
+      const firstOccurence = word.indexOf(centreLetter);
+      const lastIndex = word.length - 1;
+
+      const letters = word
+        .split('')
+        .map((l, i) => {
+          const classes =
+            i === lastIndex
+              ? 'game-input__letter game-input__letter--pop'
+              : 'game-input__letter';
+          const colour = i === firstOccurence ? ' style="color: var(--primary)"' : '';
+          return `<span class="${classes}"${colour}>${l}</span>`;
+        })
+        .join('');
+
+      return letters ? `<span class="game-input__word">${letters}</span>` : '';
+    },
+  },
+});
+
+</script>
+
+<!--  component: "game-actions"  -->
+<script>
+vm.component('component-game-actions', {
+  template: '<div id="gameActions" class="game-actions">   <ul class="game-actions__actions" role="menu">     <li role="presentation">       <button          class="block-button game-actions__action"         data-variant="secondary"         role="menuitem"         @click.stop.prevent="removeLetter"         :aria-disabled="!currentWord || $root.isCompleted ? \'true\' : \'false\'"         :disabled="!currentWord || $root.isCompleted"         v-html="$root.lang.grid_action_delete_text"       ></button>     </li>      <li role="presentation">       <button          class="icon-button game-actions__action"         role="menuitem"         @click.stop.prevent="shuffleLetters">         <svg            class="icon"            data-size="38"            data-icon="Shuffle"           viewBox="0 0 24 24"           aria-hidden="true">           <use href="#iconShuffle"></use>         </svg>          <span class="sr-only" v-html="$root.lang.grid_action_shuffle_text"></span>       </button>     </li>      <li role="presentation">       <button          class="block-button game-actions__action"         data-variant="primary"         role="menuitem"         @click.stop.prevent="enterWord"         :aria-disabled="$root.canSubmitWord ? \'false\' : \'true\'"         :disabled="!$root.canSubmitWord"         v-html="$root.lang.grid_action_enter_text"       ></button>     </li>   </ul> </div>',
+  computed: {
+    currentWord() {
+      return app.vue.data.user.currentWord;
+    },
+  },
+  methods: {
+    removeLetter() {
+      return app.vue.methods.removeLetter();
+    },
+    enterWord() {
+      return app.vue.methods.enterWord();
+    },
+    shuffleLetters() {
+      return app.vue.methods.shuffleLetters();
+    },
+  },
+});
+
+</script>
+
+<!--  component: "grid"  -->
+<script>
+vm.component('component-grid', {
+  template: '<div id="gridWrapper" class="grid-wrapper">   <svg     v-if="$root.puzzle.letters.length === 11"     id="pinch-zoom-image"     xmlns="http://www.w3.org/2000/svg"     fill="none"     viewBox="0 0 300 300"     width="300"     height="300"     aria-labelledby="polygonGridTitle"     aria-describedby="polygonGridDescription">     <title id="polygonGridTitle" v-html="$root.lang.grid_title"></title>     <desc id="polygonGridDescription" v-html="$root.lang.grid_description"></desc>     <g>        <circle         style="fill: var(--polygon-grid-bg, var(--black))"         cx="150"         cy="150"         r="150"         fill="#333"         class="grid-circle" />        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[0].used }]">         <circle           class="cell-button centre-button"           @pointerdown="() => click(0)"           cx="149.6"           cy="149.6"           r="48"           fill="#F17B2D" />         <text class="cell-letter centre-letter" data-letter="0" fill="#fff" dy=".35em">           <tspan x="150" y="150">{{ $root.user.letters[0].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[1].used }]">         <circle class="cell-button" @pointerdown="() => click(1)" cx="150" cy="45" r="30" fill="#fff" />         <text class="cell-letter" data-letter="1" fill="#212121" dy=".35em">           <tspan x="150" y="45">{{ $root.user.letters[1].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[2].used }]">         <circle class="cell-button" @pointerdown="() => click(2)" cx="87" cy="64" r="30" fill="#fff" />         <text class="cell-letter" data-letter="2" fill="#212121" dy=".35em">           <tspan x="87" y="64">{{ $root.user.letters[2].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[3].used }]">         <circle class="cell-button" @pointerdown="() => click(3)" cx="214" cy="64" r="30" fill="#fff" />         <text class="cell-letter" data-letter="3" fill="#212121" dy=".35em">           <tspan x="214" y="64">{{ $root.user.letters[3].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[4].used }]">         <circle class="cell-button" @pointerdown="() => click(4)" cx="47" cy="117" r="30" fill="#fff" />         <text class="cell-letter" data-letter="4" fill="#212121" dy=".35em">           <tspan x="47" y="117">{{ $root.user.letters[4].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[5].used }]">         <circle class="cell-button" @pointerdown="() => click(5)" cx="254" cy="117" r="30" fill="#fff" />         <text class="cell-letter" data-letter="5" fill="#212121" dy=".35em">           <tspan x="254" y="117">{{ $root.user.letters[5].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[6].used }]">         <circle class="cell-button" @pointerdown="() => click(6)" cx="48" cy="182" r="30" fill="#fff" />         <text class="cell-letter" data-letter="6" fill="#212121" dy=".35em">           <tspan x="48" y="182">{{ $root.user.letters[6].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[7].used }]">         <circle class="cell-button" @pointerdown="() => click(7)" cx="253" cy="182" r="30" fill="#fff" />         <text class="cell-letter" data-letter="7" fill="#212121" dy=".35em">           <tspan x="253" y="182">{{ $root.user.letters[7].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[8].used }]">         <circle class="cell-button" @pointerdown="() => click(8)" cx="88" cy="233" r="30" fill="#fff" />         <text class="cell-letter" data-letter="8" fill="#212121" dy=".35em">           <tspan x="88" y="233">{{ $root.user.letters[8].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[9].used }]">         <circle class="cell-button" @pointerdown="() => click(9)" cx="213" cy="233" r="30" fill="#fff" />         <text class="cell-letter" data-letter="9" fill="#212121" dy=".35em">           <tspan x="213" y="233">{{ $root.user.letters[9].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[10].used }]">         <circle class="cell-button" @pointerdown="() => click(10)" cx="150" cy="252" r="30" fill="#fff" />         <text class="cell-letter" data-letter="10" fill="#212121" dy=".35em">           <tspan x="150" y="252">{{ $root.user.letters[10].text }}</tspan>         </text>       </g>     </g>   </svg>    <svg     v-if="$root.puzzle.letters.length === 10"     id="pinch-zoom-image"     xmlns="http://www.w3.org/2000/svg"     fill="none"     viewBox="0 0 300 300"     width="300"     height="300"     aria-labelledby="polygonGridTitle"     aria-describedby="polygonGridDescription">     <title id="polygonGridTitle" v-html="$root.lang.grid_title"></title>     <desc id="polygonGridDescription" v-html="$root.lang.grid_description"></desc>     <g>        <circle         style="fill: var(--polygon-grid-bg, var(--black))"         cx="150"         cy="150"         r="150"         fill="#333"         class="grid-circle" />        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[0].used }]">         <circle           class="cell-button centre-button"           @pointerdown="() => click(0)"           cx="149.6"           cy="149.6"           r="48"           fill="#F17B2D" />         <text class="cell-letter centre-letter" data-letter="0" fill="#fff" dy=".35em">           <tspan x="149.6" y="149.6">{{ $root.user.letters[0].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[1].used }]">         <circle class="cell-button" @pointerdown="() => click(1)" cx="150" cy="45" r="30" fill="#fff" />         <text class="cell-letter" data-letter="1" fill="#212121" dy=".35em">           <tspan x="150" y="45">{{ $root.user.letters[1].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[2].used }]">         <circle class="cell-button" @pointerdown="() => click(2)" cx="83" cy="76" r="30" fill="#fff" />         <text class="cell-letter" data-letter="2" fill="#212121" dy=".35em">           <tspan x="83" y="76">{{ $root.user.letters[2].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[3].used }]">         <circle class="cell-button" @pointerdown="() => click(3)" cx="217" cy="76" r="30" fill="#fff" />         <text class="cell-letter" data-letter="3" fill="#212121" dy=".35em">           <tspan x="217" y="76">{{ $root.user.letters[3].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[4].used }]">         <circle class="cell-button" @pointerdown="() => click(4)" cx="44" cy="135" r="30" fill="#fff" />         <text class="cell-letter" data-letter="4" fill="#212121" dy=".35em">           <tspan x="44" y="135">{{ $root.user.letters[4].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[5].used }]">         <circle class="cell-button" @pointerdown="() => click(5)" cx="256" cy="135" r="30" fill="#fff" />         <text class="cell-letter" data-letter="5" fill="#212121" dy=".35em">           <tspan x="256" y="135">{{ $root.user.letters[5].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[6].used }]">         <circle class="cell-button" @pointerdown="() => click(6)" cx="60" cy="203" r="30" fill="#fff" />         <text class="cell-letter" data-letter="6" fill="#212121" dy=".35em">           <tspan x="60" y="203">{{ $root.user.letters[6].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[7].used }]">         <circle class="cell-button" @pointerdown="() => click(7)" cx="240" cy="203" r="30" fill="#fff" />         <text class="cell-letter" data-letter="7" fill="#212121" dy=".35em">           <tspan x="240" y="203">{{ $root.user.letters[7].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[8].used }]">         <circle class="cell-button" @pointerdown="() => click(8)" cx="114" cy="250" r="30" fill="#fff" />         <text class="cell-letter" data-letter="8" fill="#212121" dy=".35em">           <tspan x="114" y="250">{{ $root.user.letters[8].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[9].used }]">         <circle class="cell-button" @pointerdown="() => click(9)" cx="186" cy="250" r="30" fill="#fff" />         <text class="cell-letter" data-letter="9" fill="#212121" dy=".35em">           <tspan x="186" y="250">{{ $root.user.letters[9].text }}</tspan>         </text>       </g>     </g>   </svg>    <svg     v-if="$root.puzzle.letters.length === 9"     id="pinch-zoom-image"     xmlns="http://www.w3.org/2000/svg"     fill="none"     viewBox="0 0 300 300"     width="300"     height="300"     aria-labelledby="polygonGridTitle"     aria-describedby="polygonGridDescription">     <title id="polygonGridTitle" v-html="$root.lang.grid_title"></title>     <desc id="polygonGridDescription" v-html="$root.lang.grid_description"></desc>     <g>        <circle         style="fill: var(--polygon-grid-bg, var(--black))"         cx="150"         cy="150"         r="150"         fill="#333"         class="grid-circle" />        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[0].used }]">         <circle           class="cell-button centre-button"           @pointerdown="() => click(0)"           cx="149.6"           cy="149.6"           r="48"           fill="#F17B2D" />         <text class="cell-letter centre-letter" data-letter="0" fill="#fff" dy=".35em">           <tspan x="149.6" y="149.6">{{ $root.user.letters[0].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[1].used }]">         <circle class="cell-button" @pointerdown="() => click(1)" cx="111" cy="53" r="36" fill="#fff" />         <text class="cell-letter" data-letter="1" fill="#212121" dy=".35em">           <tspan x="111" y="53">{{ $root.user.letters[1].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[2].used }]">         <circle class="cell-button" @pointerdown="() => click(2)" cx="111" cy="246" r="36" fill="#fff" />         <text class="cell-letter" data-letter="2" fill="#212121" dy=".35em">           <tspan x="111" y="246">{{ $root.user.letters[2].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[3].used }]">         <circle class="cell-button" @pointerdown="() => click(3)" cx="51" cy="110" r="36" fill="#fff" />         <text class="cell-letter" data-letter="3" fill="#212121" dy=".35em">           <tspan x="51" y="110">{{ $root.user.letters[3].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[4].used }]">         <circle class="cell-button" @pointerdown="() => click(4)" cx="51" cy="191" r="36" fill="#fff" />         <text class="cell-letter" data-letter="4" fill="#212121" dy=".35em">           <tspan x="51" y="191">{{ $root.user.letters[4].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[5].used }]">         <circle class="cell-button" @pointerdown="() => click(5)" cx="189" cy="53" r="36" fill="#fff" />         <text class="cell-letter" data-letter="5" fill="#212121" dy=".35em">           <tspan x="189" y="53">{{ $root.user.letters[5].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[6].used }]">         <circle class="cell-button" @pointerdown="() => click(6)" cx="189" cy="246" r="36" fill="#fff" />         <text class="cell-letter" data-letter="6" fill="#212121" dy=".35em">           <tspan x="189" y="246">{{ $root.user.letters[6].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[7].used }]">         <circle class="cell-button" @pointerdown="() => click(7)" cx="249" cy="110" r="36" fill="#fff" />         <text class="cell-letter" data-letter="7" fill="#212121" dy=".35em">           <tspan x="249" y="110">{{ $root.user.letters[7].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[8].used }]">         <circle class="cell-button" @pointerdown="() => click(8)" cx="249" cy="191" r="36" fill="#fff" />         <text class="cell-letter" data-letter="8" fill="#212121" dy=".35em">           <tspan x="249" y="191">{{ $root.user.letters[8].text }}</tspan>         </text>       </g>     </g>   </svg>    <svg     v-if="$root.puzzle.letters.length === 8"     id="pinch-zoom-image"     xmlns="http://www.w3.org/2000/svg"     fill="none"     viewBox="0 0 300 300"     width="300"     height="300"     aria-labelledby="polygonGridTitle"     aria-describedby="polygonGridDescription">     <title id="polygonGridTitle" v-html="$root.lang.grid_title"></title>     <desc id="polygonGridDescription" v-html="$root.lang.grid_description"></desc>     <g>        <circle         cx="150"         cy="150"         r="150"         style="fill: var(--polygon-grid-bg, var(--black))"         fill="#333"         class="grid-circle" />        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[0].used }]">         <circle           class="cell-button centre-button"           @pointerdown="() => click(0)"           cx="150"           cy="150"           r="48"           fill="#F17B2D" />         <text class="cell-letter centre-letter" data-letter="0" dy=".35em">           <tspan x="150" y="150">{{ $root.user.letters[0].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[1].used }]">         <circle           class="cell-button"           @pointerdown="() => click(1)"           cx="150.5"           cy="51.5"           r="37.5"           fill="#fff" />         <text class="cell-letter" data-letter="1" dy=".35em">           <tspan x="150.5" y="51.5">{{ $root.user.letters[1].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[2].used }]">         <circle           class="cell-button"           @pointerdown="() => click(2)"           cx="109.5"           cy="239.5"           r="37.5"           fill="#fff" />         <text class="cell-letter" data-letter="3" fill="#212121" dy=".35em">           <tspan x="109.5" y="239.5">{{ $root.user.letters[2].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[3].used }]">         <circle           class="cell-button"           @pointerdown="() => click(3)"           cx="192.5"           cy="239.5"           r="37.5"           fill="#fff" />         <text class="cell-letter" data-letter="3" fill="#212121" dy=".35em">           <tspan x="192.5" y="239.5">{{ $root.user.letters[3].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[4].used }]">         <circle           class="cell-button"           @pointerdown="() => click(4)"           cx="74.5"           cy="88.5"           r="37.5"           fill="#fff" />         <text class="cell-letter" data-letter="4" fill="#212121" dy=".35em">           <tspan x="74.5" y="88.5">{{ $root.user.letters[4].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[5].used }]">         <circle           class="cell-button"           @pointerdown="() => click(5)"           cx="226.5"           cy="88.5"           r="37.5"           fill="#fff" />         <text class="cell-letter" data-letter="6" fill="#212121" dy=".35em">           <tspan x="226.5" y="88.5">{{ $root.user.letters[5].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[6].used }]">         <circle           class="cell-button"           @pointerdown="() => click(6)"           cx="55.5"           cy="170.5"           r="37.5"           fill="#fff" />         <text class="cell-letter" data-letter="7" fill="#212121" dy=".35em">           <tspan x="55.5" y="170.5">{{ $root.user.letters[6].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[7].used }]">         <circle           class="cell-button"           @pointerdown="() => click(7)"           cx="245.5"           cy="170.5"           r="37.5"           fill="#fff" />         <text class="cell-letter" data-letter="7" fill="#212121" dy=".35em">           <tspan x="245.5" y="170.5">{{ $root.user.letters[7].text }}</tspan>         </text>       </g>     </g>   </svg>    <svg     v-if="$root.puzzle.letters.length === 7"     id="pinch-zoom-image"     xmlns="http://www.w3.org/2000/svg"     fill="none"     viewBox="0 0 300 300"     width="300"     height="300"     aria-labelledby="polygonGridTitle"     aria-describedby="polygonGridDescription">     <title id="polygonGridTitle" v-html="$root.lang.grid_title"></title>     <desc id="polygonGridDescription" v-html="$root.lang.grid_description"></desc>     <g>        <circle style="fill: var(--polygon-grid-bg, #333)" cx="150" cy="150" r="150" fill="#333"        class="grid-circle"/>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[0].used }]">         <circle           class="cell-button centre-button"           @pointerdown="() => click(0)"           cx="149.6"           cy="149.6"           r="48"           fill="#F17B2D" />         <text class="cell-letter centre-letter" data-letter="0" dy=".35em">           <tspan x="149.6" y="149.6">{{ $root.user.letters[0].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[1].used }]">         <circle           class="cell-button"           @pointerdown="() => click(1)"           cx="53.2"           cy="146"           r="45.2"           fill="#fff" />         <text class="cell-letter" data-letter="1" dy=".35em">           <tspan x="53.2" y="146">{{ $root.user.letters[1].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[2].used }]">         <circle           class="cell-button"           @pointerdown="() => click(2)"           cx="246.8"           cy="146"           r="45.2"           fill="#fff" />         <text class="cell-letter" data-letter="2" dy=".35em">           <tspan x="246.8" y="146">{{ $root.user.letters[2].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[3].used }]">         <circle           class="cell-button"           @pointerdown="() => click(3)"           cx="102"           cy="235.6"           r="45.2"           fill="#fff" />         <text class="cell-letter" data-letter="3" dy=".35em">           <tspan x="102" y="235.6">{{ $root.user.letters[3].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[4].used }]">         <circle           class="cell-button"           @pointerdown="() => click(4)"           cx="197.2"           cy="235.6"           r="45.2"           fill="#fff" />         <text class="cell-letter" data-letter="4" dy=".35em">           <tspan x="197.2" y="235.6">{{ $root.user.letters[4].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[5].used }]">         <circle           class="cell-button"           @pointerdown="() => click(5)"           cx="102"           cy="63.6"           r="45.2"           fill="#fff" />         <text class="cell-letter" data-letter="5" dy=".35em">           <tspan x="102" y="63.6">{{ $root.user.letters[5].text }}</tspan>         </text>       </g>        <g :class="[\'cell-group\', { \'used-up\': $root.user.letters[6].used }]">         <circle           class="cell-button"           @pointerdown="() => click(6)"           cx="197.2"           cy="63.6"           r="45.2"           fill="#fff" />         <text class="cell-letter" data-letter="6" dy=".35em">           <tspan x="197.2" y="63.6">{{ $root.user.letters[6].text }}</tspan>         </text>       </g>     </g>   </svg>    <div     v-if="$root.isTimed"     class="time-ring"     :class="{ \'time-ring--low\': $root.clockLow || $root.clockFinal }"     :style="{ \'--time-left\': $root.timeLeftFraction }"     aria-hidden="true"></div>    <div v-if="$root.state.timeUp" class="time-up-stamp" role="status">     <span v-text="$root.lang.feedback_time_up"></span>   </div> </div> ',
+  props: [],
+  computed: {
+  },
+  methods: {
+    click(letter) {
+      const tapped = this.$root.user.letters[letter];
+      if (this.$root.isCompleted) return;
+
+      if (tapped.used) {
+        const last = this.$root.user.orderAdded[this.$root.user.orderAdded.length - 1];
+        if (last && last.id === tapped.id) this.$root.enterWord();
+        return;
+      }
+
+      this.$root.enterLetter(tapped);
+    },
+  },
+});
+
+</script>
+
+<!--  component: "found-words"  -->
+<script>
+const emptyWord = {
+  word: '&nbsp;',
+  time: '',
+  number: '',
+};
+
+vm.component('component-found-words', {
+  template: '<div   id="foundWords"   class="found-words"   :data-state="isToggleable ? (isOpen ? \'open\' : \'closed\') : null">   <button     v-if="isToggleable"     @click="handleToggle"     class="found-words__toggle"     :style="{ color: $root.reveal.grid ? \'var(--primary)\' : \'\' }"     aria-controls="foundWordsList"     aria-label="\'Toggle found words"     :aria-expanded="isOpen ? \'true\' : \'false\'">     <span class="found-words__title" v-html="$root.lang.grid_found_title"></span>      <div v-if="isToggleable && !isOpen" class="found-words__preview">       <div>         <span           v-if="foundCount"           v-for="{ word } of foundWordsPreview">           {{ word }}         </span>          <span v-if="!foundCount" :style="{ color: \'#999\', textTransform: \'none\' }" v-html="$root.lang.grid_found_none_text"></span>       </div>     </div>      <svg       v-if="isToggleable"       :style="{          transform: !isOpen ? \'rotate(180deg)\' : \'rotate(0deg)\',          transition: \'transform 0.3s ease\'       }"       xmlns="http://www.w3.org/2000/svg"       width="21"       height="21"       fill="none"       viewBox="0 0 21 21"       aria-hidden="true">       <path         style="fill: var(--primary)"         fill="#F17B2D"         d="M11 16 3 8.036l1.455-1.448 8 7.964L11 16Z" />       <path         style="fill: var(--primary)"         fill="#F17B2D"         d="m9.545 14.552 8-7.964L19 8.036 11 16l-1.455-1.448Z" />     </svg>   </button>    <h2 class="found-words__title" v-else v-html="$root.lang.grid_found_title"></h2>    <div id="foundWordsList" class="found-words__list nice-scroll">     <p class="found-words__latest">       {{$root.lang.grid_found_text}} {{ $root.state.isPrinting && $root.reveal.solution ? totalCount : foundCount }} / {{ totalCount }}     </p>      <div       v-if="isToggleable && !foundCount && !isPrinting"       :style="{          marginBlock: \'auto\',         display: \'flex\',         flexDirection: \'column\',         alignItems: \'center\',         justifyContent: \'center\',         color: \'#ccc\',         gap: \'1rem\',         fontSize: \'1.4rem\'       }">       <svg         xmlns="http://www.w3.org/2000/svg"         width="90"         height="90"         fill="none"         viewBox="0 0 90 90"         aria-hidden="true">         <circle cx="45" cy="45" r="44.5" stroke="#CCC" />         <circle cx="44.88" cy="44.88" r="14.4" fill="#CCC" />         <circle cx="15.96" cy="43.8" r="13.06" stroke="#CCC" />         <circle cx="74.04" cy="43.8" r="13.06" stroke="#CCC" />         <circle cx="30.6" cy="70.68" r="13.06" stroke="#CCC" />         <circle cx="59.16" cy="70.68" r="13.06" stroke="#CCC" />         <circle cx="30.6" cy="19.08" r="13.06" stroke="#CCC" />         <circle cx="59.16" cy="19.08" r="13.06" stroke="#CCC" />       </svg>        <p v-html="$root.lang.grid_found_none_image_text"></p>     </div>      <ul v-if="(isToggleable ? foundCount : true) || isPrinting">       <li         v-if="!$root.reveal.solution"         v-for="{ word, player, opponents } of foundWords"         :class="[word === \'&nbsp;\' ? \'empty\' : \'filled\', playerClass(player), { \'theirs\': opponents && opponents.length }]"         :style="{ color: word.toLowerCase() === longestWord ? \'var(--primary)\' : undefined }">         <span v-html="word"></span>         <span           v-if="opponents && opponents.length"           class="found-words__theirs"           role="img"           :aria-label="theirsLabel(opponents)">           <span v-for="o in opponents" :key="o.pidx" :class="\'P\' + o.pidx"></span>         </span>         <svg           v-if="isAllLetters(word)"           class="found-words__star"           aria-hidden="true"           viewBox="0 0 16 16">           <path d="M8 1.2l2.1 4.3 4.7.7-3.4 3.3.8 4.7L8 12l-4.2 2.2.8-4.7-3.4-3.3 4.7-.7z" />         </svg>         <span v-if="pointsOf(word)" class="found-words__points" aria-hidden="true">{{ pointsOf(word) }}</span>       </li>        <li         v-if="$root.reveal.solution"         v-for="word of orderedSolution"         :class="[         \'revealed filled\',         { \'not-true-find\': !isTrueFind(word) },         playerClass(finderOf(word))       ]">         <span v-html="capitalise(word)"></span>         <span           v-if="opponentsOf(word).length"           class="found-words__theirs"           role="img"           :aria-label="theirsLabel(opponentsOf(word))">           <span v-for="o in opponentsOf(word)" :key="o.pidx" :class="\'P\' + o.pidx"></span>         </span>         <svg           v-if="isAllLetters(word)"           class="found-words__star"           aria-hidden="true"           viewBox="0 0 16 16">           <path d="M8 1.2l2.1 4.3 4.7.7-3.4 3.3.8 4.7L8 12l-4.2 2.2.8-4.7-3.4-3.3 4.7-.7z" />         </svg>         <span v-if="pointsOf(word)" class="found-words__points" aria-hidden="true">{{ pointsOf(word) }}</span>         <svg           v-if="isTrueFind(word)"           class="found-words__tick"           aria-hidden="true"           viewBox="0 0 16 16">           <use href="#iconCorrect"></use>         </svg>       </li>     </ul>      <div class="found-words__end-game-wrapper">       <button         ref="endGame"         id="endGame"         @click="() => $root.toggleModal(\'endGame\')"         class="block-button found-words__end-game"         data-variant="secondary"         :aria-disabled="$root.isCompleted ? \'true\' : \'false\'"         :disabled="$root.isCompleted"         v-html="$root.lang.grid_found_button_quit"       ></button>     </div>   </div> </div> ',
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+  computed: {
+    orderedSolution: () =>
+      app.vue.data.user.solution.map(w => w.toLowerCase()).sort((a, b) => a.localeCompare(b)),
+    longestWord() {
+      return this.orderedSolution.reduce((a, b) => (a.length > b.length ? a : b), '');
+    },
+    isPrinting: () => app.vue.data.state.isPrinting,
+    foundCount: () => app.vue.data.state.overwriteCount ?? app.vue.data.user.found.length,
+    totalCount: () => app.vue.data.user.solution.length,
+    foundWords() {
+      const withGaps = app.vue.data.userPuzzleSettings.gaps;
+      return withGaps ? this.foundWordsWithGaps : this.foundWordsWithoutGaps;
+    },
+    foundWordsWithGaps() {
+      const { found } = app.vue.data.user;
+
+      return this.orderedSolution.map(w => {
+        const foundWord = found.find(({ word }) => word.toLowerCase() === w);
+
+        return foundWord
+          ? { ...foundWord, word: app.helpers.capitalise(foundWord.word.toLowerCase()), opponents: this.opponentsOf(w) }
+          : { ...emptyWord, opponents: this.opponentsOf(w) };
+      });
+    },
+    foundWordsWithoutGaps() {
+      const { found } = app.vue.data.user;
+      const diff = this.totalCount - this.foundCount;
+      const mine = new Set(found.map(({ word }) => word.toLowerCase()));
+      const theirs = Object.entries(this.$root.mpOpponentWords || {})
+        .filter(([word]) => !mine.has(word))
+        .sort((a, b) => Math.min(...a[1].map(o => o.at)) - Math.min(...b[1].map(o => o.at)))
+        .map(([, opponents]) => opponents);
+
+      return [
+        ...found.map(w => ({
+          ...w,
+          word: app.helpers.capitalise(w.word.toLowerCase()),
+          opponents: this.opponentsOf(w.word),
+        })),
+        ...Array.from({ length: diff }, (_, i) => ({ ...emptyWord, opponents: theirs[i] || [] })),
+      ];
+    },
+    foundWordsPreview() {
+      if (!this.foundWordsWithoutGaps.length) return [];
+      
+      return this.foundWordsWithoutGaps.filter(({ word }) => word !== '&nbsp;').reverse();
+    },
+    isToggleable: () => !app.vue.data.state.breakpoints.md && !app.vue.data.state.breakpoints.lg,
+  },
+  methods: {
+    handleToggle() {
+      if (!this.isToggleable) return;
+      this.isOpen = !this.isOpen;
+    },
+    capitalise: word => app.helpers.capitalise(word),
+    isAllLetters: word => word !== emptyWord.word && app.vue.methods.usesAllLetters(word),
+    pointsOf: word =>
+      word !== emptyWord.word && app.helpers.isPointsScoring() ? app.helpers.wordPoints(word) : null,
+    playerClass(uid) {
+      if (this.$root.mpCompetitive) return null;
+      const idx = uid ? app.vue.data.mp_game?.players?.indexOf(uid) ?? -1 : -1;
+      return idx >= 0 ? 'found-by-P' + (idx + 1) : null;
+    },
+    finderOf: word =>
+      app.vue.data.user.found.find(({ word: f }) => f.toLowerCase() === word.toLowerCase())?.player,
+    opponentsOf(word) {
+      return (this.$root.mpOpponentWords || {})[String(word).toLowerCase()] || [];
+    },
+    theirsLabel(opponents) {
+      const names = app.helpers.mpListNames ? app.helpers.mpListNames(opponents.map(o => o.name)) : '';
+      return (this.$root.lang.mp_found_by || '[[names]]').replaceAll('[[names]]', names);
+    },
+    isTrueFind: word =>
+      app.vue.data.user.found.some(
+        ({ word: foundWord }) => foundWord.toLowerCase() === word.toLowerCase()
+      ),
+  },
+});
+
+</script>
+
+<!--  component: "action"  -->
+<script>
+vm.component('component-action', {
+  template: '<div class="action">   <slot name="button"></slot>   <slot name="popout"></slot> </div>',
+});
+</script>
+
+<!--  component: "progress"  -->
+<script>
+const WINDOW_POINTS = 100;
+const WINDOW_LEAD = 50;
+
+const progressWindow = () => {
+  const max = app.helpers.maxScore();
+  if (!app.helpers.isPointsScoring() || max <= WINDOW_POINTS) {
+    return { start: 0, size: max || 1, max, sliding: false };
+  }
+  const start = Math.min(Math.max(0, app.helpers.score() - WINDOW_LEAD), max - WINDOW_POINTS);
+  return { start, size: WINDOW_POINTS, max, sliding: true };
+};
+
+vm.component('component-progress', {
+  template: '<div class="progress" aria-label="Current game progress">   <span     v-if="!visualOnly"     class="progress-indicator__rank"     :key="rankName"     role="text"     :aria-label="rankName">     <span       v-for="(ch, i) in rankLetters"       class="progress-indicator__rank-letter"       :style="{ \'--i\': i }"       aria-hidden="true"       v-text="ch"></span>   </span>    <div     ref="progressBar"     id="progressBar"     class="progress-bar"     :class="barClasses"     :style="{ \'--progress\': progressFraction }">     <div class="progress-bar__track" aria-hidden="true">       <div class="progress-bar__fill"></div>     </div>      <div       v-for="dot in dots"       class="progress-bar__dot"       :class="{ \'progress-bar__dot--achieved\': dot.achieved, \'progress-bar__dot--off\': dot.off }"       :style="{ \'--pos\': dot.pos }"       aria-hidden="true"></div>      <div       v-for="rival in rivals"       :key="rival.pidx"       class="progress-bar__rival"       :class="[\'P\' + rival.pidx, { \'progress-bar__rival--off\': rival.off }]"       :style="{ \'--pos\': rival.pos }"       :title="rival.label"       aria-hidden="true"></div>      <div class="progress-bar__thumb" :aria-label="`${foundCount} of ${totalCount} found`">       {{ foundCount }}       <span         v-if="toNextText"         class="progress-bar__to-next"         :class="{ \'progress-bar__to-next--quiet\': feedbackShowing }"         aria-hidden="true"         v-text="toNextText"></span>     </div>   </div> </div> ',
+  props: {
+    visualOnly: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    landmarks: () => app.helpers.processLandmarks(app.puzzle.clues),
+    foundCount: () => app.helpers.score(),
+    totalCount: () => app.helpers.maxScore(),
+    rankCount: () => app.vue.data.user.rank.current,
+    rankName: function () {
+        if (this.$root.mpStanding) return this.$root.mpPositionLabel;
+        return this.$root.langRank(app.vue.data.user.rank.name);
+    },
+    rankLetters: function () {
+        return String(this.rankName || '').split('').map(function (c) {
+            return c === ' ' ? '\u00A0' : c;
+        });
+    },
+    view: () => progressWindow(),
+    barClasses() {
+      const { start, size, max, sliding } = this.view;
+      return {
+        'progress-bar--sliding': sliding,
+        'progress-bar--more-before': sliding && start > 0,
+        'progress-bar--more-after': sliding && start + size < max,
+      };
+    },
+    progressFraction() {
+      const { start, size } = this.view;
+      return Math.min(1, Math.max(0, (app.helpers.score() - start) / size));
+    },
+    dots() {
+      const { start, size } = this.view;
+      const found = app.helpers.score();
+      return app.helpers.processLandmarks(app.puzzle.clues).map(mark => {
+        const pos = (mark - start) / size;
+        return { pos, achieved: found >= mark, off: pos < 0 || pos > 1 };
+      });
+    },
+    rivals() {
+      const root = this.$root;
+      if (!root.mpCompetitive || root.mpStatus !== 'playing') return [];
+
+      const { start, size } = this.view;
+      return root.mpPlayers
+        .filter(player => !player.isSelf)
+        .map(player => {
+          const score = root.mpScoreFor(player.uid);
+          const pos = (score - start) / size;
+          return {
+            pidx: player.pidx,
+            label: `${player.name}: ${score}`,
+            pos: Math.min(1, Math.max(0, pos)),
+            off: pos < 0 || pos > 1,
+          };
+        });
+    },
+    feedbackShowing: () => app.vue.data.feedback.length > 0,
+    nextLandmark() {
+      const score = app.helpers.score();
+      return this.landmarks.find(mark => mark > score) ?? null;
+    },
+    toNextText() {
+      if (this.$root.mpStanding) return this.$root.mpGapText;
+      if (!app.helpers.isPointsScoring() || this.nextLandmark === null) return '';
+      return (this.$root.lang.progress_to_next || '[[n]] to next level').replaceAll(
+        '[[n]]',
+        this.nextLandmark - app.helpers.score()
+      );
+    },
+  },
+  watch: {
+    rankCount(newVal, oldVal) {
+      if (newVal === oldVal) return;
+
+      const dots = Array.from(document.querySelectorAll('.progress-bar__dot--achieved'));
+
+      dots.forEach((dot, i) => {
+        dot.style.animation = 'none';
+        void dot.offsetWidth;
+        dot.style.animation = `blink 50ms ${i / 13}s alternate`;
+      });
+    },
+  },
+});
+
+</script>
+
+
+    <script>app.init({"puzzle":{"hasTimer":true},"user":{"gaps":{"id":"gaps","type":"Boolean","default":false,"display":"Helpful gaps"},"timer":{"id":"timer","type":"Boolean","default":true,"display":"Show timer"}}});</script>
+  </body>
+</html>

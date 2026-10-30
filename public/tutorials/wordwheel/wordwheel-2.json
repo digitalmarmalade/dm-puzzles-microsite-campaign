@@ -1,0 +1,36 @@
+{
+  "headline": "Word Wheel",
+  "meta": {
+    "id": "tutorial-2",
+    "title": "Word Wheel",
+    "difficulty": "Easy",
+    "type": "wordwheel",
+    "variant": "Word Wheel",
+    "slug": "wordwheel-tutorial-2",
+    "number": "",
+    "description": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 2,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 0,
+    "rowCount": 0,
+    "allowedValues": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "solution": "fizz,zing,fizzing,fizzling"
+  },
+  "copy": {
+    "title": "Word Wheel",
+    "gridsize": {
+      "type": "Standard",
+      "rows": 0,
+      "cols": 0
+    }
+  },
+  "celldata": "Z,FIZLING",
+  "cluedata": "2,3",
+  "feedback": null
+}

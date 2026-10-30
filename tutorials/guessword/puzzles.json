@@ -1,0 +1,8 @@
+{
+  "_readme": "Source for the three tutorial GuessWords. Edit here, then run `npm run tutorials` to rebuild public/tutorials/guessword/guessword-*.json. Each answer must be a five-letter word from the gameplay's word list (public/tutorials/guessword/json/dictionary.json); the build checks it once that file is there. Each step's card (tutorial.brief.guessword.N in the microsite locales) suggests `opener` as the first guess, and the build checks it shows what `shows` says: only greens (green), only yellows (yellow) or both (mix). Change the card text if you change an opener.",
+  "puzzles": [
+    { "difficulty": "Easy", "answer": "CHAIR", "opener": "CHAIN", "shows": "green" },
+    { "difficulty": "Easy", "answer": "HEART", "opener": "EARTH", "shows": "yellow" },
+    { "difficulty": "Easy", "answer": "BREAD", "opener": "BEARD", "shows": "mix" }
+  ]
+}

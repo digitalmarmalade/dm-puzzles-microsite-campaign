@@ -1,0 +1,35 @@
+{
+  "headline": "GuessWord",
+  "meta": {
+    "id": "tutorial-3",
+    "title": "GuessWord",
+    "difficulty": "Easy",
+    "type": "guessword",
+    "variant": "GuessWord",
+    "slug": "guessword-tutorial-3",
+    "number": "",
+    "description": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 3,
+      "steps": 3
+    }
+  },
+  "copy": {
+    "title": "GuessWord",
+    "gridsize": {
+      "type": "Standard",
+      "rows": 6,
+      "cols": 5
+    },
+    "settings": {
+      "colCount": 5,
+      "rowCount": 6,
+      "solution": "BREAD"
+    }
+  },
+  "cluedata": "",
+  "celldata": "",
+  "feedback": null
+}

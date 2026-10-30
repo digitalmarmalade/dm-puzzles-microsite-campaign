@@ -1,0 +1,70 @@
+.stamp-holder {
+    flex: none;
+    display: grid;
+    inline-size: var(--stamp-size, 6rem);
+    block-size: var(--stamp-size, 6rem);
+    container-type: inline-size;
+}
+.stamp {
+    display: grid;
+    place-content: center;
+    inline-size: 100%;
+    block-size: 100%;
+    border-radius: 16cqi;
+    border: 1px solid var(--card-border);
+    font-size: 21cqi;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-colour-secondary, #777);
+    background: var(--card-background);
+
+    small {
+        font-size: 16cqi;
+        font-weight: 400;
+    }
+}
+.stamp--gap {
+    border: 1px dashed var(--card-border);
+    background: transparent;
+    color: var(--text-colour-secondary, #777);
+    opacity: .45;
+}
+.stamp--current {
+    border: 1px dashed rgba(var(--puzzle-tile-shadow), .5);
+    background: transparent;
+}
+.stamp--won {
+    border: 1px solid var(--metal-dark);
+    background:
+        linear-gradient(155deg, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .12) 30%, rgba(255, 255, 255, 0) 46%, rgba(0, 0, 0, .08) 100%),
+        linear-gradient(135deg, var(--metal-light) 0%, var(--metal-base) 28%, var(--metal-dark) 52%, var(--metal-base) 72%, var(--metal-light) 100%);
+    color: rgba(255,255,255,.8);
+    text-shadow: 0 1.2cqi 2cqi rgba(0, 0, 0, .4);
+    box-shadow:
+        0 0 0 1.5cqi rgba(255, 255, 255, .18) inset,
+        0 -7.5cqi 6.25cqi 0 rgba(0, 0, 0, .2) inset,
+        0  5cqi 5cqi 0 rgba(255, 255, 255, .35) inset,
+        0  3.75cqi 3.75cqi 0 rgba(var(--stamp-rgb), .35),
+        0  1.25cqi 2.5cqi 0 rgba(var(--stamp-rgb), .25),
+        0  15cqi 25cqi 0 rgba(var(--stamp-rgb), .3);
+}
+.stamp--tier-1 {
+    --stamp-rgb: 168, 102, 48;
+    --metal-light: #E8B184;
+    --metal-base: #B3733F;
+    --metal-dark: #985B30;
+}
+.stamp--tier-2 {
+    --stamp-rgb: 118, 131, 146;
+    --metal-light: #F4F6F9;
+    --metal-base: #A6B0BC;
+    --metal-dark: #86909E;
+}
+.stamp--tier-3 {
+    --stamp-rgb: 201, 145, 16;
+    --metal-light: #FFE38F;
+    --metal-base: #D9A21B;
+    --metal-dark: #B8840F;
+}

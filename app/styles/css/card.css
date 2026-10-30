@@ -1,0 +1,157 @@
+  .card {
+    background-color: var(--card-background, #fff);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius, 10px);
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > form { 
+      inline-size: 100%;
+    }
+
+    form & {
+      inline-size: 100%;
+    }
+  }
+
+  .card--main {
+    padding: var(--card-main-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-main-gap);
+
+    @media (width >= 1024px) {
+      align-items: flex-start;
+    }
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--vertical-rhythm-half);
+    inline-size: 100%;
+
+    @media (width >= 1024px) {
+      flex-direction: row; 
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &.card-header--no-actions {
+      @media (width >= 1024px) {
+        justify-content: center;
+      }
+    }
+  }
+
+  .card-title {
+    text-align: center;
+  }
+
+  .card-title__edit {
+    color: var(--button-primary);
+    display: inline-flex;
+    background: none;
+    gap: .2em;
+    border: none;
+    align-items: center;
+    margin: 0 .5rem 0 0;
+    cursor: pointer;
+    transition: color .25s ease;
+
+    > svg {
+      inline-size: .5em;
+      block-size: .5em;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--button-primary-hover);
+        }
+    }
+  }
+
+  .card-header__title {
+    display: flex;
+    gap: 1rem;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+
+    .card-title {
+      margin: 0;
+      text-align: start;
+    }
+
+    @media (width >= 1024px) {
+      margin: 0;
+    }
+
+  }
+
+  .card-header__title__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 .3rem;
+  flex-shrink: 0;
+
+  /* Sizing */
+  inline-size: 6rem;
+  block-size: 6rem;
+
+  /* Look & feel */
+  border-radius: 1rem;
+  border: 1px solid var(--card-border, rgba(84, 79, 91, 0.10));
+  background: var(--puzzle-tile-background);
+  transform-origin: var(--dot-inset) var(--dot-inset);
+
+  /* Motion */
+  transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+
+  /* Elevation (overridable) */
+  --tile-shadow:
+    0 -0.3rem 0.25rem 0 rgba(var(--puzzle-tile-shadow), 0.20) inset,
+    0  0.2rem 0.2rem 0 rgba(255, 255, 255, 0.50) inset,
+    0  0.15rem 0.15rem 0 rgba(var(--puzzle-tile-shadow), 0.30),
+    0  0.05rem 0.1rem 0 rgba(var(--puzzle-tile-shadow), 0.20),
+    0  0.6rem 1rem 0 rgba(var(--puzzle-tile-shadow), 0.20);
+  box-shadow: var(--tile-shadow);
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme-status]) & {
+    --puzzle-tile-shadow: 0, 0, 0;
+    --tile-shadow:
+      0 -0.6rem 0.5rem 0 rgba(var(--puzzle-tile-shadow), 0.4) inset,
+      0  0.4rem 0.4rem 0 rgba(255, 255, 255, 0.05) inset,
+      0  0.3rem 0.3rem 0 rgba(var(--puzzle-tile-shadow), 0.3),
+      0  0.1rem 0.2rem 0 rgba(var(--puzzle-tile-shadow), 0.30),
+      0  1.2rem 2rem 0 rgba(var(--puzzle-tile-shadow), 0.30);
+    }
+  }
+  :root[data-theme-status="dark"] & {
+    --puzzle-tile-shadow: 0, 0, 0;
+    --tile-shadow:
+      0 -0.6rem 0.5rem 0 rgba(var(--puzzle-tile-shadow), 0.4) inset,
+      0  0.4rem 0.4rem 0 rgba(255, 255, 255, 0.05) inset,
+      0  0.3rem 0.3rem 0 rgba(var(--puzzle-tile-shadow), 0.3),
+      0  0.1rem 0.2rem 0 rgba(var(--puzzle-tile-shadow), 0.30),
+      0  1.2rem 2rem 0 rgba(var(--puzzle-tile-shadow), 0.30);
+  }
+
+  > svg {
+    inline-size: 80%;
+    block-size: 80%;
+  }
+
+}
+:global([data-theme-status="dark"] .card-header__title__icon svg)  {
+        opacity: .6;    
+}
+:not([data-theme-status]) .card-header__title__icon svg {
+    @media (prefers-color-scheme: dark) {
+        opacity: .6;
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "id": "tutorial-3",
+    "title": "Takuzu",
+    "difficulty": "Easy",
+    "type": "takuzu",
+    "number": "",
+    "variant": "Takuzu",
+    "slug": "takuzu-tutorial-3",
+    "description": "",
+    "section": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 3,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 6,
+    "rowCount": 6,
+    "allowedValues": "01",
+    "solution": "101100011001110010001101010011100110"
+  },
+  "copy": {
+    "gridsize": {
+      "type": "Standard",
+      "rows": 6,
+      "cols": 6
+    }
+  },
+  "celldata": "1 11 00 10   10 10 0  010  011  01  ",
+  "cluedata": "x             =                  =              x                       ",
+  "feedback": null
+}

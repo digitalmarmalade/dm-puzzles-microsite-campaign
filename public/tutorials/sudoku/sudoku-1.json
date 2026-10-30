@@ -1,0 +1,87 @@
+{
+  "version": "http://ipuz.org/v2",
+  "kind": [
+    "http://ipuz.org/sudoku#1"
+  ],
+  "title": "Sudoku",
+  "difficulty": "Easy",
+  "boxes": true,
+  "dimensions": {
+    "width": 4,
+    "height": 4
+  },
+  "settings": {
+    "boxColCount": 2,
+    "boxRowCount": 2
+  },
+  "puzzle": [
+    [
+      4,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      4,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      4,
+      2
+    ]
+  ],
+  "solution": [
+    [
+      4,
+      3,
+      2,
+      1
+    ],
+    [
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      2,
+      4,
+      1,
+      3
+    ],
+    [
+      3,
+      1,
+      4,
+      2
+    ]
+  ],
+  "meta": {
+    "variant": "Sudoku",
+    "slug": "sudoku-tutorial-1",
+    "id": "tutorial-1",
+    "number": "",
+    "description": "",
+    "type": "sudoku",
+    "section": "",
+    "difficulty": "Easy",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 1,
+      "steps": 3
+    }
+  },
+  "copy": {},
+  "feedback": null
+}

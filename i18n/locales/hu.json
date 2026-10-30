@@ -1,0 +1,1592 @@
+{
+    "auth": {
+        "bannerFreeTitle": "A mai első rejtvényedhez nem kell fiók",
+        "bannerFreeBody": "Hozz létre egy ingyenes fiókot, hogy minden rejtvénnyel játszhass, és a sorozatod meg a beállításaid minden eszközön megmaradjanak.",
+        "freePlayUsed": "Ha ma tovább játszanál, jelentkezz be vagy hozz létre egy ingyenes fiókot. Így a sorozatod és a beállításaid is megmaradnak minden eszközön.",
+        "loginPrompt": "Jelentkezz be, hogy a sorozatod és a beállításaid minden eszközön megmaradjanak.",
+        "loginToPlay": "Be kell jelentkezned a(z) {name} játékhoz",
+        "loginToFriends": "Be kell jelentkezned, hogy baráti ligában játssz",
+        "loginToAccount": "Be kell jelentkezned a fiókod megtekintéséhez",
+        "loginToStats": "Be kell jelentkezned a statisztikáid megtekintéséhez",
+        "bannerText": "Jelentkezz be vagy hozz létre egy ingyenes fiókot, hogy nyomon követhesd a haladásodat és minden rejtvénnyel játszhass.",
+        "logIn": "Bejelentkezés",
+        "signUp": "Regisztráció",
+        "backHome": "Vissza a rejtvényekhez",
+        "locked": "Zárolva",
+        "loggedIn": "Be vagy jelentkezve",
+        "loggedOut": "Ki lettél jelentkeztetve"
+    },
+    "common": {
+        "refreshingPuzzles": "Frissítjük a rejtvényeket…",
+        "cancel": "Mégse",
+        "submit": "Küldés",
+        "back": "Vissza",
+        "update": "Frissítés",
+        "enter": "Belépés",
+        "select": "Kiválasztás",
+        "or": "VAGY",
+        "create": "Létrehozás",
+        "join": "Csatlakozás",
+        "ok": "Rendben",
+        "close": "Bezárás",
+        "errSelectPuzzles": "Kérlek válassz ki rejtvényeket",
+        "notifications": "Értesítések",
+        "updateAvailable": "Frissítés elérhető – érintsd meg a frissítéshez"
+    },
+    "nav": {
+        "home": "Kezdőlap",
+        "puzzles": "Rejtvények",
+        "achievements": "Eredmények",
+        "stats": "Statisztikák",
+        "friends": "Barátok",
+        "account": "Fiók",
+        "menu": "Menü",
+        "toggleTheme": "Téma váltása"
+    },
+    "language": {
+        "label": "Nyelv"
+    },
+    "footer": {
+        "copyright": "© {year} Digital Marmalade",
+        "backToTop": "Vissza a tetejére"
+    },
+    "home": {
+        "welcome": {
+            "title": "Új itt?",
+            "body": "Vágj bele, vagy nézd meg a 30 másodperces bemutatót az oldal személyre szabásához.",
+            "tour": "Bemutató indítása",
+            "dismiss": "Később"
+        },
+        "badges": {
+            "mostPlayed": "Legtöbbet játszott",
+            "streak": "Sorozat {count}",
+            "lastTime": "Legutóbb játszott"
+        },
+        "todaysPuzzles": "Mai rejtvények",
+        "allPuzzles": "Összes rejtvény",
+        "yourFavourites": "Kedvenceid",
+        "forYou": "Neked",
+        "yourPuzzles": {
+            "title": "Rejtvényeid",
+            "reasons": {
+                "favourite": "Az egyik kedvenced",
+                "boosted": "Többet kértél ezekből",
+                "stepUp": "Készen állsz egy nehezebb szintre",
+                "morning": "A szokásos reggeli rejtvényed",
+                "afternoon": "A szokásos délutáni rejtvényed",
+                "evening": "A szokásos esti rejtvényed",
+                "night": "A szokásos késő esti rejtvényed",
+                "played": "Ezt gyakran játszod",
+                "streak": "Folytasd a sorozatodat",
+                "tour": "Illik a bemutatóban választottakhoz",
+                "missed": "Ez kimaradt?",
+                "archive": "Egy az archívumból",
+                "fromDay": "Rejtvény – {day}",
+                "catchUp": "Pótold ezt",
+                "moreLike": "Tetszett a mai? Próbáld ki ezt",
+                "worthALook": "Érdemes megnézni",
+                "yesterday": "A tegnapi rejtvény",
+                "resume": "Folytasd, ahol abbahagytad",
+                "likeCategory": {
+                    "words": "Mert szereted a szójátékokat",
+                    "numbers": "Mert szereted a számrejtvényeket",
+                    "logic": "Mert szereted a logikai játékokat",
+                    "quiz": "Mert szereted a kvízeket"
+                }
+            },
+            "archiveTitle": "{name} {number}. szám",
+            "allDone": "Mára mindent megoldottál",
+            "allDoneBody": "Végeztél a mai válogatással. Kérsz egyet az archívumból?",
+            "allDoneCta": "Archívum böngészése"
+        },
+        "favourite": "Hozzáadás a kedvencekhez",
+        "unfavourite": "Eltávolítás a kedvencek közül",
+        "viewArchive": "Archívum megtekintése",
+        "archive": "Archívum",
+        "latestCompleted": "Legutóbb teljesített rejtvény",
+        "hideVariant": "Változat elrejtése",
+        "unhideVariant": "Változat megjelenítése",
+        "showHidden": "{count} rejtett rejtvény megjelenítése | {count} rejtett rejtvény megjelenítése",
+        "hideHidden": "{count} rejtett rejtvény elrejtése | {count} rejtett rejtvény elrejtése",
+        "variantHidden": "{name} elrejtve",
+        "allHidden": "Minden rejtvény el van rejtve.",
+        "allHiddenCategory": "Ebben a kategóriában minden rejtvény el van rejtve.",
+        "filterByType": "Szűrés típus szerint",
+        "levelCount": "{count} szint | {count} szint",
+        "completedCount": "{count} / {total} teljesítve",
+        "showLevels": "{name} szintjeinek megjelenítése",
+        "showFront": "Vissza a {name} kártyához",
+        "categories": {
+            "all": "Mind",
+            "words": "Szavak",
+            "numbers": "Számok",
+            "logic": "Logika",
+            "quiz": "Kvíz",
+            "quick": "Gyors"
+        }
+    },
+    "nudge": {
+        "label": "Javaslat",
+        "no": "Nem, köszönöm",
+        "levelPrompt": "Villámgyorsan megy a(z) {family} — kipróbálod a(z) {name} szintet?",
+        "levelYes": "Igen, próbáljuk ki",
+        "levelDone": "A(z) {name} mostantól a kedvenceid között van."
+    },
+    "statsTeaser": {
+        "title": "Építsd fel a rejtvényprofilodat",
+        "achievements": "Ezek a teljesítmények várnak rád",
+        "signIn": "Jelentkezz be, hogy kövesd a statisztikádat, és a sorozatod meg a beállításaid minden eszközön megmaradjanak.",
+        "play": "A mai rejtvények",
+        "body": "Játssz néhány rejtvényt, és itt megjelennek a statisztikáid, a sorozataid és a játékosprofilod."
+    },
+    "guide": {
+        "slides": {
+            "title": "Így működik a Sticky Puzzles",
+            "goTo": "{n}. dia",
+            "back": "Vissza",
+            "next": "Tovább",
+            "close": "Bezárás",
+            "tour": "Mutasd meg",
+            "tryIt": "Kipróbálom",
+            "daily": {
+                "title": "Minden nap új rejtvények",
+                "text": "Minden reggel friss rejtvények, a keresztrejtvénytől a logikai rácsokig. Lemaradtál egyről? Az archívumban vár."
+            },
+            "pick": {
+                "title": "Válaszd ki a rejtvényeidet",
+                "text": "Koppints azokra, amelyek tetszenek. A kedvenceid kerülnek előre a Rejtvényeidben. Koppints a szemre, hogy elrejtsd, amit nem szeretnél látni."
+            },
+            "streak": {
+                "title": "Tartsd meg a sorozatod",
+                "text": "Játssz naponta bármelyik rejtvénnyel, hogy nőjön a sorozatod."
+            },
+            "profile": {
+                "title": "Építsd fel a rejtvényprofilodat",
+                "text": "Szerezz eredményeket, és nézd, ahogy játék közben nőnek a statisztikáid."
+            },
+            "free": {
+                "title": "Egy rejtvény fiók nélkül",
+                "text": "A napi első rejtvényedhez nem kell fiók. Hozz létre egy ingyenes fiókot, hogy mindegyikkel játszhass, és a haladásod minden eszközön megmaradjon."
+            }
+        },
+        "tour": {
+            "label": "Funkcióbemutató",
+            "count": "{n} / {total}",
+            "end": "Bemutató vége",
+            "next": "Tovább",
+            "done": "Kész",
+            "play": "Játék",
+            "later": "Most nem",
+            "yourPuzzles": {
+                "title": "Rejtvényeid",
+                "body": "Ezeket a rejtvényeket neked válogattuk. Minél többet játszol, annál jobb lesz a válogatás."
+            },
+            "today": {
+                "title": "A mai rejtvények",
+                "body": "Minden nap új válogatás. Koppints a ♡-re egy rejtvényen, hogy kedvencnek jelöld."
+            },
+            "summary": {
+                "title": "Sorozat és kihívások",
+                "body": "Játssz minden nap, hogy nőjön a sorozatod, és teljesítsd a napi és heti kihívásokat."
+            },
+            "all": {
+                "title": "Minden rejtvény",
+                "body": "Böngészd az összes rejtvényt és az archívumukat. Koppints az ⓘ-re a szabályokért."
+            },
+            "menu": {
+                "title": "A menü",
+                "body": "Itt találod a statisztikáidat, a fiókodat és a beállításokat. Nézzünk bele."
+            },
+            "stats": {
+                "title": "Statisztikáid",
+                "body": "Nézd meg, hogy állsz ebben a hónapban, ebben az évben és összesen."
+            },
+            "free": {
+                "title": "Nem kell fiók",
+                "body": "A napi első rejtvényedet fiók nélkül is megoldhatod. Hozz létre egy ingyeneset, hogy mindegyikkel játszhass."
+            },
+            "ready": {
+                "title": "Kezdhetjük?",
+                "body": "Ennyi az egész. Válassz egy rejtvényt, és kezdj bele.",
+                "bodyWith": "Kezdésnek: a mai {name}."
+            }
+        },
+        "tip": {
+            "dismiss": "Értem",
+            "yourPuzzles": "Ezeket a rejtvényeket neked válogattuk."
+        }
+    },
+    "announcement": {
+        "label": "Új rejtvény: {name}",
+        "kicker": "Új rejtvény",
+        "play": "Játék most",
+        "learn": "Tanuld meg",
+        "dismiss": "Bezárás",
+        "body": {
+            "takuzu": "Töltsd ki a rácsot két szimbólummal. Minden sor és oszlop legyen kiegyensúlyozott, és soha ne legyen három egyforma egymás mellett."
+        }
+    },
+    "wrapped": {
+        "banner": {
+            "kicker": "Összefoglalód:",
+            "title": "{month}",
+            "body": "Mit csináltál {month} hónapban?",
+            "cta": "Megnézem",
+            "dismiss": "Elrejtés"
+        },
+        "link": {
+            "cta": "Újra megnézem"
+        },
+        "share": {
+            "button": "Megosztás",
+            "text": "A(z) {month} hónapom rejtvényekben",
+            "footer": "Játssz itt: {host}",
+            "voice": {
+                "solved": {
+                    "kicker": "Megfejtettem"
+                },
+                "days": {
+                    "kicker": "Ennyi napon játszottam"
+                },
+                "perfect": {
+                    "body": "{month} minden napján játszottam. Ez aztán a kitartás!"
+                },
+                "minutes": {
+                    "kicker": "Ennyit töltöttem"
+                },
+                "top": {
+                    "kicker": "A legtöbbet játszottam"
+                },
+                "improved": {
+                    "time": {
+                        "within": "Az utolsó 3 játékom: átlagosan {now}, az első 3: {before}"
+                    },
+                    "words": {
+                        "within": "Az utolsó 3 játékom: a szavak {now}%-a, az első 3: {before}%"
+                    }
+                },
+                "assists": {
+                    "crossword": {
+                        "on": {
+                            "body": "{month} elején nélkülük kezdtem, most {to} betűt választok"
+                        }
+                    },
+                    "codeword": {
+                        "on": {
+                            "body": "{month} elején nélkülük kezdtem, most {to} betűt választok"
+                        }
+                    },
+                    "sudoku": {
+                        "on": {
+                            "body": "{month} elején nélkülük kezdtem, most a mezők {to}%-a ki van töltve"
+                        }
+                    }
+                },
+                "challenges": {
+                    "kicker": "Teljesítettem"
+                },
+                "medal": {
+                    "kicker": "Megnyertem"
+                }
+            }
+        },
+        "story": {
+            "label": "Összefoglalód: {month}",
+            "close": "Bezárás",
+            "prev": "Előző",
+            "next": "Következő",
+            "slideOf": "{n}. dia / {total}"
+        },
+        "intro": {
+            "body": "Nézzük vissza a rejtvényes hónapodat."
+        },
+        "solved": {
+            "kicker": "Megfejtettél",
+            "unit": "rejtvényt | rejtvényt"
+        },
+        "days": {
+            "kicker": "Ennyi napon játszottál",
+            "unit": "nap a(z) {total}-ból ({month}) | nap a(z) {total}-ból ({month})"
+        },
+        "perfect": {
+            "kicker": "Minden egyes nap",
+            "title": "Tökéletes hónap",
+            "body": "{month} minden napján játszottál. Ez aztán a kitartás!"
+        },
+        "minutes": {
+            "kicker": "Ennyit töltöttél",
+            "unit": "percet rejtvényezéssel | percet rejtvényezéssel",
+            "hours": "Ez {hours} óra {minutes} perc agytorna."
+        },
+        "top": {
+            "kicker": "A legtöbbet játszott",
+            "body": "{count} játék | {count} játék"
+        },
+        "rising": {
+            "kicker": "Felfelé ível",
+            "body": "{count} játék, {month} hónapban {prev} volt | {count} játék, {month} hónapban {prev} volt",
+            "new": "{count} játék, ebben a hónapban új | {count} játék, ebben a hónapban új"
+        },
+        "falling": {
+            "kicker": "Háttérbe szorult",
+            "body": "{count} játék, {month} hónapban {prev} volt | {count} játék, {month} hónapban {prev} volt",
+            "none": "Ebben a hónapban egyszer sem, {month} hónapban {prev} volt"
+        },
+        "improved": {
+            "time": {
+                "kicker": "Egyre gyorsabb",
+                "headline": "Átlagosan {saved}-cel gyorsabb",
+                "month": "Átlagosan {now}, {month} hónapban {before} volt",
+                "within": "Az utolsó 3: átlagosan {now}, az első 3: {before}"
+            },
+            "words": {
+                "kicker": "Több megtalált szó",
+                "headline": "+{saved} pont",
+                "month": "A szavak {now}%-át találod meg, {month} hónapban {before}% volt",
+                "within": "Az utolsó 3: a szavak {now}%-a, az első 3: {before}%"
+            }
+        },
+        "help": {
+            "less": {
+                "kicker": "Egyedül is megy",
+                "unit": "a rejtvényeknek segítség nélkül",
+                "body": "{month} hónapban {prev}% volt"
+            },
+            "more": {
+                "kicker": "Egy kis segítség",
+                "unit": "a rejtvényeknek egy kis segítséggel",
+                "body": "{month} hónapban {prev}% volt – erre való"
+            }
+        },
+        "assists": {
+            "crossword": {
+                "fewer": {
+                    "kicker": "Kevesebb betű",
+                    "body": "{month} elején {from} betű, most {to}"
+                },
+                "off": {
+                    "kicker": "Nincs szükség betűkre",
+                    "body": "{month} elején {from} betű, most egy sem"
+                },
+                "more": {
+                    "kicker": "Több betű",
+                    "body": "{month} elején {from} betű, most {to}"
+                },
+                "on": {
+                    "kicker": "Egy kis előny",
+                    "body": "{month} elején nélkülük kezdtél, most {to} betűt választasz"
+                }
+            },
+            "codeword": {
+                "fewer": {
+                    "kicker": "Kevesebb betű",
+                    "body": "{month} elején {from} betű, most {to}"
+                },
+                "off": {
+                    "kicker": "Nincs szükség betűkre",
+                    "body": "{month} elején {from} betű, most egy sem"
+                },
+                "more": {
+                    "kicker": "Több betű",
+                    "body": "{month} elején {from} betű, most {to}"
+                },
+                "on": {
+                    "kicker": "Egy kis előny",
+                    "body": "{month} elején nélkülük kezdtél, most {to} betűt választasz"
+                }
+            },
+            "sudoku": {
+                "fewer": {
+                    "kicker": "Kevesebb kezdő mező",
+                    "body": "{month} elején a mezők {from}%-a, most {to}%"
+                },
+                "off": {
+                    "kicker": "Nincs szükség kezdő mezőkre",
+                    "body": "{month} elején a mezők {from}%-a, most egy sem"
+                },
+                "more": {
+                    "kicker": "Több kezdő mező",
+                    "body": "{month} elején a mezők {from}%-a, most {to}%"
+                },
+                "on": {
+                    "kicker": "Egy kis előny",
+                    "body": "{month} elején nélkülük kezdtél, most a mezők {to}%-a ki van töltve"
+                }
+            }
+        },
+        "challenges": {
+            "kicker": "Teljesítettél",
+            "unit": "kihívást | kihívást"
+        },
+        "outro": {
+            "title": "Ilyen volt a(z) {month}",
+            "body": "Jöjjön még egy remek rejtvényes hónap!",
+            "cta": "Összes statisztika",
+            "replay": "Újra"
+        },
+        "medal": {
+            "kicker": "Megnyerted",
+            "title": "{tier} – {month}",
+            "solved": "{count} megfejtett rejtvény | {count} megfejtett rejtvény"
+        }
+    },
+    "profileAnnounce": {
+        "changed": "Megváltozott a rejtvényprofilod",
+        "cta": "Statisztika megtekintése"
+    },
+    "achievements": {
+        "title": "Eredmények",
+        "unlockedToast": "Eredmény feloldva!",
+        "challengeTitle": "Kihívások",
+        "timesAchieved": "{count} alkalommal | {count} alkalommal",
+        "descPuzzles": "Teljesíts {target} rejtvényt",
+        "descPuzzles1": "Teljesítsd az első rejtvényedet",
+        "descChallenges": "Teljesíts {target} kihívást",
+        "descChallenges1": "Teljesítsd az első kihívásodat",
+        "descVariety": "Próbálj ki {target} rejtvénytípust",
+        "descVarietyAll": "Próbálj ki minden rejtvénytípust",
+        "descStreak": "Érj el egy {target} napos szériát",
+        "descDays": "Játssz {target} különböző napon",
+        "titlePuzzles1": "Első rejtvény",
+        "titlePuzzles10": "Jó kezdet",
+        "titlePuzzles50": "Rendszeres játékos",
+        "titlePuzzles100": "Rejtvényrajongó",
+        "titleChallenges1": "Kihívás elfogadva",
+        "titleChallenges10": "Kihívás bajnok",
+        "titleChallenges50": "Kihívás mester",
+        "titleVariety3": "Felfedező",
+        "titleVariety5": "Sokoldalú",
+        "titleVarietyAll": "Tökéletesítő",
+        "titleStreak3": "Lendületben",
+        "titleStreak7": "Heti harcos",
+        "titleStreak30": "Havi mester",
+        "titleDays7": "Elkötelezett",
+        "titleDays30": "Odaadó",
+        "titleChallenges100": "Kihívás-legenda",
+        "titleClean10": "Mesterlövész",
+        "titleClean50": "Érinthetetlen",
+        "titleClean100": "Hibátlan",
+        "descClean": "Fejezz be {target} rejtvényt egyetlen ellenőrzés vagy felfedés nélkül",
+        "earnedCount": "{count} megszerezve",
+        "nextUp": "Következő célok",
+        "nextUpEmpty": "Minden sorozat minden jelvényét megszerezted. Lenyűgöző.",
+        "earned": "Megszerzett",
+        "earnedEmpty": "Fejtsd meg az első rejtvényed, hogy megszerezd az első jelvényed.",
+        "seeAll": "Összes jelvény",
+        "seeAllEarned": "Mind a(z) {count} megszerzett",
+        "secretToast": "Titkos jelvényt találtál!",
+        "titleArchive10": "Időutazó",
+        "titleArchive50": "Levéltáros",
+        "titleArchive100": "Történész",
+        "descArchive": "Fejts meg {target} rejtvényt az archívumból",
+        "titleBests5": "Egyéni csúcs",
+        "titleBests25": "Rekorddöntő",
+        "descBests": "Döntsd meg a legjobb idődet {target} alkalommal",
+        "titleClimber1": "A létra tetején",
+        "descClimber1": "Teljesítsd egy rejtvénycsalád legnehezebb szintjét",
+        "titleClimberAll": "Csúcs",
+        "descClimberAll": "Teljesítsd minden rejtvénycsalád legnehezebb szintjét",
+        "tiers": {
+            "1": "Bronz",
+            "2": "Ezüst",
+            "3": "Arany"
+        },
+        "month": {
+            "title": "{month} céljai",
+            "daysLeft": "Még {count} nap | Még {count} nap",
+            "progress": "{current} / {target}",
+            "tierAt": "{tier} {target}",
+            "tierEveryDay": "{tier} minden nap",
+            "goals": {
+                "puzzles": "Megfejtett rejtvények",
+                "days": "Játéknapok",
+                "variety": "Minden rejtvénytípus",
+                "clean": "Tiszta megfejtések"
+            },
+            "toastTitle": "Havi cél teljesítve!",
+            "toastBody": "{goal}: {tier} – {month}"
+        },
+        "months": {
+            "title": "Hónapjaid",
+            "inProgress": "Folyamatban",
+            "played": "Játszottál",
+            "none": "Nem játszottál",
+            "seeAll": "Összes"
+        },
+        "secrets": {
+            "title": "Titkos",
+            "hint": "Néhány jelvény rejtve marad, amíg meg nem találod.",
+            "more": "Még {count} vár rád | Még {count} vár rád"
+        },
+        "secret": {
+            "nightOwl": {
+                "title": "Éjjeli bagoly",
+                "desc": "Fejts meg egy rejtvényt éjfél után",
+                "done": "Éjfél után fejtettél meg egy rejtvényt"
+            },
+            "earlyBird": {
+                "title": "Korán kelő",
+                "desc": "Fejts meg egy rejtvényt reggel 7 előtt",
+                "done": "Reggel 7 előtt fejtettél meg egy rejtvényt"
+            },
+            "comeback": {
+                "title": "Üdv újra",
+                "desc": "Térj vissza 30 nap szünet után",
+                "done": "30 nap szünet után visszatértél"
+            },
+            "lifeline": {
+                "title": "Mentőöv",
+                "desc": "Mentsd meg a sorozatodat",
+                "done": "Megmentetted a sorozatodat"
+            },
+            "fullHouse": {
+                "title": "Telitalálat",
+                "desc": "Fejts meg minden rejtvényt a megjelenése napján",
+                "done": "Minden rejtvényt a megjelenése napján fejtettél meg"
+            },
+            "ghost": {
+                "title": "Bú!",
+                "desc": "Fejts meg egy rejtvényt Halloweenkor",
+                "done": "Halloweenkor fejtettél meg egy rejtvényt"
+            },
+            "spotless": {
+                "title": "Hibátlan",
+                "desc": "Fejts meg 10 rejtvényt egymás után ellenőrzés, felfedés és tipp nélkül",
+                "done": "10 rejtvényt fejtettél meg egymás után ellenőrzés, felfedés és tipp nélkül"
+            },
+            "weekend": {
+                "title": "Hétvégi pihenő",
+                "desc": "Fejts meg 5 rejtvényt egyetlen hétvégén",
+                "done": "5 rejtvényt fejtettél meg egyetlen hétvégén"
+            },
+            "christmas": {
+                "title": "Karácsonyi rejtvény",
+                "desc": "Fejts meg egy rejtvényt karácsony napján",
+                "done": "Karácsony napján fejtettél meg egy rejtvényt"
+            }
+        },
+        "donePuzzles": "{target} rejtvényt fejtettél meg",
+        "donePuzzles1": "Megfejtetted az első rejtvényed",
+        "doneChallenges": "{target} kihívást teljesítettél",
+        "doneChallenges1": "Teljesítetted az első kihívásod",
+        "doneVariety": "{target} rejtvénytípust próbáltál ki",
+        "doneVarietyAll": "Minden rejtvénytípust kipróbáltál",
+        "doneStreak": "Elértél egy {target} napos sorozatot",
+        "doneDays": "{target} különböző napon játszottál",
+        "doneClean": "{target} rejtvényt fejtettél meg ellenőrzés és felfedés nélkül",
+        "doneArchive": "{target} rejtvényt fejtettél meg az archívumból",
+        "doneBests": "{target} alkalommal döntötted meg a legjobb idődet",
+        "doneClimber1": "Teljesítetted egy rejtvénycsalád legnehezebb szintjét",
+        "doneClimberAll": "Teljesítetted minden rejtvénycsalád legnehezebb szintjét",
+        "challengeDone": "{count} kihívást teljesítettél | {count} kihívást teljesítettél",
+        "allTitle": "Összes jelvény",
+        "earnedTitle": "Jelvényeid",
+        "earnedOn": "Megszerezve: {date}",
+        "tracks": {
+            "puzzles": "Megfejtett rejtvények",
+            "streak": "Sorozatok",
+            "days": "Játéknapok",
+            "clean": "Tiszta megfejtések",
+            "variety": "Rejtvénytípusok",
+            "archive": "Archívum",
+            "bests": "Egyéni csúcsok",
+            "climber": "Hegymászó",
+            "challenges": "Kihívások",
+            "anniversary": "Velünk töltött idő",
+            "medals": "Havi érmek",
+            "golds": "Arany hónapok"
+        },
+        "secretPill": "Titkos",
+        "titlePuzzles250": "Rejtvényrajongó",
+        "titlePuzzles500": "Rejtvénymester",
+        "titlePuzzles1000": "Rejtvénylegenda",
+        "titlePuzzles2500": "Halhatatlan rejtvényfejtő",
+        "titleClean250": "Precizitás",
+        "titleClean500": "Hibátlan",
+        "titleClean1000": "Perfekcionista",
+        "titleStreak100": "Százas sorozat",
+        "titleStreak365": "Egyéves sorozat",
+        "titleDays100": "Centurio",
+        "titleDays365": "Egy év rejtvény",
+        "titleDays1000": "Ezer nap",
+        "titleArchive250": "Kurátor",
+        "titleArchive500": "Az archívum őre",
+        "titleBests50": "Villám",
+        "titleBests100": "Megállíthatatlan",
+        "titleAnniversary1m": "Egy hónapja velünk",
+        "titleAnniversary6m": "Fél év",
+        "titleAnniversary1y": "Első évforduló",
+        "titleAnniversary2y": "Két év",
+        "titleAnniversary3y": "Három év",
+        "titleAnniversary5y": "Öt év",
+        "descAnniversary1m": "Teljen el egy hónap az első rejtvényed óta",
+        "descAnniversary6m": "Teljen el hat hónap az első rejtvényed óta",
+        "descAnniversary1y": "Teljen el egy év az első rejtvényed óta",
+        "descAnniversary2y": "Teljen el két év az első rejtvényed óta",
+        "descAnniversary3y": "Teljen el három év az első rejtvényed óta",
+        "descAnniversary5y": "Teljen el öt év az első rejtvényed óta",
+        "doneAnniversary1m": "Egy hónap telt el az első rejtvényed óta",
+        "doneAnniversary6m": "Hat hónap telt el az első rejtvényed óta",
+        "doneAnniversary1y": "Egy év telt el az első rejtvényed óta",
+        "doneAnniversary2y": "Két év telt el az első rejtvényed óta",
+        "doneAnniversary3y": "Három év telt el az első rejtvényed óta",
+        "doneAnniversary5y": "Öt év telt el az első rejtvényed óta",
+        "descMedals": "Nyerj havi érmet {target} különböző hónapban",
+        "doneMedals": "{target} hónapban nyertél havi érmet",
+        "descGolds": "Nyerj aranyat {target} hónapban",
+        "doneGolds": "{target} hónapban nyertél aranyat",
+        "descGolds1": "Nyerj arany havi érmet",
+        "doneGolds1": "Arany havi érmet nyertél"
+    },
+    "stats": {
+        "title": "Statisztikák",
+        "puzzleStatistics": "Rejtvénystatisztikák",
+        "totalPuzzles": "Teljesített rejtvények",
+        "puzzleTypes": "Rejtvénytípusok",
+        "longestStreak": "Leghosszabb széria",
+        "daysPlayed": "Játszott napok",
+        "bestDay": "Legjobb nap",
+        "thisMonth": "Ebben a hónapban",
+        "lastMonth": "Múlt hónapban",
+        "weeksPlays": "A hét játékai",
+        "thisWeek": "Ezen a héten",
+        "lastWeek": "Múlt héten",
+        "average90": "90 napos átlag",
+        "dataWindow": "Az összesítések a teljes játékodat tartalmazzák; a grafikonok az utolsó 90 napot mutatják",
+        "dataWindowAll": "Az összesítések és a grafikonok a teljes játékodat mutatják",
+        "noData": "Teljesíts néhány rejtvényt, hogy itt láthasd a statisztikáidat.",
+        "allTime": "Összesen",
+        "period": "Időszak",
+        "started": "Elkezdett rejtvények",
+        "completed": "Megfejtett rejtvények",
+        "cleanSolves": "Segítség nélkül megfejtve",
+        "typesPlayed": "Játszott rejtvénytípusok",
+        "typePlays": "{name}: {count} megfejtve",
+        "playsByMonth": "Játékok havonta",
+        "playsOverTime": "Játékok időben",
+        "playsPerMonth": "Játékok havonta",
+        "playsPerYear": "Játékok évente",
+        "averageLine": "Átlag"
+    },
+    "profile": {
+        "label": "Játékos profil",
+        "newbie": {
+            "title": "Újonc",
+            "subtitle": "Csak most kezded."
+        },
+        "fanatic": {
+            "title": "{variant} rajongó",
+            "subtitle": "A {variant} a kedvenc rejtvényed."
+        },
+        "numberCruncher": {
+            "title": "Számbűvész",
+            "subtitle": "{v1} és {v2} a kedvenceid."
+        },
+        "wordsmith": {
+            "title": "Szómester",
+            "subtitle": "{v1} és {v2} a kedvenceid."
+        },
+        "logicBuff": {
+            "title": "Logikai rajongó",
+            "subtitle": "{v1} és {v2} a kedvenceid."
+        },
+        "quizzer": {
+            "title": "Kvízkedvelő",
+            "subtitle": "{v1} és {v2} a kedvenceid."
+        },
+        "dailyDevotee": {
+            "title": "Napi elkötelezett",
+            "subtitle": "Szinte minden nap játszol."
+        },
+        "weekendWarrior": {
+            "title": "Hétvégi harcos",
+            "subtitle": "Szombat és vasárnap vannak a csúcson."
+        },
+        "earlyBird": {
+            "title": "Kora reggeli",
+            "subtitle": "Te vagy az első a nap folyamán."
+        },
+        "nightOwl": {
+            "title": "Éjjeli bagoly",
+            "subtitle": "A javát estére hagyod."
+        },
+        "allRounder": {
+            "title": "Sokoldalú",
+            "subtitle": "Mindenből egy kicsit."
+        }
+    },
+    "challenges": {
+        "aria": "Kihívásaid",
+        "today": "Mai rejtvény",
+        "fromArchive": "Az archívumból",
+        "comeBackTomorrow": "Mára kész. Gyere vissza holnap a folytatáshoz.",
+        "pickIntro": "Bármelyik beleszámít.",
+        "offTip": "Nem szeretnél kihívásokat látni?",
+        "offAction": "Kikapcsolás",
+        "offKeep": "Maradjanak",
+        "offToast": "Kihívások kikapcsolva. A Fiókban visszakapcsolhatod őket.",
+        "suggested": "Válassz kihívást",
+        "complete": "Kihívás teljesítve!",
+        "completeToast": "Kihívás teljesítve!",
+        "expired": "Lejárt az idő",
+        "expiredBody": "{target}-ből {current} lett meg. Még egy próba?",
+        "daysLeft": "Még {n} nap | Még {n} nap",
+        "endsToday": "Ma ér véget",
+        "progress": "{current} / {target}",
+        "join": "Elfogadom",
+        "notNow": "Most nem",
+        "play": "Játék",
+        "leave": "Kilépés a kihívásból",
+        "retry": "Újra",
+        "pickNew": "Új választása",
+        "dismiss": "Elvetés",
+        "typeWeek": {
+            "title": "Egy munkahét {name}",
+            "body": "Teljesíts {target} {name} rejtvényt a következő {days} napban.",
+            "goal": "Teljesíts {target} {name} rejtvényt."
+        },
+        "typeDay": {
+            "title": "Dupla {name}",
+            "body": "Teljesíts ma {target} {name} rejtvényt.",
+            "goal": "Teljesíts {target} {name} rejtvényt."
+        },
+        "typeClean": {
+            "title": "{name} egyedül",
+            "body": "Fejts meg {target} {name} rejtvényt felfedés és tipp nélkül a következő {days} napban.",
+            "goal": "Fejts meg {target} {name} rejtvényt felfedés és tipp nélkül.",
+            "bodyGuesses": "Fejts meg {target} {name} rejtvényt legfeljebb 3 tippből a következő {days} napban.",
+            "goalGuesses": "Fejts meg {target} {name} rejtvényt legfeljebb 3 tippből."
+        },
+        "stepUp": {
+            "title": "Lépj szintet: {name}",
+            "body": "Teljesíts {target} {name} rejtvényt a következő {days} napban.",
+            "goal": "Teljesíts {target} {name} rejtvényt."
+        },
+        "revisit": {
+            "title": "Vissza a(z) {name} játékhoz",
+            "body": "Már rég játszottál vele. Teljesíts {target} {name} rejtvényt a következő {days} napban.",
+            "goal": "Teljesíts {target} {name} rejtvényt."
+        },
+        "groupWeek": {
+            "words": {
+                "title": "Szavak hete",
+                "body": "Teljesíts {target} szójátékot a következő {days} napban.",
+                "goal": "Teljesíts {target} szójátékot."
+            },
+            "numbers": {
+                "title": "Számzsonglőr",
+                "body": "Teljesíts {target} számrejtvényt a következő {days} napban.",
+                "goal": "Teljesíts {target} számrejtvényt."
+            },
+            "logic": {
+                "title": "Logika hete",
+                "body": "Teljesíts {target} logikai rejtvényt a következő {days} napban.",
+                "goal": "Teljesíts {target} logikai rejtvényt."
+            },
+            "quick": {
+                "title": "Villámhét",
+                "body": "Teljesíts {target} gyors rejtvényt a következő {days} napban.",
+                "goal": "Teljesíts {target} gyors rejtvényt."
+            }
+        },
+        "groupVariety": {
+            "words": {
+                "title": "Szóválogatás",
+                "body": "Játssz {target} különböző szójátékkal a következő {days} napban.",
+                "goal": "Játssz {target} különböző szójátékkal."
+            },
+            "numbers": {
+                "title": "Számválogatás",
+                "body": "Játssz {target} különböző számrejtvénnyel a következő {days} napban.",
+                "goal": "Játssz {target} különböző számrejtvénnyel."
+            },
+            "logic": {
+                "title": "Logikai válogatás",
+                "body": "Játssz {target} különböző logikai rejtvénnyel a következő {days} napban.",
+                "goal": "Játssz {target} különböző logikai rejtvénnyel."
+            },
+            "quick": {
+                "title": "Villámválogatás",
+                "body": "Játssz {target} különböző gyors rejtvénnyel a következő {days} napban.",
+                "goal": "Játssz {target} különböző gyors rejtvénnyel."
+            }
+        },
+        "coffee": {
+            "title": "Kávészünet",
+            "body": "Teljesíts ma {target} gyors rejtvényt.",
+            "goal": "Teljesíts {target} gyors rejtvényt."
+        },
+        "streak": {
+            "title": "Öt nap egymás után",
+            "body": "Játssz {target} egymást követő napon.",
+            "goal": "Játssz {target} egymást követő napon.",
+            "expired": "A(z) {target} napból a(z) {current}. napig jutottál. Még egy próba?"
+        },
+        "explore": {
+            "title": "Valami új",
+            "body": "Próbálj ki {target} olyan rejtvénytípust, amellyel még sosem játszottál, a következő {days} napban.",
+            "goal": "Próbálj ki {target} olyan rejtvénytípust, amellyel még sosem játszottál."
+        },
+        "mixDay": {
+            "title": "Vegyes válogatás",
+            "body": "Játssz ma {target} különböző rejtvénytípussal.",
+            "goal": "Játssz {target} különböző rejtvénytípussal."
+        },
+        "marathon": {
+            "title": "Rejtvénymaraton",
+            "body": "Teljesíts ma {target} rejtvényt.",
+            "goal": "Teljesíts {target} rejtvényt."
+        },
+        "fourDays": {
+            "title": "Négynapos hét",
+            "body": "Játssz {target} különböző napon a következő {days} napban.",
+            "goal": "Játssz {target} különböző napon."
+        },
+        "spotless": {
+            "title": "Hibátlan hét",
+            "body": "Fejts meg {target} rejtvényt felfedés és tipp nélkül a következő {days} napban.",
+            "goal": "Fejts meg {target} rejtvényt felfedés és tipp nélkül."
+        },
+        "typeRun": {
+            "title": "{name} mesterhármas",
+            "body": "Játssz {name} játékkal {target} egymást követő napon.",
+            "goal": "Játssz {name} játékkal {target} egymást követő napon."
+        },
+        "archive": {
+            "title": "Archívumfelfedező",
+            "body": "Teljesíts {target} rejtvényt az archívumból a következő {days} napban.",
+            "goal": "Teljesíts {target} rejtvényt az archívumból."
+        },
+        "favSweep": {
+            "title": "Kedvencek köre",
+            "body": "Teljesítsd ma mind a(z) {target} kedvenc rejtvényedet.",
+            "goal": "Teljesítsd mind a(z) {target} kedvenc rejtvényedet."
+        }
+    },
+    "summary": {
+        "aria": "Az elmúlt 7 nap összefoglalója",
+        "carouselAria": "Panel kiválasztása",
+        "title": "Az elmúlt 7 nap",
+        "puzzles": "Rejtvények",
+        "types": "Rejtvénytípusok",
+        "mostPlayed": "Legtöbbet játszott",
+        "noPuzzles": "Az elmúlt 7 napban nem játszottál.",
+        "days": "Játéknapok"
+    },
+    "streak": {
+        "aria": "Játékszéria",
+        "title": "Rejtvénysorozat",
+        "dayCount": "nap | nap",
+        "weekCount": "hét | hét",
+        "recentDaysAria": "Legutóbbi napok"
+    },
+    "archive": {
+        "filterBy": "Szűrés:",
+        "about": "Névjegy",
+        "recent": "Legutóbbi",
+        "noPuzzles": "Ebben a hónapban nincsenek rejtvények.",
+        "otherLevels": "Egyéb szintek",
+        "statusFilterLabel": "Szűrés állapot szerint",
+        "statusAll": "Mind",
+        "statusUnplayed": "Nem játszott",
+        "statusUnfinished": "Folyamatban",
+        "statusCompleted": "Teljesítve",
+        "playMostRecent": "A legutóbbi indítása",
+        "typeAchievements": {
+            "trained": "{name}: kiképezve",
+            "descTrained": "Teljesítsd mind a(z) {target} {name} oktatóanyagot",
+            "heading": "Eredmények",
+            "nextUp": "Következő",
+            "moreToDiscover": "Még több felfedezni való…",
+            "apprentice": "{name} tanonc",
+            "expert": "{name} szakértő",
+            "master": "{name} mester",
+            "purist": "{name} purista",
+            "descPlay": "Fejezz be {target} {name} rejtvényt",
+            "sharpSolver": "{name} Éles Elme",
+            "descSharp": "Oldj meg {target} {name} rejtvényt legfeljebb 3 tippből",
+            "descCleanMistakes": "Oldj meg {target} {name} rejtvényt hibázás vagy felfedés nélkül",
+            "sharpEye": "{name} Sasszem",
+            "wordHawk": "{name} Szóvadász",
+            "fullHouse": "{name} Telitalálat",
+            "descWordsPct": "Találd meg a szavak {target}%-át egy {name} rejtvényben",
+            "descPointsPct": "Szerezd meg a pontok {target}%-át egy {name} rejtvényben",
+            "descClean": "Oldj meg {target} {name} rejtvényt ellenőrzés vagy felfedés nélkül"
+        },
+        "stats": {
+            "title": "{name} statisztika",
+            "completed": "Befejezett",
+            "averageTime": "Átlagos idő",
+            "bestTime": "Legjobb idő",
+            "longestStreak": "Leghosszabb sorozat",
+            "currentStreak": "Jelenlegi sorozat",
+            "cleanSolves": "Tiszta megfejtések",
+            "averageChecks": "Átlagos ellenőrzések",
+            "averageReveals": "Átlagos felfedések",
+            "averageMistakes": "Átlagos hibák",
+            "averageWordsFound": "Átlagosan talált szavak",
+            "bestWordsFound": "Legtöbb talált szó",
+            "averageScore": "Átlagos pontszám",
+            "bestScore": "Legjobb pontszám",
+            "sharpSolves": "Pontos megfejtések",
+            "averageGuesses": "Átlagos tippek",
+            "bestGuesses": "Legjobb tippek",
+            "guesses": "Tippek",
+            "notSolved": "Nem sikerült",
+            "winRate": "Győzelmi %",
+            "guessDistribution": "Sikeres tippek",
+            "signedOut": "Jelentkezz be a haladásod követéséhez",
+            "chartTitle": "Utolsó 7 befejezett",
+            "chartTitlePlays": "Utolsó 7 játszott",
+            "time": "Idő",
+            "checks": "Ellenőrzések",
+            "reveals": "Felfedések",
+            "hints": "Súgások",
+            "mistakes": "Hibák",
+            "wordsFound": "Talált szavak",
+            "score": "Pontszám",
+            "average": "Átlag",
+            "persona": {
+                "newcomer": {"title": "Újonc", "desc": "Most ismerkedsz a(z) {name} játékkal."},
+                "comeback": {"title": "Üdv újra", "desc": "Jó újra látni a(z) {name} játéknál."},
+                "recordBreaker": {"title": "Rekorder", "desc": "Most állítottad be a legjobb {name} idődet."},
+                "improver": {"title": "Fejlődő", "desc": "A(z) {name} időid {percent}%-kal javultak mostanában."},
+                "sharpshooter": {"title": "Mesterlövész", "desc": "Átlagosan {guesses} tippből megfejted a(z) {name} játékot."},
+                "purist": {"title": "A Purista", "desc": "Az utolsó {total} {name} megfejtésedből {clean} segítség nélkül ment."},
+                "clockwork": {"title": "Mint az óramű", "desc": "A(z) {name} játékaid mindig nagyjából {time} ideig tartanak."},
+                "nightOwl": {"title": "Éjjeli bagoly", "desc": "A(z) {name} játékot többnyire sötétedés után játszod."},
+                "earlyBird": {"title": "Korán kelő", "desc": "A(z) {name} játékot legszívesebben reggel játszod."},
+                "weekender": {"title": "Hétvégi játékos", "desc": "A(z) {name} a hétvégi kikapcsolódásod."},
+                "veteran": {"title": "A Veterán", "desc": "Eddig {count} {name} rejtvényt fejtettél meg."},
+                "hintHunter": {"title": "Tippvadász", "desc": "Szívesen elfogadsz egy tippet a(z) {name} játékhoz."},
+                "allRounder": {"title": "Nyugodt megfejtő", "desc": "Higgadt, sokoldalú {name} játékos."},
+                "unhurried": {"title": "Ráérősen", "desc": "A(z) {name} játékaid mostanában kicsit tovább tartanak. Élvezed őket?"},
+                "fewerReveals": {"title": "Kevesebb felfedés", "desc": "A(z) {name} felfedéseid {before}-ról {after}-ra csökkentek játékonként."},
+                "fewerChecks": {"title": "Kevesebb ellenőrzés", "desc": "A(z) {name} ellenőrzéseid {before}-ról {after}-ra csökkentek játékonként."},
+                "fewerHints": {"title": "Kevesebb tipp", "desc": "A(z) {name} tippjeid {before}-ról {after}-ra csökkentek játékonként."},
+                "fewerMistakes": {"title": "Kevesebb hiba", "desc": "A(z) {name} hibáid {before}-ról {after}-ra csökkentek játékonként."},
+                "fewerGuesses": {"title": "Pontosabb tippek", "desc": "A(z) {name} próbálkozásaid {before}-ról {after}-ra csökkentek játékonként."},
+                "findingMore": {"title": "Egyre több szó", "desc": "Több szót találsz a(z) {name} játékban: {before}%-ról {after}%-ra."},
+                "lunchBreak": {"title": "Ebédszüneti játékos", "desc": "A(z) {name} játékot többnyire ebédidőben játszod."},
+                "eveningSolver": {"title": "Esti kikapcsolódás", "desc": "Esténként szívesen kikapcsolódsz a(z) {name} játékkal."},
+                "movedMornings": {"title": "Új szokás", "desc": "Mostanában reggelente játszol a(z) {name} játékkal."},
+                "movedAfternoons": {"title": "Új szokás", "desc": "Mostanában délutánonként játszol a(z) {name} játékkal."},
+                "movedEvenings": {"title": "Új szokás", "desc": "Mostanában esténként játszol a(z) {name} játékkal."},
+                "movedNights": {"title": "Új szokás", "desc": "Mostanában késő éjjel játszol a(z) {name} játékkal."}
+            }
+        }
+    },
+    "puzzle": {
+        "notStarted": "A rejtvény még nem indult el",
+        "halfComplete": "A rejtvény 50%-ban kész",
+        "percentComplete": "A rejtvény {percent}%-ban kész",
+        "statusNotStarted": "Nincs elkezdve",
+        "statusInProgress": "{percent}% kész",
+        "statusStarted": "Elkezdve",
+        "statusCompleted": "Befejezve",
+        "relatedHeading": "Szerintünk ez tetszeni fog",
+        "next": {
+            "streak": "Folytasd a(z) {name}-sorozatodat",
+            "resume": "Folytasd, ahol abbahagytad",
+            "snack": "Még egy gyors rejtvény",
+            "archive": "Egy az archívumból",
+            "nextArchive": "A következő az archívumból"
+        }
+    },
+    "account": {
+        "teaser": {
+            "title": "A rejtvényeid, bárhol",
+            "body": "Hozz létre egy ingyenes fiókot, hogy a sorozatod, a statisztikáid és a beállításaid minden eszközön megmaradjanak, és játszhass a barátaiddal.",
+            "streak": "A sorozatod minden eszközön folytatódik",
+            "setup": "A kedvenceid és a rejtett rejtvényeid mindenhová követnek",
+            "achievements": "Szerezz eredményeket, és kövesd a statisztikáidat",
+            "friends": "Versenyezz a barátaiddal egy baráti ligában"
+        },
+        "title": "Fiók",
+        "fieldEmail": "E-mail",
+        "fieldUid": "UID",
+        "fieldName": "Név",
+        "logout": "Kijelentkezés",
+        "signInTitle": "Jelentkezz be a fiókodba",
+        "createTitle": "Fiók létrehozása",
+        "yourEmail": "E-mail címed",
+        "emailInvalid": "Adj meg egy érvényes e-mail címet",
+        "password": "Jelszó",
+        "confirmPassword": "Jelszó megerősítése",
+        "showPassword": "Jelszó megjelenítése",
+        "hidePassword": "Jelszó elrejtése",
+        "passwordMismatch": "A jelszavak nem egyeznek",
+        "passwordStrength": {
+            "weak": "Gyenge",
+            "fair": "Közepes",
+            "good": "Jó",
+            "strong": "Erős"
+        },
+        "noAccount": "Még nincs fiókod?",
+        "haveAccount": "Már van fiókod?",
+        "preferences": {
+            "title": "Beállítások",
+            "showFeatured": "Rejtvényjavaslatok megjelenítése a kezdőlapon",
+            "showChallenges": "Kihívások megjelenítése",
+            "notifications": "Küldjetek push-értesítéseket",
+            "notificationsBlocked": "Az értesítések le vannak tiltva. Engedélyezd őket a böngésző beállításaiban a frissítésekhez.",
+            "replayTour": "Üdvözlő bemutató újranézése"
+        }
+    },
+    "notificationsPrompt": {
+        "title": "Maradj képben?",
+        "body": "Szólunk, ha a mai rejtvények készen állnak, és figyelmeztetünk, ha a sorozatod veszélybe kerül.",
+        "enable": "Igen, értesíts",
+        "notNow": "Most nem"
+    },
+    "installPrompt": {
+        "title": "Tedd a rejtvényeket a Főképernyőre",
+        "body": "Nyisd meg a mai rejtvényeket egy koppintással, teljes képernyőn, böngészősávok nélkül.",
+        "step1": "Koppints a Megosztás gombra",
+        "step1Hint": "Ha nem látod, előbb koppints a ••• gombra.",
+        "step2": "Válaszd a Főképernyőhöz adás lehetőséget",
+        "step2Hint": "Görgess lejjebb, vagy koppints a Továbbiak megjelenítése gombra, ha nem látszik.",
+        "step3": "Koppints a Hozzáadás gombra",
+        "step3Hint": "Az ikon megjelenik a Főképernyőn.",
+        "gotIt": "Értem",
+        "never": "Ne kérdezd újra"
+    },
+    "streakToast": {
+        "title": "Sorozat meghosszabbítva!",
+        "body": "{name} — {count} nap egymás után"
+    },
+    "streakFreeze": {
+        "saveBarLabel": "Mentsd meg a sorozatod",
+        "savedTitle": "Sorozat megmentve!",
+        "savedBody": "A(z) {n} napos sorozatod folytatódik — így tovább!",
+        "title": "Megszakadt a sorozat",
+        "body": "Még nincs minden veszve — mentsd meg a sorozatod, ha ma befejezel {target} rejtvényt.",
+        "progress": "Ma {done} / {target} rejtvény",
+        "earnedInline": "Sorozat megmentve!",
+        "start": "Gyerünk",
+        "continue": "Tovább"
+    },
+    "streakModal": {
+        "dayTitle": "{n} napos sorozat!",
+        "weekTitle": "{n} hetes sorozat!",
+        "dayBody": "Szép munka — gyere vissza holnap, hogy folytasd.",
+        "weekBody": "Minden héten játszottál — tartsd életben a sorozatot.",
+        "continue": "Tovább"
+    },
+    "changelog": {
+        "title": "Újdonságok",
+        "dismiss": "Rendben"
+    },
+    "friends": {
+        "title": "Barátok",
+        "welcome": {
+            "title": "Játssz a barátaiddal",
+            "body": "Hozz létre egy privát csoportot, válasszátok ki a közös rejtvényeket, és nézzétek meg, ki vezet minden nap.",
+            "point1": "Válasszátok ki, mely rejtvényekben versenyeztek",
+            "point2": "Idők és pontszámok egymás mellett",
+            "point3": "Privát ranglista csak a csoportodnak",
+            "point4": "Napi, havi és éves győztesek",
+            "create": "Csoport létrehozása",
+            "join": "Csatlakozás kóddal"
+        },
+        "nameLabel": "A neved a csoportokban",
+        "nameHelp": "Csak a csoportjaid tagjai látják. Bármikor megváltoztathatod.",
+        "errNoDisplayName": "Add meg a csoportokban használt neved",
+        "addDisplayName": "Megjelenítendő név hozzáadása",
+        "allFriendGroups": "Összes baráti csoport",
+        "groupSuffix": "egy csoport",
+        "yourFriendGroups": "A te baráti csoportjaid",
+        "join": {
+            "title": "Csatlakozás csoporthoz",
+            "codeLabel": "Csoportkód",
+            "codeHelp": "Kérd el a kódot a csoport tulajdonosától.",
+            "errNoCode": "Kérlek add meg a kódot",
+            "errCodeShort": "A kódnak legalább 6 karakter hosszúnak kell lennie",
+            "fromLink": "A kódot kitöltöttük a linkedből.",
+            "submit": "Csatlakozási kérés",
+            "approvalNote": "Az új tagokat a csoport tulajdonosa hagyja jóvá."
+        },
+        "create": {
+            "title": "Csoport létrehozása",
+            "nameLabel": "Csoport neve",
+            "includeHeading": "Milyen rejtvényeket szeretnél benne látni?",
+            "errNoName": "Adj meg egy csoportnevet",
+            "generate": "Generálj egyet",
+            "suggestions": [
+                "Rejtvénybarátok",
+                "Az Agytröszt",
+                "Szóbarátok Klubja",
+                "Rácsvadászok",
+                "A Nyomkeresők",
+                "Sudoku Osztag",
+                "Betűfalók",
+                "Fejtörő Kávézó",
+                "Okostojások",
+                "A Gondolkodók",
+                "Furfangosok",
+                "A Négyzetek Urai",
+                "Fejtörő Banda",
+                "A Megfejtők",
+                "Számzsonglőrök",
+                "Agyafúrtak",
+                "Vízszintes és Függőleges",
+                "Neuron Csapat",
+                "Tea és Talány",
+                "A Leleményesek",
+                "A Gyors Eszűek",
+                "Kis Zsenik",
+                "Okosok Klubja",
+                "Nyomvadászok",
+                "Keresztrejtvény Királyok",
+                "Korán Kelők",
+                "Üres Kockák",
+                "Aktív Neuronok",
+                "A Profik",
+                "A Sherlockok",
+                "Hegyes Ceruzák",
+                "Logikamániások",
+                "Anagramma Banda",
+                "Szürkeállomány",
+                "Rejtvénykör",
+                "A Nap Bajnokai",
+                "Nagy Agyak",
+                "Betűbűvészek",
+                "Keddi Klub",
+                "Kis Szürke Sejtek",
+                "A Ravaszok",
+                "A Szakértők",
+                "A Rejtélyesek",
+                "Okos Fejek",
+                "Vidám Töprengők",
+                "Rácsbanda",
+                "A Nyomozók",
+                "Számmágusok",
+                "Kávé és Kockák",
+                "Éjszakai Baglyok",
+                "A Rejtvényfejtők",
+                "A Logikusok",
+                "Kollektív Agy",
+                "A Villámgyorsak",
+                "A Furfangosok",
+                "A Filozófusok",
+                "Bölcs Baglyok",
+                "Kódfejtők",
+                "Okosok Ligája",
+                "Végső Válasz"
+            ],
+            "submit": "Létrehozás"
+        },
+        "invite": {
+            "title": "Hívd meg a barátaidat ide: {name}",
+            "intro": "Küldd el a barátaidnak a linket, vagy add meg nekik a kódot a Csatlakozás csoporthoz oldalon.",
+            "shareCode": "Csoportkód",
+            "codePrefix": "Kód:",
+            "copyCode": "Kód másolása",
+            "copyLink": "Link másolása",
+            "shareLink": "Link megosztása",
+            "copied": "Másolva",
+            "shareText": "Csatlakozz a rejtvénycsoportomhoz ({name}) a Sticky Puzzles oldalon",
+            "cardKicker": "Meghívást kaptál",
+            "cardCode": "Kód: {code}",
+            "cardBody": "Csatlakozz a rejtvénycsoportomhoz a Sticky Puzzles oldalon",
+            "codeNote": "Figyelj oda! A kódodat vagy linkedet használó játékosoknak a jóváhagyásodra lesz szükségük a csatlakozáshoz.",
+            "done": "Kész"
+        },
+        "manage": {
+            "requestsTitle": "Csatlakozási kérések",
+            "playersTitle": "Játékosok ({n})",
+            "onlyOne": "Egyelőre csak te vagy itt. Hívd meg a barátaidat lent.",
+            "inviteTitle": "Barátok meghívása",
+            "puzzlesTitle": "Rejtvények",
+            "puzzlesHelp": "Koppints egy rejtvényre a hozzáadáshoz vagy eltávolításhoz. A változások azonnal mentődnek.",
+            "saved": "Mentve",
+            "errLastPuzzle": "Legalább egy rejtvény maradjon",
+            "owner": "Tulajdonos",
+            "accepted": "{name} csatlakozott a csoporthoz",
+            "declinedToast": "{name} kérését elutasítottad",
+            "removed": "{name} eltávolítva",
+            "deleteGroup": "Csoport törlése",
+            "deleteTitle": "Törlöd: {name}?",
+            "deleteBody": "A csoport minden tag számára törlődik. Ez nem vonható vissza.",
+            "deleteConfirm": "Csoport törlése",
+            "deleted": "{name} törölve"
+        },
+        "view": {
+            "overall": "Összesített",
+            "currentLeaders": "Jelenlegi vezetők",
+            "periodLeaders": "{period} vezetői",
+            "periodWinners": "{period} nyertesei",
+            "completedPuzzles": "Befejezett rejtvények",
+            "avgScore": "Átlagos pontszám / teljesítési idő"
+        },
+        "list": {
+            "caption": "Csoportok",
+            "colName": "Csoport neve",
+            "colRequests": "Kérelmek",
+            "colActions": "Műveletek",
+            "owner": "Tulajdonos",
+            "awaitingApproval": "Jóváhagyásra vár",
+            "leave": "Kilépés",
+            "manage": "Kezelés",
+            "view": "Megtekintés",
+            "players": "Játékosok",
+            "requests": "{count} kérelem"
+        },
+        "members": {
+            "you": "Te",
+            "declined": "Elutasítva",
+            "accept": "Elfogadás",
+            "decline": "Elutasítás",
+            "remove": "Eltávolítás"
+        },
+        "modal": {
+            "changeDisplayName": "Megjelenítendő név módosítása",
+            "addDisplayName": "Megjelenítendő név hozzáadása",
+            "displayNameSr": "Válassz megjelenítendő nevet, hogy a barátaid felismerjenek!",
+            "displayNameHelp": "Csak a csoportjaid tagjai látják majd, és bármikor módosíthatod.",
+            "changeGroupName": "Csoport nevének módosítása",
+            "addGroupName": "Csoport nevének hozzáadása",
+            "removeMemberTitle": "Játékos eltávolítása",
+            "removeMemberBody": "Biztosan eltávolítod {name} játékost a(z) {group} csoportból?",
+            "removeMemberConfirm": "Játékos eltávolítása"
+        },
+        "stats": {
+            "completedPuzzles": "Befejezett rejtvények",
+            "bestAvgScore": "Legjobb átlagpontszám",
+            "allPuzzles": "Összes rejtvény",
+            "player": "Játékos",
+            "time": "Idő",
+            "score": "Pontszám",
+            "noCompletions": "Még senki sem fejezte be ezt a rejtvényt ezen a napon ebben a csoportban.",
+            "leaveGroup": "Csoport elhagyása",
+            "mostWins": "Legtöbb győzelem",
+            "mostPlayed": "Legtöbbet játszott",
+            "titleOverall": "{stat} – összesített",
+            "titleIn": "{stat} – {period}",
+            "date": "Dátum"
+        }
+    },
+    "months": ["január", "február", "március", "április", "május", "június", "július", "augusztus", "szeptember", "október", "november", "december"],
+    "variantInfo": {
+        "open": "{name} – bemutatás",
+        "videoComingSoon": "Videó előnézet hamarosan",
+        "playTime": "Kb. {mins} perc",
+        "play": "Játék",
+        "playLatest": "Legutóbbi játék"
+    },
+    "puzzleDescription": {
+        "gridfill": "Helyezd el a megadott méretű blokkokat, hogy a rácsot minél gyorsabban teljesen kitöltsd.",
+        "headcoach": "Tedd próbára a szellemi frissességed egy sorozatnyi villámgyors számolós feladvánnyal.",
+        "pyramidplus": "Kombináld az alap számait úgy, hogy a csúcs összegét kapd meg.",
+        "quiz": "Tedd próbára tudásod feleletválasztós kvízünkben. Meglesz a maximális pontszám?",
+        "sudoku": "Logikai és következtetési játék. Töltsd ki a rácsot úgy, hogy minden sor, oszlop és mezőcsoport tartalmazza az 1–9 számokat.",
+        "wordsearch": "Klasszikus időtöltés — keresd meg az elrejtett szavakat a rácsban. Minden korosztálynak tökéletes.",
+        "totalswipeout": "Villámgyorsan válaszolj kérdésekre és állításokra: húzz jobbra az igenhez, balra a nemhez. Pörgős döntéshozás bárkinek.",
+        "worumber": "A kvíz találkozik a matekkal. Válaszolj a kérdésre, majd oldj meg egy gyors számítást a következő lépéshez. 10 lépés, 3 élet, sok fejtörés.",
+        "wordwheel": "A Szókeréken megadott betűkből találj ki minél több szót.",
+        "guessword": "Találd ki a rejtett szót — minden próbálkozás után a nyomok elárulják, mi illik. Hány kísérletre van szükséged?",
+        "traintracks": "Rakj le egyetlen összefüggő sínpályát a két végpont között. A rács szélén lévő számok megmutatják, hány elem kerül az egyes sorokba és oszlopokba.",
+        "crossword": "Mini fejtörő. Milyen gyorsan töltöd ki a 9×9-es rácsunkat?",
+        "5mquiz": "Villámkvízünk — 10 kérdés, egyenként 30 másodperc. Kellemes gyors kvízelmélet.",
+        "slidepuzzle": "Csúsztasd a csempéket, hogy összeálljon a kép — meg tudod csinálni a lehető legkevesebb lépésből?",
+        "2speedcrossword": "Kétféleképpen játszhatod ugyanazt a keresztrejtvényt — száguldj át a gyors meghatározásokon, vagy vedd fel a kesztyűt a rejtvényes változattal.",
+        "huedoku": "Logikai és következtetési játék. Töltsd ki a rácsot úgy, hogy minden sor, oszlop és mezőcsoport a 6 színt tartalmazza.",
+        "takuzu": "A logika és az egyensúly játéka. Töltsd ki a rácsot két szimbólummal úgy, hogy minden sorban és oszlopban ugyanannyi legyen mindkettőből, és soha ne álljon három egyforma egymás mellett.",
+        "codeword": "Kódfejtő szórejtvény. A rács minden száma más betűt jelöl: fejtsd meg, melyiket, és előbukkannak a szavak."
+    },
+    "tags": {
+        "gridfill": ["Térbeli", "Blokkok", "Gyors"],
+        "headcoach": ["Fejszámolás", "Matek", "Villám"],
+        "pyramidplus": ["Számok", "Összeg", "Rétegek"],
+        "quiz": ["Tudás", "Kvíz", "Kíváncsi"],
+        "sudoku": ["Logika", "Számok", "Klasszikus"],
+        "wordsearch": ["Többjátékos", "Szavak", "Rejtett", "Kellemes"],
+        "totalswipeout": ["Fürge", "Ösztön", "Villám"],
+        "worumber": ["Vegyes", "Kvíz", "Lépések"],
+        "wordwheel": ["Szavak", "Betűk", "Felfedez"],
+        "guessword": ["Szójáték", "Következtetés", "Fürge"],
+        "traintracks": ["Logika", "Sínek", "Útvonalak"],
+        "crossword": ["Többjátékos", "Szavak", "Nyomok", "Klasszikus"],
+        "5mquiz": ["Frappáns", "Kvíz", "Idő"],
+        "slidepuzzle": ["Vizuális", "Tapintható", "Csempék"],
+        "2speedcrossword": ["Szavak", "Rejtvényes", "Kettős"],
+        "huedoku": ["Színes", "Logika", "Rács"],
+        "takuzu": ["Logika", "Szimbólumok", "Egyensúly"],
+        "codeword": ["Szavak", "Kód", "Következtetés"]
+    },
+    "letters": {
+        "title": "Válaszd ki a segítő betűidet",
+        "consonants": "Mássalhangzók",
+        "vowels": "Magánhangzók",
+        "count": "{n} / {max}",
+        "play": "Játék",
+        "skip": "Játék segítő betűk nélkül"
+    },
+    "cover": {
+        "number": "{number}. szám",
+        "play": "Játék",
+        "includedIn": "Kihívás része | Kihívások része",
+        "lastTimeOf": "Legutóbb · {name}",
+        "tutorials": "Oktatóanyagok",
+        "tutorialStep": "{step}. rejtvény",
+        "start": "Kezdés",
+        "replay": "Újra",
+        "completed": "Kész",
+        "assist": {
+            "crossword": {
+                "offerHarder": "Az utolsó 3 keresztrejtvényedet segítség nélkül fejtetted meg, ezért most kevesebb betűt választhatsz.",
+                "offerOff": "Az utolsó 3 keresztrejtvényedet segítség nélkül fejtetted meg, ezért kikapcsoltuk a betűválasztást.",
+                "adjusted": "A visszajelzésed alapján kezdés előtt választhatsz néhány betűt, amit kitöltünk.",
+                "playWithout": "Játék segítő betűk nélkül"
+            },
+            "codeword": {
+                "offerHarder": "Az utolsó 3 {name} rejtvényedet segítség nélkül fejtetted meg, ezért most kevesebb betűt választhatsz.",
+                "offerOff": "Az utolsó 3 {name} rejtvényedet segítség nélkül fejtetted meg, ezért kikapcsoltuk a betűválasztást.",
+                "adjusted": "A visszajelzésed alapján kezdés előtt választhatsz néhány betűt, amit kitöltünk.",
+                "playWithout": "Játék segítő betűk nélkül"
+            },
+            "sudoku": {
+                "offerHarder": "Az utolsó 3 rejtvényedet segítség nélkül fejtetted meg, ezért most kevesebb mezőt töltünk ki.",
+                "offerOff": "Az utolsó 3 rejtvényedet segítség nélkül fejtetted meg, ezért kikapcsoltuk a kezdő mezőket.",
+                "adjusted": "Legutóbb jelezted, hogy a {name} nehéz volt, ezért kezdés előtt kitöltünk néhány extra mezőt.",
+                "playWithout": "Játék kezdő mezők nélkül"
+            }
+        }
+    },
+    "tutorial": {
+        "stepNamed": "{step}/{steps}. oktatóanyag: {name}",
+        "stepOf": "{step}/{steps}. oktatóanyag",
+        "singleSolved": "Oktatóanyag teljesítve!",
+        "singleMissed": "Most nem sikerült, de már érted a lényeget.",
+        "title": "{name} tanulása",
+        "step": "{step}. rejtvény / {steps}",
+        "goTo": "Ugrás a(z) {step}. rejtvényre",
+        "frameTitle": "{name} gyakorlórejtvény: {step} / {steps}",
+        "solved": "Megfejtve! Jöhet a következő?",
+        "next": "Következő rejtvény",
+        "allDone": "Mindet megfejtetted. Készen állsz az igazira!",
+        "missed": "Most nem sikerült. Jöhet a következő?",
+        "practiceDone": "Kész a gyakorlás. Készen állsz az igazira!",
+        "start": "Kezdjük",
+        "brief": {
+            "crossword": {
+                "1": {
+                    "title": "Válaszolj a meghatározásokra",
+                    "text": "Olvasd el a meghatározást, és írd be a választ a rácsba. A négyzetben lévő szám mutatja, hol kezdődik a válasz."
+                },
+                "2": {
+                    "title": "Vízszintes és függőleges",
+                    "text": "A válaszok vízszintesen vagy függőlegesen futnak, és ahol keresztezik egymást, közös betűjük van, így minden válasz segít a következőben."
+                },
+                "3": {
+                    "title": "Kezdd a biztosakkal",
+                    "text": "Néhány meghatározás szójáték. Először azt írd be, amiben biztos vagy – ezek a betűk segítenek a többinél."
+                }
+            },
+            "sudoku": {
+                "1": {
+                    "title": "Minden szám egyszer",
+                    "text": "Töltsd ki a rácsot úgy, hogy minden sorban, oszlopban és dobozban egyszer szerepeljenek az 1–4 számok. Koppints egy négyzetre, majd egy számra."
+                },
+                "2": {
+                    "title": "Nagyobb rács",
+                    "text": "Most 1-től 6-ig megy. Minden doboz 3 négyzet széles és 2 magas, és továbbra is minden szám egyszer kell bele."
+                },
+                "3": {
+                    "title": "Csak egy hely maradt",
+                    "text": "Válassz egy számot, és nézz meg egy dobozt, amelyből még hiányzik. Azok a sorok és oszlopok, amelyekben már szerepel, kizárnak négyzeteket, és gyakran csak egy marad. Elakadtál? Koppints a villanykörtére egy lépésért."
+                }
+            },
+            "takuzu": {
+                "1": {
+                    "title": "Két szimbólum",
+                    "text": "Tölts ki minden négyzetet a két szimbólum egyikével – koppints egy négyzetre a váltáshoz. Minden sorban és oszlopban ugyanannyi kell mindkettőből, és soha nem lehet három egyforma egymás mellett."
+                },
+                "2": {
+                    "title": "Keresd a párokat",
+                    "text": "Két egyforma egymás mellett? A két végükön lévő négyzet csak a másik szimbólum lehet. Ugyanez igaz két egyforma közti résre is."
+                },
+                "3": {
+                    "title": "= és ×",
+                    "text": "A két mező közötti = azt jelenti, hogy ugyanaz a szimbólum kerül beléjük, a × pedig azt, hogy különböző. Használd a jeleket az ismert szabályokkal együtt a rács kitöltéséhez."
+                }
+            },
+            "traintracks": {
+                "1": {
+                    "title": "Kösd össze A-t és B-t",
+                    "text": "Fektess le egyetlen pályát A-tól B-ig. A számok megmutatják, hány négyzetben van sín az egyes sorokban és oszlopokban. Koppints egy négyzetre, hogy elemet válassz."
+                },
+                "2": {
+                    "title": "Számold a síneket",
+                    "text": "Ha egy sorban vagy oszlopban már megvan az összes sín, a többi négyzete üres marad. Ezzel kizárhatsz négyzeteket."
+                },
+                "3": {
+                    "title": "Kövesd az útvonalat",
+                    "text": "Indulj ki az állomásokból és a megadott elemből, és gondold végig, merre kell mennie a pályának. Soha nem keresztezi magát, és nem ágazik el."
+                }
+            },
+            "gridfill": {
+                "1": {
+                    "title": "Építsd fel a blokkokat",
+                    "text": "Oszd fel a rácsot téglalapokra. Minden blokkban pontosan egy szám van, és ez mutatja, hány négyzetből áll. Húzd végig az ujjad a négyzeteken egy blokk rajzolásához."
+                },
+                "2": {
+                    "title": "Válaszd ki az alakot",
+                    "text": "A 4 lehet négyzet vagy négy egy sorban. Olyan alakot válassz, amely nem takar le másik számot."
+                },
+                "3": {
+                    "title": "Töltsd ki a rácsot",
+                    "text": "Minden négyzetnek egy blokkhoz kell tartoznia. Kezdd azokkal a számokkal, amelyek csak egyféleképpen férnek el."
+                }
+            },
+            "headcoach": {
+                "1": {
+                    "title": "Kövesd a láncot",
+                    "text": "Kezdd a megjelenített számmal, és minden lépést az előző válaszodra alkalmazz. A válaszokat a számbillentyűzeten írd be."
+                },
+                "2": {
+                    "title": "Számolj nyugodtan",
+                    "text": "Kell egy kis hely a gondolkodáshoz? Koppints a ceruzára jegyzetek készítéséhez. A rossz válasz meg lesz jelölve, és újra próbálkozhatsz."
+                },
+                "3": {
+                    "title": "A teljes lánc",
+                    "text": "Nyolc lépés, mint a napi rejtvényben. Haladj egyenként, mindig az előző válaszodból kiindulva."
+                }
+            },
+            "huedoku": {
+                "1": {
+                    "title": "Minden szín egyszer",
+                    "text": "Töltsd ki a rácsot úgy, hogy minden sorban, oszlopban és dobozban egyszer szerepeljen mind a négy szín. Koppints egy négyzetre, majd egy színre."
+                },
+                "2": {
+                    "title": "Hat szín",
+                    "text": "Most hat szín van, és minden doboz 3 négyzet széles és 2 magas. Minden sorban, oszlopban és dobozban továbbra is egyszer kell lennie minden színnek."
+                },
+                "3": {
+                    "title": "Csak egy hely maradt",
+                    "text": "Válassz egy színt, és nézz meg egy dobozt, amelyből még hiányzik. Azok a sorok és oszlopok, amelyekben már szerepel, kizárnak négyzeteket, és gyakran csak egy marad. Elakadtál? Koppints a villanykörtére egy lépésért."
+                }
+            },
+            "guessword": {
+                "1": {
+                    "title": "A zöld talált",
+                    "text": "Találd ki a rejtett ötbetűs szót hat próbálkozásból. Először írd be: CHAIN, és nyomd meg az Entert. A zöld betűk jók és jó helyen vannak, ezért hagyd őket a helyükön. A szürke betűk nincsenek benne a szóban."
+                },
+                "2": {
+                    "title": "A sárgát mozgasd",
+                    "text": "Kezdd ezzel: EARTH. A sárga betűk benne vannak a szóban, de rossz helyen, ezért próbáld őket máshol."
+                },
+                "3": {
+                    "title": "Mindkét szín",
+                    "text": "Kezdd ezzel: BEARD. A zöld betűket hagyd a helyükön, a sárgákat pedig rakosgasd, amíg a szó össze nem áll."
+                }
+            },
+            "wordwheel": {
+                "1": {
+                    "title": "Betűk a keréken",
+                    "text": "Koppints a betűkre, hogy legalább négybetűs szavakat alkoss, majd nyomd meg az Entert. Minden szóban szerepelnie kell a középső betűnek. Öt angol szót kell megtalálnod, és az egyik az összes betűt felhasználja."
+                },
+                "2": {
+                    "title": "A dupla betű kétszer számít",
+                    "text": "Minden mezőt szavanként egyszer használhatsz, így a keréken kétszer szereplő betűt kétszer is. Találd meg a négy szót."
+                },
+                "3": {
+                    "title": "Teljes méretű kerék",
+                    "text": "Öt szót kell megtalálnod. A többes szám nem számít. Elakadtál? Keverd meg a betűket, hogy új szemmel lásd őket."
+                }
+            },
+            "wordsearch": {
+                "1": {
+                    "title": "Keresd meg a szavakat",
+                    "text": "Húzd az ujjad a szó első betűjétől az utolsóig. Itt a szavak vízszintesen vagy függőlegesen futnak. Találd meg a lista három szavát."
+                },
+                "2": {
+                    "title": "Bármilyen irányban",
+                    "text": "A szavak visszafelé vagy átlósan is futhatnak. Találd meg mind a négyet."
+                },
+                "3": {
+                    "title": "Nagyobb rács",
+                    "text": "Hat szó rejtőzik minden irányban. Elakadtál? Koppints egy szóra a listában, és megmutatjuk az első betűjét."
+                }
+            },
+            "codeword": {
+              "1": {
+                "title": "A számok betűk",
+                "text": "Minden szám egy betűt jelöl, és ugyanaz a szám mindig ugyanaz a betű. A T, az I, az L és az E már a helyén van. Töltsd ki a többit, hogy befejezd a szavakat."
+              },
+              "2": {
+                "title": "Ugyanaz a szám, ugyanaz a betű",
+                "text": "Ha egy szám kétszer szerepel egymás után, a betűje is, mint itt a dupla E és a dupla T. Használd őket a szavak befejezéséhez."
+              },
+              "3": {
+                "title": "Kezdd azzal, amit tudsz",
+                "text": "Azokat a szavakat a legkönnyebb megfejteni, amelyekben már a legtöbb betű megvan. Kezdd velük, majd minden új betűt használj a többihez."
+              }
+            }
+        }
+    },
+    "assistFeedback": {
+        "title": "Mennyi segítséget szeretnél legközelebb?",
+        "letters": {
+            "title": "Hány segítő betűt szeretnél választani legközelebb?",
+            "used": "Most {n} segítő betűt választottál. | Most {n} segítő betűt választottál.",
+            "unused": "Most segítő betűk nélkül játszottál.",
+            "choice": "{label} ({n})"
+        },
+        "choices": {
+            "none": "Egyet sem",
+            "fewer": "Kevesebbet",
+            "same": "Ugyanannyit",
+            "more": "Többet",
+            "alotmore": "Sokkal többet"
+        }
+    },
+    "insights": {
+        "title": "Amit megtudtunk rólad",
+        "intro": "Az oldalt a játékstílusodhoz igazítjuk. Ezt gondoljuk most – töröld, ami nem stimmel, és nem használjuk tovább.",
+        "groups": {
+            "likes": "Rejtvények, amelyeket úgy tűnik, szeretsz",
+            "time": "Mikor játszol",
+            "difficulty": "Nehézség",
+            "help": "Segítség-beállítások",
+            "told": "Amit elmondtál nekünk"
+        },
+        "likes": "{name} – {count} alkalommal játszottad az elmúlt 30 napban | {name} – {count} alkalommal játszottad az elmúlt 30 napban",
+        "time": {
+            "morning": "A(z) {name} rejtvényt általában reggel játszod",
+            "afternoon": "A(z) {name} rejtvényt általában délután játszod",
+            "evening": "A(z) {name} rejtvényt általában este játszod",
+            "night": "A(z) {name} rejtvényt általában késő éjjel játszod"
+        },
+        "lean": {
+            "harder": {
+                "rating": "A(z) {name} legutóbb túl könnyű volt, ezért a nehezebb szintjeit ajánljuk",
+                "purist": "A(z) {name} rejtvényt segítség nélkül oldod meg, ezért a nehezebb szintjeit ajánljuk",
+                "improver": "Egyre gyorsabb vagy a(z) {name} rejtvényben, ezért a nehezebb szintjeit ajánljuk"
+            },
+            "easier": {
+                "rating": "A(z) {name} legutóbb nehéz volt, ezért a könnyebb szintjeit ajánljuk",
+                "hintHunter": "A(z) {name} rejtvénynél gyakran használsz segítséget, ezért a könnyebb szintjeit ajánljuk",
+                "newcomer": "Még új vagy a(z) {name} rejtvényben, ezért a könnyebb szintjeit ajánljuk"
+            }
+        },
+        "assists": {
+            "crossword": "{name}: {level} betűt választasz kitöltésre",
+            "codeword": "{name}: {level} betűt választasz kitöltésre",
+            "sudoku": "{name}: kezdés előtt a mezők {level}%-át kitöltjük"
+        },
+        "boosted": {
+            "words": "Több szójátékot kértél",
+            "numbers": "Több számrejtvényt kértél",
+            "logic": "Több logikai rejtvényt kértél",
+            "quiz": "Több kvízt kértél"
+        },
+        "tour": "A bemutatóban ezeket választottad: {picks}",
+        "remove": "Törlés",
+        "removeLabel": "Törlés: {text}",
+        "removeAll": "Összes törlése",
+        "empty": "Még semmi – játssz néhány rejtvényt, és elkezdjük hozzád igazítani az oldalt.",
+        "allRemoved": "Nincs mit mutatni – mindent töröltél, amit feltételeztünk.",
+        "restore": "{count} törölt elem visszaállítása | {count} törölt elem visszaállítása"
+    }
+}

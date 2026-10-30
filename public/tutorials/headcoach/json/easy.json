@@ -1,0 +1,50 @@
+
+{
+    "meta":
+    {
+        "title": "Head Coach Test",
+        "difficulty": "Easy",
+        "date": "23 Jan 2023",
+        "id": 256,
+        "type": "headcoach",
+        "author": "Brainiac",
+        "number": 256
+    },
+    "settings":
+    {
+        "colCount": 0,
+        "rowCount": 0,
+        "allowedValues": "1234567890",
+        "solution": "25"
+    },
+    "cluedata": [
+        {
+            "name": null,
+            "difficulty": "Easy",
+            "start": 40,
+            "answer": 25,
+            "data": [
+                {
+                    "clue": "&divide; 4",
+                    "result": 10
+                },
+                {
+                    "clue": "1\/2 of it",
+                    "result": 5
+                },
+                {
+                    "clue": "square it",
+                    "result": 25
+                }
+            ]
+        }
+    ],
+    "copy":
+    {
+        "date-publish": "Wednesday, 10 April 2019",
+        "date-publish-email": "10 April 2019",
+        "date-publish-analytics": "2019\/04\/10 13:36 Wednesday",
+        "date-release": "Wednesday, 10 April 2019",
+        "date-solution": "Wednesday, 10 April 2019"
+    }
+}

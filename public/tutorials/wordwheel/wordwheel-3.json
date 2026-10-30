@@ -1,0 +1,36 @@
+{
+  "headline": "Word Wheel",
+  "meta": {
+    "id": "tutorial-3",
+    "title": "Word Wheel",
+    "difficulty": "Easy",
+    "type": "wordwheel",
+    "variant": "Word Wheel",
+    "slug": "wordwheel-tutorial-3",
+    "number": "",
+    "description": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 3,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 0,
+    "rowCount": 0,
+    "allowedValues": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "solution": "crow,wool,work,cowl,clockwork"
+  },
+  "copy": {
+    "title": "Word Wheel",
+    "gridsize": {
+      "type": "Standard",
+      "rows": 0,
+      "cols": 0
+    }
+  },
+  "celldata": "W,CLOCKORK",
+  "cluedata": "2,3,4",
+  "feedback": null
+}

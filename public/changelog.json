@@ -1,0 +1,116 @@
+[
+  {
+    "id": "2026-09-08",
+    "image": "/img/changelog/2026-09-08.webp",
+    "imageAlt": "Sudoku and puzzle grids on a dark backdrop",
+    "title": {
+      "en": "Changes for September",
+      "de": "Neu im September",
+      "fr": "Nouveautés de septembre",
+      "es": "Novedades de septiembre",
+      "hu": "Újdonságok szeptemberben",
+      "it": "Novità di settembre",
+      "pl": "Nowości we wrześniu"
+    },
+    "notes": {
+      "en": [
+        "New Game! Introducing TrainTracks",
+        "Protect your streak with the new streak save feature."
+      ],
+      "de": [
+        "Neues Spiel! Wir stellen TrainTracks vor",
+        "Schütze deine Serie mit der neuen Serien-Rettung."
+      ],
+      "fr": [
+        "Nouveau jeu ! Découvrez TrainTracks",
+        "Protégez votre série grâce au nouveau sauvetage de série."
+      ],
+      "es": [
+        "¡Nuevo juego! Te presentamos TrainTracks",
+        "Protege tu racha con el nuevo rescate de racha."
+      ],
+      "hu": [
+        "Új játék! Bemutatjuk a TrainTracks-et",
+        "Védd meg a sorozatod az új sorozatmentéssel."
+      ],
+      "it": [
+        "Nuovo gioco! Ecco TrainTracks",
+        "Proteggi la tua serie con il nuovo salvataggio della serie."
+      ],
+      "pl": [
+        "Nowa gra! Przedstawiamy TrainTracks",
+        "Chroń swoją passę dzięki nowemu ratunkowi passy."
+      ]
+    }
+  },
+  {
+    "id": "2026-08-28",
+    "image": "/img/changelog/2026-08-06.webp",
+    "imageAlt": "Sudoku and puzzle grids on a dark backdrop",
+    "title": {
+      "en": "We've made some improvements",
+      "de": "Wir haben einige Verbesserungen vorgenommen",
+      "fr": "Nous avons apporté quelques améliorations",
+      "es": "Hemos hecho algunas mejoras",
+      "hu": "Néhány fejlesztést végeztünk",
+      "it": "Abbiamo apportato alcuni miglioramenti",
+      "pl": "Wprowadziliśmy kilka ulepszeń"
+    },
+    "notes": {
+      "en": [
+        "New Game! Introducing WordWheel",
+        "Gameplay tweaks to Guessword.",
+        "New help features in Sudoku: your notes are now easier to read and a new hint feature tells you what numbers are missing in a row, column or block.",
+        "Puzzle specific stats now available on each puzzle archive page."
+      ],
+      "de": [
+        "Neues Spiel! Wir stellen WordWheel vor",
+        "Spielverbesserungen bei Guessword.",
+        "Neue Hilfefunktionen in Sudoku: deine Notizen sind jetzt leichter zu lesen, und eine neue Hinweisfunktion zeigt dir, welche Zahlen in einer Zeile, Spalte oder einem Block noch fehlen.",
+        "Puzzlespezifische Statistiken sind jetzt auf jeder Puzzle-Archivseite verfügbar."
+      ],
+      "fr": [
+        "Nouveau jeu ! Découvrez WordWheel",
+        "Ajustements du gameplay pour Guessword.",
+        "Nouvelles fonctions d'aide dans le Sudoku : vos notes sont désormais plus faciles à lire, et un nouvel indice vous montre quels chiffres manquent dans une ligne, une colonne ou un bloc.",
+        "Des statistiques par puzzle sont désormais disponibles sur chaque page d'archive de puzzle."
+      ],
+      "es": [
+        "¡Nuevo juego! Te presentamos WordWheel",
+        "Ajustes de juego en Guessword.",
+        "Nuevas funciones de ayuda en Sudoku: tus notas ahora son más fáciles de leer y una nueva pista te indica qué números faltan en una fila, columna o bloque.",
+        "Estadísticas específicas de cada puzzle ya disponibles en cada página de archivo."
+      ],
+      "hu": [
+        "Új játék! Bemutatjuk a WordWheelt",
+        "Játékmenetbeli finomítások a Guessword játékban.",
+        "Új segítségek a Sudokuban: a jegyzeteid mostantól könnyebben olvashatók, és egy új tipp megmutatja, mely számok hiányoznak egy sorból, oszlopból vagy blokkból.",
+        "Puzzle-specifikus statisztikák mostantól elérhetők minden puzzle archívumoldalán."
+      ],
+      "it": [
+        "Nuovo gioco! Ecco WordWheel",
+        "Modifiche al gameplay di Guessword.",
+        "Nuove funzioni di aiuto nel Sudoku: le tue note ora sono più facili da leggere e un nuovo suggerimento ti indica quali numeri mancano in una riga, colonna o blocco.",
+        "Statistiche specifiche per ogni puzzle ora disponibili in ogni pagina di archivio."
+      ],
+      "pl": [
+        "Nowa gra! Przedstawiamy WordWheel",
+        "Poprawki rozgrywki w Guessword.",
+        "Nowe funkcje pomocy w Sudoku: twoje notatki są teraz łatwiejsze do odczytania, a nowa podpowiedź pokazuje, jakich liczb brakuje w wierszu, kolumnie lub bloku.",
+        "Statystyki dla poszczególnych łamigłówek dostępne teraz na każdej stronie archiwum."
+      ]
+    }
+  },
+  {
+    "id": "2026-08-06",
+    "title": {
+      "en": "Welcome to Sticky Puzzles",
+      "de": "Willkommen bei Sticky Puzzles",
+      "fr": "Bienvenue sur Sticky Puzzles",
+      "es": "Bienvenido a Sticky Puzzles",
+      "hu": "Üdvözlünk a Sticky Puzzlesnál",
+      "it": "Benvenuto su Sticky Puzzles",
+      "pl": "Witamy w Sticky Puzzles"
+    }
+  }
+]

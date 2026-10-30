@@ -1,0 +1,338 @@
+{
+    "meta": {
+        "id": "8871",
+        "title": "Head Coach No ",
+        "author": "",
+        "difficulty": "",
+        "variant": "Number Magic",
+        "slug": "number-magic-no-00000",
+        "number": "00000",
+        "description": "",
+        "archive": "archive.json",
+        "related": "Wordsearch"
+    },
+    "settings": {
+        "colCount": 0,
+        "rowCount": 0,
+        "allowedValues": "1234567890",
+        "solution": "509"
+    },
+    "cluedata": [
+        {
+            "start": 0,
+            "answer": 509,
+            "difficulty": "Medium",
+            "data": [
+                {
+                    "clue": "How many members were in the original Dumbledore's Army?",
+                    "operator": "",
+                    "result": 28,
+                    "hint": null
+                },
+                {
+                    "clue": "Now add how many Harrys there were on broomsticks at the beginning of Deathly Hallows.",
+                    "operator": "+",
+                    "result": 35,
+                    "hint": "It's the most magical number..."
+                },
+                {
+                    "clue": "How many subjects are studied by first years  at Hogwarts? Subtract this answer from your last!",
+                    "operator": "-",
+                    "result": 28,
+                    "hint": "It's also how many Horcruxes there are. "
+                },
+                {
+                    "clue": "What is the number of times Harry takes the Hogwarts Express in the books? Multiply this answer from your last.",
+                    "operator": "x",
+                    "result": 140,
+                    "hint": "Remember - he doesn't go to Hogwarts in the last book! "
+                },
+                {
+                    "clue": "Now divide that answer by how many siblings  Albus Potter has.",
+                    "operator": "&divide;",
+                    "result": 70,
+                    "hint": "They say good things come in..."
+                },
+                {
+                    "clue": "What day of the month is Hermione's birthday? Add this to your last answer.",
+                    "operator": "+",
+                    "result": 89,
+                    "hint": "It's somewhere in the middle of the month."
+                },
+                {
+                    "clue": "Subtract that by the number of times Harry encounters Voldemort in the stories.",
+                    "operator": "-",
+                    "result": 81,
+                    "hint": "Meeting him via Quirrell and his Tom Riddle memory both count "
+                },
+                {
+                    "clue": "Multiply by how many competitors there were in the Triwizard Tournament.",
+                    "operator": "x",
+                    "result": 324,
+                    "hint": "One more than there SHOULD have been! "
+                },
+                {
+                    "clue": "And divide by the number of of Muggles Sirius Black was accused of murdering at once.",
+                    "operator": "&divide;",
+                    "result": 27,
+                    "hint": "It is also the same number of years he spent in Azkaban."
+                },
+                {
+                    "clue": "Finally, add the total number of points Gryffindor earnt to win the House Cup in Philosopher's Stone.",
+                    "operator": "+",
+                    "result": 509,
+                    "hint": "It's a little less than 500."
+                }
+            ]
+        }
+    ],
+    "copy": {
+        "date-publish": "Saturday, 20 March 2021",
+        "date-publish-email": "20 March 2021",
+        "date-publish-analytics": "2021\/03\/20 00:10 Saturday",
+        "date-release": "Saturday, 20 March 2021",
+        "date-solution": "Saturday, 20 March 2021",
+        "id": "00000"
+    },
+    "feedback": {
+        "positive": {
+            "title": "Well done!?!",
+            "subtitle": "That was impressive",
+            "buttons": [
+                {
+                    "label": "Play more puzzles here",
+                    "action": "close-overlay",
+                    "url": "https:\/\/www.wizardingworld.com\/collections\/potter-puzzles"
+                },
+                {
+                    "label": "Start again!",
+                    "action": "start-again",
+                    "url": ""
+                },
+                {
+                    "label": "Close!",
+                    "action": "close-overlay",
+                    "url": ""
+                },
+                {
+                    "label": "Play another Number Magic",
+                    "action": "play-another",
+                    "url": ""
+                },
+                {
+                    "label": "Play another puzzle type",
+                    "action": "play-related",
+                    "url": ""
+                }
+            ],
+            "links": [
+                {
+                    "label": "Try the BBC",
+                    "image": "https://cdn.iconscout.com/icon/free/png-256/bbc-282627.png",
+                    "url": "https://www.bbc.co.uk/"
+                }
+            ],
+            "image": "img\/feedback\/positive.jpg"
+        },
+        "negative": {
+            "title": "Bad luck",
+            "subtitle": "Numbers aren't your game",
+            "buttons": [
+                {
+                    "label": "Play more puzzles here",
+                    "action": "close-overlay",
+                    "url": "https:\/\/www.wizardingworld.com\/collections\/potter-puzzles"
+                },
+                {
+                    "label": "Start again!",
+                    "action": "start-again",
+                    "url": ""
+                },
+                {
+                    "label": "Close!",
+                    "action": "close-overlay",
+                    "url": ""
+                },
+                {
+                    "label": "Play another Number Magic",
+                    "action": "play-another",
+                    "url": ""
+                },
+                {
+                    "label": "Play another puzzle type",
+                    "action": "play-related",
+                    "url": ""
+                }
+            ],
+            "links": [
+                {
+                    "label": "Try the BBC",
+                    "image": "https://cdn.iconscout.com/icon/free/png-256/bbc-282627.png",
+                    "url": "https://www.bbc.co.uk/"
+                }
+            ],
+            "image": "img\/feedback\/negative.jpg"
+        }
+    },
+    "sharing": null,
+    "videos": {
+        "triggers": {
+            "easter-eggs": {
+                "expelliarmus": [
+                    "\/wizarding-world\/assets\/videos\/easter-egg-expelliarmus.mp4"
+                ],
+                "finnigan": [
+                    "\/wizarding-world\/assets\/videos\/easter-egg-seamus-1.mp4"
+                ],
+                "hagrid": [
+                    "\/wizarding-world\/assets\/videos\/easter-egg-rubeus-1.mp4"
+                ],
+                "leviosa": [
+                    "\/wizarding-world\/assets\/videos\/easter-egg-wingardium-leviosa.mp4"
+                ],
+                "mcgonagall": [
+                    "\/wizarding-world\/assets\/videos\/easter-egg-minerva.mp4"
+                ],
+                "minerva": [
+                    "\/wizarding-world\/assets\/videos\/easter-egg-minerva.mp4"
+                ],
+                "rubeus": [
+                    "\/wizarding-world\/assets\/videos\/easter-egg-rubeus-1.mp4"
+                ],
+                "seamus": [
+                    "\/wizarding-world\/assets\/videos\/easter-egg-seamus-1.mp4"
+                ],
+                "wingardium": [
+                    "\/wizarding-world\/assets\/videos\/easter-egg-wingardium-leviosa.mp4"
+                ]
+            },
+            "misspellings": {
+                "acceo": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "acio": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "adrien": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "aggripa": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "agripa": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "aparrate": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "apperate": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "aves": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "blots": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "dellacur": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "dumbledor": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "essense ": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "floreun": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "florian": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "goerge": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "hary": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "herione": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "hermeone": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "hermone": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "hermyone": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "hogwats": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "kneasle": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "kneazel": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "pavarti": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "philospher": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "pigmy": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "quafle": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "quaffel": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-2.mp4"
+                ],
+                "quibler": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "septumsempra": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "venamous": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "victor": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ],
+                "wizardy": [
+                    "\/wizarding-world\/assets\/videos\/misspelling-1.mp4"
+                ]
+            },
+            "profanity": {
+                "bloody": [
+                    "\/wizarding-world\/assets\/videos\/profanity.mp4"
+                ],
+                "mudblood": [
+                    "\/wizarding-world\/assets\/videos\/profanity.mp4"
+                ],
+                "pants": [
+                    "\/wizarding-world\/assets\/videos\/profanity.mp4"
+                ],
+                "sod": [
+                    "\/wizarding-world\/assets\/videos\/profanity.mp4"
+                ]
+            }
+        },
+        "words": {
+            "longerthan": {
+                "7": [
+                    "\/wizarding-world\/assets\/videos\/congratulations-advanced.mp4"
+                ]
+            },
+            "shorterthan": {
+                "5": [
+                    "\/wizarding-world\/assets\/videos\/congratulations-sarcastic.mp4"
+                ]
+            }
+        }
+    }
+}

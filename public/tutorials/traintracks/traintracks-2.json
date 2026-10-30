@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "id": "tutorial-2",
+    "type": "traintracks",
+    "title": "Train Tracks",
+    "difficulty": "Easy",
+    "variant": "Train Tracks",
+    "slug": "train-tracks-tutorial-2",
+    "number": "",
+    "description": "",
+    "section": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 2,
+      "steps": 3
+    }
+  },
+  "cluedata": ",,,,,,,,,,,,,,,,,,LT,,,,,,",
+  "copy": {
+    "settings": {
+      "colCount": 5,
+      "rowCount": 5,
+      "solution": ",,,RB,LR,,RB,LR,LT,,,RT,LR,LB,,LB,,RB,LT,,RT,LR,LT,,",
+      "rowClues": [
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "colClues": [
+        2,
+        3,
+        4,
+        4,
+        1
+      ],
+      "stations": [
+        {
+          "edge": "left",
+          "row": 4,
+          "label": "A"
+        },
+        {
+          "edge": "right",
+          "row": 1,
+          "label": "B"
+        }
+      ]
+    },
+    "gridsize": {
+      "type": "Standard",
+      "rows": 5,
+      "cols": 5
+    }
+  },
+  "feedback": null
+}

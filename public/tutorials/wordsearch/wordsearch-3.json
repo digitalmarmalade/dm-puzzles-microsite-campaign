@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "id": "tutorial-3",
+    "title": "Wordsearch",
+    "difficulty": "Easy",
+    "type": "wordsearch",
+    "variant": "Wordsearch",
+    "slug": "wordsearch-tutorial-3",
+    "number": "",
+    "description": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 3,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 8,
+    "rowCount": 8,
+    "allowedValues": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "solution": "11,14;19,46;50,29;1,33;56,24;64,58"
+  },
+  "copy": {
+    "title": "Wordsearch"
+  },
+  "celldata": "SKPBGYFJTZRAINXVOBSHKPCDRFGNDYJUMHVNOKPOXQIBCWGLYWKFJPVCBREDNUHT",
+  "cluedata": "RAIN,SNOW,WIND,STORM,CLOUD,THUNDER",
+  "feedback": null
+}

@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "id": "tutorial-1",
+    "title": "Wordsearch",
+    "difficulty": "Easy",
+    "type": "wordsearch",
+    "variant": "Wordsearch",
+    "slug": "wordsearch-tutorial-1",
+    "number": "",
+    "description": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 1,
+      "steps": 3
+    }
+  },
+  "settings": {
+    "colCount": 5,
+    "rowCount": 5,
+    "allowedValues": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "solution": "1,11;1,4;16,19"
+  },
+  "copy": {
+    "title": "Wordsearch"
+  },
+  "celldata": "STARFUHZLPNWQIKMOONCBXDGV",
+  "cluedata": "SUN,STAR,MOON",
+  "feedback": null
+}

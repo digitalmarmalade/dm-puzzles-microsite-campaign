@@ -1,0 +1,40 @@
+{
+  "_readme": "Source for the three tutorial Huedokus (Sudoku in colours; each number is a colour). Edit here, then run `npm run tutorials` to rebuild public/tutorials/huedoku/huedoku-*.json. Grid rows use . for an empty square. `box` is a box's width and height in squares. The build (shared with Sudoku, tutorials/sudoku/sudoku.js) checks every grid has exactly one solution. `\"teaches\": \"onlyPlace\"` also makes the build check the grid has squares that are the only place in their box for a number but could take others, and that it finishes with just those and one-number-left squares.",
+  "puzzles": [
+    {
+      "difficulty": "Easy",
+      "box": [2, 2],
+      "grid": [
+        ".4.2",
+        "3..4",
+        "4.2.",
+        ".14."
+      ]
+    },
+    {
+      "difficulty": "Easy",
+      "box": [3, 2],
+      "grid": [
+        ".14.3.",
+        "362.5.",
+        ".36125",
+        "...64.",
+        "...314",
+        "14.562"
+      ]
+    },
+    {
+      "difficulty": "Easy",
+      "box": [3, 2],
+      "teaches": "onlyPlace",
+      "grid": [
+        "51...4",
+        "63...5",
+        ".4..51",
+        ".516.3",
+        "423516",
+        "165432"
+      ]
+    }
+  ]
+}

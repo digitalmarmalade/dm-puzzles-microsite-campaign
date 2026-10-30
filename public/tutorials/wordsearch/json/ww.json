@@ -1,0 +1,75 @@
+{
+    "meta": {
+        "id": "1",
+        "title":"Wordsearch",
+        "difficulty":"medium",
+        "date": "18 Nov 2019",
+        "variant": "Wordsearch",
+        "slug": "wordsearch-no-0001-1",
+        "archive": "assets/archive.json"
+    },
+    "settings": {
+        "colCount": 10,
+        "rowCount": 11,
+        "allowedValues": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "solution": "11,101;2,92;29,109;83,90;97,93;108,103;10,91;75,30;25,80;23,78",
+        "unused": "2,3,4,5,6"
+    },
+    "celldata": "GSVHARYTKABUPANTSMCOUGSNBVECPRTAIEPEEMENTRAFEPASPZEQQPTKATPNRUZASHEQEVBIBXCFPRRRELINCENDIOELLLORTKMGRBREPEEKPA",
+    "cluedata": "BUTTERBEER,SUGAR QUILL,PEPPER IMP,INCENDIO,TROLL,KEEPER,ACCEPTABLE,CHASER,BEATER,SEEKER",
+    "copy": {
+        "date-publish": "Monday, 18 November 2019",
+        "date-publish-email": "18 November 2019",
+        "date-publish-analytics": "2019/11/18 00:00 Monday",
+        "date-release": "Monday, 18 November 2019",
+        "date-solution": "Monday, 18 November 2019",
+        "id": "0001"
+    },
+    "videos": {
+        "triggers": {
+            "easter-eggs": {
+                "expelliarmus": ["assets/videos/easter-egg-expelliarmus.mp4"],
+                "finnigan": ["assets/videos/easter-egg-seamus-1.mp4"],
+                "hagrid": ["assets/videos/easter-egg-rubeus-1.mp4"],
+                "leviosa": ["assets/videos/easter-egg-wingardium-leviosa.mp4"],
+                "mcgonagall": ["assets/videos/easter-egg-minerva.mp4"],
+                "minerva": ["assets/videos/easter-egg-minerva.mp4"],
+                "rubeus": ["assets/videos/easter-egg-rubeus-1.mp4"],
+                "seamus": ["assets/videos/easter-egg-seamus-1.mp4"],
+                "wingardium": ["assets/videos/easter-egg-wingardium-leviosa.mp4"]
+            },
+            "misspellings": {
+                "apperate": ["assets/videos/misspelling-2.mp4"],
+                "blots": ["assets/videos/misspelling-2.mp4"],
+                "dumbledor": ["assets/videos/misspelling-1.mp4"],
+                "florian": ["assets/videos/misspelling-2.mp4"],
+                "hary": ["assets/videos/misspelling-1.mp4"],
+                "hermeone": ["assets/videos/misspelling-1.mp4"],
+                "hermone": ["assets/videos/misspelling-1.mp4"],
+                "hermyone": ["assets/videos/misspelling-1.mp4"],
+                "hogwats": ["assets/videos/misspelling-1.mp4"],
+                "kneasle": ["assets/videos/misspelling-2.mp4"],
+                "kneazel": ["assets/videos/misspelling-2.mp4"],
+                "pavarti": ["assets/videos/misspelling-1.mp4"],
+                "philospher": ["assets/videos/misspelling-1.mp4"],
+                "septumsempra": ["assets/videos/misspelling-1.mp4"],
+                "victor": ["assets/videos/misspelling-1.mp4"],
+                "wizardy": ["assets/videos/misspelling-1.mp4"]
+            },
+            "profanity": {
+                "bloody": ["assets/videos/profanity.mp4"],
+                "mudblood": ["assets/videos/profanity.mp4"],
+                "pants": ["assets/videos/profanity.mp4"],
+                "sod": ["assets/videos/profanity.mp4"]
+            }
+        },
+        "words": {
+            "longerthan": {
+                "7": ["assets/videos/congratulations-advanced.mp4"]
+            },
+            "shorterthan": {
+                "5": ["assets/videos/congratulations-sarcastic.mp4"]
+            }
+        }
+    }
+}

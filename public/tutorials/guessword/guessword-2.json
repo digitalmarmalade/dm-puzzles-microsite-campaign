@@ -1,0 +1,35 @@
+{
+  "headline": "GuessWord",
+  "meta": {
+    "id": "tutorial-2",
+    "title": "GuessWord",
+    "difficulty": "Easy",
+    "type": "guessword",
+    "variant": "GuessWord",
+    "slug": "guessword-tutorial-2",
+    "number": "",
+    "description": "",
+    "archive": "",
+    "related": "",
+    "tutorial": {
+      "step": 2,
+      "steps": 3
+    }
+  },
+  "copy": {
+    "title": "GuessWord",
+    "gridsize": {
+      "type": "Standard",
+      "rows": 6,
+      "cols": 5
+    },
+    "settings": {
+      "colCount": 5,
+      "rowCount": 6,
+      "solution": "HEART"
+    }
+  },
+  "cluedata": "",
+  "celldata": "",
+  "feedback": null
+}

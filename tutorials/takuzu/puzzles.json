@@ -1,0 +1,51 @@
+{
+  "_readme": "Source for the three tutorial Takuzus. Edit here, then run `npm run tutorials` to rebuild public/tutorials/takuzu/takuzu-*.json. Grid rows use 0 and 1 for the two symbols and . for an empty square. Optional right (one row per grid row, the sign between each square and the one to its right) and down (one row per gap between grid rows, the sign between each square and the one below) use = for the same symbol, x for different and . for none. The build checks every grid has exactly one solution (no three the same in a line, each row and column half and half, no two rows or columns alike, every sign kept).",
+  "puzzles": [
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "0...",
+        ".0..",
+        "101.",
+        "..10"
+      ]
+    },
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "11..00",
+        "0..101",
+        "1.0.1.",
+        "..10.1",
+        "01.101",
+        "1.1.1."
+      ]
+    },
+    {
+      "difficulty": "Easy",
+      "grid": [
+        "1.11.0",
+        "0.10..",
+        ".10.10",
+        ".0..01",
+        "0..011",
+        "..01.."
+      ],
+      "right": [
+        "x....",
+        ".....",
+        "..=..",
+        ".....",
+        ".....",
+        "...=."
+      ],
+      "down": [
+        "......",
+        "......",
+        "x.....",
+        "......",
+        "......"
+      ]
+    }
+  ]
+}
