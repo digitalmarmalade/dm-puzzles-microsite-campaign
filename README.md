@@ -75,6 +75,10 @@ What's stored, under `campaigns/{campaign}/`:
   `/c/{id}/profile`.
   `handle` is chosen for them from their name (`harold`, or `harold-2` if that's taken) and
   never changes, so links they've shared keep working. Only they (and the campaign's admins) can read it.
+- `solves/{slug}`: a public tally of solve times for one puzzle, `{count, b0 … b240}` in
+  15-second slots, used for "faster than X% of players". Each finished, timed day adds
+  exactly one, to the slot for its own time; the rules check that against the day saved in the
+  same batch.
 - `public/{handle}`: a player's public challenge page at `/c/{id}/{handle}` (e.g.
   `/c/charity-sample/harold`), holding `{ownerUid, name, avatar, reason, updatedAt}`. The
   document id is the address, so two players can't have the same one. Anyone can read one;

@@ -1,7 +1,7 @@
 import {readFileSync} from 'node:fs'
-import {afterAll, beforeAll, beforeEach, describe, test} from 'vitest'
+import {afterAll, beforeAll, beforeEach, describe, expect, test} from 'vitest'
 import {assertFails, assertSucceeds, initializeTestEnvironment} from '@firebase/rules-unit-testing'
-import {deleteDoc, doc, getDoc, getDocs, collection, serverTimestamp, setDoc, Timestamp, updateDoc, writeBatch} from 'firebase/firestore'
+import {deleteDoc, doc, getDoc, getDocs, collection, increment, serverTimestamp, setDoc, Timestamp, updateDoc, writeBatch} from 'firebase/firestore'
 
 const C = 'campaigns/charity-run'
 let env
@@ -108,6 +108,45 @@ describe('profiles', () => {
         await assertFails(saveProfile('amy', 'amy', {name: 'x'.repeat(41)}))
         await assertFails(saveProfile('amy', 'amy', {reason: 'x'.repeat(281)}))
         await assertFails(saveProfile('amy', 'amy', {updatedAt: Timestamp.fromDate(new Date('2020-01-01'))}))
+    })
+})
+
+describe('solve tallies', () => {
+    function finish(uid, day, slug, seconds, bucket = `b${Math.floor(seconds / 15)}`) {
+        const db = as(uid)
+        const batch = writeBatch(db)
+        batch.set(doc(db, `${C}/players/${uid}/days/${day}`), {slug, completedAt: serverTimestamp(), seconds})
+        batch.set(doc(db, `${C}/solves/${slug}`), {count: increment(1), [bucket]: increment(1), day, by: uid}, {merge: true})
+        return batch.commit()
+    }
+    test('a finished day adds one to its puzzle\'s tally, in the right slot', async () => {
+        await assertSucceeds(finish('bob', 2, 'sudoku-2', 312))
+        await assertSucceeds(finish('amy', 2, 'sudoku-2', 95))
+        const tally = (await getDoc(doc(as(null), `${C}/solves/sudoku-2`))).data()
+        expect(tally).toMatchObject({count: 2, b20: 1, b6: 1})
+    })
+    test('the slot has to match the saved time', async () => {
+        await assertFails(finish('bob', 2, 'sudoku-2', 312, 'b2'))
+    })
+    test('a tally only moves with a newly finished day of that puzzle', async () => {
+        await assertFails(setDoc(doc(as('bob'), `${C}/solves/sudoku-2`), {count: increment(1), b20: increment(1), day: 1, by: 'bob'}, {merge: true}))
+        const db = as('bob')
+        const batch = writeBatch(db)
+        batch.set(doc(db, `${C}/players/bob/days/2`), {slug: 'sudoku-2', completedAt: serverTimestamp(), seconds: 312})
+        batch.set(doc(db, `${C}/solves/other-puzzle`), {count: increment(1), b20: increment(1), day: 2, by: 'bob'}, {merge: true})
+        await assertFails(batch.commit())
+    })
+    test('nobody can bump a tally by more than one or for someone else', async () => {
+        const db = as('bob')
+        const batch = writeBatch(db)
+        batch.set(doc(db, `${C}/players/bob/days/2`), {slug: 'sudoku-2', completedAt: serverTimestamp(), seconds: 312})
+        batch.set(doc(db, `${C}/solves/sudoku-2`), {count: increment(2), b20: increment(2), day: 2, by: 'bob'}, {merge: true})
+        await assertFails(batch.commit())
+        const db2 = as('amy')
+        const batch2 = writeBatch(db2)
+        batch2.set(doc(db2, `${C}/players/amy/days/2`), {slug: 'sudoku-2', completedAt: serverTimestamp(), seconds: 312})
+        batch2.set(doc(db2, `${C}/solves/sudoku-2`), {count: increment(1), b20: increment(1), day: 2, by: 'bob'}, {merge: true})
+        await assertFails(batch2.commit())
     })
 })
 

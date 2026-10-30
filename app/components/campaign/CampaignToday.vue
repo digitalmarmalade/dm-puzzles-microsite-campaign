@@ -1,5 +1,6 @@
 <script setup>
 import {msUntilTomorrow} from '@/lib/campaign/dates'
+import {durationParts, fasterThan} from '@/lib/campaign/achievements'
 import {timezoneOf} from '@/lib/campaign/schedule'
 
 const props = defineProps({
@@ -7,6 +8,8 @@ const props = defineProps({
     track: {type: Object, required: true},
     progress: {type: Object, required: true},
     percents: {type: Object, default: () => ({})},
+    times: {type: Object, default: () => ({})},
+    previewing: {type: Boolean, default: false},
 })
 
 const {t} = useI18n()
@@ -21,6 +24,19 @@ const lead = computed(() => today.value ?? catchUp.value)
 const puzzle = computed(() => lead.value ? props.track.puzzles[lead.value.day - 1] : null)
 const percent = computed(() => lead.value ? props.percents[lead.value.day] ?? null : null)
 const doneToday = computed(() => !today.value && props.progress.currentDay >= 1 && props.progress.currentDay <= props.progress.days.length)
+const todaySolve = computed(() => {
+    const day = props.progress.currentDay
+    const seconds = props.times[day]
+    return doneToday.value && seconds ? {day, seconds, slug: props.track.puzzles[day - 1]?.slug} : null
+})
+const tallySlugs = computed(() => todaySolve.value?.slug ? [todaySolve.value.slug] : [])
+const tallies = useSolveTallies(props.campaign, tallySlugs, props.previewing)
+const beat = computed(() => todaySolve.value ? fasterThan(tallies.value[todaySolve.value.slug], todaySolve.value.seconds) : null)
+const solvedIn = computed(() => {
+    if (!todaySolve.value) return ''
+    const {h, m, s} = durationParts(todaySolve.value.seconds)
+    return h ? t('campaign.time.hm', {h, m}) : m ? t('campaign.time.ms', {m, s}) : t('campaign.time.s', {s})
+})
 const nextDay = computed(() => props.progress.currentDay < props.progress.days.length ? props.progress.currentDay + 1 : null)
 
 const remaining = ref(msUntilTomorrow(timezoneOf(props.campaign)))
@@ -60,6 +76,10 @@ onBeforeUnmount(() => clearInterval(clock))
         <div class="today__text">
             <p class="today__label">{{ t('campaign.today.doneLabel') }}</p>
             <h2 class="today__name">{{ t('campaign.today.doneTitle') }}</h2>
+            <p v-if="todaySolve" class="today__solve">
+                {{ t('campaign.today.solvedIn', {time: solvedIn}) }}
+                <strong v-if="beat !== null">{{ t('campaign.solveTimes.fasterThan', {percent: beat}) }}</strong>
+            </p>
             <p v-if="nextDay" class="today__note">
                 {{ t('campaign.today.unlocksIn', {day: nextDay}) }}
                 <strong class="today__countdown">{{ countdown }}</strong>
@@ -194,6 +214,16 @@ onBeforeUnmount(() => clearInterval(clock))
     background: var(--primary);
     color: var(--text-on-primary);
     font-variant-numeric: tabular-nums;
+}
+
+.today__solve {
+    margin-block-start: .4rem;
+    font-weight: 600;
+
+    strong {
+        margin-inline-start: .4rem;
+        color: var(--secondary);
+    }
 }
 
 .today__note {

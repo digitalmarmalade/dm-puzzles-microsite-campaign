@@ -1741,7 +1741,8 @@
             "catchUpNote": "You missed this one. There's still time to play it.",
             "doneLabel": "Today's puzzle",
             "doneTitle": "Done! Nice work.",
-            "unlocksIn": "Day {day} unlocks in"
+            "unlocksIn": "Day {day} unlocks in",
+            "solvedIn": "Solved in {time}."
         },
         "card": {
             "started": "I'm doing the {days} day challenge",
@@ -1831,7 +1832,17 @@
             "timed": "Across {count} puzzles",
             "total": "Total time",
             "totalNote": "Puzzling for a good cause",
-            "bests": "Personal bests"
+            "bests": "Personal bests",
+            "fasterThan": "Faster than {percent}% of players"
+        },
+        "moments": {
+            "label": "New sponsor",
+            "one": "{name} sponsored you {amount}",
+            "many": "{name} and {others} other sponsored you {amount} | {name} and {others} others sponsored you {amount}",
+            "thank": "Say thanks",
+            "later": "Later",
+            "thanksText": "Thank you {names} for sponsoring my {title} challenge! It means so much.",
+            "thanked": "Thanked"
         },
         "account": {
             "signIn": "Sign in",

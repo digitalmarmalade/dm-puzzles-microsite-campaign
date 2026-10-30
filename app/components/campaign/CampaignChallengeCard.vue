@@ -15,6 +15,8 @@ const props = defineProps({
     shareTitle: {type: String, default: ''},
     shareCard: {type: Boolean, default: false},
     sample: {type: Boolean, default: false},
+    previewing: {type: Boolean, default: false},
+    thankedKey: {type: String, default: null},
 })
 
 const {t} = useI18n()
@@ -90,7 +92,7 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
 
         <CampaignMilestones :progress="progress" />
 
-        <CampaignSolveTimes :times="times" :puzzles="track.puzzles" />
+        <CampaignSolveTimes :campaign="campaign" :times="times" :puzzles="track.puzzles" :previewing="previewing" />
 
         <CampaignSupporters
             v-if="fundraising"
@@ -98,6 +100,7 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
             :name="profile?.name ?? ''"
             :own="!!editTo"
             :sample="sample"
+            :thanked-key="thankedKey"
         />
 
         <CampaignShareCard

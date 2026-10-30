@@ -24,6 +24,22 @@ service cloud.firestore {
         && !(handle in ['profile', 'day', 'days', 'p', 'admin', 'dashboard', 'share', 'public', 'sign-in', 'signin', 'login', 'register', 'settings', 'help', 'about', 'new', 'edit', 'welcome']);
     }
 
+    function validSolve(campaign, slug) {
+      let next = request.resource.data;
+      let before = resource == null ? {} : resource.data;
+      let dayPath = /databases/$(database)/documents/campaigns/$(campaign)/players/$(request.auth.uid)/days/$(string(next.day));
+      let day = getAfter(dayPath);
+      let bucket = 'b' + string(day.data.seconds >= 3600 ? 240 : int(day.data.seconds / 15));
+      return next.by == request.auth.uid
+        && next.day is int
+        && !exists(dayPath)
+        && day.data.slug == slug
+        && day.data.seconds is int
+        && next.diff(before).affectedKeys().hasOnly(['count', 'day', 'by', bucket])
+        && next.count == before.get('count', 0) + 1
+        && next.get(bucket, 0) == before.get(bucket, 0) + 1;
+    }
+
     match /campaigns/{campaign} {
 
       match /admins/{uid} {
@@ -59,6 +75,11 @@ service cloud.firestore {
           && validDetails(request.resource.data)
           && (request.resource.data.get('handle', null) == null
             || getAfter(/databases/$(database)/documents/campaigns/$(campaign)/public/$(request.resource.data.handle)).data.ownerUid == request.auth.uid);
+      }
+
+      match /solves/{slug} {
+        allow get: if true;
+        allow create, update: if signedIn() && validSolve(campaign, slug);
       }
 
       match /public/{handle} {

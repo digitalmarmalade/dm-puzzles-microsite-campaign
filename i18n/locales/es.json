@@ -1735,7 +1735,8 @@
             "catchUpNote": "Te lo perdiste. Aún estás a tiempo de jugarlo.",
             "doneLabel": "Puzle de hoy",
             "doneTitle": "¡Hecho! Buen trabajo.",
-            "unlocksIn": "El día {day} se desbloquea en"
+            "unlocksIn": "El día {day} se desbloquea en",
+            "solvedIn": "Resuelto en {time}."
         },
         "card": {
             "started": "Estoy haciendo el reto de {days} días",
@@ -1825,7 +1826,17 @@
             "timed": "En {count} puzles",
             "total": "Tiempo total",
             "totalNote": "Por una buena causa",
-            "bests": "Mejores marcas"
+            "bests": "Mejores marcas",
+            "fasterThan": "Más rápido que el {percent} % de los jugadores"
+        },
+        "moments": {
+            "label": "Nuevo patrocinador",
+            "one": "{name} te ha patrocinado con {amount}",
+            "many": "{name} y {others} persona más te han patrocinado con {amount} | {name} y {others} personas más te han patrocinado con {amount}",
+            "thank": "Dar las gracias",
+            "later": "Más tarde",
+            "thanksText": "¡Gracias {names} por patrocinar mi reto {title}! Significa muchísimo.",
+            "thanked": "Agradecido"
         },
         "account": {
             "signIn": "Iniciar sesión",

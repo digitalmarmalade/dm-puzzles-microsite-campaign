@@ -144,10 +144,19 @@ async function begin() {
             :share-card="!!p.profile.value?.handle"
             :fundraising="fundraising"
             :sample="!!fundraising"
+            :previewing="p.previewing"
+            :thanked-key="`campaign-sponsors:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}:thanked`"
         >
             <template v-if="!p.progress.value.over" #lead>
+                <CampaignSponsorMoment
+                    v-if="fundraising?.supporters"
+                    :campaign="campaign"
+                    :fundraising="fundraising"
+                    :share-url="p.profile.value?.handle ? pageUrl(p.profile.value.handle) : null"
+                    :storage-key="`campaign-sponsors:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}`"
+                />
                 <CampaignMilestoneUnlock :colours="[campaign.theme?.primary, campaign.theme?.secondary, '#ffd166'].filter(Boolean)" :progress="p.progress.value" :storage-key="`campaign-milestones-seen:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}`" />
-                <CampaignToday :campaign="campaign" :track="p.track.value" :progress="p.progress.value" :percents="p.percents.value" />
+                <CampaignToday :campaign="campaign" :track="p.track.value" :progress="p.progress.value" :percents="p.percents.value" :times="p.times.value" :previewing="p.previewing" />
             </template>
             <p v-if="p.progress.value.currentDay === 0" class="campaign-note">{{ t('campaign.beforeStart', {date: formatDate(p.progress.value.days[0].due)}) }}</p>
         </CampaignChallengeCard>

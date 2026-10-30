@@ -4,11 +4,13 @@ const props = defineProps({
     name: {type: String, default: ''},
     own: {type: Boolean, default: false},
     sample: {type: Boolean, default: false},
+    thankedKey: {type: String, default: null},
 })
 
 const {t} = useI18n()
 const dateLocale = useDateLocale()
 const money = useMoney(props.fundraising.currency)
+const {thanked} = props.thankedKey ? useThanked(props.thankedKey) : {thanked: ref([])}
 
 const raised = computed(() => props.fundraising.raised ?? 0)
 const target = computed(() => props.fundraising.target ?? null)
@@ -50,7 +52,10 @@ const hue = (name) => [...(name ?? '')].reduce((sum, c) => sum + c.charCodeAt(0)
                     <p v-if="supporter.message" class="supporter__message">{{ supporter.message }}</p>
                     <p v-if="typeof supporter.daysAgo === 'number'" class="supporter__when">{{ when(supporter.daysAgo) }}</p>
                 </div>
-                <strong class="supporter__amount">{{ money(supporter.amount) }}</strong>
+                <div class="supporter__side">
+                    <strong class="supporter__amount">{{ money(supporter.amount) }}</strong>
+                    <span v-if="own && thanked.includes(supporter.name)" class="supporter__thanked">♥ {{ t('campaign.moments.thanked') }}</span>
+                </div>
             </li>
         </ol>
 
@@ -216,6 +221,21 @@ const hue = (name) => [...(name ?? '')].reduce((sum, c) => sum + c.charCodeAt(0)
     margin-block-start: .4rem;
     font-size: 1.3rem;
     opacity: .6;
+}
+
+.supporter__side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .4rem;
+    flex-shrink: 0;
+}
+
+.supporter__thanked {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
 .supporter__amount {

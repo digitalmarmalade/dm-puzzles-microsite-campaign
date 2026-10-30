@@ -1735,7 +1735,8 @@
             "catchUpNote": "Ez kimaradt. Még bepótolhatod.",
             "doneLabel": "A mai rejtvény",
             "doneTitle": "Kész! Szép munka.",
-            "unlocksIn": "A(z) {day}. nap ennyi idő múlva nyílik:"
+            "unlocksIn": "A(z) {day}. nap ennyi idő múlva nyílik:",
+            "solvedIn": "Megoldva: {time}."
         },
         "card": {
             "started": "Vállaltam a(z) {days} napos kihívást",
@@ -1825,7 +1826,17 @@
             "timed": "{count} rejtvény alapján",
             "total": "Teljes idő",
             "totalNote": "Egy jó ügyért",
-            "bests": "Egyéni csúcsok"
+            "bests": "Egyéni csúcsok",
+            "fasterThan": "Gyorsabb, mint a játékosok {percent}%-a"
+        },
+        "moments": {
+            "label": "Új támogató",
+            "one": "{name} {amount} összeggel támogatott",
+            "many": "{name} és még {others} ember {amount} összeggel támogatott | {name} és még {others} ember {amount} összeggel támogatott",
+            "thank": "Köszönd meg",
+            "later": "Később",
+            "thanksText": "Köszönöm, {names}, hogy támogatjátok a(z) {title} kihívásomat! Nagyon sokat jelent.",
+            "thanked": "Megköszönve"
         },
         "account": {
             "signIn": "Bejelentkezés",

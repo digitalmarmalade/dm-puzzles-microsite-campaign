@@ -1735,7 +1735,8 @@
             "catchUpNote": "Ta Cię ominęła. Nadal możesz w nią zagrać.",
             "doneLabel": "Dzisiejsza łamigłówka",
             "doneTitle": "Gotowe! Świetna robota.",
-            "unlocksIn": "Dzień {day} odblokuje się za"
+            "unlocksIn": "Dzień {day} odblokuje się za",
+            "solvedIn": "Rozwiązano w {time}."
         },
         "card": {
             "started": "Podejmuję {days}-dniowe wyzwanie",
@@ -1825,7 +1826,17 @@
             "timed": "Z {count} łamigłówek",
             "total": "Łączny czas",
             "totalNote": "W szczytnym celu",
-            "bests": "Rekordy osobiste"
+            "bests": "Rekordy osobiste",
+            "fasterThan": "Szybciej niż {percent}% graczy"
+        },
+        "moments": {
+            "label": "Nowy sponsor",
+            "one": "{name} wsparł(a) Cię kwotą {amount}",
+            "many": "{name} i {others} inna osoba wsparli Cię kwotą {amount} | {name} i {others} inne osoby wsparli Cię kwotą {amount}",
+            "thank": "Podziękuj",
+            "later": "Później",
+            "thanksText": "Dziękuję, {names}, za wsparcie mojego wyzwania {title}! To wiele dla mnie znaczy.",
+            "thanked": "Podziękowano"
         },
         "account": {
             "signIn": "Zaloguj się",

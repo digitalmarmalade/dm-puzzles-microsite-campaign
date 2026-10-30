@@ -1,5 +1,5 @@
 import {expect, test} from 'vitest'
-import {durationParts, milestones, solveStats, streaks} from '../../app/lib/campaign/achievements.js'
+import {bucketOf, durationParts, fasterThan, milestones, sampleTally, solveStats, streaks} from '../../app/lib/campaign/achievements.js'
 import {msUntilTomorrow} from '../../app/lib/campaign/dates.js'
 
 const run = (...states) => {
@@ -51,4 +51,27 @@ test('no times means no stats', () => {
 test('durations split into hours, minutes and seconds', () => {
     expect(durationParts(3725)).toEqual({h: 1, m: 2, s: 5})
     expect(durationParts(59.6)).toEqual({h: 0, m: 1, s: 0})
+})
+
+test('times fall into 15-second slots, with one slot for an hour or more', () => {
+    expect(bucketOf(0)).toBe(0)
+    expect(bucketOf(14)).toBe(0)
+    expect(bucketOf(15)).toBe(1)
+    expect(bucketOf(3599)).toBe(239)
+    expect(bucketOf(9999)).toBe(240)
+})
+test('a time is compared with everyone else who solved the puzzle', () => {
+    const tally = {count: 11, b4: 1, b10: 5, b20: 5}
+    expect(fasterThan(tally, 60)).toBe(99)
+    expect(fasterThan(tally, 160)).toBe(70)
+    expect(fasterThan({count: 11, b4: 5, b10: 1, b20: 5}, 160)).toBe(50)
+})
+test('no comparison until enough other people have solved it', () => {
+    expect(fasterThan({count: 5, b4: 5}, 60)).toBe(null)
+    expect(fasterThan(null, 60)).toBe(null)
+})
+test('sample tallies are stable for a puzzle and add up', () => {
+    const a = sampleTally('crossword-no-94')
+    expect(sampleTally('crossword-no-94')).toEqual(a)
+    expect(Object.entries(a).filter(([k]) => k !== 'count').reduce((sum, [, n]) => sum + n, 0)).toBe(a.count)
 })

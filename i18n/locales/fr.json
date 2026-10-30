@@ -1735,7 +1735,8 @@
             "catchUpNote": "Vous l'avez manqué. Il est encore temps d'y jouer.",
             "doneLabel": "Puzzle du jour",
             "doneTitle": "Terminé ! Bravo.",
-            "unlocksIn": "Le jour {day} se débloque dans"
+            "unlocksIn": "Le jour {day} se débloque dans",
+            "solvedIn": "Résolu en {time}."
         },
         "card": {
             "started": "Je relève le défi des {days} jours",
@@ -1825,7 +1826,17 @@
             "timed": "Sur {count} puzzles",
             "total": "Temps total",
             "totalNote": "Pour une bonne cause",
-            "bests": "Records personnels"
+            "bests": "Records personnels",
+            "fasterThan": "Plus rapide que {percent} % des joueurs"
+        },
+        "moments": {
+            "label": "Nouveau parrain",
+            "one": "{name} vous a parrainé : {amount}",
+            "many": "{name} et {others} autre personne vous ont parrainé : {amount} | {name} et {others} autres personnes vous ont parrainé : {amount}",
+            "thank": "Dire merci",
+            "later": "Plus tard",
+            "thanksText": "Merci {names} de parrainer mon défi {title} ! Ça compte énormément.",
+            "thanked": "Remercié"
         },
         "account": {
             "signIn": "Se connecter",

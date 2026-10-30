@@ -1,9 +1,10 @@
-import {collection, doc, getDoc, onSnapshot, serverTimestamp, setDoc, writeBatch} from 'firebase/firestore'
+import {collection, doc, getDoc, increment, onSnapshot, serverTimestamp, setDoc, writeBatch} from 'firebase/firestore'
 import {EmailAuthProvider, createUserWithEmailAndPassword, linkWithCredential, signInAnonymously} from 'firebase/auth'
 import {loadCampaign} from '@/lib/campaign/registry'
 import {dateIn, isIsoDate} from '@/lib/campaign/dates'
 import {SAMPLE_RUNS, phase, progress as progressOf, sampleRun, sampleSeconds, startDateFor, timezoneOf, trackOf} from '@/lib/campaign/schedule'
 import {cleanProfile, handleCandidates, handleFrom, profileSettings} from '@/lib/campaign/profile'
+import {bucketOf, sampleTally} from '@/lib/campaign/achievements'
 
 export async function useCampaign() {
     const route = useRoute()
@@ -288,9 +289,13 @@ export function useCampaignPlayer(campaign) {
             store.save({...store.load(), completions: completions.value, times: times.value})
             return
         }
-        const record = {slug, completedAt: serverTimestamp()}
-        if (seconds) record.seconds = seconds
-        await setDoc(doc($firestore, `campaigns/${campaign.id}/players/${user.value.uid}/days/${day}`), record)
+        const uid = user.value.uid
+        const batch = writeBatch($firestore)
+        batch.set(doc($firestore, `campaigns/${campaign.id}/players/${uid}/days/${day}`), seconds ? {slug, completedAt: serverTimestamp(), seconds} : {slug, completedAt: serverTimestamp()})
+        if (seconds) {
+            batch.set(doc($firestore, `campaigns/${campaign.id}/solves/${slug}`), {count: increment(1), [`b${bucketOf(seconds)}`]: increment(1), day: +day, by: uid}, {merge: true})
+        }
+        await batch.commit()
     }
 
     async function saveProfile(changes) {
@@ -398,4 +403,43 @@ export function useCampaignPublicPage(campaign, handle) {
     const solveTimes = computed(() => own.previewing ? own.times.value : times.value)
 
     return {loaded, profile: details, track, progress, times: solveTimes, isOwner, previewing: own.previewing, today: own.today}
+}
+
+export function useSolveTallies(campaign, slugs, previewing) {
+    const {$firestore} = useNuxtApp()
+    const tallies = ref({})
+    watch(slugs, async (list) => {
+        const missing = list.filter(slug => !(slug in tallies.value))
+        if (!missing.length) return
+        const found = await Promise.all(missing.map(async (slug) => {
+            if (previewing) return [slug, sampleTally(slug)]
+            try {
+                return [slug, (await getDoc(doc($firestore, `campaigns/${campaign.id}/solves/${slug}`))).data() ?? null]
+            } catch (e) {
+                console.error(e)
+                return [slug, null]
+            }
+        }))
+        tallies.value = {...tallies.value, ...Object.fromEntries(found)}
+    }, {immediate: true})
+    return tallies
+}
+
+export function useThanked(key) {
+    const thanked = useState(`thanked:${key}`, () => {
+        try {
+            return JSON.parse(localStorage.getItem(key)) ?? []
+        } catch {
+            return []
+        }
+    })
+    function thank(names) {
+        thanked.value = [...new Set([...thanked.value, ...names])]
+        try {
+            localStorage.setItem(key, JSON.stringify(thanked.value))
+        } catch {
+            //
+        }
+    }
+    return {thanked, thank}
 }

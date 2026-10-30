@@ -1,13 +1,19 @@
 <script setup>
-import {durationParts, solveStats} from '@/lib/campaign/achievements'
+import {durationParts, fasterThan, solveStats} from '@/lib/campaign/achievements'
 
 const props = defineProps({
+    campaign: {type: Object, required: true},
     times: {type: Object, default: () => ({})},
     puzzles: {type: Array, required: true},
+    previewing: {type: Boolean, default: false},
 })
 
 const {t} = useI18n()
 const stats = computed(() => solveStats(props.times, props.puzzles))
+const slugOf = (day) => props.puzzles[day - 1]?.slug
+const slugs = computed(() => stats.value ? [...new Set([stats.value.fastest, ...stats.value.bests].map(s => slugOf(s.day)).filter(Boolean))] : [])
+const tallies = useSolveTallies(props.campaign, slugs, props.previewing)
+const beat = (solve) => fasterThan(tallies.value[slugOf(solve.day)], solve.seconds)
 
 function duration(seconds) {
     const {h, m, s} = durationParts(seconds)
@@ -26,6 +32,7 @@ function duration(seconds) {
                 <span class="solve-times__label">{{ t('campaign.solveTimes.fastest') }}</span>
                 <strong class="solve-times__value">{{ duration(stats.fastest.seconds) }}</strong>
                 <span class="solve-times__note">{{ t('campaign.solveTimes.fastestNote', {day: stats.fastest.day, type: stats.fastest.type}) }}</span>
+                <span v-if="beat(stats.fastest) !== null" class="solve-times__beat">{{ t('campaign.solveTimes.fasterThan', {percent: beat(stats.fastest)}) }}</span>
             </div>
             <div class="solve-times__stat">
                 <span class="solve-times__label">{{ t('campaign.solveTimes.average') }}</span>
@@ -44,7 +51,10 @@ function duration(seconds) {
             <ul>
                 <li v-for="best in stats.bests" :key="best.type" class="solve-times__best">
                     <span class="solve-times__icon" aria-hidden="true"><svg><use :href="sprite(best.icon)" /></svg></span>
-                    <span class="solve-times__type">{{ best.type }}</span>
+                    <span class="solve-times__type">
+                        {{ best.type }}
+                        <small v-if="beat(best) !== null">{{ t('campaign.solveTimes.fasterThan', {percent: beat(best)}) }}</small>
+                    </span>
                     <span class="solve-times__day">{{ t('campaign.dayN', {day: best.day}) }}</span>
                     <strong class="solve-times__time">{{ duration(best.seconds) }}</strong>
                 </li>
@@ -151,6 +161,23 @@ function duration(seconds) {
 
 .solve-times__type {
     flex: 1;
+    font-weight: 700;
+
+    small {
+        display: block;
+        color: var(--secondary);
+        font-size: 1.2rem;
+    }
+}
+
+.solve-times__beat {
+    align-self: flex-start;
+    margin-block-start: .6rem;
+    padding: .2rem 1rem;
+    border-radius: 9999px;
+    background: var(--secondary);
+    color: #fff;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 

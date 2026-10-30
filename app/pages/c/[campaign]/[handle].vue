@@ -59,6 +59,7 @@ const fundraising = computed(() => sampleFundraising(campaign, page.previewing))
                 :share-url="pageUrl(handle)"
                 :share-title="title"
                 :sample="!!fundraising"
+                :previewing="page.previewing"
                 :playable="false"
             >
                 <template v-if="fundraising?.url && !page.progress.value.over" #lead>

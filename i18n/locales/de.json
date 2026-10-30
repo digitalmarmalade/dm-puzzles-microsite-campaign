@@ -1734,7 +1734,8 @@
             "catchUpNote": "Das hast du verpasst. Du kannst es noch spielen.",
             "doneLabel": "Rätsel des Tages",
             "doneTitle": "Geschafft! Gut gemacht.",
-            "unlocksIn": "Tag {day} wird freigeschaltet in"
+            "unlocksIn": "Tag {day} wird freigeschaltet in",
+            "solvedIn": "Gelöst in {time}."
         },
         "card": {
             "started": "Ich mache die {days}-Tage-Challenge",
@@ -1824,7 +1825,17 @@
             "timed": "Über {count} Rätsel",
             "total": "Gesamtzeit",
             "totalNote": "Rätseln für den guten Zweck",
-            "bests": "Persönliche Bestzeiten"
+            "bests": "Persönliche Bestzeiten",
+            "fasterThan": "Schneller als {percent} % der Spieler"
+        },
+        "moments": {
+            "label": "Neue Unterstützung",
+            "one": "{name} hat dich mit {amount} unterstützt",
+            "many": "{name} und {others} weitere Person haben dich mit {amount} unterstützt | {name} und {others} weitere haben dich mit {amount} unterstützt",
+            "thank": "Danke sagen",
+            "later": "Später",
+            "thanksText": "Danke, {names}, dass ihr meine {title}-Challenge unterstützt! Das bedeutet mir so viel.",
+            "thanked": "Bedankt"
         },
         "account": {
             "signIn": "Anmelden",

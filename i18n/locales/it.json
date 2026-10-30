@@ -1735,7 +1735,8 @@
             "catchUpNote": "Questo te lo sei perso. Sei ancora in tempo per giocarlo.",
             "doneLabel": "Puzzle di oggi",
             "doneTitle": "Fatto! Ottimo lavoro.",
-            "unlocksIn": "Il giorno {day} si sblocca tra"
+            "unlocksIn": "Il giorno {day} si sblocca tra",
+            "solvedIn": "Risolto in {time}."
         },
         "card": {
             "started": "Partecipo alla sfida dei {days} giorni",
@@ -1825,7 +1826,17 @@
             "timed": "Su {count} puzzle",
             "total": "Tempo totale",
             "totalNote": "Per una buona causa",
-            "bests": "Record personali"
+            "bests": "Record personali",
+            "fasterThan": "Più veloce del {percent}% dei giocatori"
+        },
+        "moments": {
+            "label": "Nuovo sostenitore",
+            "one": "{name} ti ha sostenuto con {amount}",
+            "many": "{name} e {others} altra persona ti hanno sostenuto con {amount} | {name} e altre {others} persone ti hanno sostenuto con {amount}",
+            "thank": "Ringrazia",
+            "later": "Più tardi",
+            "thanksText": "Grazie {names} per aver sostenuto la mia sfida {title}! Significa tantissimo.",
+            "thanked": "Ringraziato"
         },
         "account": {
             "signIn": "Accedi",
