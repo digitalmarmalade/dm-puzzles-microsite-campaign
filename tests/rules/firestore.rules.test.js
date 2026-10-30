@@ -1,7 +1,7 @@
 import {readFileSync} from 'node:fs'
 import {afterAll, beforeAll, beforeEach, describe, test} from 'vitest'
 import {assertFails, assertSucceeds, initializeTestEnvironment} from '@firebase/rules-unit-testing'
-import {deleteDoc, doc, getDoc, getDocs, collection, serverTimestamp, setDoc, Timestamp, updateDoc} from 'firebase/firestore'
+import {deleteDoc, doc, getDoc, getDocs, collection, serverTimestamp, setDoc, Timestamp, updateDoc, writeBatch} from 'firebase/firestore'
 
 const C = 'campaigns/charity-run'
 let env
@@ -20,9 +20,19 @@ beforeEach(async () => {
         await setDoc(doc(db, `${C}/admins/partner`), {})
         await setDoc(doc(db, `${C}/players/bob`), {track: 'logic', startedAt: Timestamp.now()})
         await setDoc(doc(db, `${C}/players/bob/days/1`), {slug: 'sudoku-1', completedAt: Timestamp.now()})
-        await setDoc(doc(db, `${C}/public/share-bob`), {ownerUid: 'bob', name: 'Bob'})
+        await setDoc(doc(db, `${C}/public/bob`), {ownerUid: 'bob', name: 'Bob', avatar: null, reason: '', updatedAt: Timestamp.now()})
     })
 })
+
+const details = (extra = {}) => ({name: 'Amy', avatar: '/img/profiles/newbie.svg', reason: 'For my gran', updatedAt: serverTimestamp(), ...extra})
+
+function saveProfile(uid, handle, extra = {}) {
+    const db = as(uid)
+    const batch = writeBatch(db)
+    if (handle) batch.set(doc(db, `${C}/public/${handle}`), {ownerUid: uid, ...details(extra)})
+    batch.set(doc(db, `${C}/profiles/${uid}`), {...details(extra), handle})
+    return batch.commit()
+}
 
 const as = (uid) => (uid ? env.authenticatedContext(uid) : env.unauthenticatedContext()).firestore()
 
@@ -40,9 +50,9 @@ describe('players', () => {
         await assertFails(setDoc(doc(as('amy'), `${C}/players/bob2`), {track: 'words', startedAt: serverTimestamp()}))
         await assertFails(setDoc(doc(as(null), `${C}/players/amy`), {track: 'words', startedAt: serverTimestamp()}))
     })
-    test('players read only their own record', async () => {
-        await assertSucceeds(getDoc(doc(as('bob'), `${C}/players/bob`)))
-        await assertFails(getDoc(doc(as('amy'), `${C}/players/bob`)))
+    test('anyone can read one player\'s progress for their public page, but not list players', async () => {
+        await assertSucceeds(getDoc(doc(as(null), `${C}/players/bob`)))
+        await assertSucceeds(getDocs(collection(as(null), `${C}/players/bob/days`)))
         await assertFails(getDocs(collection(as('bob'), `${C}/players`)))
     })
 })
@@ -68,23 +78,29 @@ describe('days', () => {
 })
 
 describe('profiles', () => {
-    const profile = (extra = {}) => ({name: 'Amy', avatar: '/img/profiles/newbie.svg', reason: 'For my gran', updatedAt: serverTimestamp(), ...extra})
-    test('a player can save and change their own profile', async () => {
-        await assertSucceeds(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile()))
-        await assertSucceeds(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile({name: 'Amy B', avatar: null, reason: ''})))
+    test('a player saves their profile and page address together', async () => {
+        await assertSucceeds(saveProfile('amy', 'amy'))
+        await assertSucceeds(saveProfile('amy', 'amy', {name: 'Amy B', avatar: null, reason: ''}))
         await assertSucceeds(getDoc(doc(as('amy'), `${C}/profiles/amy`)))
     })
+    test('a profile can go without a page', async () => {
+        await assertSucceeds(saveProfile('amy', null))
+    })
+    test('a profile cannot claim someone else\'s address', async () => {
+        await assertFails(setDoc(doc(as('amy'), `${C}/profiles/amy`), {...details(), handle: 'bob'}))
+        await assertFails(saveProfile('amy', 'bob'))
+    })
     test('nobody else can write or read it, except admins reading', async () => {
-        await assertSucceeds(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile()))
-        await assertFails(setDoc(doc(as('bob'), `${C}/profiles/amy`), profile()))
+        await assertSucceeds(saveProfile('amy', 'amy'))
+        await assertFails(setDoc(doc(as('bob'), `${C}/profiles/amy`), {...details(), handle: null}))
         await assertFails(getDoc(doc(as('bob'), `${C}/profiles/amy`)))
         await assertSucceeds(getDoc(doc(as('partner'), `${C}/profiles/amy`)))
     })
     test('only the expected fields, within their limits', async () => {
-        await assertFails(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile({admin: true})))
-        await assertFails(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile({name: 'x'.repeat(41)})))
-        await assertFails(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile({reason: 'x'.repeat(281)})))
-        await assertFails(setDoc(doc(as('amy'), `${C}/profiles/amy`), profile({updatedAt: Timestamp.fromDate(new Date('2020-01-01'))})))
+        await assertFails(saveProfile('amy', 'amy', {admin: true}))
+        await assertFails(saveProfile('amy', 'amy', {name: 'x'.repeat(41)}))
+        await assertFails(saveProfile('amy', 'amy', {reason: 'x'.repeat(281)}))
+        await assertFails(saveProfile('amy', 'amy', {updatedAt: Timestamp.fromDate(new Date('2020-01-01'))}))
     })
 })
 
@@ -106,7 +122,7 @@ describe('partner admins', () => {
 
 describe('public pages', () => {
     test('anyone can read one, signed in or not', async () => {
-        await assertSucceeds(getDoc(doc(as(null), `${C}/public/share-bob`)))
+        await assertSucceeds(getDoc(doc(as(null), `${C}/public/bob`)))
     })
     test('nobody can list them except admins', async () => {
         await assertFails(getDocs(collection(as(null), `${C}/public`)))
@@ -114,13 +130,19 @@ describe('public pages', () => {
         await assertSucceeds(getDocs(collection(as('partner'), `${C}/public`)))
     })
     test('only the owner can edit or remove theirs', async () => {
-        await assertSucceeds(updateDoc(doc(as('bob'), `${C}/public/share-bob`), {name: 'Robert'}))
-        await assertFails(updateDoc(doc(as('amy'), `${C}/public/share-bob`), {name: 'Hacked'}))
-        await assertFails(updateDoc(doc(as('bob'), `${C}/public/share-bob`), {ownerUid: 'amy'}))
-        await assertFails(deleteDoc(doc(as('amy'), `${C}/public/share-bob`)))
-        await assertSucceeds(deleteDoc(doc(as('bob'), `${C}/public/share-bob`)))
+        const page = (extra = {}) => ({ownerUid: 'bob', ...details({name: 'Robert'}), ...extra})
+        await assertSucceeds(setDoc(doc(as('bob'), `${C}/public/bob`), page()))
+        await assertFails(setDoc(doc(as('amy'), `${C}/public/bob`), page({ownerUid: 'amy'})))
+        await assertFails(setDoc(doc(as('bob'), `${C}/public/bob`), page({ownerUid: 'amy'})))
+        await assertFails(deleteDoc(doc(as('amy'), `${C}/public/bob`)))
+        await assertSucceeds(deleteDoc(doc(as('bob'), `${C}/public/bob`)))
+    })
+    test('an address must be a tidy, unreserved one', async () => {
+        await assertSucceeds(setDoc(doc(as('amy'), `${C}/public/amy-2`), {ownerUid: 'amy', ...details()}))
+        await assertFails(setDoc(doc(as('amy'), `${C}/public/Amy`), {ownerUid: 'amy', ...details()}))
+        await assertFails(setDoc(doc(as('amy'), `${C}/public/profile`), {ownerUid: 'amy', ...details()}))
     })
     test('nobody can create one in someone else\'s name', async () => {
-        await assertFails(setDoc(doc(as('amy'), `${C}/public/share-x`), {ownerUid: 'bob'}))
+        await assertFails(setDoc(doc(as('amy'), `${C}/public/x`), {ownerUid: 'bob', ...details()}))
     })
 })

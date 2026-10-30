@@ -1,9 +1,9 @@
-import {collection, doc, onSnapshot, serverTimestamp, setDoc} from 'firebase/firestore'
+import {collection, doc, getDoc, onSnapshot, serverTimestamp, setDoc, writeBatch} from 'firebase/firestore'
 import {signInAnonymously} from 'firebase/auth'
 import {loadCampaign} from '@/lib/campaign/registry'
 import {dateIn, isIsoDate} from '@/lib/campaign/dates'
 import {phase, progress as progressOf, startDateFor, timezoneOf, trackOf} from '@/lib/campaign/schedule'
-import {cleanProfile} from '@/lib/campaign/profile'
+import {cleanProfile, handleFrom} from '@/lib/campaign/profile'
 
 export async function useCampaign() {
     const route = useRoute()
@@ -97,10 +97,30 @@ function percentStore(campaign, previewing) {
     }
 }
 
-export function saveCampaignProfile(campaign, uid, profile) {
+export function saveCampaignProfile(campaign, uid, profile, previousHandle = null) {
     const {$firestore} = useNuxtApp()
-    return setDoc(doc($firestore, `campaigns/${campaign.id}/profiles/${uid}`), {...cleanProfile(campaign, profile), updatedAt: serverTimestamp()})
+    const {handle, ...details} = cleanProfile(campaign, profile)
+    const stamped = {...details, updatedAt: serverTimestamp()}
+    const base = `campaigns/${campaign.id}`
+    const batch = writeBatch($firestore)
+    if (handle) batch.set(doc($firestore, `${base}/public/${handle}`), {ownerUid: uid, ...stamped})
+    if (previousHandle && previousHandle !== handle) batch.delete(doc($firestore, `${base}/public/${previousHandle}`))
+    batch.set(doc($firestore, `${base}/profiles/${uid}`), {...stamped, handle})
+    return batch.commit()
 }
+
+export async function handleOwner(campaign, handle) {
+    const {$firestore} = useNuxtApp()
+    const snap = await getDoc(doc($firestore, `campaigns/${campaign.id}/public/${handle}`))
+    return snap.exists() ? snap.data().ownerUid : null
+}
+
+export function useCampaignPageUrl(campaign) {
+    const localePath = useLocalePath()
+    return (handle) => new URL(localePath(`/c/${campaign.id}/${handle}`), window.location.origin).href
+}
+
+export const previewProfile = (campaign) => cleanProfile(campaign, {handle: handleFrom(campaign.preview?.name), ...campaign.preview})
 
 export function useCampaignPlayer(campaign) {
     const {$auth, $firestore} = useNuxtApp()
@@ -127,7 +147,7 @@ export function useCampaignPlayer(campaign) {
         const state = store.load()
         player.value = state.player
         completions.value = state.completions
-        profile.value = state.profile ?? (campaign.preview?.name ? cleanProfile(campaign, campaign.preview) : null)
+        profile.value = state.profile ?? (campaign.preview?.name ? previewProfile(campaign) : null)
         loaded.value = true
     } else {
         watch(() => user.value?.uid, (uid) => {
@@ -212,7 +232,7 @@ export function useCampaignPlayer(campaign) {
             return
         }
         await ensureUser()
-        await saveCampaignProfile(campaign, user.value.uid, changes)
+        await saveCampaignProfile(campaign, user.value.uid, changes, profile.value?.handle)
     }
 
     function notePercent(day, percent) {
@@ -232,4 +252,75 @@ function until(condition) {
             resolve()
         }, {immediate: true})
     })
+}
+
+export function useCampaignPublicPage(campaign, handle) {
+    const {$firestore} = useNuxtApp()
+    const user = useState('campaignUser')
+    const tz = timezoneOf(campaign)
+    const own = useCampaignPlayer(campaign)
+
+    const ownerUid = ref(null)
+    const details = ref(null)
+    const player = ref(null)
+    const completions = ref({})
+    const loaded = ref(false)
+
+    let stop = []
+    const unsubscribe = () => {
+        stop.forEach(fn => fn())
+        stop = []
+    }
+    onScopeDispose(unsubscribe)
+
+    if (own.previewing) {
+        watchEffect(() => {
+            if (!own.loaded.value) return
+            const mine = own.profile.value?.handle === handle
+            details.value = mine ? own.profile.value : null
+            loaded.value = true
+        })
+    } else {
+        stop.push(onSnapshot(doc($firestore, `campaigns/${campaign.id}/public/${handle}`), (snap) => {
+            const data = snap.data()
+            details.value = data ?? null
+            if (data && data.ownerUid === ownerUid.value) return
+            stop.splice(1).forEach(fn => fn())
+            ownerUid.value = data?.ownerUid ?? null
+            player.value = null
+            completions.value = {}
+            if (!data) {
+                loaded.value = true
+                return
+            }
+            const base = `campaigns/${campaign.id}/players/${data.ownerUid}`
+            let pending = 2
+            const ready = () => {
+                if (--pending === 0) loaded.value = true
+            }
+            stop.push(onSnapshot(doc($firestore, base), (s) => {
+                const p = s.data({serverTimestamps: 'estimate'})
+                player.value = p ? {track: p.track, startedOn: dateIn(tz, p.startedAt.toDate())} : null
+                ready()
+            }, ready))
+            stop.push(onSnapshot(collection($firestore, `${base}/days`), (s) => {
+                completions.value = Object.fromEntries(s.docs.map(d => [d.id, dateIn(tz, d.data({serverTimestamps: 'estimate'}).completedAt.toDate())]))
+                ready()
+            }, ready))
+        }, () => {
+            loaded.value = true
+        }))
+    }
+
+    const source = computed(() => own.previewing ? {player: own.player.value, today: own.today.value} : {player: player.value, today: own.today.value})
+    const track = computed(() => source.value.player ? trackOf(campaign, source.value.player.track) : null)
+    const progress = computed(() => {
+        const p = source.value.player
+        if (!p || !details.value) return null
+        if (own.previewing) return own.progress.value
+        return progressOf(campaign, {startDate: startDateFor(campaign, p.startedOn), today: source.value.today, completions: completions.value})
+    })
+    const isOwner = computed(() => own.previewing ? !!details.value : !!user.value && user.value.uid === ownerUid.value)
+
+    return {loaded, profile: details, track, progress, isOwner, previewing: own.previewing, today: own.today}
 }

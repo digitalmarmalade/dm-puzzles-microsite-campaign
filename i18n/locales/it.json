@@ -1631,7 +1631,33 @@
             "save": "Salva",
             "cancel": "Annulla",
             "edit": "Modifica profilo",
-            "add": "Aggiungi nome e avatar"
+            "add": "Aggiungi nome e avatar",
+            "handle": "Indirizzo della tua pagina",
+            "handleHint": "La tua pagina pubblica della sfida, da seguire per sostenitori e amici. Lettere, numeri e trattini.",
+            "handleTry": "Prova {handle}",
+            "handleStatus": {
+                "checking": "Verifica in corso…",
+                "free": "Questo indirizzo è libero",
+                "taken": "Questo indirizzo è già in uso",
+                "invalid": "Questo indirizzo non può essere usato. Prova con lettere, numeri e trattini."
+            }
+        },
+        "public": {
+            "createOwn": "Crea la tua sfida",
+            "notFound": "Nessuna sfida qui",
+            "notFoundText": "Questo indirizzo non è in uso, oppure il proprietario l'ha cambiato.",
+            "yours": "Questa è la tua pagina pubblica, come la vedono i tuoi sostenitori.",
+            "backToYours": "Torna alla tua sfida",
+            "perfect": "{name} ce l'ha fatta: ogni puzzle nel suo giorno!",
+            "finished": "{name} ha completato la sfida!",
+            "notStarted": "{name} non ha ancora iniziato. Torna presto.",
+            "ctaTitle": "Ti va di metterti alla prova?"
+        },
+        "share": {
+            "label": "La tua pagina pubblica",
+            "copy": "Copia link",
+            "copied": "Copiato!",
+            "share": "Condividi"
         },
         "account": {
             "needed": "Accedi o crea un account per partecipare.",
@@ -1649,6 +1675,7 @@
                 "auth/weak-password": "Usa almeno 6 caratteri per la password.",
                 "auth/invalid-email": "Non sembra un indirizzo email.",
                 "auth/too-many-requests": "Troppi tentativi. Attendi un momento e riprova.",
+                "permission-denied": "Questo indirizzo è appena stato preso. Scegline un altro.",
                 "default": "Qualcosa è andato storto. Riprova."
             }
         }

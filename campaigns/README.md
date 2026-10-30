@@ -29,7 +29,7 @@ and `advent-sample` (24 fixed December days, guests welcome) are examples to cop
 | `theme` | Colours: `primary`, `onPrimary` (text on primary), `background`, `text`. |
 | `text` | The campaign's own words, per language: `{"en": {...}}` with `title`, `tagline`, `intro`, `finished` and `perfect`. |
 | `tracks` | The challenges a player can choose between. One track means no choice. |
-| `profile` | Optional. What players can add about themselves: `{"avatars": ["/img/...svg"], "reason": true}`. `avatars` replaces the default set of avatar images; `reason: false` hides the "why are you taking on the challenge" box. Players always give a name. |
+| `profile` | Optional. What players can add about themselves: `{"avatars": ["/img/...svg"], "reason": true}`. `avatars` replaces the default set of avatar images; `reason: false` hides the "why are you taking on the challenge" box; `publicPage: false` turns off players' public pages. Players always give a name. |
 | `preview` | Optional sample data shown only when previewing a date: `name`, `avatar`, `reason` and `fundraising`. |
 
 ### schedule

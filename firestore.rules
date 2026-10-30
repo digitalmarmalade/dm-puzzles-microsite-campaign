@@ -11,6 +11,19 @@ service cloud.firestore {
       return signedIn() && exists(/databases/$(database)/documents/campaigns/$(campaign)/admins/$(request.auth.uid));
     }
 
+    function validDetails(d) {
+      return d.name is string && d.name.size() <= 40
+        && (d.avatar == null || d.avatar is string && d.avatar.size() <= 200)
+        && d.reason is string && d.reason.size() <= 280
+        && d.updatedAt == request.time;
+    }
+
+    function validHandle(handle) {
+      return handle.size() <= 40
+        && handle.matches('^[a-z0-9]+(-[a-z0-9]+)*$')
+        && !(handle in ['profile', 'day', 'days', 'p', 'admin', 'dashboard', 'share', 'public', 'sign-in', 'signin', 'login', 'register', 'settings', 'help', 'about', 'new', 'edit']);
+    }
+
     match /campaigns/{campaign} {
 
       match /admins/{uid} {
@@ -19,7 +32,7 @@ service cloud.firestore {
       }
 
       match /players/{uid} {
-        allow get: if signedIn() && request.auth.uid == uid || isAdmin(campaign);
+        allow get: if true;
         allow list: if isAdmin(campaign);
         allow create: if signedIn() && request.auth.uid == uid
           && request.resource.data.keys().hasOnly(['track', 'startedAt'])
@@ -27,7 +40,7 @@ service cloud.firestore {
           && request.resource.data.startedAt == request.time;
 
         match /days/{day} {
-          allow read: if signedIn() && request.auth.uid == uid || isAdmin(campaign);
+          allow read: if true;
           allow create: if signedIn() && request.auth.uid == uid
             && day.matches('^[1-9][0-9]{0,2}$')
             && request.resource.data.keys().hasOnly(['slug', 'completedAt'])
@@ -40,19 +53,23 @@ service cloud.firestore {
         allow get: if signedIn() && request.auth.uid == uid || isAdmin(campaign);
         allow list: if isAdmin(campaign);
         allow create, update: if signedIn() && request.auth.uid == uid
-          && request.resource.data.keys().hasOnly(['name', 'avatar', 'reason', 'updatedAt'])
-          && request.resource.data.name is string && request.resource.data.name.size() <= 40
-          && (request.resource.data.avatar == null || request.resource.data.avatar is string && request.resource.data.avatar.size() <= 200)
-          && request.resource.data.reason is string && request.resource.data.reason.size() <= 280
-          && request.resource.data.updatedAt == request.time;
+          && request.resource.data.keys().hasOnly(['name', 'avatar', 'reason', 'handle', 'updatedAt'])
+          && validDetails(request.resource.data)
+          && (request.resource.data.get('handle', null) == null
+            || getAfter(/databases/$(database)/documents/campaigns/$(campaign)/public/$(request.resource.data.handle)).data.ownerUid == request.auth.uid);
       }
 
-      match /public/{shareId} {
+      match /public/{handle} {
         allow get: if true;
         allow list: if isAdmin(campaign);
-        allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
+        allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid
+          && request.resource.data.keys().hasOnly(['ownerUid', 'name', 'avatar', 'reason', 'updatedAt'])
+          && validHandle(handle)
+          && validDetails(request.resource.data);
         allow update: if signedIn() && resource.data.ownerUid == request.auth.uid
-          && request.resource.data.ownerUid == resource.data.ownerUid;
+          && request.resource.data.ownerUid == resource.data.ownerUid
+          && request.resource.data.keys().hasOnly(['ownerUid', 'name', 'avatar', 'reason', 'updatedAt'])
+          && validDetails(request.resource.data);
         allow delete: if signedIn() && resource.data.ownerUid == request.auth.uid;
       }
     }

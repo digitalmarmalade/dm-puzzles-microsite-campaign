@@ -30,6 +30,7 @@ useHead({
             </NuxtLink>
             <nav class="campaign__nav">
                 <NuxtLink :to="home">{{ t('campaign.home') }}</NuxtLink>
+                <slot name="nav" />
             </nav>
         </header>
         <main class="campaign__main">

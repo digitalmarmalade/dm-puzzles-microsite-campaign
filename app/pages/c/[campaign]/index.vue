@@ -72,6 +72,7 @@ async function start(trackId) {
             :edit-to="localePath(`/c/${campaign.id}/profile`)"
             :fundraising="sample?.fundraising ?? null"
         >
+            <CampaignShareLink v-if="p.profile.value?.handle" :campaign="campaign" :handle="p.profile.value.handle" :title="text('title')" />
             <p v-if="p.progress.value.perfect" class="campaign-finished">{{ text('perfect') }}</p>
             <p v-else-if="p.progress.value.finished" class="campaign-finished">{{ text('finished') }}</p>
             <p v-else-if="p.progress.value.currentDay === 0" class="campaign-note">{{ t('campaign.beforeStart', {date: formatDate(p.progress.value.days[0].due)}) }}</p>

@@ -1631,7 +1631,33 @@
             "save": "Guardar",
             "cancel": "Cancelar",
             "edit": "Editar perfil",
-            "add": "Añade tu nombre y avatar"
+            "add": "Añade tu nombre y avatar",
+            "handle": "Dirección de tu página",
+            "handleHint": "Tu página pública del reto, para que te sigan patrocinadores y amigos. Letras, números y guiones.",
+            "handleTry": "Prueba {handle}",
+            "handleStatus": {
+                "checking": "Comprobando…",
+                "free": "Esta dirección está libre",
+                "taken": "Esta dirección ya está en uso",
+                "invalid": "Esta dirección no se puede usar. Prueba con letras, números y guiones."
+            }
+        },
+        "public": {
+            "createOwn": "Crea tu propio reto",
+            "notFound": "Aquí no hay ningún reto",
+            "notFoundText": "Esta dirección no está en uso o su propietario la ha cambiado.",
+            "yours": "Esta es tu página pública, tal como la ven tus patrocinadores.",
+            "backToYours": "Volver a tu reto",
+            "perfect": "¡{name} lo ha conseguido: cada puzle en su día!",
+            "finished": "¡{name} ha completado el reto!",
+            "notStarted": "{name} aún no ha empezado. Vuelve pronto.",
+            "ctaTitle": "¿Te animas a un reto?"
+        },
+        "share": {
+            "label": "Tu página pública",
+            "copy": "Copiar enlace",
+            "copied": "¡Copiado!",
+            "share": "Compartir"
         },
         "account": {
             "needed": "Inicia sesión o crea una cuenta para participar.",
@@ -1649,6 +1675,7 @@
                 "auth/weak-password": "Usa al menos 6 caracteres para tu contraseña.",
                 "auth/invalid-email": "Eso no parece un correo electrónico.",
                 "auth/too-many-requests": "Demasiados intentos. Espera un momento y vuelve a intentarlo.",
+                "permission-denied": "Alguien acaba de coger esa dirección. Elige otra.",
                 "default": "Algo ha fallado. Inténtalo de nuevo."
             }
         }

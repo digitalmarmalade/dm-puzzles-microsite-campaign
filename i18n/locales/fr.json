@@ -1631,7 +1631,33 @@
             "save": "Enregistrer",
             "cancel": "Annuler",
             "edit": "Modifier le profil",
-            "add": "Ajoutez votre nom et votre avatar"
+            "add": "Ajoutez votre nom et votre avatar",
+            "handle": "Adresse de votre page",
+            "handleHint": "Votre page de défi publique, que vos parrains et amis peuvent suivre. Lettres, chiffres et tirets.",
+            "handleTry": "Essayez {handle}",
+            "handleStatus": {
+                "checking": "Vérification…",
+                "free": "Cette adresse est libre",
+                "taken": "Cette adresse est déjà prise",
+                "invalid": "Cette adresse ne peut pas être utilisée. Essayez des lettres, des chiffres et des tirets."
+            }
+        },
+        "public": {
+            "createOwn": "Créez votre propre défi",
+            "notFound": "Aucun défi ici",
+            "notFoundText": "Cette adresse n'est pas utilisée, ou son propriétaire l'a modifiée.",
+            "yours": "Voici votre page publique, telle que la voient vos parrains.",
+            "backToYours": "Retour à votre défi",
+            "perfect": "{name} a réussi : chaque puzzle le bon jour !",
+            "finished": "{name} a terminé le défi !",
+            "notStarted": "{name} n'a pas encore commencé. Revenez bientôt.",
+            "ctaTitle": "Envie de relever le défi ?"
+        },
+        "share": {
+            "label": "Votre page publique",
+            "copy": "Copier le lien",
+            "copied": "Copié !",
+            "share": "Partager"
         },
         "account": {
             "needed": "Connectez-vous ou créez un compte pour participer.",
@@ -1649,6 +1675,7 @@
                 "auth/weak-password": "Utilisez au moins 6 caractères pour votre mot de passe.",
                 "auth/invalid-email": "Cela ne ressemble pas à une adresse e-mail.",
                 "auth/too-many-requests": "Trop de tentatives. Patientez un instant et réessayez.",
+                "permission-denied": "Cette adresse vient d'être prise. Veuillez en choisir une autre.",
                 "default": "Un problème est survenu. Veuillez réessayer."
             }
         }

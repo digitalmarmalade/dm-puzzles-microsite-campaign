@@ -1,4 +1,6 @@
 <script setup>
+import {profileSettings} from '@/lib/campaign/profile'
+
 const campaign = await useCampaign()
 const {t} = useI18n()
 const localePath = useLocalePath()
@@ -9,6 +11,8 @@ const homePath = localePath(`/c/${campaign.id}`)
 const form = ref(null)
 const busy = ref(false)
 const error = ref('')
+const handleStatus = ref('empty')
+const needsHandle = profileSettings(campaign).publicPage
 
 watchEffect(() => {
     if (!p.loaded.value || form.value) return
@@ -16,18 +20,22 @@ watchEffect(() => {
         navigateTo(homePath, {replace: true})
         return
     }
-    form.value = {name: '', avatar: null, reason: '', ...p.profile.value}
+    form.value = {name: '', avatar: null, reason: '', handle: null, ...p.profile.value}
 })
 
 async function save() {
-    busy.value = true
     error.value = ''
+    if (needsHandle && handleStatus.value !== 'free') {
+        error.value = t(`campaign.profile.handleStatus.${handleStatus.value === 'empty' ? 'invalid' : handleStatus.value}`)
+        return
+    }
+    busy.value = true
     try {
         await p.saveProfile(form.value)
         await navigateTo(homePath)
     } catch (e) {
         console.error(e)
-        error.value = t('campaign.account.errors.default')
+        error.value = t(e.code === 'permission-denied' ? 'campaign.profile.handleStatus.taken' : 'campaign.account.errors.default')
     } finally {
         busy.value = false
     }
@@ -48,7 +56,13 @@ async function save() {
                     <p role="alert">{{ error }}</p>
                 </Attention>
 
-                <CampaignProfileFields v-model="form" :campaign="campaign" />
+                <CampaignProfileFields
+                    v-model="form"
+                    v-model:handle-status="handleStatus"
+                    :campaign="campaign"
+                    :own-handle="p.profile.value?.handle ?? null"
+                    :offline="p.previewing"
+                />
 
                 <div class="form-actions">
                     <NuxtLink :to="homePath" class="campaign-profile__cancel">{{ t('campaign.profile.cancel') }}</NuxtLink>

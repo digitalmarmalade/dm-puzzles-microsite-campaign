@@ -1631,7 +1631,33 @@
             "save": "Mentés",
             "cancel": "Mégse",
             "edit": "Profil szerkesztése",
-            "add": "Add meg a neved és az avatárod"
+            "add": "Add meg a neved és az avatárod",
+            "handle": "Oldalad címe",
+            "handleHint": "A kihívásod nyilvános oldala, amelyet a támogatóid és barátaid követhetnek. Betűk, számok és kötőjelek.",
+            "handleTry": "Próbáld: {handle}",
+            "handleStatus": {
+                "checking": "Ellenőrzés…",
+                "free": "Ez a cím szabad",
+                "taken": "Ez a cím már foglalt",
+                "invalid": "Ez a cím nem használható. Próbálkozz betűkkel, számokkal és kötőjelekkel."
+            }
+        },
+        "public": {
+            "createOwn": "Indítsd el a saját kihívásod",
+            "notFound": "Itt nincs kihívás",
+            "notFoundText": "Ez a cím nincs használatban, vagy a tulajdonosa megváltoztatta.",
+            "yours": "Ez a nyilvános oldalad, ahogy a támogatóid látják.",
+            "backToYours": "Vissza a kihívásodhoz",
+            "perfect": "{name} megcsinálta: minden rejtvényt a maga napján!",
+            "finished": "{name} teljesítette a kihívást!",
+            "notStarted": "{name} még nem kezdte el. Nézz vissza hamarosan.",
+            "ctaTitle": "Kedved támadt egy kihíváshoz?"
+        },
+        "share": {
+            "label": "Nyilvános oldalad",
+            "copy": "Link másolása",
+            "copied": "Másolva!",
+            "share": "Megosztás"
         },
         "account": {
             "needed": "A részvételhez jelentkezz be vagy hozz létre fiókot.",
@@ -1649,6 +1675,7 @@
                 "auth/weak-password": "A jelszó legalább 6 karakter legyen.",
                 "auth/invalid-email": "Ez nem tűnik e-mail-címnek.",
                 "auth/too-many-requests": "Túl sok próbálkozás. Várj egy kicsit, és próbáld újra.",
+                "permission-denied": "Ezt a címet épp most foglalták le. Kérlek, válassz másikat.",
                 "default": "Valami hiba történt. Próbáld újra."
             }
         }

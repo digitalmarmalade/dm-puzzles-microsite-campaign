@@ -1637,7 +1637,33 @@
             "save": "Save",
             "cancel": "Cancel",
             "edit": "Edit profile",
-            "add": "Add your name and avatar"
+            "add": "Add your name and avatar",
+            "handle": "Your page address",
+            "handleHint": "Your public challenge page, for sponsors and friends to follow. Letters, numbers and hyphens.",
+            "handleTry": "Try {handle}",
+            "handleStatus": {
+                "checking": "Checking…",
+                "free": "That address is free",
+                "taken": "That address is already taken",
+                "invalid": "That address can't be used. Try letters, numbers and hyphens."
+            }
+        },
+        "public": {
+            "createOwn": "Create your own challenge",
+            "notFound": "There's no challenge here",
+            "notFoundText": "This address isn't in use, or its owner has changed it.",
+            "yours": "This is your public page, as your sponsors see it.",
+            "backToYours": "Back to your challenge",
+            "perfect": "{name} did it: every puzzle on its day!",
+            "finished": "{name} has completed the challenge!",
+            "notStarted": "{name} hasn't started yet. Check back soon.",
+            "ctaTitle": "Fancy a challenge yourself?"
+        },
+        "share": {
+            "label": "Your public page",
+            "copy": "Copy link",
+            "copied": "Copied!",
+            "share": "Share"
         },
         "account": {
             "needed": "Sign in or create an account to take part.",
@@ -1655,6 +1681,7 @@
                 "auth/weak-password": "Use at least 6 characters for your password.",
                 "auth/invalid-email": "That doesn't look like an email address.",
                 "auth/too-many-requests": "Too many attempts. Please wait a moment and try again.",
+                "permission-denied": "That page address has just been taken. Please pick another.",
                 "default": "Something went wrong. Please try again."
             }
         }

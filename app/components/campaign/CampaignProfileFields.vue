@@ -3,8 +3,11 @@ import {NAME_MAX, REASON_MAX, profileSettings} from '@/lib/campaign/profile'
 
 const props = defineProps({
     campaign: {type: Object, required: true},
+    ownHandle: {type: String, default: null},
+    offline: {type: Boolean, default: false},
 })
 const profile = defineModel({type: Object, required: true})
+const handleStatus = defineModel('handleStatus', {type: String, default: 'empty'})
 
 const {t} = useI18n()
 const settings = profileSettings(props.campaign)
@@ -26,6 +29,16 @@ const initial = computed(() => (profile.value.name ?? '').trim().charAt(0).toUpp
             v-model="profile.name"
         />
     </div>
+
+    <CampaignHandleField
+        v-if="settings.publicPage"
+        v-model="profile.handle"
+        v-model:status="handleStatus"
+        :campaign="campaign"
+        :name="profile.name"
+        :own-handle="ownHandle"
+        :offline="offline"
+    />
 
     <fieldset class="form-input profile-avatars">
         <legend>{{ t('campaign.profile.avatar') }}</legend>

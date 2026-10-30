@@ -58,10 +58,15 @@ What's stored, under `campaigns/{campaign}/`:
   server and can't be changed, so a rolling challenge's day 1 is fixed.
 - `players/{uid}/days/{day}`: one per completed day, `{slug, completedAt}`. Create-only
   and stamped by the server, so a late day always stays late.
-- `profiles/{uid}`: the player's `{name, avatar, reason, updatedAt}`, given when they
+- `profiles/{uid}`: the player's `{name, avatar, reason, handle, updatedAt}`, given when they
   register and editable at `/c/{id}/profile`. Only they (and the campaign's admins) can read it.
-- `public/{shareId}`: what a player chose to show on their public challenge page (not built yet).
-  Anyone can read one; only its owner can change it.
+- `public/{handle}`: a player's public challenge page at `/c/{id}/{handle}` (e.g.
+  `/c/charity-sample/harold`), holding `{ownerUid, name, avatar, reason, updatedAt}`. The
+  document id is the address, so two players can't have the same one. Anyone can read one;
+  only its owner can change or remove it. Saving a profile writes both documents together,
+  and the rules only let a profile point at an address its owner holds. The page shows the
+  player's progress, so a player's record and days can be read by anyone who has their
+  id, though nobody but admins can list players.
 - `admins/{uid}`: partner staff who can see this campaign's players. Added by hand in
   the Firestore console; nobody can add one from the site.
 

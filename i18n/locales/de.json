@@ -1630,7 +1630,33 @@
             "save": "Speichern",
             "cancel": "Abbrechen",
             "edit": "Profil bearbeiten",
-            "add": "Name und Avatar hinzufügen"
+            "add": "Name und Avatar hinzufügen",
+            "handle": "Adresse deiner Seite",
+            "handleHint": "Deine öffentliche Challenge-Seite, der Unterstützer und Freunde folgen können. Buchstaben, Zahlen und Bindestriche.",
+            "handleTry": "Versuch {handle}",
+            "handleStatus": {
+                "checking": "Wird geprüft…",
+                "free": "Diese Adresse ist frei",
+                "taken": "Diese Adresse ist schon vergeben",
+                "invalid": "Diese Adresse ist nicht möglich. Versuch es mit Buchstaben, Zahlen und Bindestrichen."
+            }
+        },
+        "public": {
+            "createOwn": "Starte deine eigene Challenge",
+            "notFound": "Hier gibt es keine Challenge",
+            "notFoundText": "Diese Adresse wird nicht verwendet oder wurde von ihrem Inhaber geändert.",
+            "yours": "Das ist deine öffentliche Seite, so wie deine Unterstützer sie sehen.",
+            "backToYours": "Zurück zu deiner Challenge",
+            "perfect": "{name} hat es geschafft: jedes Rätsel am richtigen Tag!",
+            "finished": "{name} hat die Challenge abgeschlossen!",
+            "notStarted": "{name} hat noch nicht angefangen. Schau bald wieder vorbei.",
+            "ctaTitle": "Lust auf eine eigene Challenge?"
+        },
+        "share": {
+            "label": "Deine öffentliche Seite",
+            "copy": "Link kopieren",
+            "copied": "Kopiert!",
+            "share": "Teilen"
         },
         "account": {
             "needed": "Melde dich an oder erstelle ein Konto, um mitzumachen.",
@@ -1648,6 +1674,7 @@
                 "auth/weak-password": "Verwende mindestens 6 Zeichen für dein Passwort.",
                 "auth/invalid-email": "Das sieht nicht wie eine E-Mail-Adresse aus.",
                 "auth/too-many-requests": "Zu viele Versuche. Bitte warte kurz und versuche es erneut.",
+                "permission-denied": "Diese Adresse wurde gerade vergeben. Bitte wähle eine andere.",
                 "default": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
             }
         }

@@ -1,5 +1,6 @@
 <script setup>
 import {EmailAuthProvider, createUserWithEmailAndPassword, linkWithCredential, signInWithEmailAndPassword} from 'firebase/auth'
+import {profileSettings} from '@/lib/campaign/profile'
 
 const props = defineProps({
     campaign: {type: Object, required: true},
@@ -10,7 +11,9 @@ const {$auth} = useNuxtApp()
 
 const mode = ref('register')
 const form = reactive({email: '', password: '', confirm: ''})
-const profile = ref({name: '', avatar: null, reason: ''})
+const profile = ref({name: '', avatar: null, reason: '', handle: null})
+const handleStatus = ref('empty')
+const needsHandle = profileSettings(props.campaign).publicPage
 const busy = ref(false)
 const error = ref('')
 
@@ -32,6 +35,10 @@ async function register() {
 
 async function submit() {
     if (confirmError.value) return
+    if (registering.value && needsHandle && handleStatus.value !== 'free') {
+        error.value = t(`campaign.profile.handleStatus.${handleStatus.value === 'empty' ? 'invalid' : handleStatus.value}`)
+        return
+    }
     busy.value = true
     error.value = ''
     try {
@@ -56,7 +63,7 @@ async function submit() {
                 <p role="alert">{{ error }}</p>
             </Attention>
 
-            <CampaignProfileFields v-if="registering" v-model="profile" :campaign="campaign" />
+            <CampaignProfileFields v-if="registering" v-model="profile" v-model:handle-status="handleStatus" :campaign="campaign" />
 
             <EmailInput id="campaign-email" :label="t('account.yourEmail')" required v-model="form.email" />
 

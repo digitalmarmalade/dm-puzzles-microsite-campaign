@@ -1631,7 +1631,33 @@
             "save": "Zapisz",
             "cancel": "Anuluj",
             "edit": "Edytuj profil",
-            "add": "Dodaj imię i awatar"
+            "add": "Dodaj imię i awatar",
+            "handle": "Adres Twojej strony",
+            "handleHint": "Twoja publiczna strona wyzwania, którą mogą śledzić sponsorzy i znajomi. Litery, cyfry i myślniki.",
+            "handleTry": "Spróbuj {handle}",
+            "handleStatus": {
+                "checking": "Sprawdzanie…",
+                "free": "Ten adres jest wolny",
+                "taken": "Ten adres jest już zajęty",
+                "invalid": "Tego adresu nie można użyć. Spróbuj liter, cyfr i myślników."
+            }
+        },
+        "public": {
+            "createOwn": "Stwórz własne wyzwanie",
+            "notFound": "Nie ma tu żadnego wyzwania",
+            "notFoundText": "Ten adres nie jest używany albo jego właściciel go zmienił.",
+            "yours": "To Twoja publiczna strona, tak jak widzą ją sponsorzy.",
+            "backToYours": "Wróć do swojego wyzwania",
+            "perfect": "{name} dał(a) radę: każda łamigłówka w swoim dniu!",
+            "finished": "{name} ukończył(a) wyzwanie!",
+            "notStarted": "{name} jeszcze nie zaczął(-ęła). Zajrzyj wkrótce.",
+            "ctaTitle": "Masz ochotę na wyzwanie?"
+        },
+        "share": {
+            "label": "Twoja publiczna strona",
+            "copy": "Kopiuj link",
+            "copied": "Skopiowano!",
+            "share": "Udostępnij"
         },
         "account": {
             "needed": "Zaloguj się lub załóż konto, aby wziąć udział.",
@@ -1649,6 +1675,7 @@
                 "auth/weak-password": "Hasło musi mieć co najmniej 6 znaków.",
                 "auth/invalid-email": "To nie wygląda na adres e-mail.",
                 "auth/too-many-requests": "Zbyt wiele prób. Odczekaj chwilę i spróbuj ponownie.",
+                "permission-denied": "Ten adres właśnie został zajęty. Wybierz inny.",
                 "default": "Coś poszło nie tak. Spróbuj ponownie."
             }
         }
