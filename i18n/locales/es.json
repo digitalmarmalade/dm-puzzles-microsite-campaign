@@ -1659,6 +1659,21 @@
             "copied": "¡Copiado!",
             "share": "Compartir"
         },
+        "finale": {
+            "title": "¡Lo has conseguido!",
+            "eyebrow": "Reto completado",
+            "perfectEyebrow": "Recorrido perfecto",
+            "perfectRun": "Los {total} puzles, cada uno en su día",
+            "onTimeLate": "{onTime} a tiempo, {late} con retraso",
+            "dates": "Del {from} al {to}",
+            "imageCompleted": "ha completado {headline}",
+            "shareImage": "Comparte tu logro",
+            "downloadImage": "Descargar imagen",
+            "thankSponsors": "Da las gracias a tus patrocinadores",
+            "sponsorName": "Patrocina a {name}",
+            "endedTitle": "Tu reto ha terminado",
+            "endedText": "Has completado {completed} de {total} puzles."
+        },
         "account": {
             "needed": "Inicia sesión o crea una cuenta para participar.",
             "signIn": "Iniciar sesión",

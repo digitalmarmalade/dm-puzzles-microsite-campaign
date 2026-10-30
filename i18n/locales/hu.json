@@ -1659,6 +1659,21 @@
             "copied": "Másolva!",
             "share": "Megosztás"
         },
+        "finale": {
+            "title": "Sikerült!",
+            "eyebrow": "Kihívás teljesítve",
+            "perfectEyebrow": "Hibátlan teljesítés",
+            "perfectRun": "Mind a(z) {total} rejtvény, mindegyik a maga napján",
+            "onTimeLate": "{onTime} időben, {late} később",
+            "dates": "{from} – {to}",
+            "imageCompleted": "teljesítette: {headline}",
+            "shareImage": "Oszd meg az eredményed",
+            "downloadImage": "Kép letöltése",
+            "thankSponsors": "Köszönd meg a támogatóidnak",
+            "sponsorName": "{name} támogatása",
+            "endedTitle": "A kihívásod véget ért",
+            "endedText": "{total} rejtvényből {completed}-t oldottál meg."
+        },
         "account": {
             "needed": "A részvételhez jelentkezz be vagy hozz létre fiókot.",
             "signIn": "Bejelentkezés",

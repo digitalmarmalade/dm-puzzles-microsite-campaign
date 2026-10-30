@@ -27,7 +27,7 @@ and `advent-sample` (24 fixed December days, guests welcome) are examples to cop
 | `features` | Switches for optional features, e.g. `{"friends": false}`. Not used yet. |
 | `schedule` | The days; see below. |
 | `theme` | Colours: `primary`, `onPrimary` (text on primary), `background`, `text`. |
-| `text` | The campaign's own words, per language: `{"en": {...}}` with `title`, `tagline`, `intro`, `finished` and `perfect`. |
+| `text` | The campaign's own words, per language: `{"en": {...}}` with `title`, `tagline`, `intro`, `finished` and `perfect`. `finished` and `perfect` are the headline of the player's finale once they've done every day (late or on time). |
 | `tracks` | The challenges a player can choose between. One track means no choice. |
 | `profile` | Optional. What players can add about themselves: `{"avatars": ["/img/...svg"], "reason": true}`. `avatars` replaces the default set of avatar images; `reason: false` hides the "why are you taking on the challenge" box; `publicPage: false` turns off players' public pages. Players always give a name. |
 | `preview` | Optional sample data shown only when previewing a date: `name`, `avatar`, `reason` and `fundraising`. |

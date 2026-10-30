@@ -1659,6 +1659,21 @@
             "copied": "Copié !",
             "share": "Partager"
         },
+        "finale": {
+            "title": "Vous avez réussi !",
+            "eyebrow": "Défi terminé",
+            "perfectEyebrow": "Parcours parfait",
+            "perfectRun": "Les {total} puzzles, chacun le bon jour",
+            "onTimeLate": "{onTime} à temps, {late} en retard",
+            "dates": "Du {from} au {to}",
+            "imageCompleted": "a terminé {headline}",
+            "shareImage": "Partagez votre réussite",
+            "downloadImage": "Télécharger l'image",
+            "thankSponsors": "Remerciez vos parrains",
+            "sponsorName": "Parrainer {name}",
+            "endedTitle": "Votre défi est terminé",
+            "endedText": "Vous avez terminé {completed} puzzles sur {total}."
+        },
         "account": {
             "needed": "Connectez-vous ou créez un compte pour participer.",
             "signIn": "Se connecter",

@@ -1,6 +1,6 @@
 import {describe, expect, test} from 'vitest'
 import {addDays, dateIn, daysBetween, isIsoDate} from '../../app/lib/campaign/dates.js'
-import {canPlay, dayState, joinWindow, lastChance, phase, progress, startDateFor, validateCampaign} from '../../app/lib/campaign/schedule.js'
+import {canPlay, dayState, joinWindow, lastChance, phase, progress, sampleRun, startDateFor, validateCampaign} from '../../app/lib/campaign/schedule.js'
 
 const puzzles = (n) => Array.from({length: n}, (_, i) => ({slug: `p-${i + 1}`, name: `Puzzle ${i + 1}`, type: 'sudoku', url: `https://x/p-${i + 1}.json`}))
 
@@ -148,5 +148,22 @@ describe('validating a campaign', () => {
             'track "a", day 3: puzzle is missing "type"',
             'track "a", day 3: puzzle is missing "url"',
         ])
+    })
+})
+
+describe('sample runs for previewing the finale', () => {
+    const run = (campaign, kind) => {
+        const r = sampleRun(campaign, kind)
+        return progress(campaign, {startDate: startDateFor(campaign, r.startedOn), today: r.today, completions: r.completions})
+    }
+    test('a perfect run', () => {
+        expect(run(charity, 'perfect')).toMatchObject({finished: true, perfect: true, over: true})
+        expect(run(advent, 'perfect')).toMatchObject({finished: true, perfect: true})
+    })
+    test('a finished run with some days late', () => {
+        expect(run(charity, 'finished')).toMatchObject({finished: true, perfect: false, late: 2})
+    })
+    test('a run that ended with days missed', () => {
+        expect(run(advent, 'ended')).toMatchObject({finished: false, over: true, completed: 15, missed: 9})
     })
 })

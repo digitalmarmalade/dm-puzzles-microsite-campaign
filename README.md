@@ -31,6 +31,13 @@ Add `?today=2026-12-05` to any campaign page to see it as it would be on that da
 It lasts for the tab; `?today=off` stops it. While previewing, progress is kept in the
 tab only, nothing is saved to Firebase, and sign-in is skipped.
 
+To see the finale, add `?finale=perfect`, `?finale=finished` (two days played late) or
+`?finale=ended` (only some days done, then the catch-up time ran out). This fills in a
+whole run in preview and moves the preview date to just after it, so it works without
+`?today=`. `ended` only applies to campaigns whose `late` setting has a limit; with
+`late: true` a missed day can always be caught up, so the challenge never ends unfinished.
+The confetti plays again each time.
+
 ## Tests
 
 ```bash

@@ -1665,6 +1665,21 @@
             "copied": "Copied!",
             "share": "Share"
         },
+        "finale": {
+            "title": "You did it!",
+            "eyebrow": "Challenge complete",
+            "perfectEyebrow": "Perfect run",
+            "perfectRun": "All {total} puzzles, every one on its day",
+            "onTimeLate": "{onTime} on time, {late} played late",
+            "dates": "{from} to {to}",
+            "imageCompleted": "completed {headline}",
+            "shareImage": "Share your achievement",
+            "downloadImage": "Download image",
+            "thankSponsors": "Thank your sponsors",
+            "sponsorName": "Sponsor {name}",
+            "endedTitle": "Your challenge is over",
+            "endedText": "You completed {completed} of {total} puzzles."
+        },
         "account": {
             "needed": "Sign in or create an account to take part.",
             "signIn": "Sign in",

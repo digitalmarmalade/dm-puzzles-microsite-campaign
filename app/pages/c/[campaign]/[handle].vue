@@ -14,6 +14,7 @@ const page = useCampaignPublicPage(campaign, handle)
 const homePath = localePath(`/c/${campaign.id}`)
 const name = computed(() => page.profile.value?.name ?? '')
 const title = computed(() => name.value ? t('campaign.namedChallenge', {name: name.value}) : t('campaign.yourChallenge'))
+const pageUrl = useCampaignPageUrl(campaign)
 const fundraising = computed(() => page.previewing ? campaign.preview?.fundraising ?? null : null)
 </script>
 
@@ -37,6 +38,16 @@ const fundraising = computed(() => page.previewing ? campaign.preview?.fundraisi
                 <NuxtLink :to="homePath">{{ t('campaign.public.backToYours') }}</NuxtLink>
             </p>
 
+            <CampaignFinale
+                v-if="page.progress.value?.over && page.track.value"
+                :campaign="campaign"
+                :track="page.track.value"
+                :progress="page.progress.value"
+                :profile="page.profile.value"
+                :page-url="pageUrl(handle)"
+                :fundraising="fundraising"
+            />
+
             <CampaignChallengeCard
                 v-if="page.progress.value && page.track.value"
                 :campaign="campaign"
@@ -45,10 +56,7 @@ const fundraising = computed(() => page.previewing ? campaign.preview?.fundraisi
                 :profile="page.profile.value"
                 :fundraising="fundraising"
                 :playable="false"
-            >
-                <p v-if="page.progress.value.perfect" class="campaign-finished">{{ t('campaign.public.perfect', {name}) }}</p>
-                <p v-else-if="page.progress.value.finished" class="campaign-finished">{{ t('campaign.public.finished', {name}) }}</p>
-            </CampaignChallengeCard>
+            />
 
             <section v-else class="card card--main public-missing">
                 <h1>{{ title }}</h1>
@@ -99,15 +107,6 @@ const fundraising = computed(() => page.previewing ? campaign.preview?.fundraisi
         font-weight: 600;
         margin-inline-start: .6rem;
     }
-}
-
-.campaign-finished {
-    color: var(--primary);
-    font-family: var(--font-display);
-    font-size: 2.2rem;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
 }
 
 .public-cta {

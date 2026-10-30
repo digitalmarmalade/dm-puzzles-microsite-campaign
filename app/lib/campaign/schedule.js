@@ -120,3 +120,22 @@ export function validateCampaign(campaign) {
     }
     return errors
 }
+
+export const SAMPLE_RUNS = ['perfect', 'finished', 'ended']
+
+export function sampleRun(campaign, kind) {
+    const s = campaign.schedule
+    const startedOn = s.mode === 'fixed' ? s.start : s.startFrom
+    const total = s.days
+    const dues = Array.from({length: total}, (_, i) => dueDate(startedOn, i + 1))
+    const last = dues.at(-1)
+    const completions = {}
+    if (kind === 'ended') {
+        dues.slice(0, Math.ceil(total * .6)).forEach((due, i) => completions[i + 1] = due)
+        const close = lastChance(campaign, last)
+        return {startedOn, today: addDays(close ?? last, 1), completions}
+    }
+    const late = kind === 'finished' && s.late !== false ? [Math.min(4, total - 1), Math.min(9, total - 1)] : []
+    dues.forEach((due, i) => completions[i + 1] = late.includes(i + 1) ? addDays(due, 1) : due)
+    return {startedOn, today: addDays(last, 1), completions}
+}

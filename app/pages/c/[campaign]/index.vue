@@ -16,6 +16,7 @@ const error = ref('')
 const when = computed(() => phase(campaign, p.today.value))
 const formatDate = (iso) => new Intl.DateTimeFormat(dateLocale.value, {day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'}).format(new Date(`${iso}T12:00:00Z`))
 const sample = p.previewing ? campaign.preview : null
+const pageUrl = useCampaignPageUrl(campaign)
 
 async function start(trackId) {
     busy.value = true
@@ -62,8 +63,19 @@ async function start(trackId) {
             </template>
         </template>
 
+        <CampaignFinale
+            v-if="p.progress.value?.over && p.track.value"
+            :campaign="campaign"
+            :track="p.track.value"
+            :progress="p.progress.value"
+            :profile="p.profile.value"
+            :page-url="p.profile.value?.handle ? pageUrl(p.profile.value.handle) : null"
+            :fundraising="sample?.fundraising ?? null"
+            own
+        />
+
         <CampaignChallengeCard
-            v-else-if="p.progress.value && p.track.value"
+            v-if="p.player.value && p.progress.value && p.track.value"
             :campaign="campaign"
             :track="p.track.value"
             :progress="p.progress.value"
@@ -73,9 +85,7 @@ async function start(trackId) {
             :fundraising="sample?.fundraising ?? null"
         >
             <CampaignShareLink v-if="p.profile.value?.handle" :campaign="campaign" :handle="p.profile.value.handle" :title="text('title')" />
-            <p v-if="p.progress.value.perfect" class="campaign-finished">{{ text('perfect') }}</p>
-            <p v-else-if="p.progress.value.finished" class="campaign-finished">{{ text('finished') }}</p>
-            <p v-else-if="p.progress.value.currentDay === 0" class="campaign-note">{{ t('campaign.beforeStart', {date: formatDate(p.progress.value.days[0].due)}) }}</p>
+            <p v-if="p.progress.value.currentDay === 0" class="campaign-note">{{ t('campaign.beforeStart', {date: formatDate(p.progress.value.days[0].due)}) }}</p>
         </CampaignChallengeCard>
 
         <p v-if="p.user.value?.email" class="campaign-account">
@@ -132,15 +142,6 @@ h2 {
 
 .campaign-tracks:has(> :only-child) .campaign-track {
     background: none;
-}
-
-.campaign-finished {
-    color: var(--primary);
-    font-family: var(--font-display);
-    font-size: 2.2rem;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
 }
 
 .campaign-account {

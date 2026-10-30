@@ -1659,6 +1659,21 @@
             "copied": "Skopiowano!",
             "share": "Udostępnij"
         },
+        "finale": {
+            "title": "Udało się!",
+            "eyebrow": "Wyzwanie ukończone",
+            "perfectEyebrow": "Perfekcyjny przebieg",
+            "perfectRun": "Wszystkie {total} łamigłówek, każda w swoim dniu",
+            "onTimeLate": "{onTime} na czas, {late} z opóźnieniem",
+            "dates": "Od {from} do {to}",
+            "imageCompleted": "ukończył(a) {headline}",
+            "shareImage": "Podziel się sukcesem",
+            "downloadImage": "Pobierz obraz",
+            "thankSponsors": "Podziękuj sponsorom",
+            "sponsorName": "Wesprzyj: {name}",
+            "endedTitle": "Twoje wyzwanie dobiegło końca",
+            "endedText": "Ukończono {completed} z {total} łamigłówek."
+        },
         "account": {
             "needed": "Zaloguj się lub załóż konto, aby wziąć udział.",
             "signIn": "Zaloguj się",

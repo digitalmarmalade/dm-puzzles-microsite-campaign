@@ -1658,6 +1658,21 @@
             "copied": "Kopiert!",
             "share": "Teilen"
         },
+        "finale": {
+            "title": "Geschafft!",
+            "eyebrow": "Challenge abgeschlossen",
+            "perfectEyebrow": "Perfekter Lauf",
+            "perfectRun": "Alle {total} Rätsel, jedes an seinem Tag",
+            "onTimeLate": "{onTime} pünktlich, {late} nachgeholt",
+            "dates": "{from} bis {to}",
+            "imageCompleted": "hat {headline} geschafft",
+            "shareImage": "Teile deinen Erfolg",
+            "downloadImage": "Bild herunterladen",
+            "thankSponsors": "Bedank dich bei deinen Unterstützern",
+            "sponsorName": "{name} unterstützen",
+            "endedTitle": "Deine Challenge ist vorbei",
+            "endedText": "Du hast {completed} von {total} Rätseln gelöst."
+        },
         "account": {
             "needed": "Melde dich an oder erstelle ein Konto, um mitzumachen.",
             "signIn": "Anmelden",

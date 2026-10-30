@@ -2,7 +2,7 @@ import {collection, doc, getDoc, onSnapshot, serverTimestamp, setDoc, writeBatch
 import {signInAnonymously} from 'firebase/auth'
 import {loadCampaign} from '@/lib/campaign/registry'
 import {dateIn, isIsoDate} from '@/lib/campaign/dates'
-import {phase, progress as progressOf, startDateFor, timezoneOf, trackOf} from '@/lib/campaign/schedule'
+import {SAMPLE_RUNS, phase, progress as progressOf, sampleRun, startDateFor, timezoneOf, trackOf} from '@/lib/campaign/schedule'
 import {cleanProfile, handleFrom} from '@/lib/campaign/profile'
 
 export async function useCampaign() {
@@ -49,11 +49,22 @@ export function useCampaignPreview(campaign) {
     try {
         if (asked === 'off') sessionStorage.removeItem(key)
         else if (isIsoDate(asked)) sessionStorage.setItem(key, asked)
+        if (SAMPLE_RUNS.includes(route.query.finale)) previewSampleRun(campaign, route.query.finale, key)
     } catch {
         //
     }
     const today = read()
     return {today: isIsoDate(today) ? today : null}
+}
+
+function previewSampleRun(campaign, kind, todayKey) {
+    const run = sampleRun(campaign, kind)
+    const store = previewStore(campaign)
+    const state = store.load()
+    const track = trackOf(campaign, state.player?.track)?.id ?? campaign.tracks[0].id
+    sessionStorage.setItem(todayKey, run.today)
+    store.save({...state, player: {track, startedOn: run.startedOn}, completions: run.completions})
+    Object.keys(localStorage).filter(k => k.startsWith(`campaign-finale-seen:${campaign.id}:`)).forEach(k => localStorage.removeItem(k))
 }
 
 function previewStore(campaign) {
