@@ -1,0 +1,67 @@
+rules_version = '2';
+
+//  Security rules for the campaigns Firebase project (separate from Sticky Puzzles).
+//  Deploy with `firebase deploy --only firestore`.
+//
+//  campaigns/{campaign}
+//    admins/{uid}            partner staff who can see this campaign's dashboard.
+//                            Added by hand in the console; nobody can write them from the site.
+//    players/{uid}           one per player: {track, startedAt}. startedAt is the server's
+//                            clock and can't be changed, so a rolling challenge's day 1 is fixed.
+//      days/{day}            one per completed day: {slug, completedAt}. Create-only and
+//                            stamped by the server, so late days can't be hidden.
+//    public/{shareId}        what a player chose to share on their public page. Anyone can
+//                            read it; only its owner can write it.
+//  users/{uid}/**            the player's own synced settings and history (from the microsite).
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin(campaign) {
+      return signedIn() && exists(/databases/$(database)/documents/campaigns/$(campaign)/admins/$(request.auth.uid));
+    }
+
+    match /campaigns/{campaign} {
+
+      match /admins/{uid} {
+        allow get: if signedIn() && request.auth.uid == uid;
+        allow list: if isAdmin(campaign);
+      }
+
+      match /players/{uid} {
+        allow get: if signedIn() && request.auth.uid == uid || isAdmin(campaign);
+        allow list: if isAdmin(campaign);
+        allow create: if signedIn() && request.auth.uid == uid
+          && request.resource.data.keys().hasOnly(['track', 'startedAt'])
+          && request.resource.data.track is string
+          && request.resource.data.startedAt == request.time;
+
+        match /days/{day} {
+          allow read: if signedIn() && request.auth.uid == uid || isAdmin(campaign);
+          allow create: if signedIn() && request.auth.uid == uid
+            && day.matches('^[1-9][0-9]{0,2}$')
+            && request.resource.data.keys().hasOnly(['slug', 'completedAt'])
+            && request.resource.data.slug is string
+            && request.resource.data.completedAt == request.time;
+        }
+      }
+
+      match /public/{shareId} {
+        allow get: if true;
+        allow list: if isAdmin(campaign);
+        allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
+        allow update: if signedIn() && resource.data.ownerUid == request.auth.uid
+          && request.resource.data.ownerUid == resource.data.ownerUid;
+        allow delete: if signedIn() && resource.data.ownerUid == request.auth.uid;
+      }
+    }
+
+    match /users/{uid}/{document=**} {
+      allow read, write: if signedIn() && request.auth.uid == uid;
+    }
+  }
+}

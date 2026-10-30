@@ -25,3 +25,12 @@ public/gameplay
 .env
 .env.*
 !.env.example
+
+# Firebase CLI
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+.firebase
+
+# Lives only in the S3 bucket (see Deployments in the README)
+public/firebaseConfig.json

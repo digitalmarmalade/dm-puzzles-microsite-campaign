@@ -9,7 +9,8 @@
         "generate": "nuxt generate",
         "tutorials": "node tutorials/crossword/build.js && node tutorials/sudoku/build.js && node tutorials/huedoku/build.js && node tutorials/takuzu/build.js && node tutorials/traintracks/build.js && node tutorials/gridfill/build.js && node tutorials/headcoach/build.js && node tutorials/guessword/build.js && node tutorials/wordwheel/build.js && node tutorials/wordsearch/build.js && node tutorials/codeword/build.js",
         "preview": "nuxt preview",
-        "postinstall": "nuxt prepare"
+        "postinstall": "nuxt prepare",
+        "test:rules": "firebase emulators:exec --only firestore --project demo-campaigns \"vitest run tests/rules\""
     },
     "dependencies": {
         "@nuxtjs/i18n": "^10.4.0",
@@ -20,5 +21,9 @@
         "pinia": "^3.0.3",
         "vue": "^3.5.22",
         "vue-router": "^4.5.1"
+    },
+    "devDependencies": {
+        "@firebase/rules-unit-testing": "^5.0.2",
+        "vitest": "^3.2.7"
     }
 }

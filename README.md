@@ -277,6 +277,23 @@ of locale codes, e.g. `SITE_LOCALES=pl npm run dev`. Unset means every locale in
 header language switcher hides itself when only one locale exists. An unknown
 code fails the build. Needs a restart to take effect.
 
+## Firebase
+
+The campaigns site has its own Firebase project, separate from Sticky Puzzles. Its
+Firestore security rules and indexes live in this repo (`firestore.rules`,
+`firestore.indexes.json`; the data layout is described at the top of the rules) and
+are deployed with the Firebase CLI:
+
+```bash
+firebase deploy --only firestore
+```
+
+Local testing: `firebase emulators:start` runs Auth and Firestore locally
+(UI at http://localhost:4000).
+
+Partner staff get dashboard access by adding a document at
+`campaigns/{campaign}/admins/{uid}` in the Firestore console.
+
 ## Deployments
 
 One deployment serves every campaign: a static `nuxt generate` build synced to an
