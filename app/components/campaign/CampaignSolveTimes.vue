@@ -72,9 +72,10 @@ function duration(seconds) {
 
 .solve-times__stats {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
 
-    @media (width >= 600px) {
+    @media (width >= 720px) {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -83,14 +84,23 @@ function duration(seconds) {
     display: flex;
     flex-direction: column;
     gap: .2rem;
-    padding: 1.6rem 2rem;
+    padding: 1.4rem 1.6rem;
     border: 1px solid var(--card-border);
     border-radius: var(--border-radius-inner);
+
+    @media (width >= 720px) {
+        padding: 1.6rem 2rem;
+    }
 }
 
 .solve-times__stat--fastest {
+    grid-column: 1 / -1;
     border-color: color-mix(in srgb, var(--primary) 30%, var(--card-border));
     background: color-mix(in srgb, var(--primary) 5%, var(--card-background));
+
+    @media (width >= 720px) {
+        grid-column: auto;
+    }
 }
 
 .solve-times__label {
@@ -101,12 +111,16 @@ function duration(seconds) {
 
 .solve-times__value {
     font-family: var(--font-display);
-    font-size: 3.2rem;
+    font-size: 2.6rem;
     line-height: 1.1;
     font-variant-numeric: tabular-nums;
 
     .solve-times__stat--fastest & {
         color: var(--primary);
+    }
+
+    @media (width >= 720px) {
+        font-size: 3.2rem;
     }
 }
 
