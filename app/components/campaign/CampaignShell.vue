@@ -19,6 +19,27 @@ const signedIn = computed(() => !!user.value && !user.value.isAnonymous)
 const slots = useSlots()
 const year = new Date().getFullYear()
 const owner = props.campaign.organisation || text('title')
+const menuOpen = ref(false)
+const burger = ref(null)
+const menuId = useId()
+
+function closeMenu() {
+    menuOpen.value = false
+}
+
+function onKeydown(event) {
+    if (event.key !== 'Escape' || !menuOpen.value) return
+    closeMenu()
+    burger.value?.focus()
+}
+
+function onMenuClick(event) {
+    if (event.target.closest('a, button')) closeMenu()
+}
+
+watch(() => route.fullPath, closeMenu)
+onMounted(() => document.addEventListener('keydown', onKeydown))
+onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
 
 useHead({
     title: () => props.title ?? text('title'),
@@ -38,7 +59,7 @@ useHead({
                     <img v-if="campaign.theme?.logo" :src="campaign.theme.logo" :alt="text('title')" class="campaign__logo">
                     <span v-else class="campaign__title">{{ text('title') }}</span>
                 </NuxtLink>
-                <nav class="campaign__nav">
+                <nav class="campaign__nav" :aria-label="t('campaign.menu')">
                     <NuxtLink :to="home">{{ t('campaign.home') }}</NuxtLink>
                     <slot name="nav" />
                     <template v-if="accounts && !previewing && user !== undefined">
@@ -46,8 +67,34 @@ useHead({
                         <NuxtLink v-else :to="{path: home, query: {signin: 1}}">{{ t('campaign.account.signIn') }}</NuxtLink>
                     </template>
                 </nav>
+                <button
+                    ref="burger"
+                    type="button"
+                    class="campaign__burger"
+                    :aria-expanded="menuOpen"
+                    :aria-controls="menuId"
+                    :aria-label="t('campaign.menu')"
+                    @click="menuOpen = !menuOpen"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </header>
             <slot name="banner" />
+        </div>
+        <div :id="menuId" class="campaign__menu" :class="{'is-open': menuOpen}" :inert="!menuOpen" @click="onMenuClick">
+            <button type="button" class="campaign__menu-close" :aria-label="t('campaign.card.close')">
+                <svg aria-hidden="true"><use :href="sprite('close')" /></svg>
+            </button>
+            <nav class="campaign__menu-links" :aria-label="t('campaign.menu')">
+                <NuxtLink :to="home">{{ t('campaign.home') }}</NuxtLink>
+                <slot name="nav" />
+                <template v-if="accounts && !previewing && user !== undefined">
+                    <button v-if="signedIn" type="button" class="campaign__nav-button" @click="signOut($auth)">{{ t('campaign.account.signOut') }}</button>
+                    <NuxtLink v-else :to="{path: home, query: {signin: 1}}">{{ t('campaign.account.signIn') }}</NuxtLink>
+                </template>
+            </nav>
         </div>
         <main class="campaign__main">
             <slot />
@@ -183,7 +230,7 @@ body:has(.campaign, .campaign-play) {
 }
 
 .campaign__nav {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: .8rem 3rem;
@@ -200,6 +247,133 @@ body:has(.campaign, .campaign-play) {
             @media (hover: hover) {
                 color: var(--primary);
             }
+        }
+    }
+
+    @media (width >= 720px) {
+        display: flex;
+    }
+}
+
+.campaign__burger {
+    appearance: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    flex-shrink: 0;
+    inline-size: 4rem;
+    block-size: 4rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--text-colour);
+    cursor: pointer;
+    transition: gap .25s;
+
+    span {
+        display: block;
+        inline-size: 2.5rem;
+        block-size: .2rem;
+        border-radius: 1px;
+        background-color: currentColor;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            gap: .7rem;
+        }
+    }
+
+    @media (width >= 720px) {
+        display: none;
+    }
+}
+
+.campaign__menu {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9rem 3rem 3rem;
+    background: var(--app-bg);
+    color: var(--text-colour);
+    overflow: auto;
+    transform: translateX(103%);
+    transition: transform .3s ease-in-out;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    @media (width >= 720px) {
+        display: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+}
+
+.campaign__menu-close {
+    position: absolute;
+    inset-block-start: 2.4rem;
+    inset-inline-end: 2.4rem;
+    display: grid;
+    place-items: center;
+    inline-size: 4rem;
+    block-size: 4rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+
+    svg {
+        inline-size: 2.4rem;
+        block-size: 2.4rem;
+    }
+}
+
+.campaign__menu-links {
+    display: flex;
+    flex-direction: column;
+    inline-size: 100%;
+    max-inline-size: 50rem;
+
+    a,
+    .campaign__nav-button {
+        display: block;
+        padding: 2rem;
+        border-block-end: 1px solid var(--card-border);
+        color: inherit;
+        font-size: 1.8rem;
+        letter-spacing: .1rem;
+        text-align: start;
+        text-decoration: none;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: translateX(5rem);
+        transition: opacity .3s ease-in-out .12s, transform .3s ease-in-out .12s;
+
+        .is-open & {
+            opacity: 1;
+            transform: none;
+        }
+
+        &:nth-child(2) {
+            transition-delay: .16s;
+        }
+
+        &:nth-child(3) {
+            transition-delay: .2s;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
         }
     }
 }

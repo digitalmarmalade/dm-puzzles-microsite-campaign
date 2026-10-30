@@ -1584,6 +1584,7 @@
         "restore": "Przywróć {count} usunięty element | Przywróć {count} usunięte elementy"
     },
     "campaign": {
+        "menu": "Menu",
         "loading": "Ładowanie…",
         "notFound": "Nic tu nie ma.",
         "devIndex": "Kampanie w tej wersji",

@@ -1590,6 +1590,7 @@
         "restore": "Bring back {count} removed item | Bring back {count} removed items"
     },
     "campaign": {
+        "menu": "Menu",
         "loading": "Loading…",
         "notFound": "There's nothing here.",
         "devIndex": "Campaigns in this build",

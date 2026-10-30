@@ -1583,6 +1583,7 @@
         "restore": "{count} entfernten Eintrag wiederherstellen | {count} entfernte Einträge wiederherstellen"
     },
     "campaign": {
+        "menu": "Menü",
         "loading": "Wird geladen…",
         "notFound": "Hier gibt es nichts.",
         "devIndex": "Kampagnen in diesem Build",

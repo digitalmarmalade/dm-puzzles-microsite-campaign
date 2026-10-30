@@ -1584,6 +1584,7 @@
         "restore": "Recuperar {count} elemento eliminado | Recuperar {count} elementos eliminados"
     },
     "campaign": {
+        "menu": "Menú",
         "loading": "Cargando…",
         "notFound": "Aquí no hay nada.",
         "devIndex": "Campañas en esta compilación",

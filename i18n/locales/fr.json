@@ -1584,6 +1584,7 @@
         "restore": "Rétablir {count} élément supprimé | Rétablir {count} éléments supprimés"
     },
     "campaign": {
+        "menu": "Menu",
         "loading": "Chargement…",
         "notFound": "Il n'y a rien ici.",
         "devIndex": "Campagnes de cette version",

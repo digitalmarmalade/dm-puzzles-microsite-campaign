@@ -13,7 +13,7 @@ const dash = computed(() => `${CIRCUMFERENCE * Math.min(100, Math.max(0, props.p
 </script>
 
 <template>
-    <div class="campaign-stat" :style="{'--stat-colour': colour}">
+    <div class="campaign-stat" :class="{'campaign-stat--side': flame}" :style="{'--stat-colour': colour}">
         <p class="campaign-stat__text">
             <span class="campaign-stat__value">{{ value }}</span>
             <span class="campaign-stat__label">{{ label }}</span>
@@ -29,13 +29,29 @@ const dash = computed(() => `${CIRCUMFERENCE * Math.min(100, Math.max(0, props.p
 <style scoped>
 .campaign-stat {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.6rem;
-    padding: 2rem 3rem;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1.4rem 1.6rem;
+
+    @media (width >= 720px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.6rem;
+        padding: 2rem 3rem;
+    }
+
     border: 1px solid var(--card-border);
     border-radius: var(--border-radius-inner);
     background: var(--card-background);
+}
+
+.campaign-stat--side {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .campaign-stat__text {
@@ -47,20 +63,28 @@ const dash = computed(() => `${CIRCUMFERENCE * Math.min(100, Math.max(0, props.p
 
 .campaign-stat__value {
     font-family: var(--font-display);
-    font-size: 3.4rem;
+    font-size: 2.6rem;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.05;
+
+    @media (width >= 720px) {
+        font-size: 3.4rem;
+    }
 }
 
 .campaign-stat__label {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: .05rem;
+
+    @media (width >= 720px) {
+        font-size: 1.3rem;
+    }
 }
 
 .campaign-stat__ring {
-    inline-size: 6.4rem;
-    block-size: 6.4rem;
+    inline-size: 4.4rem;
+    block-size: 4.4rem;
     flex-shrink: 0;
     transform: rotate(-90deg);
 
@@ -68,14 +92,24 @@ const dash = computed(() => `${CIRCUMFERENCE * Math.min(100, Math.max(0, props.p
         fill: none;
         stroke-width: 5;
     }
+
+    @media (width >= 720px) {
+        inline-size: 6.4rem;
+        block-size: 6.4rem;
+    }
 }
 
 .campaign-stat__flame {
     flex-shrink: 0;
-    inline-size: 4.8rem;
-    block-size: 4.8rem;
+    inline-size: 3.6rem;
+    block-size: 3.6rem;
     color: var(--stat-colour);
     animation: flame-flicker 2.4s ease-in-out infinite;
+
+    @media (width >= 720px) {
+        inline-size: 4.8rem;
+        block-size: 4.8rem;
+    }
 
     @media (prefers-reduced-motion: reduce) {
         animation: none;

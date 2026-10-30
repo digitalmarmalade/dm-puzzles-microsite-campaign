@@ -1584,6 +1584,7 @@
         "restore": "Ripristina {count} elemento rimosso | Ripristina {count} elementi rimossi"
     },
     "campaign": {
+        "menu": "Menu",
         "loading": "Caricamento…",
         "notFound": "Qui non c'è niente.",
         "devIndex": "Campagne in questa build",

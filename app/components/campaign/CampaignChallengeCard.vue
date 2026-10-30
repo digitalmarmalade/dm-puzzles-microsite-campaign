@@ -61,23 +61,22 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
                 :percent="progress.completed / total * 100"
             />
             <CampaignStat
+                v-if="fundraising"
+                :value="fundraising.target ? t('campaign.raisedOf', {raised: money(fundraising.raised), target: money(fundraising.target)}) : money(fundraising.raised)"
+                :label="t('campaign.raised')"
+                :percent="raisedPercent"
+                colour="var(--secondary)"
+            />
+            <CampaignStat
                 :value="t('campaign.streak.value', {n: streak.current})"
                 :label="streak.best > streak.current ? t('campaign.streak.labelBest', {best: streak.best}) : t('campaign.streak.label')"
                 :flame="streak.current > 0"
             />
-            <template v-if="fundraising">
-                <CampaignStat
-                    :value="fundraising.target ? t('campaign.raisedOf', {raised: money(fundraising.raised), target: money(fundraising.target)}) : money(fundraising.raised)"
-                    :label="t('campaign.raised')"
-                    :percent="raisedPercent"
-                    colour="var(--secondary)"
-                />
-                <CampaignStat
-                    v-if="typeof fundraising.sponsors === 'number'"
-                    :value="String(fundraising.sponsors)"
-                    :label="t('campaign.sponsors')"
-                />
-            </template>
+            <CampaignStat
+                v-if="typeof fundraising?.sponsors === 'number'"
+                :value="String(fundraising.sponsors)"
+                :label="t('campaign.sponsors')"
+            />
         </div>
 
         <slot />
@@ -228,7 +227,11 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
 
 .challenge-card__stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
+
+    @media (width >= 720px) {
+        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    }
 }
 </style>

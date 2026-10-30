@@ -1584,6 +1584,7 @@
         "restore": "{count} törölt elem visszaállítása | {count} törölt elem visszaállítása"
     },
     "campaign": {
+        "menu": "Menü",
         "loading": "Betöltés…",
         "notFound": "Itt nincs semmi.",
         "devIndex": "Kampányok ebben a buildben",
