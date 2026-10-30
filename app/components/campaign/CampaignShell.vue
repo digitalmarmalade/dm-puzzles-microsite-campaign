@@ -333,6 +333,41 @@ body:has(.campaign, .campaign-play) {
     }
 }
 
+.campaign-pill {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .7rem 1.4rem;
+    border: 1px solid var(--card-border);
+    border-radius: 9999px;
+    background: var(--card-background);
+    color: var(--text-colour);
+    font: inherit;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color .15s ease, color .15s ease;
+
+    svg {
+        inline-size: 1.6rem;
+        block-size: 1.6rem;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 2px;
+    }
+}
+
 .campaign-button {
     appearance: none;
     display: inline-flex;

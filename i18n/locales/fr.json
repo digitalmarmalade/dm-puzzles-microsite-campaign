@@ -1632,6 +1632,7 @@
             "save": "Enregistrer",
             "cancel": "Annuler",
             "edit": "Modifier le profil",
+            "editShort": "Modifier",
             "add": "Ajoutez votre nom et votre avatar"
         },
         "public": {
@@ -1646,7 +1647,8 @@
             "ctaTitle": "Envie de relever le défi ?"
         },
         "share": {
-            "label": "Votre page publique",
+            "label": "Partagez votre page",
+            "more": "Plus d'options",
             "copy": "Copier le lien",
             "copied": "Copié !",
             "share": "Partager"
@@ -1726,6 +1728,46 @@
             "avatarHint": "Affiché à côté de votre nom sur votre page.",
             "previewHint": "Voici à quoi ressemblera votre page pour vos amis et parrains.",
             "previewPlaceholder": "Choisissez votre défi ci-dessus"
+        },
+        "today": {
+            "label": "Jour {day} · Puzzle du jour",
+            "play": "Jouer",
+            "continue": "Continuer · {percent} %",
+            "catchUpLabel": "Rattrapage · Jour {day}",
+            "catchUpNote": "Vous l'avez manqué. Il est encore temps d'y jouer.",
+            "doneLabel": "Puzzle du jour",
+            "doneTitle": "Terminé ! Bravo.",
+            "doneNext": "Le jour {day} se débloque demain."
+        },
+        "card": {
+            "started": "Je relève le défi des {days} jours",
+            "down": "{n} de faits.",
+            "toGo": "Plus que {n}.",
+            "finished": "Les {days} sont faits !",
+            "pledge": "Je soutiens {org} en relevant le défi : {headline}. Votre soutien compte !",
+            "sponsorMe": "Parrainez-moi",
+            "joinMe": "Rejoignez-moi",
+            "title": "Partagez votre progression",
+            "close": "Fermer",
+            "size": "Format de l'image",
+            "making": "Création de votre image…",
+            "download": "Télécharger l'image",
+            "create": "Créer une image à partager",
+            "shareProgress": "Partagez votre progression",
+            "formats": {
+                "square": {
+                    "name": "Publication",
+                    "hint": "Instagram, Facebook, LinkedIn"
+                },
+                "story": {
+                    "name": "Story",
+                    "hint": "Stories et statut WhatsApp"
+                },
+                "wide": {
+                    "name": "Lien",
+                    "hint": "Liens X, LinkedIn, Facebook"
+                }
+            }
         },
         "account": {
             "signIn": "Se connecter",

@@ -1632,6 +1632,7 @@
             "save": "Salva",
             "cancel": "Annulla",
             "edit": "Modifica profilo",
+            "editShort": "Modifica",
             "add": "Aggiungi nome e avatar"
         },
         "public": {
@@ -1646,7 +1647,8 @@
             "ctaTitle": "Ti va di metterti alla prova?"
         },
         "share": {
-            "label": "La tua pagina pubblica",
+            "label": "Condividi la tua pagina",
+            "more": "Altre opzioni",
             "copy": "Copia link",
             "copied": "Copiato!",
             "share": "Condividi"
@@ -1726,6 +1728,46 @@
             "avatarHint": "Mostrato accanto al tuo nome sulla tua pagina.",
             "previewHint": "Ecco come vedranno la tua pagina amici e sostenitori.",
             "previewPlaceholder": "Scegli la tua sfida qui sopra"
+        },
+        "today": {
+            "label": "Giorno {day} · Puzzle di oggi",
+            "play": "Gioca ora",
+            "continue": "Continua · {percent}%",
+            "catchUpLabel": "Recupera · Giorno {day}",
+            "catchUpNote": "Questo te lo sei perso. Sei ancora in tempo per giocarlo.",
+            "doneLabel": "Puzzle di oggi",
+            "doneTitle": "Fatto! Ottimo lavoro.",
+            "doneNext": "Il giorno {day} si sblocca domani."
+        },
+        "card": {
+            "started": "Partecipo alla sfida dei {days} giorni",
+            "down": "{n} fatti.",
+            "toGo": "Ne mancano {n}.",
+            "finished": "Tutti i {days} fatti!",
+            "pledge": "Sostengo {org} affrontando la sfida: {headline}. Mi piacerebbe il tuo sostegno!",
+            "sponsorMe": "Sostienimi",
+            "joinMe": "Unisciti a me",
+            "title": "Condividi i tuoi progressi",
+            "close": "Chiudi",
+            "size": "Formato immagine",
+            "making": "Sto creando la tua immagine…",
+            "download": "Scarica l'immagine",
+            "create": "Crea un'immagine da condividere",
+            "shareProgress": "Condividi i tuoi progressi",
+            "formats": {
+                "square": {
+                    "name": "Post",
+                    "hint": "Instagram, Facebook, LinkedIn"
+                },
+                "story": {
+                    "name": "Storia",
+                    "hint": "Storie e stato WhatsApp"
+                },
+                "wide": {
+                    "name": "Link",
+                    "hint": "Link su X, LinkedIn, Facebook"
+                }
+            }
         },
         "account": {
             "signIn": "Accedi",

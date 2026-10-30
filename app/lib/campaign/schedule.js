@@ -108,6 +108,7 @@ export function validateCampaign(campaign) {
     }
     for (const [lang, words] of Object.entries(campaign.text ?? {})) {
         const steps = words?.steps
+        if (words?.pledge !== undefined && typeof words.pledge !== 'string') errors.push(`text.${lang}.pledge must be text`)
         if (steps !== undefined && (!Array.isArray(steps) || steps.some(st => typeof st?.title !== 'string' || typeof st?.body !== 'string'))) {
             errors.push(`text.${lang}.steps must be a list of {"title", "body"}`)
         }

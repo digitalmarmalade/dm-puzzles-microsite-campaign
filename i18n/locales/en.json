@@ -1638,6 +1638,7 @@
             "save": "Save",
             "cancel": "Cancel",
             "edit": "Edit profile",
+            "editShort": "Edit",
             "add": "Add your name and avatar"
         },
         "public": {
@@ -1652,7 +1653,8 @@
             "ctaTitle": "Fancy a challenge yourself?"
         },
         "share": {
-            "label": "Your public page",
+            "label": "Share your page",
+            "more": "More options",
             "copy": "Copy link",
             "copied": "Copied!",
             "share": "Share"
@@ -1732,6 +1734,46 @@
             "avatarHint": "Shown next to your name on your page.",
             "previewHint": "This is how your page will look to friends and sponsors.",
             "previewPlaceholder": "Choose your challenge above"
+        },
+        "today": {
+            "label": "Day {day} · Today's puzzle",
+            "play": "Play now",
+            "continue": "Continue · {percent}%",
+            "catchUpLabel": "Catch up · Day {day}",
+            "catchUpNote": "You missed this one. There's still time to play it.",
+            "doneLabel": "Today's puzzle",
+            "doneTitle": "Done! Nice work.",
+            "doneNext": "Day {day} unlocks tomorrow."
+        },
+        "card": {
+            "started": "I'm doing the {days} day challenge",
+            "down": "{n} down.",
+            "toGo": "{n} to go.",
+            "finished": "All {days} done!",
+            "pledge": "I'm supporting {org} by taking on {headline}. I'd love your support!",
+            "sponsorMe": "Sponsor me",
+            "joinMe": "Join me",
+            "title": "Share your progress",
+            "close": "Close",
+            "size": "Image size",
+            "making": "Making your image…",
+            "download": "Download image",
+            "create": "Create a sharing image",
+            "shareProgress": "Share your progress",
+            "formats": {
+                "square": {
+                    "name": "Post",
+                    "hint": "Instagram, Facebook, LinkedIn"
+                },
+                "story": {
+                    "name": "Story",
+                    "hint": "Stories and WhatsApp status"
+                },
+                "wide": {
+                    "name": "Link",
+                    "hint": "X, LinkedIn, Facebook links"
+                }
+            }
         },
         "account": {
             "signIn": "Sign in",

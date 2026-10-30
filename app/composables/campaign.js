@@ -210,24 +210,25 @@ export function useCampaignPlayer(campaign) {
                 return
             }
             loaded.value = false
-            let pending = 3
-            const ready = () => {
-                if (--pending === 0) loaded.value = true
+            const seen = new Set()
+            const ready = (source) => {
+                seen.add(source)
+                if (seen.size === 3) loaded.value = true
             }
             const base = `campaigns/${campaign.id}/players/${uid}`
             stop.push(onSnapshot(doc($firestore, base), (snap) => {
                 const data = snap.data({serverTimestamps: 'estimate'})
                 player.value = data ? {track: data.track, startedOn: dateIn(tz, data.startedAt.toDate())} : null
-                ready()
-            }, ready))
+                ready('player')
+            }, () => ready('player')))
             stop.push(onSnapshot(collection($firestore, `${base}/days`), (snap) => {
                 completions.value = Object.fromEntries(snap.docs.map(d => [d.id, dateIn(tz, d.data({serverTimestamps: 'estimate'}).completedAt.toDate())]))
-                ready()
-            }, ready))
+                ready('days')
+            }, () => ready('days')))
             stop.push(onSnapshot(doc($firestore, `campaigns/${campaign.id}/profiles/${uid}`), (snap) => {
                 profile.value = snap.data() ?? null
-                ready()
-            }, ready))
+                ready('profile')
+            }, () => ready('profile')))
         }, {immediate: true})
         onScopeDispose(unsubscribe)
     }
@@ -344,19 +345,20 @@ export function useCampaignPublicPage(campaign, handle) {
                 return
             }
             const base = `campaigns/${campaign.id}/players/${data.ownerUid}`
-            let pending = 2
-            const ready = () => {
-                if (--pending === 0) loaded.value = true
+            const seen = new Set()
+            const ready = (source) => {
+                seen.add(source)
+                if (seen.size === 2) loaded.value = true
             }
             stop.push(onSnapshot(doc($firestore, base), (s) => {
                 const p = s.data({serverTimestamps: 'estimate'})
                 player.value = p ? {track: p.track, startedOn: dateIn(tz, p.startedAt.toDate())} : null
-                ready()
-            }, ready))
+                ready('player')
+            }, () => ready('player')))
             stop.push(onSnapshot(collection($firestore, `${base}/days`), (s) => {
                 completions.value = Object.fromEntries(s.docs.map(d => [d.id, dateIn(tz, d.data({serverTimestamps: 'estimate'}).completedAt.toDate())]))
-                ready()
-            }, ready))
+                ready('days')
+            }, () => ready('days')))
         }, () => {
             loaded.value = true
         }))

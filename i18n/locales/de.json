@@ -1631,6 +1631,7 @@
             "save": "Speichern",
             "cancel": "Abbrechen",
             "edit": "Profil bearbeiten",
+            "editShort": "Bearbeiten",
             "add": "Name und Avatar hinzufügen"
         },
         "public": {
@@ -1645,7 +1646,8 @@
             "ctaTitle": "Lust auf eine eigene Challenge?"
         },
         "share": {
-            "label": "Deine öffentliche Seite",
+            "label": "Teile deine Seite",
+            "more": "Weitere Optionen",
             "copy": "Link kopieren",
             "copied": "Kopiert!",
             "share": "Teilen"
@@ -1725,6 +1727,46 @@
             "avatarHint": "Wird neben deinem Namen auf deiner Seite angezeigt.",
             "previewHint": "So sehen Freunde und Unterstützer deine Seite.",
             "previewPlaceholder": "Wähle oben deine Challenge"
+        },
+        "today": {
+            "label": "Tag {day} · Rätsel des Tages",
+            "play": "Jetzt spielen",
+            "continue": "Weiter · {percent} %",
+            "catchUpLabel": "Nachholen · Tag {day}",
+            "catchUpNote": "Das hast du verpasst. Du kannst es noch spielen.",
+            "doneLabel": "Rätsel des Tages",
+            "doneTitle": "Geschafft! Gut gemacht.",
+            "doneNext": "Tag {day} wird morgen freigeschaltet."
+        },
+        "card": {
+            "started": "Ich mache die {days}-Tage-Challenge",
+            "down": "{n} geschafft.",
+            "toGo": "Noch {n}.",
+            "finished": "Alle {days} geschafft!",
+            "pledge": "Ich unterstütze {org} mit dieser Challenge: {headline}. Ich freue mich über deine Unterstützung!",
+            "sponsorMe": "Unterstütze mich",
+            "joinMe": "Mach mit",
+            "title": "Teile deinen Fortschritt",
+            "close": "Schließen",
+            "size": "Bildformat",
+            "making": "Dein Bild wird erstellt…",
+            "download": "Bild herunterladen",
+            "create": "Bild zum Teilen erstellen",
+            "shareProgress": "Teile deinen Fortschritt",
+            "formats": {
+                "square": {
+                    "name": "Beitrag",
+                    "hint": "Instagram, Facebook, LinkedIn"
+                },
+                "story": {
+                    "name": "Story",
+                    "hint": "Storys und WhatsApp-Status"
+                },
+                "wide": {
+                    "name": "Link",
+                    "hint": "Links auf X, LinkedIn, Facebook"
+                }
+            }
         },
         "account": {
             "signIn": "Anmelden",

@@ -144,9 +144,14 @@ async function start(trackId) {
             :percents="p.percents.value"
             :profile="p.profile.value"
             :edit-to="localePath(`/c/${campaign.id}/profile`)"
+            :share-url="p.profile.value?.handle ? pageUrl(p.profile.value.handle) : null"
+            :share-title="text('title')"
+            :share-card="!!p.profile.value?.handle"
             :fundraising="sample?.fundraising ?? null"
         >
-            <CampaignShareLink v-if="p.profile.value?.handle" :campaign="campaign" :handle="p.profile.value.handle" :title="text('title')" />
+            <template v-if="!p.progress.value.over" #lead>
+                <CampaignToday :campaign="campaign" :track="p.track.value" :progress="p.progress.value" :percents="p.percents.value" />
+            </template>
             <p v-if="p.progress.value.currentDay === 0" class="campaign-note">{{ t('campaign.beforeStart', {date: formatDate(p.progress.value.days[0].due)}) }}</p>
         </CampaignChallengeCard>
 

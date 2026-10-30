@@ -1632,6 +1632,7 @@
             "save": "Mentés",
             "cancel": "Mégse",
             "edit": "Profil szerkesztése",
+            "editShort": "Szerkesztés",
             "add": "Add meg a neved és az avatárod"
         },
         "public": {
@@ -1646,7 +1647,8 @@
             "ctaTitle": "Kedved támadt egy kihíváshoz?"
         },
         "share": {
-            "label": "Nyilvános oldalad",
+            "label": "Oszd meg az oldalad",
+            "more": "További lehetőségek",
             "copy": "Link másolása",
             "copied": "Másolva!",
             "share": "Megosztás"
@@ -1726,6 +1728,46 @@
             "avatarHint": "A neved mellett jelenik meg az oldaladon.",
             "previewHint": "Így látják majd az oldaladat a barátaid és támogatóid.",
             "previewPlaceholder": "Válaszd ki fent a kihívásod"
+        },
+        "today": {
+            "label": "{day}. nap · A mai rejtvény",
+            "play": "Játék most",
+            "continue": "Folytatás · {percent}%",
+            "catchUpLabel": "Pótlás · {day}. nap",
+            "catchUpNote": "Ez kimaradt. Még bepótolhatod.",
+            "doneLabel": "A mai rejtvény",
+            "doneTitle": "Kész! Szép munka.",
+            "doneNext": "A(z) {day}. nap holnap nyílik meg."
+        },
+        "card": {
+            "started": "Vállaltam a(z) {days} napos kihívást",
+            "down": "{n} kész.",
+            "toGo": "Még {n}.",
+            "finished": "Mind a(z) {days} kész!",
+            "pledge": "A(z) {org} támogatására vállaltam: {headline}. Örülnék a támogatásodnak!",
+            "sponsorMe": "Támogass",
+            "joinMe": "Csatlakozz",
+            "title": "Oszd meg a haladásod",
+            "close": "Bezárás",
+            "size": "Képméret",
+            "making": "A képed készül…",
+            "download": "Kép letöltése",
+            "create": "Megosztható kép készítése",
+            "shareProgress": "Oszd meg a haladásod",
+            "formats": {
+                "square": {
+                    "name": "Bejegyzés",
+                    "hint": "Instagram, Facebook, LinkedIn"
+                },
+                "story": {
+                    "name": "Történet",
+                    "hint": "Történetek és WhatsApp-állapot"
+                },
+                "wide": {
+                    "name": "Link",
+                    "hint": "X, LinkedIn, Facebook linkek"
+                }
+            }
         },
         "account": {
             "signIn": "Bejelentkezés",

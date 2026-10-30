@@ -1632,6 +1632,7 @@
             "save": "Zapisz",
             "cancel": "Anuluj",
             "edit": "Edytuj profil",
+            "editShort": "Edytuj",
             "add": "Dodaj imię i awatar"
         },
         "public": {
@@ -1646,7 +1647,8 @@
             "ctaTitle": "Masz ochotę na wyzwanie?"
         },
         "share": {
-            "label": "Twoja publiczna strona",
+            "label": "Udostępnij swoją stronę",
+            "more": "Więcej opcji",
             "copy": "Kopiuj link",
             "copied": "Skopiowano!",
             "share": "Udostępnij"
@@ -1726,6 +1728,46 @@
             "avatarHint": "Widoczny obok Twojego imienia na Twojej stronie.",
             "previewHint": "Tak Twoją stronę zobaczą znajomi i sponsorzy.",
             "previewPlaceholder": "Wybierz wyzwanie powyżej"
+        },
+        "today": {
+            "label": "Dzień {day} · Dzisiejsza łamigłówka",
+            "play": "Graj teraz",
+            "continue": "Kontynuuj · {percent}%",
+            "catchUpLabel": "Nadrabianie · Dzień {day}",
+            "catchUpNote": "Ta Cię ominęła. Nadal możesz w nią zagrać.",
+            "doneLabel": "Dzisiejsza łamigłówka",
+            "doneTitle": "Gotowe! Świetna robota.",
+            "doneNext": "Dzień {day} odblokuje się jutro."
+        },
+        "card": {
+            "started": "Podejmuję {days}-dniowe wyzwanie",
+            "down": "{n} za mną.",
+            "toGo": "Zostało {n}.",
+            "finished": "Wszystkie {days} za mną!",
+            "pledge": "Wspieram {org}, podejmując wyzwanie: {headline}. Będzie mi miło, jeśli mnie wesprzesz!",
+            "sponsorMe": "Wesprzyj mnie",
+            "joinMe": "Dołącz do mnie",
+            "title": "Udostępnij swoje postępy",
+            "close": "Zamknij",
+            "size": "Format obrazu",
+            "making": "Tworzę Twój obraz…",
+            "download": "Pobierz obraz",
+            "create": "Utwórz obraz do udostępnienia",
+            "shareProgress": "Udostępnij swoje postępy",
+            "formats": {
+                "square": {
+                    "name": "Post",
+                    "hint": "Instagram, Facebook, LinkedIn"
+                },
+                "story": {
+                    "name": "Relacja",
+                    "hint": "Relacje i status WhatsApp"
+                },
+                "wide": {
+                    "name": "Link",
+                    "hint": "Linki w X, LinkedIn, Facebook"
+                }
+            }
         },
         "account": {
             "signIn": "Zaloguj się",

@@ -55,6 +55,8 @@ const fundraising = computed(() => page.previewing ? campaign.preview?.fundraisi
                 :progress="page.progress.value"
                 :profile="page.profile.value"
                 :fundraising="fundraising"
+                :share-url="pageUrl(handle)"
+                :share-title="title"
                 :playable="false"
             />
 

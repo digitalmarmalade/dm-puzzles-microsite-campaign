@@ -1632,6 +1632,7 @@
             "save": "Guardar",
             "cancel": "Cancelar",
             "edit": "Editar perfil",
+            "editShort": "Editar",
             "add": "Añade tu nombre y avatar"
         },
         "public": {
@@ -1646,7 +1647,8 @@
             "ctaTitle": "¿Te animas a un reto?"
         },
         "share": {
-            "label": "Tu página pública",
+            "label": "Comparte tu página",
+            "more": "Más opciones",
             "copy": "Copiar enlace",
             "copied": "¡Copiado!",
             "share": "Compartir"
@@ -1726,6 +1728,46 @@
             "avatarHint": "Se muestra junto a tu nombre en tu página.",
             "previewHint": "Así verán tu página tus amigos y patrocinadores.",
             "previewPlaceholder": "Elige tu reto arriba"
+        },
+        "today": {
+            "label": "Día {day} · Puzle de hoy",
+            "play": "Jugar ahora",
+            "continue": "Continuar · {percent} %",
+            "catchUpLabel": "Recupera · Día {day}",
+            "catchUpNote": "Te lo perdiste. Aún estás a tiempo de jugarlo.",
+            "doneLabel": "Puzle de hoy",
+            "doneTitle": "¡Hecho! Buen trabajo.",
+            "doneNext": "El día {day} se desbloquea mañana."
+        },
+        "card": {
+            "started": "Estoy haciendo el reto de {days} días",
+            "down": "{n} hechos.",
+            "toGo": "Faltan {n}.",
+            "finished": "¡Los {days} hechos!",
+            "pledge": "Apoyo a {org} con este reto: {headline}. ¡Me encantaría contar con tu apoyo!",
+            "sponsorMe": "Patrocíname",
+            "joinMe": "Únete",
+            "title": "Comparte tu progreso",
+            "close": "Cerrar",
+            "size": "Formato de imagen",
+            "making": "Creando tu imagen…",
+            "download": "Descargar imagen",
+            "create": "Crear una imagen para compartir",
+            "shareProgress": "Comparte tu progreso",
+            "formats": {
+                "square": {
+                    "name": "Publicación",
+                    "hint": "Instagram, Facebook, LinkedIn"
+                },
+                "story": {
+                    "name": "Historia",
+                    "hint": "Historias y estado de WhatsApp"
+                },
+                "wide": {
+                    "name": "Enlace",
+                    "hint": "Enlaces en X, LinkedIn, Facebook"
+                }
+            }
         },
         "account": {
             "signIn": "Iniciar sesión",

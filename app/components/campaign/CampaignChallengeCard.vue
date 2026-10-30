@@ -8,6 +8,9 @@ const props = defineProps({
     fundraising: {type: Object, default: null},
     playable: {type: Boolean, default: true},
     editTo: {type: String, default: null},
+    shareUrl: {type: String, default: null},
+    shareTitle: {type: String, default: ''},
+    shareCard: {type: Boolean, default: false},
 })
 
 const {t} = useI18n()
@@ -17,11 +20,22 @@ const total = props.campaign.schedule.days
 const title = computed(() => props.profile?.name ? t('campaign.namedChallenge', {name: props.profile.name}) : t('campaign.yourChallenge'))
 const initial = computed(() => (props.profile?.name ?? '').trim().charAt(0).toUpperCase())
 const money = (amount) => new Intl.NumberFormat(dateLocale.value, {style: 'currency', currency: props.fundraising?.currency ?? 'GBP', maximumFractionDigits: 0}).format(amount)
+const shareCardDialog = ref(null)
+const openShareCard = () => shareCardDialog.value?.open()
+provide('shareCard', {available: toRef(props, 'shareCard'), open: openShareCard})
 const raisedPercent = computed(() => props.fundraising?.target ? props.fundraising.raised / props.fundraising.target * 100 : null)
 </script>
 
 <template>
     <section class="challenge-card">
+        <div v-if="shareUrl || editTo" class="challenge-card__tools">
+            <CampaignShareMenu v-if="shareUrl" :url="shareUrl" :title="shareTitle" :on-card="shareCard ? openShareCard : null" />
+            <NuxtLink v-if="editTo" :to="editTo" class="campaign-pill">
+                <svg aria-hidden="true"><use :href="sprite('edit')" /></svg>
+                {{ t(profile ? 'campaign.profile.editShort' : 'campaign.profile.add') }}
+            </NuxtLink>
+        </div>
+
         <header class="challenge-card__header">
             <img v-if="profile?.avatar" :src="profile.avatar" alt="" class="challenge-card__avatar challenge-card__avatar--image">
             <span v-else-if="initial" class="challenge-card__avatar challenge-card__avatar--initial" aria-hidden="true">{{ initial }}</span>
@@ -29,7 +43,6 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
                 <h1 class="challenge-card__title">{{ title }}</h1>
                 <p v-if="track.headline" class="challenge-card__headline">{{ track.headline }}</p>
                 <blockquote v-if="profile?.reason" class="challenge-card__reason">{{ profile.reason }}</blockquote>
-                <NuxtLink v-if="editTo" :to="editTo" class="challenge-card__edit">{{ t(profile ? 'campaign.profile.edit' : 'campaign.profile.add') }}</NuxtLink>
             </div>
             <a v-if="fundraising?.url" :href="fundraising.url" class="campaign-button challenge-card__sponsor" target="_blank" rel="noopener">
                 {{ t('campaign.sponsor') }}
@@ -38,6 +51,8 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
                 </svg>
             </a>
         </header>
+
+        <slot name="lead" />
 
         <div class="challenge-card__stats">
             <CampaignStat
@@ -69,11 +84,22 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
             :percents="percents"
             :playable="playable"
         />
+
+        <CampaignShareCard
+            v-if="shareCard"
+            ref="shareCardDialog"
+            :campaign="campaign"
+            :track="track"
+            :progress="progress"
+            :url="shareUrl"
+            :fundraising="fundraising"
+        />
     </section>
 </template>
 
 <style scoped>
 .challenge-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
@@ -166,12 +192,20 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
     text-wrap: pretty;
 }
 
-.challenge-card__edit {
-    display: inline-block;
-    margin-block-start: .8rem;
-    color: var(--primary);
-    font-size: 1.4rem;
-    font-weight: 600;
+.challenge-card__tools {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    gap: .8rem;
+    margin-block-end: -1.2rem;
+
+    @media (width >= 720px) {
+        position: absolute;
+        z-index: 3;
+        inset-block-start: 2rem;
+        inset-inline-end: 2rem;
+        margin: 0;
+    }
 }
 
 .challenge-card__sponsor {
