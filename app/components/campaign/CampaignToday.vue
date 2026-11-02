@@ -279,25 +279,27 @@ onBeforeUnmount(() => clearInterval(clock))
     align-items: center;
     justify-content: center;
     gap: .8rem;
-    flex: 1 1 100%;
-    padding: 1.6rem 3.2rem;
+    margin-inline: auto;
+    padding: 1.1rem 2.4rem;
     border-radius: 9999px;
     background: var(--card-background);
     color: var(--primary);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 6px 16px rgba(0, 0, 0, .15);
     transition: transform .15s ease, box-shadow .15s ease;
 
     svg {
-        inline-size: 1.8rem;
-        block-size: 1.8rem;
+        inline-size: 1.4rem;
+        block-size: 1.4rem;
         fill: currentColor;
     }
 
     @media (width >= 720px) {
-        flex: none;
+        margin-inline: 0;
+        padding: 1.4rem 2.8rem;
+        font-size: 1.7rem;
     }
 
     @media (hover: hover) {

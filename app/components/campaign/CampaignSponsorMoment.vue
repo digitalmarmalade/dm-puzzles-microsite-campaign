@@ -80,16 +80,16 @@ async function sayThanks() {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1.6rem 2.4rem;
-    padding: 2.4rem;
-    border: .2rem solid color-mix(in srgb, var(--secondary) 40%, transparent);
+    gap: 1.2rem 1.6rem;
+    padding: 1.4rem 1.6rem;
+    border: .1rem solid color-mix(in srgb, var(--secondary) 40%, transparent);
     border-radius: var(--border-radius);
     background: color-mix(in srgb, var(--secondary) 8%, var(--card-background));
+    color: var(--text-colour);
     animation: moment-in .5s cubic-bezier(.2, 1.4, .4, 1) both;
 
     @media (width >= 720px) {
-        flex-wrap: nowrap;
-        padding: 2.4rem 3.2rem;
+        padding: 1.4rem 2rem;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -101,12 +101,12 @@ async function sayThanks() {
     display: grid;
     place-items: center;
     flex-shrink: 0;
-    inline-size: 7.2rem;
-    block-size: 7.2rem;
+    inline-size: 4.4rem;
+    block-size: 4.4rem;
     border-radius: 50%;
     background: var(--card-background);
-    font-size: 3.6rem;
-    box-shadow: 0 6px 16px color-mix(in srgb, var(--secondary) 25%, transparent);
+    font-size: 2.2rem;
+    box-shadow: 0 3px 8px color-mix(in srgb, var(--secondary) 25%, transparent);
 }
 
 .moment__text {
@@ -121,20 +121,21 @@ async function sayThanks() {
 
 .moment__label {
     color: var(--secondary);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: .12rem;
+    letter-spacing: .1rem;
 }
 
 .moment__title {
     font-family: var(--font-display);
-    font-size: 2.4rem;
-    line-height: 1.2;
+    font-size: 1.8rem;
+    line-height: 1.25;
 }
 
 .moment__message {
-    margin-block-start: .4rem;
+    margin-block-start: .2rem;
+    font-size: 1.4rem;
     font-style: italic;
     opacity: .85;
 }
@@ -142,10 +143,11 @@ async function sayThanks() {
 .moment__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: .8rem;
+    gap: .6rem;
 
     .campaign-button {
-        padding: 1rem 2rem;
+        padding: .7rem 1.6rem;
+        font-size: 1.4rem;
     }
 }
 

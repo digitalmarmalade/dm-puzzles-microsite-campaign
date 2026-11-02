@@ -1,5 +1,6 @@
 import {DEFAULT_TIMEZONE, addDays, daysBetween, isIsoDate} from './dates.js'
 import {validateProfileSettings} from './profile.js'
+import {SKINS} from './advent.js'
 
 export const PLAYABLE = ['today', 'catchup', 'done', 'late']
 
@@ -103,6 +104,7 @@ export function validateCampaign(campaign) {
     errors.push(...validateProfileSettings(campaign.profile))
     if (campaign.sampleFundraising !== undefined && typeof campaign.sampleFundraising !== 'boolean') errors.push('sampleFundraising must be true or false')
     if (campaign.organisation !== undefined && (typeof campaign.organisation !== 'string' || !campaign.organisation)) errors.push('organisation must be text')
+    if (campaign.theme?.skin !== undefined && !SKINS.includes(campaign.theme.skin)) errors.push(`theme.skin must be one of ${SKINS.join(', ')}`)
     for (const key of ['logo', 'banner', 'bannerFocus']) {
         const value = campaign.theme?.[key]
         if (value !== undefined && (typeof value !== 'string' || !value)) errors.push(`theme.${key} must be text`)

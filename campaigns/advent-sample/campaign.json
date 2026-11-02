@@ -16,9 +16,10 @@
     }
   },
   "theme": {
+    "skin": "advent",
     "primary": "#b3262f",
     "onPrimary": "#ffffff",
-    "background": "#fbf6ef",
+    "background": "#0a1940",
     "text": "#2a1414"
   },
   "text": {

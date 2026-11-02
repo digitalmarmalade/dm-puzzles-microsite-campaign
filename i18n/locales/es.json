@@ -1611,6 +1611,9 @@
         "previewing": "Vista previa como {date}. El progreso solo se guarda en esta pestaña.",
         "stopPreview": "Salir de la vista previa",
         "lateBadge": "Tarde",
+        "advent": {
+            "open": "Abrir la puerta {day}"
+        },
         "namedChallenge": "El reto de {name}",
         "yourChallenge": "Tu reto",
         "daysCompleted": "Días completados",
@@ -1782,8 +1785,8 @@
         },
         "streak": {
             "value": "{n}",
-            "label": "Racha puntual",
-            "labelBest": "Racha puntual · récord {best}"
+            "label": "Racha",
+            "labelBest": "Racha · récord {best}"
         },
         "milestones": {
             "title": "Hitos",

@@ -106,7 +106,7 @@ onBeforeUnmount(() => {
 <template>
     <div class="campaign-play" :style="useCampaignTheme(campaign)">
         <Title>{{ t('campaign.dayN', {day}) }} · {{ text('title') }}</Title>
-        <NuxtLink :to="homePath" class="campaign-play__back">
+        <NuxtLink :to="homePath" class="campaign-play__back" :aria-label="t('campaign.back')">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="15 18 9 12 15 6" />
             </svg>
@@ -134,14 +134,16 @@ body:has(.campaign-play) {
 
 .campaign-play__back {
     position: fixed;
-    inset-block-start: .8rem;
-    inset-inline-start: .8rem;
+    inset-block-start: .6rem;
+    inset-inline-start: .6rem;
     z-index: 51;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: .6rem;
-    padding: 0 1.4rem;
-    block-size: 3.6rem;
+    min-inline-size: 5rem;
+    block-size: 4rem;
+    padding: 0 1.2rem;
     border-radius: 9999px;
     background: var(--primary);
     color: var(--text-on-primary);
@@ -150,8 +152,28 @@ body:has(.campaign-play) {
     text-decoration: none;
 
     svg {
-        inline-size: 1.6rem;
-        block-size: 1.6rem;
+        inline-size: 2rem;
+        block-size: 2rem;
+    }
+
+    span {
+        display: none;
+    }
+
+    @media (width >= 720px) {
+        inset-block-start: 1.4rem;
+        inset-inline-start: max(1.4rem, (100vw - 1440px) / 2 + 2rem);
+        min-inline-size: 0;
+        block-size: 3.6rem;
+
+        svg {
+            inline-size: 1.6rem;
+            block-size: 1.6rem;
+        }
+
+        span {
+            display: inline;
+        }
     }
 }
 

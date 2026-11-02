@@ -48,7 +48,7 @@ useHead({
 </script>
 
 <template>
-    <div class="campaign" :style="useCampaignTheme(campaign)">
+    <div class="campaign" :class="{'campaign--snowy': campaign.theme?.skin === 'advent'}" :style="useCampaignTheme(campaign)">
         <p v-if="previewing" class="campaign__preview" role="status">
             {{ t('campaign.previewing', {date: previewing}) }}
             <a :href="`${route.path}?today=off`">{{ t('campaign.stopPreview') }}</a>
@@ -137,6 +137,37 @@ body:has(.campaign, .campaign-play) {
 
     @media (width >= 1200px) {
         --page-gutter: 4.8rem;
+    }
+
+    &.campaign--snowy {
+        background: radial-gradient(120% 60rem at 50% 0, #154d99 0%, transparent 70%), var(--app-bg);
+
+        .campaign__top:not(.has-banner) .campaign__title,
+        .campaign__top:not(.has-banner) .campaign__nav,
+        .explainer,
+        .campaign-account,
+        .campaign-note {
+            color: #fff;
+        }
+
+        .explainer {
+            border-color: rgba(255, 255, 255, .12);
+            background: rgba(255, 255, 255, .05);
+        }
+
+        .explainer .campaign-heading {
+            color: var(--advent-gold-light, #f6d98e);
+        }
+
+        .campaign__footer {
+            border-color: rgba(255, 255, 255, .12);
+            background: transparent;
+            color: rgba(255, 255, 255, .8);
+
+            a {
+                color: #f6d98e;
+            }
+        }
     }
 }
 

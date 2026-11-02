@@ -1610,6 +1610,9 @@
         "previewing": "Vorschau für den {date}. Der Fortschritt bleibt nur in diesem Tab.",
         "stopPreview": "Vorschau beenden",
         "lateBadge": "Spät",
+        "advent": {
+            "open": "Türchen {day} öffnen"
+        },
         "namedChallenge": "{name}s Challenge",
         "yourChallenge": "Deine Challenge",
         "daysCompleted": "Tage geschafft",
@@ -1781,8 +1784,8 @@
         },
         "streak": {
             "value": "{n}",
-            "label": "Pünktlich-Serie",
-            "labelBest": "Pünktlich-Serie · Rekord {best}"
+            "label": "Serie",
+            "labelBest": "Serie · Rekord {best}"
         },
         "milestones": {
             "title": "Meilensteine",

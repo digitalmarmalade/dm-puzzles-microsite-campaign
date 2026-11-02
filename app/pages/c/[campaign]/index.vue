@@ -24,6 +24,8 @@ watchEffect(() => {
     if (p.user.value && !p.user.value.isAnonymous) navigateTo(welcomePath, {replace: true})
 })
 
+const snowy = campaign.theme?.skin === 'advent'
+const heroBanner = campaign.theme?.banner ?? (snowy ? '/img/advent/scene.svg' : null)
 const hero = ref(null)
 const heroImage = ref(null)
 const PARALLAX = .15
@@ -72,16 +74,17 @@ async function begin() {
 
 <template>
     <CampaignShell :campaign="campaign" :previewing="p.previewing ? p.today.value : null">
-        <template v-if="p.loaded.value && !p.player.value && campaign.theme?.banner" #banner>
+        <template v-if="p.loaded.value && !p.player.value && heroBanner" #banner>
             <section ref="hero" class="campaign-hero">
                 <img
                     ref="heroImage"
-                    :src="campaign.theme.banner"
+                    :src="heroBanner"
                     alt=""
                     class="campaign-hero__image"
-                    :style="{objectPosition: campaign.theme.bannerFocus ?? 'center'}"
+                    :style="{objectPosition: campaign.theme?.bannerFocus ?? 'center'}"
                     fetchpriority="high"
                 >
+                <CampaignSnow v-if="snowy" :density="1.5" />
                 <div class="campaign-hero__inner">
                     <h1 class="campaign-hero__title"><span>{{ text('tagline') || text('title') }}</span></h1>
                 </div>
@@ -90,7 +93,7 @@ async function begin() {
 
         <p v-if="!p.loaded.value" class="campaign-note">{{ t('campaign.loading') }}</p>
 
-        <div v-else-if="!p.player.value" class="campaign-landing" :class="{'has-banner': campaign.theme?.banner}">
+        <div v-else-if="!p.player.value" class="campaign-landing" :class="{'has-banner': heroBanner}">
             <aside class="campaign-landing__action">
                 <CampaignSignIn
                     v-if="campaign.account === 'required' && (p.previewing || p.needsAccount.value)"
@@ -114,7 +117,7 @@ async function begin() {
                 </div>
             </aside>
 
-            <CampaignExplainer :campaign="campaign" :show-title="!campaign.theme?.banner" class="campaign-landing__explainer" />
+            <CampaignExplainer :campaign="campaign" :show-title="!heroBanner" class="campaign-landing__explainer" />
         </div>
 
         <CampaignDetails v-if="p.loaded.value && !p.player.value" :campaign="campaign" />
@@ -148,15 +151,17 @@ async function begin() {
             :thanked-key="`campaign-sponsors:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}:thanked`"
         >
             <template v-if="!p.progress.value.over" #lead>
-                <CampaignSponsorMoment
-                    v-if="fundraising?.supporters"
-                    :campaign="campaign"
-                    :fundraising="fundraising"
-                    :share-url="p.profile.value?.handle ? pageUrl(p.profile.value.handle) : null"
-                    :storage-key="`campaign-sponsors:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}`"
-                />
                 <CampaignMilestoneUnlock :colours="[campaign.theme?.primary, campaign.theme?.secondary, '#ffd166'].filter(Boolean)" :progress="p.progress.value" :storage-key="`campaign-milestones-seen:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}`" />
-                <CampaignToday :campaign="campaign" :track="p.track.value" :progress="p.progress.value" :percents="p.percents.value" :times="p.times.value" :previewing="p.previewing" />
+                <div class="challenge-lead">
+                    <CampaignToday v-if="!snowy" :campaign="campaign" :track="p.track.value" :progress="p.progress.value" :percents="p.percents.value" :times="p.times.value" :previewing="p.previewing" />
+                    <CampaignSponsorMoment
+                        v-if="fundraising?.supporters"
+                        :campaign="campaign"
+                        :fundraising="fundraising"
+                        :share-url="p.profile.value?.handle ? pageUrl(p.profile.value.handle) : null"
+                        :storage-key="`campaign-sponsors:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}`"
+                    />
+                </div>
             </template>
             <p v-if="p.progress.value.currentDay === 0" class="campaign-note">{{ t('campaign.beforeStart', {date: formatDate(p.progress.value.days[0].due)}) }}</p>
         </CampaignChallengeCard>
@@ -169,6 +174,21 @@ async function begin() {
 </template>
 
 <style scoped>
+.challenge-lead {
+    display: grid;
+    gap: 2.4rem;
+
+    &:empty {
+        display: none;
+    }
+
+    @media (width >= 1024px) {
+        &:has(> .today + .moment) {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+}
+
 .campaign-landing {
     display: grid;
     align-items: start;

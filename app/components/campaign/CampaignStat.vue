@@ -46,6 +46,7 @@ const dash = computed(() => `${CIRCUMFERENCE * Math.min(100, Math.max(0, props.p
     border: 1px solid var(--card-border);
     border-radius: var(--border-radius-inner);
     background: var(--card-background);
+    color: var(--text-colour);
 }
 
 .campaign-stat--side {

@@ -1611,6 +1611,9 @@
         "previewing": "Anteprima al {date}. I progressi restano solo in questa scheda.",
         "stopPreview": "Interrompi anteprima",
         "lateBadge": "Ritardo",
+        "advent": {
+            "open": "Apri la porta {day}"
+        },
         "namedChallenge": "La sfida di {name}",
         "yourChallenge": "La tua sfida",
         "daysCompleted": "Giorni completati",
@@ -1782,8 +1785,8 @@
         },
         "streak": {
             "value": "{n}",
-            "label": "Serie puntuale",
-            "labelBest": "Serie puntuale · record {best}"
+            "label": "Serie",
+            "labelBest": "Serie · record {best}"
         },
         "milestones": {
             "title": "Traguardi",

@@ -1611,6 +1611,9 @@
         "previewing": "Előnézet: {date}. A haladás csak ezen a lapon marad meg.",
         "stopPreview": "Előnézet leállítása",
         "lateBadge": "Késve",
+        "advent": {
+            "open": "{day}. ajtó kinyitása"
+        },
         "namedChallenge": "{name} kihívása",
         "yourChallenge": "A te kihívásod",
         "daysCompleted": "Teljesített nap",
@@ -1782,8 +1785,8 @@
         },
         "streak": {
             "value": "{n}",
-            "label": "Időben teljesített sorozat",
-            "labelBest": "Időben teljesített sorozat · rekord {best}"
+            "label": "Sorozat",
+            "labelBest": "Sorozat · rekord {best}"
         },
         "milestones": {
             "title": "Mérföldkövek",

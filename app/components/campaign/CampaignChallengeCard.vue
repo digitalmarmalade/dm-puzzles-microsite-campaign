@@ -29,22 +29,24 @@ const money = useMoney(props.fundraising?.currency)
 const shareCardDialog = ref(null)
 const openShareCard = () => shareCardDialog.value?.open()
 provide('shareCard', {available: toRef(props, 'shareCard'), open: openShareCard})
+const snowy = props.campaign.theme?.skin === 'advent'
 const raisedPercent = computed(() => props.fundraising?.target ? props.fundraising.raised / props.fundraising.target * 100 : null)
 </script>
 
 <template>
-    <section class="challenge-card">
-        <div v-if="shareUrl || editTo" class="challenge-card__tools">
+    <section class="challenge-card" :class="{'challenge-card--snowy': snowy}">
+        <CampaignSnow v-if="snowy" class="challenge-card__snow" :density="2" />
+        <div v-if="shareUrl || (editTo && !snowy)" class="challenge-card__tools">
             <CampaignShareMenu v-if="shareUrl" :url="shareUrl" :title="shareTitle" :on-card="shareCard ? openShareCard : null" />
-            <NuxtLink v-if="editTo" :to="editTo" class="campaign-pill">
+            <NuxtLink v-if="editTo && !snowy" :to="editTo" class="campaign-pill">
                 <svg aria-hidden="true"><use :href="sprite('edit')" /></svg>
                 {{ t(profile ? 'campaign.profile.editShort' : 'campaign.profile.add') }}
             </NuxtLink>
         </div>
 
         <header class="challenge-card__header">
-            <img v-if="profile?.avatar" :src="profile.avatar" alt="" class="challenge-card__avatar challenge-card__avatar--image">
-            <span v-else-if="initial" class="challenge-card__avatar challenge-card__avatar--initial" aria-hidden="true">{{ initial }}</span>
+            <img v-if="profile?.avatar && !snowy" :src="profile.avatar" alt="" class="challenge-card__avatar challenge-card__avatar--image">
+            <span v-else-if="initial && !snowy" class="challenge-card__avatar challenge-card__avatar--initial" aria-hidden="true">{{ initial }}</span>
             <div class="challenge-card__titles">
                 <h1 class="challenge-card__title">{{ title }}</h1>
                 <p v-if="track.headline" class="challenge-card__headline">{{ track.headline }}</p>
@@ -129,6 +131,100 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
         gap: 4rem;
         padding: 4rem;
     }
+
+    &.challenge-card--snowy {
+        --advent-night: #154d99;
+        --advent-night-deep: #071b57;
+        --advent-night-light: #6196c7;
+        --advent-gold: #e8b64c;
+        --advent-gold-light: #f6d98e;
+        --advent-paper: #f8f1e3;
+        --advent-ink: #1d2a4d;
+
+        isolation: isolate;
+        background: linear-gradient(180deg, var(--advent-night-deep) 0%, var(--advent-night) 45%, var(--advent-night-light) 100%);
+        color: #fff;
+    }
+}
+
+.challenge-card__snow {
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.challenge-card--snowy :deep(.campaign-heading),
+.challenge-card--snowy .challenge-card__headline {
+    color: var(--advent-gold-light);
+}
+
+.challenge-card--snowy .challenge-card__reason {
+    border-color: var(--advent-gold);
+}
+
+.challenge-card--snowy :deep(.campaign-stat),
+.challenge-card--snowy :deep(.milestone) {
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(7, 27, 87, .45);
+    color: #fff;
+    backdrop-filter: blur(2px);
+}
+
+.challenge-card--snowy :deep(.solve-times__stat) {
+    border-color: rgba(255, 255, 255, .25);
+}
+
+.challenge-card--snowy :deep(.solve-times__stat--fastest) {
+    border-color: rgba(255, 255, 255, .25);
+    background: none;
+    color: inherit;
+
+    .solve-times__value {
+        color: inherit;
+    }
+}
+
+.challenge-card--snowy :deep(.campaign-stat__arc),
+.challenge-card--snowy :deep(.campaign-stat__flame) {
+    color: #fff;
+    stroke: #fff;
+}
+
+.challenge-card--snowy :deep(.campaign-stat__track) {
+    stroke: rgba(255, 255, 255, .2);
+}
+
+.challenge-card--snowy :deep(.unlock) {
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(7, 27, 87, .45);
+    color: #fff;
+    backdrop-filter: blur(2px);
+}
+
+.challenge-card--snowy :deep(.unlock__label) {
+    color: var(--advent-gold-light);
+}
+
+.challenge-card--snowy :deep(.unlock .campaign-button.is-secondary) {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .6);
+    color: #fff;
+}
+
+.challenge-card--snowy :deep(.milestone:not(.is-reached)) {
+    border-style: dashed;
+    border-color: rgba(255, 255, 255, .3);
+    background: rgba(7, 27, 87, .25);
+}
+
+.challenge-card--snowy :deep(.milestone__badge) {
+    border-color: rgba(255, 255, 255, .45);
+    color: rgba(255, 255, 255, .7);
+}
+
+.challenge-card--snowy :deep(.milestone.is-reached .milestone__badge),
+.challenge-card--snowy :deep(.unlock__badge) {
+    background: #fff;
+    color: var(--advent-night-deep);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .25);
 }
 
 .challenge-card__header {
@@ -210,18 +306,29 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
 }
 
 .challenge-card__tools {
-    position: relative;
+    position: absolute;
+    z-index: 3;
+    inset-block-start: 2rem;
+    inset-inline-end: 1.6rem;
     display: flex;
     justify-content: flex-end;
     gap: .8rem;
-    margin-block-end: -1.2rem;
 
     @media (width >= 720px) {
-        position: absolute;
-        z-index: 3;
-        inset-block-start: 2rem;
         inset-inline-end: 2rem;
-        margin: 0;
+    }
+
+    .challenge-card:not(:has(.challenge-card__avatar)) & {
+        position: relative;
+        inset: auto;
+        margin-block-end: -1.2rem;
+
+        @media (width >= 720px) {
+            position: absolute;
+            inset-block-start: 2rem;
+            inset-inline-end: 2rem;
+            margin: 0;
+        }
     }
 }
 

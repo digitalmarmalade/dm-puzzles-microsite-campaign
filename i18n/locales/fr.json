@@ -1611,6 +1611,9 @@
         "previewing": "Aperçu au {date}. La progression n'est conservée que dans cet onglet.",
         "stopPreview": "Arrêter l'aperçu",
         "lateBadge": "Retard",
+        "advent": {
+            "open": "Ouvrir la porte {day}"
+        },
         "namedChallenge": "Le défi de {name}",
         "yourChallenge": "Votre défi",
         "daysCompleted": "Jours terminés",
@@ -1782,8 +1785,8 @@
         },
         "streak": {
             "value": "{n}",
-            "label": "Série à l'heure",
-            "labelBest": "Série à l'heure · record {best}"
+            "label": "Série",
+            "labelBest": "Série · record {best}"
         },
         "milestones": {
             "title": "Étapes",

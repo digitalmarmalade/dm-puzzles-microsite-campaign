@@ -97,6 +97,7 @@ function duration(seconds) {
     grid-column: 1 / -1;
     border-color: color-mix(in srgb, var(--primary) 30%, var(--card-border));
     background: color-mix(in srgb, var(--primary) 5%, var(--card-background));
+    color: var(--text-colour);
 
     @media (width >= 720px) {
         grid-column: auto;
@@ -155,6 +156,7 @@ function duration(seconds) {
     padding: 1rem 1.4rem;
     border-radius: var(--border-radius-inner);
     background: color-mix(in srgb, var(--primary) 4%, var(--card-background));
+    color: var(--text-colour);
 }
 
 .solve-times__icon {

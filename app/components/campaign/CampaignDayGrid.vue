@@ -12,7 +12,14 @@ const dayUrl = (day) => props.playable ? localePath(`/c/${props.campaign.id}/day
 </script>
 
 <template>
-    <div class="campaign-day-grid">
+    <CampaignAdventCalendar
+        v-if="campaign.theme?.skin === 'advent'"
+        :campaign="campaign"
+        :days="days"
+        :puzzles="puzzles"
+        :day-url="dayUrl"
+    />
+    <div v-else class="campaign-day-grid">
         <ArchivePuzzleCardGrid>
             <CampaignDayCard
                 v-for="d in days"
@@ -35,5 +42,10 @@ const dayUrl = (day) => props.playable ? localePath(`/c/${props.campaign.id}/day
     @media (width >= 600px) {
         padding: 5rem 3rem;
     }
+}
+
+.puzzle-card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--col), (100% - var(--grid-gap) * 6) / 7), 1fr));
+    max-inline-size: none;
 }
 </style>

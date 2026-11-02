@@ -53,6 +53,11 @@ const percent = computed(() => props.fundraising.target ? Math.min(100, props.fu
     gap: .8rem;
     flex: 1 1 24rem;
     min-inline-size: 0;
+    text-align: center;
+
+    @media (width >= 720px) {
+        text-align: start;
+    }
 }
 
 .sponsor-cta__title {
@@ -91,25 +96,27 @@ const percent = computed(() => props.fundraising.target ? Math.min(100, props.fu
     align-items: center;
     justify-content: center;
     gap: .8rem;
-    flex: 1 1 100%;
-    padding: 1.6rem 3.2rem;
+    margin-inline: auto;
+    padding: 1.1rem 2.4rem;
     border-radius: 9999px;
     background: #fff;
     color: var(--secondary);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 6px 16px rgba(0, 0, 0, .15);
     transition: transform .15s ease;
 
     svg {
-        inline-size: 2rem;
-        block-size: 2rem;
+        inline-size: 1.6rem;
+        block-size: 1.6rem;
         fill: var(--primary);
     }
 
     @media (width >= 720px) {
-        flex: none;
+        margin-inline: 0;
+        padding: 1.4rem 2.8rem;
+        font-size: 1.7rem;
     }
 
     @media (hover: hover) {

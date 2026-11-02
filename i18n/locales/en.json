@@ -1617,6 +1617,9 @@
         "previewing": "Previewing as {date}. Progress is only kept in this tab.",
         "stopPreview": "Stop previewing",
         "lateBadge": "Late",
+        "advent": {
+            "open": "Open door {day}"
+        },
         "namedChallenge": "{name}'s Challenge",
         "yourChallenge": "Your Challenge",
         "daysCompleted": "Days completed",
@@ -1788,8 +1791,8 @@
         },
         "streak": {
             "value": "{n}",
-            "label": "On-time streak",
-            "labelBest": "On-time streak · best {best}"
+            "label": "Streak",
+            "labelBest": "Streak · best {best}"
         },
         "milestones": {
             "title": "Milestones",

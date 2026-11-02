@@ -73,6 +73,7 @@ function share() {
     border: .2rem solid color-mix(in srgb, var(--primary) 40%, transparent);
     border-radius: var(--border-radius);
     background: color-mix(in srgb, var(--primary) 6%, var(--card-background));
+    color: var(--text-colour);
     animation: unlock-in .5s cubic-bezier(.2, 1.4, .4, 1) both;
 
     @media (width >= 720px) {

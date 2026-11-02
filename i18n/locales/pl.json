@@ -1611,6 +1611,9 @@
         "previewing": "Podgląd na dzień {date}. Postęp jest zapisywany tylko w tej karcie.",
         "stopPreview": "Zakończ podgląd",
         "lateBadge": "Późno",
+        "advent": {
+            "open": "Otwórz okienko {day}"
+        },
         "namedChallenge": "Wyzwanie: {name}",
         "yourChallenge": "Twoje wyzwanie",
         "daysCompleted": "Ukończone dni",
@@ -1782,8 +1785,8 @@
         },
         "streak": {
             "value": "{n}",
-            "label": "Seria na czas",
-            "labelBest": "Seria na czas · rekord {best}"
+            "label": "Seria",
+            "labelBest": "Seria · rekord {best}"
         },
         "milestones": {
             "title": "Kamienie milowe",

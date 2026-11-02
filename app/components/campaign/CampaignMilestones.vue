@@ -57,6 +57,7 @@ const items = computed(() => milestones(props.progress))
         border-style: solid;
         border-color: color-mix(in srgb, var(--primary) 30%, var(--card-border));
         background: color-mix(in srgb, var(--primary) 5%, var(--card-background));
+        color: var(--text-colour);
         opacity: 1;
     }
 }

@@ -73,6 +73,7 @@ const hue = (name) => [...(name ?? '')].reduce((sum, c) => sum + c.charCodeAt(0)
     padding: 2.4rem 2rem;
     border-radius: var(--border-radius);
     background: color-mix(in srgb, var(--secondary) 6%, var(--card-background));
+    color: var(--text-colour);
 
     @media (width >= 720px) {
         padding: 3.2rem;
@@ -167,6 +168,7 @@ const hue = (name) => [...(name ?? '')].reduce((sum, c) => sum + c.charCodeAt(0)
     padding: 1.4rem 1.6rem;
     border-radius: var(--border-radius-inner);
     background: var(--card-background);
+    color: var(--text-colour);
     box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
 }
 
