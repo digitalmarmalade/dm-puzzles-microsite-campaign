@@ -1611,7 +1611,23 @@
         "stopPreview": "Vorschau beenden",
         "lateBadge": "Spät",
         "advent": {
-            "open": "Türchen {day} öffnen"
+            "open": "Schublade {day} öffnen",
+            "kicker": "Tag {day} · {date}",
+            "playAgain": "Nochmal spielen",
+            "todayRule": "Löse es heute, um deine Serie fortzusetzen.",
+            "catchUpUntil": "Dieses war am {date} fällig. Du kannst es noch bis zum {until} nachholen.",
+            "catchUpAny": "Dieses war am {date} fällig. Du kannst es noch nachholen.",
+            "doneRule": "Du hast es gelöst. Gut gemacht!",
+            "lines": {
+                "l1": "Mach dir eine heiße Schokolade und lehn dich zurück. Das heutige Rätsel wartet.",
+                "l2": "Eine Kleinigkeit, die an kalten Tagen den Kopf warm hält.",
+                "l3": "Noch eine Schublade, noch ein Rätsel. Der Countdown läuft.",
+                "l4": "Setz den Wasserkocher auf: Dieses Rätsel verdient deine volle Aufmerksamkeit.",
+                "l5": "Lametta hängt, Rätsel los. Mal sehen, wie schnell du es knackst.",
+                "l6": "Ob Schnee oder nicht, hier wartet ein Rätsel auf dich.",
+                "l7": "Eine festliche Knobelei, nur für dich verpackt.",
+                "l8": "Einmal weniger schlafen. Zeit für das heutige Rätsel."
+            }
         },
         "namedChallenge": "{name}s Challenge",
         "yourChallenge": "Deine Challenge",

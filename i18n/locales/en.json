@@ -1618,7 +1618,23 @@
         "stopPreview": "Stop previewing",
         "lateBadge": "Late",
         "advent": {
-            "open": "Open door {day}"
+            "open": "Open drawer {day}",
+            "kicker": "Day {day} · {date}",
+            "playAgain": "Play again",
+            "todayRule": "Solve it today to keep your streak going.",
+            "catchUpUntil": "This one was due on {date}. You can still catch up until {until}.",
+            "catchUpAny": "This one was due on {date}. You can still catch it up.",
+            "doneRule": "You've solved this one. Nice work!",
+            "lines": {
+                "l1": "Pour a hot chocolate and settle in. Today's puzzle is waiting.",
+                "l2": "A little something to keep the brain warm on a cold day.",
+                "l3": "Another drawer, another puzzle. The countdown is on.",
+                "l4": "Pop the kettle on: this one deserves your full attention.",
+                "l5": "Tinsel up, puzzle on. Let's see how quickly you crack it.",
+                "l6": "Snow or no snow, there's a puzzle with your name on it.",
+                "l7": "A festive brain-teaser, wrapped just for you.",
+                "l8": "One sleep closer. Time for today's puzzle."
+            }
         },
         "namedChallenge": "{name}'s Challenge",
         "yourChallenge": "Your Challenge",

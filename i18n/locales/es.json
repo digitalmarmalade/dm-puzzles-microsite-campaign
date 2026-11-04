@@ -1612,7 +1612,23 @@
         "stopPreview": "Salir de la vista previa",
         "lateBadge": "Tarde",
         "advent": {
-            "open": "Abrir la puerta {day}"
+            "open": "Abrir el cajón {day}",
+            "kicker": "Día {day} · {date}",
+            "playAgain": "Jugar de nuevo",
+            "todayRule": "Resuélvelo hoy para mantener tu racha.",
+            "catchUpUntil": "Este tocaba el {date}. Aún puedes recuperarlo hasta el {until}.",
+            "catchUpAny": "Este tocaba el {date}. Aún puedes recuperarlo.",
+            "doneRule": "Ya lo has resuelto. ¡Buen trabajo!",
+            "lines": {
+                "l1": "Prepárate un chocolate caliente y ponte cómodo. El puzle de hoy te espera.",
+                "l2": "Algo para mantener la mente caliente en un día frío.",
+                "l3": "Otro cajón, otro puzle. La cuenta atrás ha empezado.",
+                "l4": "Pon la tetera: este merece toda tu atención.",
+                "l5": "Espumillón puesto, puzle en marcha. A ver qué tan rápido lo resuelves.",
+                "l6": "Con nieve o sin ella, hay un puzle con tu nombre.",
+                "l7": "Un acertijo festivo, envuelto solo para ti.",
+                "l8": "Una noche menos. Hora del puzle de hoy."
+            }
         },
         "namedChallenge": "El reto de {name}",
         "yourChallenge": "Tu reto",

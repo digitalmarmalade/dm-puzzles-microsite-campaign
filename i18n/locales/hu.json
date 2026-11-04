@@ -1612,7 +1612,23 @@
         "stopPreview": "Előnézet leállítása",
         "lateBadge": "Késve",
         "advent": {
-            "open": "{day}. ajtó kinyitása"
+            "open": "{day}. fiók kinyitása",
+            "kicker": "{day}. nap · {date}",
+            "playAgain": "Újra",
+            "todayRule": "Oldd meg ma, hogy folytatódjon a sorozatod.",
+            "catchUpUntil": "Ennek {date} volt a napja. {until}-ig még pótolhatod.",
+            "catchUpAny": "Ennek {date} volt a napja. Még pótolhatod.",
+            "doneRule": "Ezt már megoldottad. Szép munka!",
+            "lines": {
+                "l1": "Készíts egy forró csokit, és helyezkedj el kényelmesen. Vár a mai rejtvény.",
+                "l2": "Egy kis valami, ami hideg napokon is melegen tartja az elmét.",
+                "l3": "Újabb fiók, újabb rejtvény. Indul a visszaszámlálás.",
+                "l4": "Tedd fel a teát: ez megérdemli a teljes figyelmedet.",
+                "l5": "Díszek fent, rejtvény indul. Lássuk, milyen gyorsan oldod meg.",
+                "l6": "Hó ide vagy oda, egy rejtvény vár rád.",
+                "l7": "Ünnepi fejtörő, csak neked csomagolva.",
+                "l8": "Eggyel kevesebb alvás. Itt a mai rejtvény ideje."
+            }
         },
         "namedChallenge": "{name} kihívása",
         "yourChallenge": "A te kihívásod",

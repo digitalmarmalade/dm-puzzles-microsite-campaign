@@ -1612,7 +1612,23 @@
         "stopPreview": "Arrêter l'aperçu",
         "lateBadge": "Retard",
         "advent": {
-            "open": "Ouvrir la porte {day}"
+            "open": "Ouvrir le tiroir {day}",
+            "kicker": "Jour {day} · {date}",
+            "playAgain": "Rejouer",
+            "todayRule": "Résolvez-le aujourd'hui pour garder votre série.",
+            "catchUpUntil": "Celui-ci était prévu le {date}. Vous pouvez encore le rattraper jusqu'au {until}.",
+            "catchUpAny": "Celui-ci était prévu le {date}. Vous pouvez encore le rattraper.",
+            "doneRule": "Vous l'avez résolu. Bravo !",
+            "lines": {
+                "l1": "Préparez un chocolat chaud et installez-vous. Le puzzle du jour vous attend.",
+                "l2": "Un petit quelque chose pour garder l'esprit au chaud par temps froid.",
+                "l3": "Un nouveau tiroir, un nouveau puzzle. Le compte à rebours est lancé.",
+                "l4": "Mettez la bouilloire en route : celui-ci mérite toute votre attention.",
+                "l5": "Guirlandes en place, puzzle en route. Voyons à quelle vitesse vous le résolvez.",
+                "l6": "Neige ou pas, un puzzle vous attend.",
+                "l7": "Un casse-tête festif, emballé rien que pour vous.",
+                "l8": "Une nuit de moins avant Noël. Place au puzzle du jour."
+            }
         },
         "namedChallenge": "Le défi de {name}",
         "yourChallenge": "Votre défi",

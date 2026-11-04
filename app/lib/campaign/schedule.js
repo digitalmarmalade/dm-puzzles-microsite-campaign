@@ -112,6 +112,10 @@ export function validateCampaign(campaign) {
     for (const [lang, words] of Object.entries(campaign.text ?? {})) {
         const steps = words?.steps
         if (words?.pledge !== undefined && typeof words.pledge !== 'string') errors.push(`text.${lang}.pledge must be text`)
+        const days = words?.days
+        if (days !== undefined && (typeof days !== 'object' || Array.isArray(days) || Object.entries(days).some(([k, v]) => !/^[1-9]\d*$/.test(k) || typeof v !== 'string'))) {
+            errors.push(`text.${lang}.days must map day numbers to text`)
+        }
         if (steps !== undefined && (!Array.isArray(steps) || steps.some(st => typeof st?.title !== 'string' || typeof st?.body !== 'string'))) {
             errors.push(`text.${lang}.steps must be a list of {"title", "body"}`)
         }

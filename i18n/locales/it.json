@@ -1612,7 +1612,23 @@
         "stopPreview": "Interrompi anteprima",
         "lateBadge": "Ritardo",
         "advent": {
-            "open": "Apri la porta {day}"
+            "open": "Apri il cassetto {day}",
+            "kicker": "Giorno {day} · {date}",
+            "playAgain": "Gioca ancora",
+            "todayRule": "Risolvilo oggi per mantenere la tua serie.",
+            "catchUpUntil": "Questo era previsto per il {date}. Puoi ancora recuperarlo fino al {until}.",
+            "catchUpAny": "Questo era previsto per il {date}. Puoi ancora recuperarlo.",
+            "doneRule": "L'hai risolto. Ottimo lavoro!",
+            "lines": {
+                "l1": "Prepara una cioccolata calda e mettiti comodo. Il puzzle di oggi ti aspetta.",
+                "l2": "Qualcosa per tenere la mente al caldo in una giornata fredda.",
+                "l3": "Un altro cassetto, un altro puzzle. Il conto alla rovescia è iniziato.",
+                "l4": "Metti su il bollitore: questo merita tutta la tua attenzione.",
+                "l5": "Addobbi pronti, puzzle pronto. Vediamo quanto ci metti a risolverlo.",
+                "l6": "Neve o non neve, c'è un puzzle che ti aspetta.",
+                "l7": "Un rompicapo festivo, impacchettato solo per te.",
+                "l8": "Una notte in meno. È l'ora del puzzle di oggi."
+            }
         },
         "namedChallenge": "La sfida di {name}",
         "yourChallenge": "La tua sfida",

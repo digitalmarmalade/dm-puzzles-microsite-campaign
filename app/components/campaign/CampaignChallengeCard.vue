@@ -35,7 +35,6 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
 
 <template>
     <section class="challenge-card" :class="{'challenge-card--snowy': snowy}">
-        <CampaignSnow v-if="snowy" class="challenge-card__snow" :density="2" />
         <div v-if="shareUrl || (editTo && !snowy)" class="challenge-card__tools">
             <CampaignShareMenu v-if="shareUrl" :url="shareUrl" :title="shareTitle" :on-card="shareCard ? openShareCard : null" />
             <NuxtLink v-if="editTo && !snowy" :to="editTo" class="campaign-pill">
@@ -55,6 +54,15 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
         </header>
 
         <slot name="lead" />
+
+        <CampaignDayGrid
+            v-if="snowy"
+            :campaign="campaign"
+            :days="progress.days"
+            :puzzles="track.puzzles"
+            :percents="percents"
+            :playable="playable"
+        />
 
         <div class="challenge-card__stats">
             <CampaignStat
@@ -84,6 +92,7 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
         <slot />
 
         <CampaignDayGrid
+            v-if="!snowy"
             :campaign="campaign"
             :days="progress.days"
             :puzzles="track.puzzles"
@@ -133,23 +142,16 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
     }
 
     &.challenge-card--snowy {
-        --advent-night: #154d99;
-        --advent-night-deep: #071b57;
-        --advent-night-light: #6196c7;
-        --advent-gold: #e8b64c;
-        --advent-gold-light: #f6d98e;
-        --advent-paper: #f8f1e3;
-        --advent-ink: #1d2a4d;
+        --advent-gold: #c9973f;
+        --advent-gold-light: #e8c77d;
+        --advent-wood: #5c2016;
 
-        isolation: isolate;
-        background: linear-gradient(180deg, var(--advent-night-deep) 0%, var(--advent-night) 45%, var(--advent-night-light) 100%);
+        padding-inline: 0;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
         color: #fff;
     }
-}
-
-.challenge-card__snow {
-    z-index: -1;
-    border-radius: inherit;
 }
 
 .challenge-card--snowy :deep(.campaign-heading),
@@ -164,7 +166,7 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
 .challenge-card--snowy :deep(.campaign-stat),
 .challenge-card--snowy :deep(.milestone) {
     border: 1px solid rgba(255, 255, 255, .14);
-    background: rgba(7, 27, 87, .45);
+    background: rgba(28, 11, 6, .45);
     color: #fff;
     backdrop-filter: blur(2px);
 }
@@ -195,7 +197,7 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
 
 .challenge-card--snowy :deep(.unlock) {
     border: 1px solid rgba(255, 255, 255, .14);
-    background: rgba(7, 27, 87, .45);
+    background: rgba(28, 11, 6, .45);
     color: #fff;
     backdrop-filter: blur(2px);
 }
@@ -212,7 +214,7 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
 .challenge-card--snowy :deep(.milestone:not(.is-reached)) {
     border-style: dashed;
     border-color: rgba(255, 255, 255, .3);
-    background: rgba(7, 27, 87, .25);
+    background: rgba(28, 11, 6, .25);
 }
 
 .challenge-card--snowy :deep(.milestone__badge) {
@@ -223,7 +225,7 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
 .challenge-card--snowy :deep(.milestone.is-reached .milestone__badge),
 .challenge-card--snowy :deep(.unlock__badge) {
     background: #fff;
-    color: var(--advent-night-deep);
+    color: var(--advent-wood);
     box-shadow: 0 6px 16px rgba(0, 0, 0, .25);
 }
 

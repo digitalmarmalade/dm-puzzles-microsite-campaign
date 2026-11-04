@@ -1612,7 +1612,23 @@
         "stopPreview": "Zakończ podgląd",
         "lateBadge": "Późno",
         "advent": {
-            "open": "Otwórz okienko {day}"
+            "open": "Otwórz szufladkę {day}",
+            "kicker": "Dzień {day} · {date}",
+            "playAgain": "Zagraj ponownie",
+            "todayRule": "Rozwiąż ją dziś, aby utrzymać swoją serię.",
+            "catchUpUntil": "Ta była na {date}. Możesz ją jeszcze nadrobić do {until}.",
+            "catchUpAny": "Ta była na {date}. Możesz ją jeszcze nadrobić.",
+            "doneRule": "Już ją rozwiązałeś. Dobra robota!",
+            "lines": {
+                "l1": "Zrób sobie gorącą czekoladę i usiądź wygodnie. Dzisiejsza łamigłówka czeka.",
+                "l2": "Coś, co rozgrzeje umysł w zimny dzień.",
+                "l3": "Kolejna szufladka, kolejna łamigłówka. Odliczanie trwa.",
+                "l4": "Nastaw czajnik: ta zasługuje na pełną uwagę.",
+                "l5": "Lameta wisi, łamigłówka gotowa. Zobaczmy, jak szybko ją rozwiążesz.",
+                "l6": "Śnieg czy nie, czeka na ciebie łamigłówka.",
+                "l7": "Świąteczna zagadka, zapakowana specjalnie dla ciebie.",
+                "l8": "Jeden sen bliżej. Czas na dzisiejszą łamigłówkę."
+            }
         },
         "namedChallenge": "Wyzwanie: {name}",
         "yourChallenge": "Twoje wyzwanie",

@@ -15,6 +15,7 @@ const home = localePath(`/c/${props.campaign.id}`)
 const {$auth} = useNuxtApp()
 const user = useState('campaignUser')
 const accounts = props.campaign.account === 'required'
+const snowy = props.campaign.theme?.skin === 'advent'
 const signedIn = computed(() => !!user.value && !user.value.isAnonymous)
 const slots = useSlots()
 const year = new Date().getFullYear()
@@ -48,7 +49,7 @@ useHead({
 </script>
 
 <template>
-    <div class="campaign" :class="{'campaign--snowy': campaign.theme?.skin === 'advent'}" :style="useCampaignTheme(campaign)">
+    <div class="campaign" :class="{'campaign--snowy': snowy}" :style="useCampaignTheme(campaign)">
         <p v-if="previewing" class="campaign__preview" role="status">
             {{ t('campaign.previewing', {date: previewing}) }}
             <a :href="`${route.path}?today=off`">{{ t('campaign.stopPreview') }}</a>
@@ -140,10 +141,23 @@ body:has(.campaign, .campaign-play) {
     }
 
     &.campaign--snowy {
-        background: radial-gradient(120% 60rem at 50% 0, #154d99 0%, transparent 70%), var(--app-bg);
+        background:
+            radial-gradient(circle at 8% 12%, rgba(255, 214, 140, .5) 0 .5rem, transparent 2.2rem),
+            radial-gradient(circle at 22% 5%, rgba(255, 196, 110, .35) 0 .8rem, transparent 3rem),
+            radial-gradient(circle at 41% 9%, rgba(255, 224, 160, .3) 0 .4rem, transparent 1.8rem),
+            radial-gradient(circle at 63% 4%, rgba(255, 205, 120, .4) 0 .7rem, transparent 2.8rem),
+            radial-gradient(circle at 78% 13%, rgba(255, 120, 90, .3) 0 .9rem, transparent 3.2rem),
+            radial-gradient(circle at 92% 7%, rgba(255, 220, 150, .45) 0 .5rem, transparent 2.4rem),
+            radial-gradient(circle at 86% 30%, rgba(255, 190, 100, .25) 0 1.2rem, transparent 4rem),
+            radial-gradient(circle at 4% 40%, rgba(255, 170, 90, .2) 0 1.4rem, transparent 4.6rem),
+            radial-gradient(70rem 50rem at 0% 100%, rgba(255, 120, 40, .28), transparent 70%),
+            radial-gradient(60rem 40rem at 100% 0%, rgba(255, 190, 110, .14), transparent 70%),
+            linear-gradient(180deg, #2b140d, #1b0c07) fixed;
+        background-attachment: fixed;
 
         .campaign__top:not(.has-banner) .campaign__title,
         .campaign__top:not(.has-banner) .campaign__nav,
+        .campaign__top:not(.has-banner) .campaign__burger,
         .explainer,
         .campaign-account,
         .campaign-note {
@@ -165,7 +179,7 @@ body:has(.campaign, .campaign-play) {
             color: rgba(255, 255, 255, .8);
 
             a {
-                color: #f6d98e;
+                color: #e8c77d;
             }
         }
     }
