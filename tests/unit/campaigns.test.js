@@ -17,7 +17,7 @@ describe.each(ids)('campaigns/%s', (id) => {
         expect(campaign.text?.en?.title).toBeTruthy()
     })
     test('its images are in public/', () => {
-        const local = [campaign.theme?.logo, campaign.theme?.banner, ...(campaign.profile?.avatars ?? [])].filter(src => src?.startsWith('/'))
+        const local = [campaign.theme?.logo, campaign.theme?.banner, campaign.theme?.crest, ...(campaign.profile?.avatars ?? [])].filter(src => src?.startsWith('/'))
         expect(local.filter(src => !existsSync(`public${src}`))).toEqual([])
     })
 })

@@ -17,6 +17,7 @@
   },
   "theme": {
     "skin": "advent",
+    "crest": "/campaigns/now-sample/crest.svg",
     "primary": "#b3262f",
     "onPrimary": "#ffffff",
     "background": "#0a1940",

@@ -73,7 +73,7 @@ async function begin() {
 </script>
 
 <template>
-    <CampaignShell :campaign="campaign" :previewing="p.previewing ? p.today.value : null">
+    <CampaignShell :campaign="campaign" :previewing="p.previewing ? p.today.value : null" :bare="snowy && !!p.player.value">
         <template v-if="p.loaded.value && !p.player.value && heroBanner" #banner>
             <section ref="hero" class="campaign-hero">
                 <img

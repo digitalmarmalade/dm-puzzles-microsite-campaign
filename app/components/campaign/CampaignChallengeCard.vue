@@ -43,7 +43,7 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
             </NuxtLink>
         </div>
 
-        <header class="challenge-card__header">
+        <header v-if="!snowy" class="challenge-card__header">
             <img v-if="profile?.avatar && !snowy" :src="profile.avatar" alt="" class="challenge-card__avatar challenge-card__avatar--image">
             <span v-else-if="initial && !snowy" class="challenge-card__avatar challenge-card__avatar--initial" aria-hidden="true">{{ initial }}</span>
             <div class="challenge-card__titles">
@@ -53,8 +53,6 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
             </div>
         </header>
 
-        <slot name="lead" />
-
         <CampaignDayGrid
             v-if="snowy"
             :campaign="campaign"
@@ -63,6 +61,8 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
             :percents="percents"
             :playable="playable"
         />
+
+        <slot name="lead" />
 
         <div class="challenge-card__stats">
             <CampaignStat

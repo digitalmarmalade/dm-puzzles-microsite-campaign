@@ -5,6 +5,7 @@ const props = defineProps({
     campaign: {type: Object, required: true},
     previewing: {type: String, default: null},
     title: {type: String, default: null},
+    bare: {type: Boolean, default: false},
 })
 
 const {t} = useI18n()
@@ -55,7 +56,7 @@ useHead({
             <a :href="`${route.path}?today=off`">{{ t('campaign.stopPreview') }}</a>
         </p>
         <div class="campaign__top" :class="{'has-banner': !!slots.banner}">
-            <header class="campaign__header">
+            <header v-if="!bare" class="campaign__header">
                 <NuxtLink :to="home" class="campaign__brand">
                     <img v-if="campaign.theme?.logo" :src="campaign.theme.logo" :alt="text('title')" class="campaign__logo">
                     <span v-else class="campaign__title">{{ text('title') }}</span>
