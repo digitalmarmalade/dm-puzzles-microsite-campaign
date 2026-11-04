@@ -5,6 +5,7 @@ const props = defineProps({
     campaign: {type: Object, required: true},
     days: {type: Array, required: true},
     puzzles: {type: Array, required: true},
+    percents: {type: Object, default: () => ({})},
     dayUrl: {type: Function, required: true},
 })
 
@@ -44,6 +45,7 @@ onBeforeUnmount(() => timers.forEach(clearTimeout))
                 :puzzle="puzzles[d.day - 1]"
                 :to="dayUrl(d.day)"
                 :opened="opened.includes(d.day)"
+                :started="typeof percents[d.day] === 'number'"
                 @select="select"
             />
         </div>

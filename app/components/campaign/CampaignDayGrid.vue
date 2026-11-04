@@ -17,6 +17,7 @@ const dayUrl = (day) => props.playable ? localePath(`/c/${props.campaign.id}/day
         :campaign="campaign"
         :days="days"
         :puzzles="puzzles"
+        :percents="percents"
         :day-url="dayUrl"
     />
     <div v-else class="campaign-day-grid">

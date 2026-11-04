@@ -7,6 +7,7 @@ const props = defineProps({
     puzzle: {type: Object, required: true},
     to: {type: String, default: null},
     opened: {type: Boolean, default: false},
+    started: {type: Boolean, default: false},
 })
 const emit = defineEmits(['select'])
 
@@ -43,6 +44,17 @@ const label = computed(() => {
     return `${name}, ${props.puzzle.variant || props.puzzle.name}: ${t(`campaign.states.${props.day.state}`)}`
 })
 
+const crumbs = computed(() => {
+    let seed = props.day.day * 9301 + 49297
+    const next = () => (seed = (seed * 9301 + 49297) % 233280) / 233280
+    return Array.from({length: 11}, (_, i) => ({
+        left: `${22 + next() * 56}%`,
+        top: `${25 + next() * 55}%`,
+        '--crumb': `${(i < 3 ? 5 : 2.5) + next() * 3}cqmin`,
+        rotate: `${Math.round(next() * 360)}deg`,
+    }))
+})
+
 const root = ref(null)
 </script>
 
@@ -59,7 +71,10 @@ const root = ref(null)
         @click="emit('select', day, root)"
     >
         <span class="drawer__recess" aria-hidden="true">
-            <span v-if="!locked" class="drawer__chocolate">
+            <span v-if="completed" class="drawer__crumbs">
+                <span v-for="(c, i) in crumbs" :key="i" class="drawer__crumb" :style="c"></span>
+            </span>
+            <span v-else-if="!locked" class="drawer__chocolate" :class="{'drawer__chocolate--bitten': started}">
                 <svg><use :href="sprite(icon)" /></svg>
             </span>
             <span v-if="completed" class="drawer__done" :class="{'drawer__done--late': day.state === 'late'}">
@@ -183,34 +198,57 @@ const root = ref(null)
         filter: drop-shadow(0 .4cqmin 0 rgba(0, 0, 0, .35));
     }
 
+    &.drawer__chocolate--bitten {
+        mask:
+            radial-gradient(circle at 96% 4%, transparent 12cqmin, #000 12.4cqmin),
+            radial-gradient(circle at 70% -6%, transparent 8cqmin, #000 8.4cqmin),
+            radial-gradient(circle at 106% 34%, transparent 8cqmin, #000 8.4cqmin);
+        mask-composite: intersect;
+    }
+
     .drawer--missed & {
         filter: saturate(.6) brightness(.8);
     }
 }
 
+.drawer__crumbs {
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: -15cqmin;
+    block-size: 15cqmin;
+}
+
+.drawer__crumb {
+    position: absolute;
+    inline-size: var(--crumb);
+    block-size: calc(var(--crumb) * .6);
+    background: linear-gradient(160deg, #c27350, #7a3324 60%, #4a1a10);
+    clip-path: polygon(10% 20%, 55% 0, 100% 30%, 85% 85%, 35% 100%, 0 65%);
+    filter: drop-shadow(0 .4cqmin .3cqmin rgba(0, 0, 0, .5));
+    translate: -50% -50%;
+}
+
 .drawer__done {
     position: absolute;
     z-index: 1;
-    inset-block-start: 5cqmin;
-    inset-inline-start: 5cqmin;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
     display: grid;
     place-items: center;
-    inline-size: 15cqmin;
-    block-size: 15cqmin;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, #f6dc9a, #c9973f 60%, #8a6322);
-    box-shadow: 0 .6cqmin 1.4cqmin rgba(0, 0, 0, .5);
-    color: #3b1d14;
+    color: #6e3c22;
+    filter:
+        drop-shadow(0 -.4cqmin 0 rgba(0, 0, 0, .75))
+        drop-shadow(0 .4cqmin 0 rgba(255, 214, 160, .2));
+    translate: -50% -50%;
 
     svg {
-        inline-size: 8cqmin;
-        block-size: 8cqmin;
+        inline-size: 30cqmin;
+        block-size: 30cqmin;
+        stroke-width: 3;
     }
 
     &.drawer__done--late {
-        background: #2a120c;
-        box-shadow: inset 0 0 0 .6cqmin #c9973f;
-        color: #e8c77d;
+        opacity: .6;
     }
 }
 
@@ -242,20 +280,11 @@ const root = ref(null)
         filter: brightness(.82) saturate(.85);
     }
 
-    .drawer--live & {
-        box-shadow:
-            inset 0 .5cqmin 0 rgba(255, 255, 255, .18),
-            inset 0 -.8cqmin 0 rgba(0, 0, 0, .35),
-            0 0 0 .8cqmin rgba(232, 199, 125, .9),
-            0 0 7cqmin 1cqmin rgba(255, 196, 92, .55);
-    }
-
     .drawer--opening & {
         box-shadow:
             inset 0 .5cqmin 0 rgba(255, 255, 255, .18),
             inset 0 -.8cqmin 0 rgba(0, 0, 0, .35),
-            0 0 0 .8cqmin rgba(232, 199, 125, .9),
-            0 0 12cqmin 3cqmin rgba(255, 196, 92, .7);
+            0 3cqmin 6cqmin rgba(0, 0, 0, .55);
     }
 }
 
@@ -263,6 +292,7 @@ const root = ref(null)
     position: absolute;
     inset: 0;
     border-radius: inherit;
+    transform-origin: 50% 0;
     transition: transform .35s cubic-bezier(.3, 1.3, .5, 1);
 
     .drawer--today.drawer--live & {
@@ -402,17 +432,17 @@ const root = ref(null)
 
 @keyframes drawer-pull {
     0% { transform: none; opacity: 1; visibility: visible; }
-    6% { transform: scale(.98); visibility: visible; }
-    22% { transform: translateY(2cqmin) scale(1.1); }
-    30% { transform: translateY(2cqmin) scale(1.09) rotate(-.6deg); }
-    38% { transform: translateY(2cqmin) scale(1.1); }
-    75% { transform: translateY(2cqmin) scale(1.1); opacity: 1; }
-    100% { transform: translateY(14cqmin) scale(1.16); opacity: 0; visibility: visible; }
+    6% { transform: translateY(-1cqmin); visibility: visible; }
+    22% { transform: translateY(8cqmin) scale(1.06); }
+    30% { transform: translateY(7cqmin) scale(1.06) rotate(-.6deg); }
+    38% { transform: translateY(8cqmin) scale(1.06); }
+    75% { transform: translateY(8cqmin) scale(1.06); opacity: 1; }
+    100% { transform: translateY(24cqmin) scale(1.1); opacity: 0; visibility: visible; }
 }
 
 @keyframes drawer-breathe {
     from { transform: none; }
-    to { transform: scale(1.04); }
+    to { transform: translateY(1.5cqmin) scale(1.03); }
 }
 
 @keyframes bauble-sway {
