@@ -151,7 +151,7 @@ async function begin() {
             :thanked-key="`campaign-sponsors:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}:thanked`"
         >
             <template v-if="!p.progress.value.over" #lead>
-                <CampaignMilestoneUnlock :colours="[campaign.theme?.primary, campaign.theme?.secondary, '#ffd166'].filter(Boolean)" :progress="p.progress.value" :storage-key="`campaign-milestones-seen:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}`" />
+                <CampaignMilestoneUnlock v-if="!snowy" :colours="[campaign.theme?.primary, campaign.theme?.secondary, '#ffd166'].filter(Boolean)" :progress="p.progress.value" :storage-key="`campaign-milestones-seen:${campaign.id}:${p.previewing ? 'preview' : p.user.value?.uid}`" />
                 <div class="challenge-lead">
                     <CampaignToday v-if="!snowy" :campaign="campaign" :track="p.track.value" :progress="p.progress.value" :percents="p.percents.value" :times="p.times.value" :previewing="p.previewing" />
                     <CampaignSponsorMoment

@@ -1613,11 +1613,9 @@
         "lateBadge": "Tarde",
         "advent": {
             "open": "Abrir el cajón {day}",
-            "kicker": "Día {day} · {date}",
+            "cabinetLine": "Abre las puertas para descubrir el reto de hoy",
             "playAgain": "Jugar de nuevo",
             "todayRule": "Resuélvelo hoy para mantener tu racha.",
-            "catchUpUntil": "Este tocaba el {date}. Aún puedes recuperarlo hasta el {until}.",
-            "catchUpAny": "Este tocaba el {date}. Aún puedes recuperarlo.",
             "doneRule": "Ya lo has resuelto. ¡Buen trabajo!",
             "lines": {
                 "l1": "Prepárate un chocolate caliente y ponte cómodo. El puzle de hoy te espera.",

@@ -64,8 +64,9 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
 
         <slot name="lead" />
 
-        <div class="challenge-card__stats">
+        <div v-if="!snowy || fundraising" class="challenge-card__stats">
             <CampaignStat
+                v-if="!snowy"
                 :value="`${progress.completed} / ${total}`"
                 :label="t('campaign.daysCompleted')"
                 :percent="progress.completed / total * 100"
@@ -78,6 +79,7 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
                 colour="var(--secondary)"
             />
             <CampaignStat
+                v-if="!snowy"
                 :value="t('campaign.streak.value', {n: streak.current})"
                 :label="streak.best > streak.current ? t('campaign.streak.labelBest', {best: streak.best}) : t('campaign.streak.label')"
                 :flame="streak.current > 0"
@@ -100,7 +102,7 @@ const raisedPercent = computed(() => props.fundraising?.target ? props.fundraisi
             :playable="playable"
         />
 
-        <CampaignMilestones :progress="progress" />
+        <CampaignMilestones v-if="!snowy" :progress="progress" />
 
         <CampaignSolveTimes :campaign="campaign" :times="times" :puzzles="track.puzzles" :previewing="previewing" />
 

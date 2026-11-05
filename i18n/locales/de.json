@@ -1612,11 +1612,9 @@
         "lateBadge": "Spät",
         "advent": {
             "open": "Schublade {day} öffnen",
-            "kicker": "Tag {day} · {date}",
+            "cabinetLine": "Öffne die Türchen und entdecke die heutige Challenge",
             "playAgain": "Nochmal spielen",
             "todayRule": "Löse es heute, um deine Serie fortzusetzen.",
-            "catchUpUntil": "Dieses war am {date} fällig. Du kannst es noch bis zum {until} nachholen.",
-            "catchUpAny": "Dieses war am {date} fällig. Du kannst es noch nachholen.",
             "doneRule": "Du hast es gelöst. Gut gemacht!",
             "lines": {
                 "l1": "Mach dir eine heiße Schokolade und lehn dich zurück. Das heutige Rätsel wartet.",

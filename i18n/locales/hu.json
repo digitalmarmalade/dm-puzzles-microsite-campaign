@@ -1613,11 +1613,9 @@
         "lateBadge": "Késve",
         "advent": {
             "open": "{day}. fiók kinyitása",
-            "kicker": "{day}. nap · {date}",
+            "cabinetLine": "Nyisd ki az ajtókat, és fedezd fel a mai kihívást",
             "playAgain": "Újra",
             "todayRule": "Oldd meg ma, hogy folytatódjon a sorozatod.",
-            "catchUpUntil": "Ennek {date} volt a napja. {until}-ig még pótolhatod.",
-            "catchUpAny": "Ennek {date} volt a napja. Még pótolhatod.",
             "doneRule": "Ezt már megoldottad. Szép munka!",
             "lines": {
                 "l1": "Készíts egy forró csokit, és helyezkedj el kényelmesen. Vár a mai rejtvény.",

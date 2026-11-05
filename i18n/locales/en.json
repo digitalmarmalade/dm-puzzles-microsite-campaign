@@ -1619,11 +1619,9 @@
         "lateBadge": "Late",
         "advent": {
             "open": "Open drawer {day}",
-            "kicker": "Day {day} · {date}",
+            "cabinetLine": "Open the doors to find today's challenge",
             "playAgain": "Play again",
             "todayRule": "Solve it today to keep your streak going.",
-            "catchUpUntil": "This one was due on {date}. You can still catch up until {until}.",
-            "catchUpAny": "This one was due on {date}. You can still catch it up.",
             "doneRule": "You've solved this one. Nice work!",
             "lines": {
                 "l1": "Pour a hot chocolate and settle in. Today's puzzle is waiting.",

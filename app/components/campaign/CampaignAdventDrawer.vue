@@ -82,16 +82,39 @@ const root = ref(null)
             </span>
         </span>
         <span class="drawer__body" aria-hidden="true">
-            <span class="drawer__front" :class="{'drawer__front--grooved': ornament === 'grooves'}">
+            <span class="drawer__front">
             <span class="drawer__notch"></span>
-            <svg v-if="ornament === 'snowflake'" class="drawer__ornament" viewBox="0 0 40 40">
-                <path d="M20 4v32M6.1 12l27.8 16M6.1 28l27.8-16M20 4l-3 3m3-3 3 3M20 36l-3-3m3 3 3-3M6.1 12l1 4m-1-4 4-1M33.9 28l-1-4m1 4-4 1M6.1 28l4 1m-4-1 1-4M33.9 12l-4-1m4 1-1 4" />
+            <svg v-if="ornament === 'wreath'" class="drawer__ornament" viewBox="0 0 40 40">
+                <path v-for="a in 12" :key="a" class="drawer__leaf" :transform="`rotate(${a * 30} 20 20)`" d="M20 6.2c2.4 1.3 3 4 1.3 6-2.4-1.3-3-4-1.3-6Z" />
+                <circle class="drawer__berry" cx="28.1" cy="28.1" r="1.6" />
+                <circle class="drawer__berry" cx="8.9" cy="23" r="1.6" />
+                <circle class="drawer__berry" cx="23" cy="8.9" r="1.6" />
             </svg>
-            <svg v-else-if="ornament === 'sprig'" class="drawer__ornament" viewBox="0 0 40 40">
-                <path d="M20 36V8M20 14c-4-4-9-4-11-2 3 3 8 4 11 2Zm0 0c4-4 9-4 11-2-3 3-8 4-11 2ZM20 23c-5-4-11-3-13-1 4 3 9 4 13 1Zm0 0c5-4 11-3 13-1-4 3-9 4-13 1ZM20 8c-1-2 0-4 0-4s1 2 0 4" />
+            <svg v-else-if="ornament === 'holly'" class="drawer__ornament" viewBox="0 0 40 40">
+                <g v-for="m in [1, -1]" :key="m" :transform="`matrix(${m} 0 0 1 ${m < 0 ? 40 : 0} 0)`">
+                    <path class="drawer__leaf" d="M18.5 19c-2.6-3.4-7.4-4.6-12.2-3.2 1.4 1 .6 2.4 1.8 3.2-1.4.2-2.4 1.2-2.4 2.4 1.4-.2 2.4.4 2.6 1.4-1.2.8-1.4 2-1.2 3 5.2 1.2 10-1.2 11.4-6.8Z" />
+                    <path class="drawer__vein" d="M18 19.6c-3.6-.4-7.6.2-10.6 2.4" />
+                </g>
+                <circle class="drawer__berry" cx="17.4" cy="13.2" r="2" />
+                <circle class="drawer__berry" cx="22.6" cy="13.2" r="2" />
+                <circle class="drawer__berry" cx="20" cy="9.8" r="2" />
             </svg>
-            <svg v-else-if="ornament === 'swirl'" class="drawer__ornament" viewBox="0 0 40 40">
-                <path d="M20 20c-6 0-10-3-10-7s3-6 6-5 3 4 1 5M20 20c6 0 10-3 10-7s-3-6-6-5-3 4-1 5M20 20c-6 0-10 3-10 7s3 6 6 5 3-4 1-5M20 20c6 0 10 3 10 7s-3 6-6 5-3-4-1-5" />
+            <svg v-else-if="ornament === 'star'" class="drawer__ornament" viewBox="0 0 40 40">
+                <path class="drawer__gold" opacity=".55" d="M20 3L22.5 14L32 8L26 17.5L37 20L26 22.5L32 32L22.5 26L20 37L17.5 26L8 32L14 22.5L3 20L14 17.5L8 8L17.5 14Z" />
+                <path class="drawer__gold" d="M23.4 11.7L22.8 17.2L28.3 16.6L24 20L28.3 23.4L22.8 22.8L23.4 28.3L20 24L16.6 28.3L17.2 22.8L11.7 23.4L16 20L11.7 16.6L17.2 17.2L16.6 11.7L20 16Z" />
+            </svg>
+            <svg v-else-if="ornament === 'poinsettia'" class="drawer__ornament" viewBox="0 0 40 40">
+                <path v-for="a in 5" :key="`o${a}`" class="drawer__petal" :transform="`rotate(${a * 72} 20 20)`" d="M20 20c-2.6-3.6-3-9.4 0-15 3 5.6 2.6 11.4 0 15Z" />
+                <path v-for="a in 5" :key="`i${a}`" class="drawer__petal drawer__petal--inner" :transform="`rotate(${a * 72 + 36} 20 20)`" d="M20 20c-1.8-2.6-2.2-6.6 0-10.4 2.2 3.8 1.8 7.8 0 10.4Z" />
+            </svg>
+            <svg v-else-if="ornament === 'canes'" class="drawer__ornament" viewBox="0 0 40 40">
+                <g v-for="m in [1, -1]" :key="m" :transform="`matrix(${m} 0 0 1 ${m < 0 ? 40 : 0} 0)`">
+                    <path class="drawer__cane" d="M11 33L25.5 10.5c1.6-2.6 5-2.8 6.4-.4 1 1.8.2 3.6-1.4 4.4" />
+                    <path class="drawer__cane drawer__cane--stripe" d="M11 33L25.5 10.5c1.6-2.6 5-2.8 6.4-.4 1 1.8.2 3.6-1.4 4.4" />
+                </g>
+            </svg>
+            <svg v-else-if="ornament === 'snowflake'" class="drawer__ornament" viewBox="0 0 40 40">
+                <path class="drawer__line" d="M20 4v32M6.1 12l27.8 16M6.1 28l27.8-16M20 4l-3 3m3-3 3 3M20 36l-3-3m3 3 3-3M6.1 12l1 4m-1-4 4-1M33.9 28l-1-4m1 4-4 1M6.1 28l4 1m-4-1 1-4M33.9 12l-4-1m4 1-1 4" />
             </svg>
             <span class="drawer__number">{{ day.day }}</span>
             <span class="drawer__knob"></span>
@@ -260,8 +283,8 @@ const root = ref(null)
     overflow: hidden;
     border-radius: inherit;
     background:
-        repeating-linear-gradient(178deg, rgba(0, 0, 0, .06) 0 .2rem, transparent .2rem .7rem, rgba(255, 255, 255, .03) .7rem .9rem, transparent .9rem 1.6rem),
-        linear-gradient(180deg, color-mix(in srgb, var(--wood) 85%, #fff) 0%, var(--wood) 35%, var(--wood-dark) 100%);
+        repeating-linear-gradient(178deg, rgba(0, 0, 0, .025) 0 .2rem, transparent .2rem .9rem, rgba(255, 255, 255, .015) .9rem 1.1rem, transparent 1.1rem 2rem),
+        linear-gradient(180deg, color-mix(in srgb, var(--wood) 92%, #fff) 0%, var(--wood) 45%, color-mix(in srgb, var(--wood) 55%, var(--wood-dark)) 100%);
     box-shadow:
         inset 0 .5cqmin 0 rgba(255, 255, 255, .18),
         inset .5cqmin 0 0 rgba(255, 255, 255, .08),
@@ -269,12 +292,6 @@ const root = ref(null)
         inset -.5cqmin 0 0 rgba(0, 0, 0, .2),
         0 .8cqmin 1.6cqmin rgba(0, 0, 0, .45);
     transition: box-shadow .3s ease;
-
-    &.drawer__front--grooved {
-        background:
-            repeating-linear-gradient(90deg, transparent 0 8cqmin, rgba(0, 0, 0, .22) 8cqmin 8.8cqmin, rgba(255, 255, 255, .08) 8.8cqmin 9.4cqmin),
-            linear-gradient(180deg, color-mix(in srgb, var(--wood) 85%, #fff) 0%, var(--wood) 35%, var(--wood-dark) 100%);
-    }
 
     .drawer--locked & {
         filter: brightness(.82) saturate(.85);
@@ -321,7 +338,7 @@ const root = ref(null)
 
 .drawer__bauble {
     position: absolute;
-    inset-block-start: calc(58% + 3cqmin);
+    inset-block-start: calc(62% + 3cqmin);
     inset-inline-start: 50%;
     display: grid;
     place-items: end center;
@@ -329,6 +346,7 @@ const root = ref(null)
     block-size: 36cqmin;
     margin-inline-start: -12cqmin;
     transform-origin: 50% 0;
+    transform: rotate(calc(var(--swing, 0deg) * (1 + var(--sway, 0) * .2)));
     animation: bauble-sway 4s ease-in-out infinite;
     animation-delay: calc(var(--sway, 0) * -1s);
 
@@ -389,22 +407,73 @@ const root = ref(null)
 
 .drawer__ornament {
     position: absolute;
-    inset-block-start: 50%;
+    inset-block-start: 62%;
     inset-inline-start: 50%;
-    inline-size: 58cqmin;
-    block-size: 58cqmin;
+    inline-size: 70cqmin;
+    block-size: 70cqmin;
+    opacity: .55;
+    filter:
+        saturate(.75)
+        drop-shadow(0 -.3cqmin 0 rgba(0, 0, 0, .45))
+        drop-shadow(0 .3cqmin 0 rgba(255, 228, 180, .18));
+    translate: -50% -50%;
+}
+
+.drawer__gold {
+    fill: #d9b062;
+}
+
+.drawer__leaf {
+    fill: #c99a43;
+    stroke: #f0d590;
+    stroke-width: .4;
+}
+
+.drawer__vein,
+.drawer__line {
     fill: none;
-    stroke: #e8c77d;
-    stroke-width: 1.2;
+    stroke: #f0d590;
+    stroke-width: .6;
     stroke-linecap: round;
-    stroke-linejoin: round;
-    opacity: .75;
-    translate: -50% -42%;
+
+    &.drawer__line {
+        stroke: #e8c77d;
+        stroke-width: 1.2;
+        stroke-linejoin: round;
+    }
+}
+
+.drawer__berry {
+    fill: #c0392b;
+    stroke: #f6dc9a;
+    stroke-width: .5;
+}
+
+.drawer__petal {
+    fill: #b3262f;
+    stroke: #e8c77d;
+    stroke-width: .5;
+
+    &.drawer__petal--inner {
+        fill: #d63c3c;
+    }
+}
+
+.drawer__cane {
+    fill: none;
+    stroke: #f3e3c1;
+    stroke-width: 2.6;
+    stroke-linecap: round;
+
+    &.drawer__cane--stripe {
+        stroke: #c0392b;
+        stroke-dasharray: 1.6 1.6;
+    }
 }
 
 .drawer__number {
     position: absolute;
-    inset-block-start: 14cqmin;
+    inset-block-start: 10cqmin;
     inset-inline: 0;
     color: #f0d590;
     font-family: Georgia, 'Times New Roman', serif;
@@ -418,7 +487,7 @@ const root = ref(null)
 
 .drawer__knob {
     position: absolute;
-    inset-block-start: 58%;
+    inset-block-start: 62%;
     inset-inline-start: 50%;
     inline-size: 13cqmin;
     block-size: 13cqmin;

@@ -1,5 +1,6 @@
 <script setup>
 import {doorOrder} from '@/lib/campaign/advent'
+import {streaks} from '@/lib/campaign/achievements'
 
 const props = defineProps({
     campaign: {type: Object, required: true},
@@ -9,8 +10,11 @@ const props = defineProps({
     dayUrl: {type: Function, required: true},
 })
 
+const {t} = useI18n()
 const text = useCampaignText(props.campaign)
 const {thanked: opened, thank: open} = useThanked(`campaign-advent-opened:${props.campaign.id}`)
+const completed = computed(() => props.days.filter(d => d.state === 'done' || d.state === 'late').length)
+const streak = computed(() => streaks({days: props.days}).current)
 const drawers = computed(() => doorOrder(props.days.length).map(day => props.days[day - 1]).filter(Boolean))
 
 const card = ref(null)
@@ -33,16 +37,60 @@ function select(day, el) {
     )
 }
 
-onBeforeUnmount(() => timers.forEach(clearTimeout))
+const calendar = ref(null)
+let swing = 0
+let spin = 0
+let lastY = 0
+let frame = null
+
+function settle() {
+    spin = (spin - swing * .06) * .94
+    swing = Math.max(-28, Math.min(28, swing + spin))
+    calendar.value?.style.setProperty('--swing', `${swing.toFixed(2)}deg`)
+    frame = Math.abs(swing) > .05 || Math.abs(spin) > .05 ? requestAnimationFrame(settle) : null
+}
+
+function onScroll() {
+    const y = window.scrollY
+    spin += Math.max(-3, Math.min(3, (y - lastY) * .06))
+    lastY = y
+    frame ??= requestAnimationFrame(settle)
+}
+
+onMounted(() => {
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return
+    lastY = window.scrollY
+    window.addEventListener('scroll', onScroll, {passive: true})
+})
+
+onBeforeUnmount(() => {
+    timers.forEach(clearTimeout)
+    window.removeEventListener('scroll', onScroll)
+    cancelAnimationFrame(frame)
+})
 </script>
 
 <template>
-    <div class="advent-calendar">
+    <div ref="calendar" class="advent-calendar">
     <div class="advent-crest">
-        <img src="/img/advent/crown.svg" alt="" class="advent-crest__wood">
+        <picture class="advent-crest__wood">
+            <source media="(width < 600px)" srcset="/img/advent/crown-mobile.webp">
+            <img src="/img/advent/crown.webp" alt="" width="2000" height="547">
+        </picture>
         <div class="advent-crest__mark">
             <img v-if="campaign.theme?.crest" :src="campaign.theme.crest" alt="" class="advent-crest__logo">
             <span class="advent-crest__title">{{ text('title') }}</span>
+            <span class="advent-crest__line">{{ text('cabinetLine') || t('campaign.advent.cabinetLine') }}</span>
+        </div>
+        <div class="advent-crest__stats">
+            <p class="advent-crest__stat advent-crest__stat--done">
+                <strong>{{ completed }}<small>/{{ days.length }}</small></strong>
+                <span class="sr-only">{{ t('campaign.daysCompleted') }}</span>
+            </p>
+            <p class="advent-crest__stat advent-crest__stat--streak">
+                <strong><svg aria-hidden="true"><use :href="sprite('streak')" /></svg>{{ t('campaign.streak.value', {n: streak}) }}</strong>
+                <span class="sr-only">{{ t('campaign.streak.label') }}</span>
+            </p>
         </div>
     </div>
     <div class="advent-cabinet">
@@ -74,42 +122,140 @@ onBeforeUnmount(() => timers.forEach(clearTimeout))
 .advent-crest {
     position: relative;
     container-type: inline-size;
-    margin-block-end: calc(1.2rem - 1%);
+    margin-block-end: -.1rem;
+
+    @media (width >= 600px) {
+        margin-inline: -.8rem;
+    }
 }
 
 .advent-crest__wood {
     display: block;
-    inline-size: 100%;
-    block-size: auto;
-    filter: drop-shadow(0 -.4rem 1.2rem rgba(0, 0, 0, .35));
+
+    img {
+        display: block;
+        inline-size: 100%;
+        block-size: auto;
+        filter: drop-shadow(0 -.4rem 1.2rem rgba(0, 0, 0, .35));
+    }
 }
 
 .advent-crest__mark {
     position: absolute;
-    inset-block-end: 4.5cqi;
+    inset-block-start: 29cqi;
     inset-inline-start: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .8cqi;
-    translate: -50% 0;
+    gap: 1.6cqi;
+    translate: -50% -50%;
     white-space: nowrap;
+
+    @media (width >= 600px) {
+        inset-block-start: 56%;
+        gap: .8cqi;
+    }
 }
 
 .advent-crest__logo {
-    inline-size: max(19cqi, 8rem);
+    inline-size: 40cqi;
     block-size: auto;
-    filter: drop-shadow(0 .2cqi .2cqi rgba(0, 0, 0, .5));
+    margin-block-end: .8cqi;
+    opacity: .8;
+    mix-blend-mode: multiply;
+
+    @media (width >= 600px) {
+        inline-size: 15cqi;
+        margin-block-end: .4cqi;
+    }
 }
 
 .advent-crest__title {
+    color: #c9973f;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 7cqi;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .02em;
+    
+    text-shadow: -1px 0 2px black;
+
+    @media (width >= 600px) {
+        font-size: 4cqi;
+    }
+}
+
+.advent-crest__stats {
+    position: absolute;
+    inset-block-start: 48cqi;
+    inset-inline-start: 50%;
+    display: flex;
+    gap: 8cqi;
+    translate: -50% -50%;
+
+    @media (width >= 600px) {
+        display: contents;
+    }
+}
+
+.advent-crest__stat {
+    display: flex;
+    align-items: center;
+    gap: .6cqi;
+    margin: 0;
     color: #f0d590;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: max(2.6cqi, 1.1rem);
-    font-style: italic;
+    font-size: 5cqi;
     font-weight: 700;
     line-height: 1;
     text-shadow: 0 .2cqi .2cqi rgba(0, 0, 0, .55);
+    white-space: nowrap;
+
+    strong {
+        display: flex;
+        align-items: center;
+        gap: .6cqi;
+    }
+
+    small {
+        font-size: .6em;
+        opacity: .8;
+    }
+
+    svg {
+        inline-size: .8em;
+        block-size: .8em;
+    }
+
+    @media (width >= 600px) {
+        position: absolute;
+        inset-block-start: 66%;
+        font-size: 2.6cqi;
+        translate: -50% -50%;
+    }
+
+    &.advent-crest__stat--done {
+        @media (width >= 600px) {
+            inset-inline-start: 25.5%;
+        }
+    }
+
+    &.advent-crest__stat--streak {
+        @media (width >= 600px) {
+            inset-inline-start: 74.5%;
+        }
+    }
+}
+
+.advent-crest__line {
+    color: #f3e3c1;
+    font-size: 3.6cqi;
+    line-height: 1.2;
+    opacity: .85;
+
+    @media (width >= 600px) {
+        font-size: 1.3cqi;
+    }
 }
 
 .advent-cabinet {
@@ -127,22 +273,17 @@ onBeforeUnmount(() => timers.forEach(clearTimeout))
         0 3rem 6rem rgba(0, 0, 0, .55),
         0 .6rem 1.2rem rgba(0, 0, 0, .4);
 
-    @media (width >= 720px) {
-        --pad: 2.4rem;
+    @media (width < 600px) {
+        box-shadow:
+            inset 0 0 0 .35rem #d6a84f,
+            inset 0 0 0 .45rem #7a5418,
+            inset .1rem .1rem 0 .35rem #f0cd7a,
+            0 3rem 6rem rgba(0, 0, 0, .55),
+            0 .6rem 1.2rem rgba(0, 0, 0, .4);
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        inset-inline: -.8rem;
-        inset-block-start: -1.2rem;
-        block-size: 1.6rem;
-        border-radius: .4rem;
-        background: linear-gradient(180deg, #7a3322, #4f1e13);
-        box-shadow:
-            inset 0 .2rem 0 #e2b45c,
-            inset 0 -.1rem 0 #b98a3e,
-            0 .4rem .8rem rgba(0, 0, 0, .4);
+    @media (width >= 720px) {
+        --pad: 2.4rem;
     }
 
     &::after {
@@ -152,6 +293,11 @@ onBeforeUnmount(() => timers.forEach(clearTimeout))
         border: .1rem solid rgba(193, 148, 72, .8);
         border-radius: .3rem;
         pointer-events: none;
+
+        @media (width < 600px) {
+            inset: .75rem;
+            border: .15rem solid #e2b45c;
+        }
     }
 }
 
@@ -166,6 +312,15 @@ onBeforeUnmount(() => timers.forEach(clearTimeout))
         inset 0 .5rem 0 #4a1c12,
         inset 0 .6rem 0 rgba(193, 148, 72, .7),
         0 1rem 2rem rgba(0, 0, 0, .5);
+
+    @media (width < 600px) {
+        margin-inline: 0;
+        box-shadow:
+            inset 0 .3rem 0 #e9bd62,
+            inset 0 .5rem 0 #4a1c12,
+            inset 0 .65rem 0 #d6a84f,
+            0 1rem 2rem rgba(0, 0, 0, .5);
+    }
 }
 
 .advent-cabinet__grid {

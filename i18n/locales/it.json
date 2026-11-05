@@ -1613,11 +1613,9 @@
         "lateBadge": "Ritardo",
         "advent": {
             "open": "Apri il cassetto {day}",
-            "kicker": "Giorno {day} · {date}",
+            "cabinetLine": "Apri le porte per scoprire la sfida di oggi",
             "playAgain": "Gioca ancora",
             "todayRule": "Risolvilo oggi per mantenere la tua serie.",
-            "catchUpUntil": "Questo era previsto per il {date}. Puoi ancora recuperarlo fino al {until}.",
-            "catchUpAny": "Questo era previsto per il {date}. Puoi ancora recuperarlo.",
             "doneRule": "L'hai risolto. Ottimo lavoro!",
             "lines": {
                 "l1": "Prepara una cioccolata calda e mettiti comodo. Il puzzle di oggi ti aspetta.",

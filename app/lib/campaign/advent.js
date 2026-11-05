@@ -10,7 +10,7 @@ export const WOODS = [
 
 export const drawerWood = (day) => WOODS[(day * 3) % WOODS.length]
 
-export const ORNAMENTS = ['snowflake', 'none', 'sprig', 'swirl', 'grooves', 'none', 'snowflake', 'sprig']
+export const ORNAMENTS = ['wreath', 'holly', 'star', 'poinsettia', 'canes', 'snowflake', 'holly', 'wreath', 'none']
 
 export const drawerOrnament = (day) => ORNAMENTS[(day * 5) % ORNAMENTS.length]
 

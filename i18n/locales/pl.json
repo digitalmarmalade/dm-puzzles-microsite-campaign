@@ -1613,11 +1613,9 @@
         "lateBadge": "Późno",
         "advent": {
             "open": "Otwórz szufladkę {day}",
-            "kicker": "Dzień {day} · {date}",
+            "cabinetLine": "Otwórz drzwiczki, aby odkryć dzisiejsze wyzwanie",
             "playAgain": "Zagraj ponownie",
             "todayRule": "Rozwiąż ją dziś, aby utrzymać swoją serię.",
-            "catchUpUntil": "Ta była na {date}. Możesz ją jeszcze nadrobić do {until}.",
-            "catchUpAny": "Ta była na {date}. Możesz ją jeszcze nadrobić.",
             "doneRule": "Już ją rozwiązałeś. Dobra robota!",
             "lines": {
                 "l1": "Zrób sobie gorącą czekoladę i usiądź wygodnie. Dzisiejsza łamigłówka czeka.",

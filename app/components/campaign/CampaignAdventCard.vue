@@ -1,5 +1,4 @@
 <script setup>
-import {lastChance} from '@/lib/campaign/schedule'
 import {glitterBurst, iconsAround, sparkleAround} from '@/lib/campaign/glitter'
 
 const props = defineProps({
@@ -21,7 +20,7 @@ let stopSparkles = null
 let stopIcons = null
 let burstTimer = null
 
-const formatDate = (iso) => new Intl.DateTimeFormat(dateLocale.value, {day: 'numeric', month: 'long', timeZone: 'UTC'}).format(new Date(`${iso}T12:00:00Z`))
+const formatDate = (iso) => new Intl.DateTimeFormat(dateLocale.value, {weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC'}).format(new Date(`${iso}T12:00:00Z`))
 const icon = computed(() => props.puzzle ? props.puzzle.icon ?? (props.puzzle.tag ?? '').replaceAll('-', '') : '')
 const completed = computed(() => ['done', 'late'].includes(props.day?.state))
 const line = computed(() => {
@@ -32,11 +31,7 @@ const rule = computed(() => {
     const d = props.day
     if (!d) return ''
     if (completed.value) return t('campaign.advent.doneRule')
-    if (d.state === 'catchup') {
-        const until = lastChance(props.campaign, d.due)
-        return until ? t('campaign.advent.catchUpUntil', {date: formatDate(d.due), until: formatDate(until)}) : t('campaign.advent.catchUpAny', {date: formatDate(d.due)})
-    }
-    return t('campaign.advent.todayRule')
+    return d.state === 'today' ? t('campaign.advent.todayRule') : ''
 })
 
 async function open(from, {burst} = {}) {
@@ -90,13 +85,22 @@ defineExpose({open})
             <button type="button" class="advent-card__close" :aria-label="t('campaign.card.close')" @click="close">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
             </button>
-            <p class="advent-card__kicker">{{ t('campaign.advent.kicker', {day: day.day, date: formatDate(day.due)}) }}</p>
+            <p class="advent-card__kicker">{{ t('campaign.dayN', {day: day.day}) }}</p>
+            <p class="advent-card__dateline">
+                <svg v-for="side in ['start', 'end']" :key="side" class="advent-card__flourish" :class="`advent-card__flourish--${side}`" viewBox="0 0 56 16" aria-hidden="true">
+                    <path class="advent-card__flourish-line" d="M2 8H33" />
+                    <path class="advent-card__flourish-leaf" d="M34 8c3-3.6 7.4-4 10.6-1.6-3.4.4-6.6 1-10.6 1.6Zm0 0c3 3.6 7.4 4 10.6 1.6-3.4-.4-6.6-1-10.6-1.6Z" />
+                    <circle class="advent-card__flourish-berry" cx="48.6" cy="8" r="2.4" />
+                    <circle class="advent-card__flourish-berry" cx="52.6" cy="5.4" r="1.8" />
+                </svg>
+                <time :datetime="day.due">{{ formatDate(day.due) }}</time>
+            </p>
             <span class="advent-card__tile" aria-hidden="true">
                 <svg><use :href="sprite(icon)" /></svg>
             </span>
             <h2 class="advent-card__title">{{ puzzle.variant || puzzle.name }}</h2>
             <p class="advent-card__line">{{ line }}</p>
-            <p class="advent-card__rule">{{ rule }}</p>
+            <p v-if="rule" class="advent-card__rule">{{ rule }}</p>
             <NuxtLink v-if="to" :to="to" class="advent-card__play">
                 {{ completed ? t('campaign.advent.playAgain') : t('campaign.today.play') }}
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
@@ -205,6 +209,52 @@ defineExpose({open})
     text-transform: uppercase;
 }
 
+.advent-card__dateline {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin: -.4rem 0 .4rem;
+    align-self: stretch;
+    justify-content: center;
+    color: #8a1c24;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: nowrap;
+
+    @media (width >= 480px) {
+        gap: 1rem;
+        font-size: 2.2rem;
+    }
+}
+
+.advent-card__flourish {
+    flex: 0 1 5.6rem;
+    min-inline-size: 1.6rem;
+    block-size: 1.6rem;
+
+    &.advent-card__flourish--end {
+        order: 1;
+        scale: -1 1;
+    }
+}
+
+.advent-card__flourish-line {
+    fill: none;
+    stroke: #b98a3e;
+    stroke-width: 1.2;
+    stroke-linecap: round;
+}
+
+.advent-card__flourish-leaf {
+    fill: #c99a43;
+}
+
+.advent-card__flourish-berry {
+    fill: #b3262f;
+}
+
 .advent-card__tile {
     display: grid;
     place-items: center;
@@ -227,7 +277,6 @@ defineExpose({open})
     margin: .4rem 0 0;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 3.2rem;
-    font-style: italic;
     line-height: 1.1;
 }
 
